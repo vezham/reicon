@@ -2,8 +2,8 @@
  * Reicon CDN — drop-in web component for 1000+ icons, 2 weights (Outline & Filled).
  * ALL icon data is inlined — zero network fetch, instant rendering.
  *
- *   <re-icon icon="home"></re-icon>
- *   <re-icon icon="home" weight="filled" size="32" color="#d97757"></re-icon>
+ *   <vx-icon icon="home"></vx-icon>
+ *   <vx-icon icon="home" weight="filled" size="32" color="#d97757"></vx-icon>
  *
  * Attributes (all reactive):
  *   icon, weight, size, color, secondary-color, stroke-width,
@@ -336,8 +336,8 @@
     },
   };
 
-  if (!customElements.get('re-icon')) {
-    customElements.define('re-icon', ReiconElement);
+  if (!customElements.get('vx-icon')) {
+    customElements.define('vx-icon', ReiconElement);
   }
   global.Reicon = Reicon;
 

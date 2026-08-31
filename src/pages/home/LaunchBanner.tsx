@@ -43,7 +43,7 @@ export default function LaunchBanner() {
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-text-base/80 hover:text-text-base/55 transition-colors cursor-pointer"
                 style={{ background: 'none', border: 'none', display: 'flex', padding: '4px' }}
             >
-                <re-icon icon="x" size="12" color="currentColor" />
+                <vx-icon icon="x" size="12" color="currentColor" />
             </button>
         </div>
     );

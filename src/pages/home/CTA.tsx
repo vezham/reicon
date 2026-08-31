@@ -101,12 +101,12 @@ export default function CTA() {
         <section className="reveal max-w-[1160px] mx-auto px-5 md:px-10 py-13">
             <div className="relative bg-text-base/3 rounded-[14px] overflow-hidden">
                 <div className="absolute -top-10 -left-10 md:-top-14 md:-left-14 pointer-events-none select-none opacity-[0.04] rotate-[195deg]">
-                    <re-icon icon="scribble" size={180} color="currentColor" weight="outline" className="block md:hidden" />
-                    <re-icon icon="scribble" size={300} color="currentColor" weight="outline" className="hidden md:block" />
+                    <vx-icon icon="scribble" size={180} color="currentColor" weight="outline" className="block md:hidden" />
+                    <vx-icon icon="scribble" size={300} color="currentColor" weight="outline" className="hidden md:block" />
                 </div>
                 <div className="absolute -bottom-10 -right-10 md:-bottom-14 md:-right-14 pointer-events-none select-none opacity-[0.04] rotate-[15deg]">
-                    <re-icon icon="scribble" size={180} color="currentColor" weight="outline" className="block md:hidden" />
-                    <re-icon icon="scribble" size={300} color="currentColor" weight="outline" className="hidden md:block" />
+                    <vx-icon icon="scribble" size={180} color="currentColor" weight="outline" className="block md:hidden" />
+                    <vx-icon icon="scribble" size={300} color="currentColor" weight="outline" className="hidden md:block" />
                 </div>
 
                 <div className="relative z-10 py-14 md:py-20 px-6 md:px-14 flex flex-col md:flex-row items-center gap-10 md:gap-16">

@@ -29,7 +29,7 @@ export default function PlaygroundPreview({
           {weight}
         </span>
 
-        <re-icon icon={selected} size={96} weight={weight} color={displayColor} />
+        <vx-icon icon={selected} size={96} weight={weight} color={displayColor} />
       </div>
 
       <div className="w-full mt-3 flex items-center justify-start">

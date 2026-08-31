@@ -37,7 +37,7 @@ export async function getSvgString(
   weight: string,
   size: number = 64
 ): Promise<string> {
-  const el = document.createElement('re-icon') as HTMLElement & { icon: string; weight: string; size: number };
+  const el = document.createElement('vx-icon') as HTMLElement & { icon: string; weight: string; size: number };
   el.setAttribute('icon', iconName);
   el.setAttribute('weight', weight);
   el.setAttribute('size', String(size));
@@ -53,7 +53,7 @@ export async function getSvgString(
     if (svg) break;
   }
   if (!svg) {
-    const existing = document.querySelector(`re-icon[icon="${iconName}"]`);
+    const existing = document.querySelector(`vx-icon[icon="${iconName}"]`);
     if (existing) svg = existing.querySelector('svg') || existing.shadowRoot?.querySelector('svg') || null;
   }
 

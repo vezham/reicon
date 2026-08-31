@@ -54,7 +54,7 @@ export default function PackPage() {
 
             <main className="flex-1 flex flex-col items-center justify-center px-6 py-24 text-center">
                 <div className="max-w-lg">
-                    <re-icon icon="box" size="48" color="currentColor" className="text-[#6C5CE7] mb-6 block mx-auto" />
+                    <vx-icon icon="box" size="48" color="currentColor" className="text-[#6C5CE7] mb-6 block mx-auto" />
                     <h1 className="font-serif text-3xl md:text-4xl text-text-base mb-4">
                         Icon Pack Builder
                     </h1>

@@ -12,7 +12,7 @@ interface ReIconElementProps extends React.HTMLAttributes<HTMLElement> {
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      're-icon': ReIconElementProps;
+      'vx-icon': ReIconElementProps;
     }
   }
 }
@@ -20,7 +20,7 @@ declare module 'react' {
 declare module 'react/jsx-runtime' {
   namespace JSX {
     interface IntrinsicElements {
-      're-icon': ReIconElementProps;
+      'vx-icon': ReIconElementProps;
     }
   }
 }
@@ -29,13 +29,13 @@ declare global {
   namespace React {
     namespace JSX {
       interface IntrinsicElements {
-        're-icon': ReIconElementProps;
+        'vx-icon': ReIconElementProps;
       }
     }
   }
   namespace JSX {
     interface IntrinsicElements {
-      're-icon': ReIconElementProps;
+      'vx-icon': ReIconElementProps;
     }
   }
 

@@ -27,7 +27,7 @@ export default function RelatedIcons({ relatedIcons }: RelatedIconsProps) {
               title={`${iconName} icon`}
             >
               <div className="flex-1 flex items-center justify-center w-full my-auto">
-                <re-icon
+                <vx-icon
                   icon={iconName}
                   size="28"
                   color="currentColor"

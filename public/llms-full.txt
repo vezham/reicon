@@ -280,20 +280,20 @@ createIcon(displayName: string, iconData: Record<string, string>): IconFunction
 
 ---
 
-### 4.6 CDN / Web Component (`<re-icon>`)
+### 4.6 CDN / Web Component (`<vx-icon>`)
 
 **Script tag:**
 ```html
-<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
 <!-- Or jsDelivr: -->
-<script src="https://cdn.jsdelivr.net/npm/@vezham/icons/cdn/vezham-icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/cdn/vezham-icons.js"></script>
 ```
 
 **Usage:**
 ```html
-<re-icon icon="home"></re-icon>
-<re-icon icon="heart" weight="filled" size="32" color="#ef4444"></re-icon>
-<re-icon icon="shield-check" weight="outline" size="28" color="#6C5CE7"></re-icon>
+<vx-icon icon="home"></vx-icon>
+<vx-icon icon="heart" weight="filled" size="32" color="#ef4444"></vx-icon>
+<vx-icon icon="shield-check" weight="outline" size="28" color="#6C5CE7"></vx-icon>
 ```
 
 **All attributes:**
@@ -556,7 +556,7 @@ A: Yes. React, Vue, Svelte packages are SSR-compatible. Vanilla JS has `toSvg()`
 A: Yes — `reicon-mcp`. It provides `search_icons`, `view_icon`, `apply_icon`, and `list_categories` tools. Works fully offline.
 
 **Q: How do I use the CDN?**
-A: Add `<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>`, then use `<re-icon icon="home"></re-icon>`.
+A: Add `<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>`, then use `<vx-icon icon="home"></vx-icon>`.
 
 **Q: Is there a VS Code extension?**
 A: Yes. Search "Reicon" in VS Code extensions or run `code --install-extension DevChauhan.reicon`.

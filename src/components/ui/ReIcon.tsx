@@ -10,5 +10,5 @@ export interface ReIconProps {
 }
 
 export default function ReIcon(props: ReIconProps) {
-    return createElement('re-icon', props as Record<string, unknown>);
+    return createElement('vx-icon', props as Record<string, unknown>);
 }

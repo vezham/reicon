@@ -78,7 +78,7 @@ export default function IconPreview({
                 dangerouslySetInnerHTML={{ __html: duotoneSvgInnerHtml }}
               />
             ) : (
-              <re-icon icon={name} weight={activeWeight} size={previewSize} color={useCustomColor ? customColor : 'var(--text-base)'} aria-label={`${pascalName} icon preview`} />
+              <vx-icon icon={name} weight={activeWeight} size={previewSize} color={useCustomColor ? customColor : 'var(--text-base)'} aria-label={`${pascalName} icon preview`} />
             )}
           </motion.div>
         </AnimatePresence>

@@ -125,25 +125,25 @@ export default function Integrations() {
                     icon={<SiHtml5 size={16} color="#E34F26" />}
                     title="CDN / HTML"
                     guideUrl="/docs/vanilla"
-                    copyText={`<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>\n\n<re-icon icon="home" size="24"></re-icon>`}
+                    copyText={`<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>\n\n<vx-icon icon="home" size="24"></vx-icon>`}
                     lines={<>
                         <div>
                             <span className="text-text-base/20">&lt;</span>
                             <span className="text-[#e06c75]">script</span>
                             <span className="text-[#d19a66]"> src</span>
                             <span className="text-text-base/30">=</span>
-                            <span className="text-[#98c379] text-[11px] break-all">"unpkg.com/@vezham/icons/cdn/vezham-icons.js"</span>
+                            <span className="text-[#98c379] text-[11px] break-all">"unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"</span>
                             <span className="text-text-base/20">&gt;&lt;/</span>
                             <span className="text-[#e06c75]">script</span>
                             <span className="text-text-base/20">&gt;</span>
                         </div>
                         <div className="mt-3">
                             <span className="text-text-base/20">&lt;</span>
-                            <span className="text-[#e06c75]">re-icon</span>
+                            <span className="text-[#e06c75]">vx-icon</span>
                             <Prop name="icon" value="home" />
                             <Prop name="size" value="24" />
                             <span className="text-text-base/20">&gt;&lt;/</span>
-                            <span className="text-[#e06c75]">re-icon</span>
+                            <span className="text-[#e06c75]">vx-icon</span>
                             <span className="text-text-base/20">&gt;</span>
                         </div>
                     </>}

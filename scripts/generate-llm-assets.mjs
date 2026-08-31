@@ -70,7 +70,7 @@ This file lists every icon in the Reicon SVG icon library by category. Use it to
 
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (\`arrow-up-right\` → \`ArrowUpRight\`)
-- **CDN**: use the kebab-case name as-is: \`<re-icon icon="arrow-up-right">\`
+- **CDN**: use the kebab-case name as-is: \`<vx-icon icon="arrow-up-right">\`
 
 ## Stats
 - **Total**: ${totalCount} unique designs (${totalCount * 2} icons counting both weights)

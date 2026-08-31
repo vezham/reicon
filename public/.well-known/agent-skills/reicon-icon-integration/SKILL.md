@@ -69,7 +69,7 @@ import { Home } from 'reicon-react-native';
 ### Web Component / CDN
 ```html
 <script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>
-<re-icon icon="home" weight="outline" size="24" color="currentColor"></re-icon>
+<vx-icon icon="home" weight="outline" size="24" color="currentColor"></vx-icon>
 ```
 
 ## Using MCP Server (for AI Agents)

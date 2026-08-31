@@ -17,7 +17,7 @@ export default function DocsRightSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="list" size="13" />
+                        <vx-icon icon="list" size="13" />
                     </div>
                     <span>On this page</span>
                 </div>

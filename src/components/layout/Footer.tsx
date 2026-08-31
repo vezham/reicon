@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="relative flex flex-col">
             <div className="flex items-center gap-2 mb-2 text-[11px] font-semibold tracking-wider text-text-base/40 uppercase">
               <div className="w-5 h-5 rounded-[5px] bg-text-base/4 flex items-center justify-center text-text-base/50 shrink-0">
-                <re-icon icon="folder" size="13" />
+                <vx-icon icon="folder" size="13" />
               </div>
               <span>Use</span>
             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
           <div className="relative flex flex-col">
             <div className="flex items-center gap-2 mb-2 text-[11px] font-semibold tracking-wider text-text-base/40 uppercase">
               <div className="w-5 h-5 rounded-[5px] bg-text-base/4 flex items-center justify-center text-text-base/50 shrink-0">
-                <re-icon icon="widget" size="13" />
+                <vx-icon icon="widget" size="13" />
               </div>
               <span>Icons</span>
             </div>
@@ -117,7 +117,7 @@ export default function Footer() {
           <div className="relative flex flex-col">
             <div className="flex items-center gap-2 mb-2 text-[11px] font-semibold tracking-wider text-text-base/40 uppercase">
               <div className="w-5 h-5 rounded-[5px] bg-text-base/4 flex items-center justify-center text-text-base/50 shrink-0">
-                <re-icon icon="layers" size="13" />
+                <vx-icon icon="layers" size="13" />
               </div>
               <span>Ecosystem</span>
             </div>
@@ -145,7 +145,7 @@ export default function Footer() {
           <div className="relative flex flex-col">
             <div className="flex items-center gap-2 mb-2 text-[11px] font-semibold tracking-wider text-text-base/40 uppercase">
               <div className="w-5 h-5 rounded-[5px] bg-text-base/4 flex items-center justify-center text-text-base/50 shrink-0">
-                <re-icon icon="headphones" size="13" />
+                <vx-icon icon="headphones" size="13" />
               </div>
               <span>Support</span>
             </div>
@@ -176,7 +176,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 relative flex flex-col">
             <div className="flex items-center gap-2 mb-2 text-[11px] font-semibold tracking-wider text-text-base/40 uppercase">
               <div className="w-5 h-5 rounded-[5px] bg-text-base/4 flex items-center justify-center text-text-base/50 shrink-0">
-                <re-icon icon="at" size="13" />
+                <vx-icon icon="at" size="13" />
               </div>
               <span>Socials</span>
             </div>
@@ -200,7 +200,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="relative flex items-center gap-2 pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer"
               >
-                <span className="text-text-base/50"><re-icon icon="user" size="13" /></span>
+                <span className="text-text-base/50"><vx-icon icon="user" size="13" /></span>
                 <span>@devchauhan</span>
               </a>
             </div>

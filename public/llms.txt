@@ -191,11 +191,11 @@ Each icon is a callable function returning `SVGSVGElement`. Tree-shakeable.
 ## CDN / Web Component (no build step)
 
 ```html
-<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
 
-<re-icon icon="home"></re-icon>
-<re-icon icon="heart" weight="filled" size="32" color="#ef4444"></re-icon>
-<re-icon icon="shield-check" weight="outline" size="28" color="#6C5CE7"></re-icon>
+<vx-icon icon="home"></vx-icon>
+<vx-icon icon="heart" weight="filled" size="32" color="#ef4444"></vx-icon>
+<vx-icon icon="shield-check" weight="outline" size="28" color="#6C5CE7"></vx-icon>
 ```
 
 All icon data is inlined — zero network calls. Uses Shadow DOM for isolation.

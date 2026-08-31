@@ -83,14 +83,14 @@ export function generateCode(
       return { importStatement, docsSnippet };
     }
     case 'html': {
-      const importStatement = '<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>';
+      const importStatement = '<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>';
       const props = [
         ` icon="${icon.name}"`,
         sizeProp(size, 'html'),
         colorAttr('html'),
         weightProp(weight, 'html'),
       ].join('');
-      const docsSnippet = `<re-icon${props}></re-icon>`;
+      const docsSnippet = `<vx-icon${props}></vx-icon>`;
       return { importStatement, docsSnippet };
     }
     case 'svg': {

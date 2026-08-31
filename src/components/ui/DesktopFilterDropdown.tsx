@@ -12,12 +12,12 @@ const OPTIONS = [
   {
     id: 'az' as SortOption,
     label: 'Alphabetical (A – Z)',
-    icon: <re-icon icon="list-arrow-down2" size="16" color="currentColor" />,
+    icon: <vx-icon icon="list-arrow-down2" size="16" color="currentColor" />,
   },
   {
     id: 'za' as SortOption,
     label: 'Alphabetical (Z – A)',
-    icon: <re-icon icon="list-arrow-up2" size="16" color="currentColor" />,
+    icon: <vx-icon icon="list-arrow-up2" size="16" color="currentColor" />,
   },
 ];
 
@@ -56,7 +56,7 @@ export default function DesktopFilterDropdown({ sortBy, onSortChange }: DesktopF
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         ) : (
-          <re-icon icon="sort-alpha" size="18" color="currentColor" className="transition-opacity duration-150" />
+          <vx-icon icon="sort-alpha" size="18" color="currentColor" className="transition-opacity duration-150" />
         )}
       </button>
 

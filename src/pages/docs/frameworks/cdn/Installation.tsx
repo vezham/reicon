@@ -35,21 +35,21 @@ export default function Installation({ markdownContent, copiedField, onCopy }: P
       </p>
 
       {/* Getting Started CDN */}
-      <h4 className="text-md font-medium text-text-base mb-4">Register Custom Element (<code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<re-icon>'}</code>)</h4>
+      <h4 className="text-md font-medium text-text-base mb-4">Register Custom Element (<code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code>)</h4>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Include the script tag inside your HTML page. This registers a reactive <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<re-icon>'}</code> component that supports dynamic styling, sizes, weights, and gradients.
+        Include the script tag inside your HTML page. This registers a reactive <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code> component that supports dynamic styling, sizes, weights, and gradients.
       </p>
 
       <SyntaxBlock
         title="HTML (UNPKG CDN)"
-        onCopy={() => onCopy('<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>', 'cdn-script')}
+        onCopy={() => onCopy('<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>', 'cdn-script')}
         copied={copiedField === 'cdn-script'}
       >
         <span className="text-text-base/70">{'<'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-[#d19a66]"> src</span>
         <span className="text-text-base/50">=</span>
-        <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"</span>
+        <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"</span>
         <span className="text-text-base/70">{'></'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-text-base/70">{'>'}</span>

@@ -19,7 +19,7 @@ export default function FaqCategory({ title, icon, items, openItems, onToggle }:
   return (
     <div className="mb-16">
       <div className="flex items-center gap-2 mb-6 text-text-base/40 text-xs font-medium uppercase tracking-widest">
-        <re-icon icon={icon} size="12" />
+        <vx-icon icon={icon} size="12" />
         <span>{title}</span>
       </div>
       <div className="divide-y divide-text-base/6">

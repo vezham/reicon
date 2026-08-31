@@ -30,7 +30,7 @@ export default function LogoSearchBar({
           title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
           aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
-          <re-icon icon="sidebar2" size="18" color="currentColor" />
+          <vx-icon icon="sidebar2" size="18" color="currentColor" />
         </button>
       )}
 
@@ -67,7 +67,7 @@ export default function LogoSearchBar({
         className="lg:hidden ml-auto flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-text-base/[0.04] hover:bg-text-base/10 text-text-base/70 hover:text-text-base text-sm font-medium transition-colors shrink-0 cursor-pointer"
         aria-label="Open filters"
       >
-        <re-icon icon="filter" size="15" color="currentColor" />
+        <vx-icon icon="filter" size="15" color="currentColor" />
         Filters
       </button>
     </div>

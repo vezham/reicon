@@ -11,21 +11,21 @@ export interface TroubleshootingItemData {
 export const troubleshootingItems: TroubleshootingItemData[] = [
   {
     question: "Icons are not rendering (CDN)",
-    answer: "Make sure the CDN script is loaded before any <re-icon> elements. Place the script tag in your <head> or before your markup.",
-    copyText: '<!-- ✅ Place in <head> -->\n<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>',
+    answer: "Make sure the CDN script is loaded before any <vx-icon> elements. Place the script tag in your <head> or before your markup.",
+    copyText: '<!-- ✅ Place in <head> -->\n<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>',
     copyField: "faq-cdn",
     syntaxNode: (
       <>
         <span className="text-text-base/30">{'<!-- ✅ Place in <head> -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
       </>
     )
   },
   {
     question: "Wrong icon weight showing",
     answer: 'The weight prop is case-sensitive in the React/Vue packages. Use "Outline" or "Filled" (PascalCase). In the CDN, use lowercase: "outline" or "filled".',
-    copyText: '// ✅ React / Vue — PascalCase\n<Star weight="Filled" />\n\n// ✅ CDN — lowercase\n<re-icon icon="star" weight="filled"></re-icon>\n\n// ❌ Wrong casing\n<Star weight="filled" />\n<re-icon icon="star" weight="Filled"></re-icon>',
+    copyText: '// ✅ React / Vue — PascalCase\n<Star weight="Filled" />\n\n// ✅ CDN — lowercase\n<vx-icon icon="star" weight="filled"></vx-icon>\n\n// ❌ Wrong casing\n<Star weight="filled" />\n<vx-icon icon="star" weight="Filled"></vx-icon>',
     copyField: "faq-weight",
     syntaxNode: (
       <>
@@ -35,20 +35,20 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
         {'\n\n'}
         <span className="text-text-base/30">{'// ✅ CDN — lowercase'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// ❌ Wrong casing'}</span>
         {'\n'}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
       </>
     )
   },
   {
     question: "Icons look blurry or wrong size",
     answer: "The size prop accepts a number (pixels). Don't pass units like \"24px\" — just pass the number. For the CDN, pass the number as a string attribute.",
-    copyText: '// ✅ Correct\n<Home size={24} />\n<re-icon icon="home" size="24"></re-icon>\n\n// ❌ Don\'t include units\n<Home size="24px" />',
+    copyText: '// ✅ Correct\n<Home size={24} />\n<vx-icon icon="home" size="24"></vx-icon>\n\n// ❌ Don\'t include units\n<Home size="24px" />',
     copyField: "faq-size",
     syntaxNode: (
       <>
@@ -56,7 +56,7 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
         {'\n'}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Home</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"24"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"24"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{"// ❌ Don't include units"}</span>
         {'\n'}

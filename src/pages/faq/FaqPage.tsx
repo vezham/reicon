@@ -326,7 +326,7 @@ export default function FaqPage() {
           <div className="reicon-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
-                <re-icon icon="compass" size="13" />
+                <vx-icon icon="compass" size="13" />
               </div>
               <span>General</span>
             </div>
@@ -339,7 +339,7 @@ export default function FaqPage() {
           <div className="reicon-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
-                <re-icon icon="code" size="13" />
+                <vx-icon icon="code" size="13" />
               </div>
               <span>Technical</span>
             </div>
@@ -352,7 +352,7 @@ export default function FaqPage() {
           <div className="reicon-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
-                <re-icon icon="palette" size="13" />
+                <vx-icon icon="palette" size="13" />
               </div>
               <span>Design</span>
             </div>

@@ -5,7 +5,7 @@ The official vanilla JavaScript package and CDN web components for Reicon. This 
 ## What you can accomplish
 - Import individual icons as DOM element factories in vanilla JS
 - Fetch SVG markup as strings directly (fully SSR/Node.js compatible)
-- Register and render custom elements (`<re-icon>`) inside HTML templates or SPAs
+- Register and render custom elements (`<vx-icon>`) inside HTML templates or SPAs
 - Load all icons via CDN script tags without build steps or bundlers
 - Tree-shake unused icons automatically when using modern bundlers
 
@@ -50,12 +50,12 @@ const svgString = Home.toSvg({ size: 24, color: 'currentColor' });
 res.send(`<div class="icon-wrap">${svgString}</div>`);
 ```
 
-### Registering Custom Element (`<re-icon>`)
+### Registering Custom Element (`<vx-icon>`)
 You can register and import the web component runtime right from your npm installation. Simply import `reicon/element` once in your application entry point.
 ```javascript
 import 'reicon/element';
 
-// Now use <re-icon icon="home"></re-icon> in your HTML templates!
+// Now use <vx-icon icon="home"></vx-icon> in your HTML templates!
 ```
 
 ### Direct Import for Smallest Bundles
@@ -71,18 +71,18 @@ const homeSvg = Home({ size: 24 });
 
 Perfect for static HTML websites, legacy applications, and prototyping. Include a script tag and render icons instantly.
 
-### Register Custom Element (`<re-icon>`)
-Include the script tag inside your HTML page. This registers a reactive `<re-icon>` component that supports dynamic styling, sizes, weights, and gradients.
+### Register Custom Element (`<vx-icon>`)
+Include the script tag inside your HTML page. This registers a reactive `<vx-icon>` component that supports dynamic styling, sizes, weights, and gradients.
 ```html
-<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
 ```
 *Or load a specific version:* `https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js`
 
 ### Basic CDN Usage
-Simply add the `<re-icon>` tags directly in your HTML:
+Simply add the `<vx-icon>` tags directly in your HTML:
 ```html
-<re-icon icon="home"></re-icon>
-<re-icon icon="shield-check" weight="filled" size="32" color="#6C5CE7"></re-icon>
+<vx-icon icon="home"></vx-icon>
+<vx-icon icon="shield-check" weight="filled" size="32" color="#6C5CE7"></vx-icon>
 ```
 
 ### Load Functions globally via Script tag
@@ -96,23 +96,23 @@ If you want to use the global `reicon` object functions directly in a browser sc
 ```
 
 ### Customizing Elements (Attributes)
-You can customize `<re-icon>` elements using reactive HTML attributes. Updates will be rendered instantly.
+You can customize `<vx-icon>` elements using reactive HTML attributes. Updates will be rendered instantly.
 ```html
 <!-- Size -->
-<re-icon icon="home" size="16"></re-icon>
-<re-icon icon="home" size="32"></re-icon>
+<vx-icon icon="home" size="16"></vx-icon>
+<vx-icon icon="home" size="32"></vx-icon>
 
 <!-- Color -->
-<re-icon icon="heart" color="#ef4444"></re-icon>
-<re-icon icon="heart" color="rgb(99, 102, 241)"></re-icon>
+<vx-icon icon="heart" color="#ef4444"></vx-icon>
+<vx-icon icon="heart" color="rgb(99, 102, 241)"></vx-icon>
 
 <!-- Weight -->
-<re-icon icon="star" weight="outline"></re-icon>
-<re-icon icon="star" weight="filled"></re-icon>
+<vx-icon icon="star" weight="outline"></vx-icon>
+<vx-icon icon="star" weight="filled"></vx-icon>
 ```
 
 ### Styling with CSS
-The `<re-icon>` element acts like an inline block. It automatically inherits its parent's text color, allowing CSS utility-classes to adjust color naturally.
+The `<vx-icon>` element acts like an inline block. It automatically inherits its parent's text color, allowing CSS utility-classes to adjust color naturally.
 ```html
 <style>
   .icon-primary {
@@ -120,11 +120,11 @@ The `<re-icon>` element acts like an inline block. It automatically inherits its
   }
 </style>
 
-<re-icon icon="home" class="icon-primary"></re-icon>
+<vx-icon icon="home" class="icon-primary"></vx-icon>
 
 <!-- Inherits color from parent -->
 <div style="color: #ef4444;">
-  <re-icon icon="heart"></re-icon>
+  <vx-icon icon="heart"></vx-icon>
 </div>
 ```
 
@@ -140,12 +140,12 @@ A complete HTML document importing Reicon via CDN and showcasing customizations:
 </head>
 <body>
   <nav>
-    <re-icon icon="home" size="20"></re-icon>
-    <re-icon icon="user" size="20"></re-icon>
+    <vx-icon icon="home" size="20"></vx-icon>
+    <vx-icon icon="user" size="20"></vx-icon>
   </nav>
   <main>
     <h1>
-      <re-icon icon="shield-check" size="28" weight="filled" color="#6C5CE7"></re-icon>
+      <vx-icon icon="shield-check" size="28" weight="filled" color="#6C5CE7"></vx-icon>
       App Verified
     </h1>
   </main>

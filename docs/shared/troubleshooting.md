@@ -5,10 +5,10 @@ Common issues and their solutions. If you don't find your answer here, open an i
 ---
 
 ## 1. Icons are not rendering (CDN)
-Make sure the CDN script is loaded before any `<re-icon>` elements. Place the script tag in your `<head>` or before your markup.
+Make sure the CDN script is loaded before any `<vx-icon>` elements. Place the script tag in your `<head>` or before your markup.
 ```html
 <!-- ✅ Place in <head> -->
-<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
 ```
 
 ---
@@ -20,7 +20,7 @@ The `weight` prop is case-sensitive in the React/Vue packages. Use `"Outline"` o
 <Star weight="Filled" />
 
 // ✅ CDN — lowercase
-<re-icon icon="star" weight="filled"></re-icon>
+<vx-icon icon="star" weight="filled"></vx-icon>
 ```
 
 ---

@@ -29,7 +29,7 @@ export default function CdnDocs({ markdownContent, copiedField, onCopy }: Props)
       <ul className="text-text-base/60 text-[15px] leading-[1.8] mb-8 space-y-1 list-disc list-inside">
         <li>Import individual icons as DOM element factories in vanilla JS</li>
         <li>Fetch SVG markup as strings directly (fully SSR/Node.js compatible)</li>
-        <li>Register and render custom elements (<code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<re-icon>'}</code>) inside HTML templates or SPAs</li>
+        <li>Register and render custom elements (<code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code>) inside HTML templates or SPAs</li>
         <li>Load all icons via CDN script tags without build steps or bundlers</li>
         <li>Tree-shake unused icons automatically when using modern bundlers</li>
       </ul>

@@ -78,7 +78,7 @@ export default function DocsMobileNav({
                         </>
                     ) : (
                         <>
-                            <re-icon icon="code" size={16} className="text-text-base/40" />
+                            <vx-icon icon="code" size={16} className="text-text-base/40" />
                             <span className="text-text-base/40 font-medium">Select</span>
                         </>
                     )}

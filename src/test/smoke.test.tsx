@@ -51,7 +51,7 @@ describe('ReIcon component', () => {
     const {container} = render(
       <ReIcon icon="home" weight="filled" size={24} color="red" />,
     );
-    const el = container.querySelector('re-icon');
+    const el = container.querySelector('vx-icon');
     expect(el).toBeInTheDocument();
     expect(el).toHaveAttribute('icon', 'home');
     expect(el).toHaveAttribute('weight', 'filled');

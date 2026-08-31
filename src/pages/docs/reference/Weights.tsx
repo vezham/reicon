@@ -18,14 +18,14 @@ export default function Weights({ markdownContent, copiedField, onCopy }: Props)
       <div className="grid sm:grid-cols-2 gap-4">
         <div className="bg-text-base/3 border border-text-base/6 rounded-xl p-6 text-center">
           <div className="flex justify-center mb-4">
-            <re-icon icon="home" size={48} color="currentColor" />
+            <vx-icon icon="home" size={48} color="currentColor" />
           </div>
           <span className="text-text-base/70 text-sm font-medium">Outline</span>
           <p className="text-text-base/30 text-[12px] mt-1">Default weight</p>
         </div>
         <div className="bg-text-base/3 border border-text-base/6 rounded-xl p-6 text-center">
           <div className="flex justify-center mb-4">
-            <re-icon icon="home" size={48} weight="filled" color="currentColor" />
+            <vx-icon icon="home" size={48} weight="filled" color="currentColor" />
           </div>
           <span className="text-text-base/70 text-sm font-medium">Filled</span>
           <p className="text-text-base/30 text-[12px] mt-1">weight="Filled"</p>

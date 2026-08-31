@@ -57,7 +57,7 @@ export default function DocsLeftSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="compass" size="13" />
+                        <vx-icon icon="compass" size="13" />
                     </div>
                     <span>Getting Started</span>
                 </div>
@@ -71,7 +71,7 @@ export default function DocsLeftSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="code" size="13" />
+                        <vx-icon icon="code" size="13" />
                     </div>
                     <span>Framework</span>
                 </div>
@@ -90,7 +90,7 @@ export default function DocsLeftSidebar({
                                     </>
                                 ) : (
                                     <>
-                                        <re-icon icon="code" size="14" className="text-text-base/40" />
+                                        <vx-icon icon="code" size="14" className="text-text-base/40" />
                                         <span className="text-[12px] text-text-base/40 font-medium">Select</span>
                                     </>
                                 )}
@@ -130,7 +130,7 @@ export default function DocsLeftSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="settings" size="13" />
+                        <vx-icon icon="settings" size="13" />
                     </div>
                     <span>Basics</span>
                 </div>
@@ -144,7 +144,7 @@ export default function DocsLeftSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="palette" size="13" />
+                        <vx-icon icon="palette" size="13" />
                     </div>
                     <span>Guides</span>
                 </div>
@@ -158,7 +158,7 @@ export default function DocsLeftSidebar({
             <div className="reicon-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
-                        <re-icon icon="help-circle" size="13" />
+                        <vx-icon icon="help-circle" size="13" />
                     </div>
                     <span>Advanced</span>
                 </div>

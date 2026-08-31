@@ -27,7 +27,7 @@ export default function DocsActionsBar({
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-[13px] font-medium text-text-base/70 hover:text-text-base bg-text-base/4 border border-text-base/10 hover:bg-text-base/8 transition-colors whitespace-nowrap"
                 >
-                    <re-icon icon="pen" size={14}></re-icon>
+                    <vx-icon icon="pen" size={14}></vx-icon>
                     Edit on GitHub
                 </a>
             </div>
@@ -43,7 +43,7 @@ export default function DocsActionsBar({
                             <path d="M20 6 9 17l-5-5" />
                         </svg>
                     ) : (
-                        <re-icon icon="copy" size={14}></re-icon>
+                        <vx-icon icon="copy" size={14}></vx-icon>
                     )}
                     Copy Markdown
                 </button>
@@ -71,7 +71,7 @@ export default function DocsActionsBar({
                                 <SiGithub size={14} />
                                 Open in GitHub
                             </span>
-                            <re-icon icon="arrow-up-right" size={12} className="text-text-base/30"></re-icon>
+                            <vx-icon icon="arrow-up-right" size={12} className="text-text-base/30"></vx-icon>
                         </a>
 
                         <button
@@ -85,7 +85,7 @@ export default function DocsActionsBar({
                                 </svg>
                                 Open in ChatGPT
                             </span>
-                            <re-icon icon="arrow-up-right" size={12} className="text-text-base/30"></re-icon>
+                            <vx-icon icon="arrow-up-right" size={12} className="text-text-base/30"></vx-icon>
                         </button>
 
                         <button
@@ -96,7 +96,7 @@ export default function DocsActionsBar({
                                 <SiClaude size={14} />
                                 Open in Claude
                             </span>
-                            <re-icon icon="arrow-up-right" size={12} className="text-text-base/30"></re-icon>
+                            <vx-icon icon="arrow-up-right" size={12} className="text-text-base/30"></vx-icon>
                         </button>
 
                         <button
@@ -104,10 +104,10 @@ export default function DocsActionsBar({
                             className="w-full flex items-center justify-between px-4 py-2 text-[13px] text-text-base/70 hover:text-text-base hover:bg-text-base/4 transition-colors text-left cursor-pointer"
                         >
                             <span className="flex items-center gap-2">
-                                <re-icon icon="chat" size={14}></re-icon>
+                                <vx-icon icon="chat" size={14}></vx-icon>
                                 Open in T3 Chat
                             </span>
-                            <re-icon icon="arrow-up-right" size={12} className="text-text-base/30"></re-icon>
+                            <vx-icon icon="arrow-up-right" size={12} className="text-text-base/30"></vx-icon>
                         </button>
                     </div>
                 )}

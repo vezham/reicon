@@ -63,25 +63,25 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
       {/* Basic CDN Usage */}
       <h4 className="text-md font-medium text-text-base mb-4 mt-8">Basic CDN Usage</h4>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Simply add the <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<re-icon>'}</code> tags directly in your HTML:
+        Simply add the <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code> tags directly in your HTML:
       </p>
 
       <SyntaxBlock
         title="HTML"
-        onCopy={() => onCopy('<re-icon icon="home"></re-icon>\n<re-icon icon="shield-check" weight="filled" size="32" color="#6C5CE7"></re-icon>', 'cdn-basic')}
+        onCopy={() => onCopy('<vx-icon icon="home"></vx-icon>\n<vx-icon icon="shield-check" weight="filled" size="32" color="#6C5CE7"></vx-icon>', 'cdn-basic')}
         copied={copiedField === 'cdn-basic'}
       >
         <span className="text-text-base/70">{'<'}</span>
-        <span className="text-[#e06c75]">re-icon</span>
+        <span className="text-[#e06c75]">vx-icon</span>
         <span className="text-[#d19a66]"> icon</span>
         <span className="text-text-base/50">=</span>
         <span className="text-[#98c379]">"home"</span>
         <span className="text-text-base/70">{'></'}</span>
-        <span className="text-[#e06c75]">re-icon</span>
+        <span className="text-[#e06c75]">vx-icon</span>
         <span className="text-text-base/70">{'>'}</span>
         {'\n'}
         <span className="text-text-base/70">{'<'}</span>
-        <span className="text-[#e06c75]">re-icon</span>
+        <span className="text-[#e06c75]">vx-icon</span>
         <span className="text-[#d19a66]"> icon</span>
         <span className="text-text-base/50">=</span>
         <span className="text-[#98c379]">"shield-check"</span>
@@ -95,36 +95,36 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         <span className="text-text-base/50">=</span>
         <span className="text-[#98c379]">"#6C5CE7"</span>
         <span className="text-text-base/70">{'></'}</span>
-        <span className="text-[#e06c75]">re-icon</span>
+        <span className="text-[#e06c75]">vx-icon</span>
         <span className="text-text-base/70">{'>'}</span>
       </SyntaxBlock>
 
       {/* Customizing Icons */}
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Customizing Elements (Attributes)</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        You can customize <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<re-icon>'}</code> elements using reactive HTML attributes. Updates will be rendered instantly.
+        You can customize <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code> elements using reactive HTML attributes. Updates will be rendered instantly.
       </p>
 
       <SyntaxBlock
         title="Attributes"
-        onCopy={() => onCopy('<!-- Size -->\n<re-icon icon="home" size="16"></re-icon>\n<re-icon icon="home" size="32"></re-icon>\n\n<!-- Color -->\n<re-icon icon="heart" color="#ef4444"></re-icon>\n<re-icon icon="heart" color="rgb(99, 102, 241)"></re-icon>\n\n<!-- Weight -->\n<re-icon icon="star" weight="outline"></re-icon>\n<re-icon icon="star" weight="filled"></re-icon>', 'cdn-attrs')}
+        onCopy={() => onCopy('<!-- Size -->\n<vx-icon icon="home" size="16"></vx-icon>\n<vx-icon icon="home" size="32"></vx-icon>\n\n<!-- Color -->\n<vx-icon icon="heart" color="#ef4444"></vx-icon>\n<vx-icon icon="heart" color="rgb(99, 102, 241)"></vx-icon>\n\n<!-- Weight -->\n<vx-icon icon="star" weight="outline"></vx-icon>\n<vx-icon icon="star" weight="filled"></vx-icon>', 'cdn-attrs')}
         copied={copiedField === 'cdn-attrs'}
       >
         <span className="text-text-base/30">{'<!-- Size -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"16"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"16"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"32"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"home"</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"32"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Color -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"heart"</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#ef4444"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"heart"</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#ef4444"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Weight -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"outline"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"outline"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">re-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
       </SyntaxBlock>
     </>
   );

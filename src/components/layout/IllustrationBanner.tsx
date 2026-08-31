@@ -102,7 +102,7 @@ export default function IllustrationBanner() {
           className="absolute top-5 right-5 z-20 w-8 h-8 rounded-full bg-text-base/5 hover:bg-text-base/12 flex items-center justify-center text-text-base/50 hover:text-text-base transition-all cursor-pointer border border-text-base/8"
           aria-label="Close modal"
         >
-          <re-icon icon="x" size="14" color="currentColor" />
+          <vx-icon icon="x" size="14" color="currentColor" />
         </button>
 
         {/* 5 Real Extracted Showcase Cards */}

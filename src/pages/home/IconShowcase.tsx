@@ -54,8 +54,8 @@ function OrbitRing({ items, className, counterClassName, size }: {
                             <div className={`w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl bg-text-base/4 border border-text-base/6 flex items-center justify-center shadow-2xs hover:scale-110 hover:border-[#6C5CE7]/40 transition-all duration-200 ${counterClassName}`} title={item.name}>
                                 {item.type === 'icon' ? (
                                     <>
-                                        <re-icon icon={item.name} size={18} color="currentColor" className="text-text-base/70 sm:hidden" weight="outline" />
-                                        <re-icon icon={item.name} size={22} color="currentColor" className="text-text-base/70 hidden sm:block" weight="outline" />
+                                        <vx-icon icon={item.name} size={18} color="currentColor" className="text-text-base/70 sm:hidden" weight="outline" />
+                                        <vx-icon icon={item.name} size={22} color="currentColor" className="text-text-base/70 hidden sm:block" weight="outline" />
                                     </>
                                 ) : (
                                     <img src={item.src} alt={item.name} className="w-4.5 h-4.5 sm:w-6 sm:h-6 object-contain" />

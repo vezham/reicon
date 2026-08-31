@@ -91,7 +91,7 @@ export default function BrandsOverlay() {
                 aria-label="Dismiss"
                 className="w-8 h-8 flex items-center justify-center rounded-full bg-text-base/5 hover:bg-text-base/10 transition-colors text-text-base/40 hover:text-text-base/70 cursor-pointer"
               >
-                <re-icon icon="x" size="12" color="currentColor" />
+                <vx-icon icon="x" size="12" color="currentColor" />
               </button>
             </div>
           </div>

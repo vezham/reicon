@@ -20,7 +20,7 @@ export default function PlaygroundCode({
     pascalName: string;
     iconNamesData: Record<string, string>;
 }) {
-    const markup = `<re-icon icon="${selected}" size={${size}} weight="${weight}" color="${displayColor}" />`;
+    const markup = `<vx-icon icon="${selected}" size={${size}} weight="${weight}" color="${displayColor}" />`;
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
@@ -44,7 +44,7 @@ export default function PlaygroundCode({
                                 : 'border-text-base/4 hover:bg-text-base/3'
                                 }`}
                         >
-                            <re-icon icon={name} size={size} weight={weight} color={displayColor} />
+                            <vx-icon icon={name} size={size} weight={weight} color={displayColor} />
                         </button>
                     ))}
                 </div>

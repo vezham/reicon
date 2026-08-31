@@ -87,7 +87,7 @@ export default function useIconDetail() {
   const fw = activeWeight === 'filled';
 
   const vanillaRaw = `import { ${pascalName} } from 'reicon';\n\nconst icon = ${pascalName}({ size: 24${fw ? ", weight: 'Filled'" : ''} });\ndocument.body.appendChild(icon);`;
-  const cdnRaw = `<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"><\/script>\n<re-icon icon="${name}"${fw ? ' weight="filled"' : ''}></re-icon>`;
+  const cdnRaw = `<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"><\/script>\n<vx-icon icon="${name}"${fw ? ' weight="filled"' : ''}></vx-icon>`;
   const reactRaw = `import { ${pascalName} } from 'reicon-react';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
   const reactNativeRaw = `import { ${pascalName} } from 'reicon-react-native';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
   const vueRaw = `import { ${pascalName} } from 'reicon-vue';\n\n<${pascalName} :size="24"${fw ? ' weight="Filled"' : ''} />`;

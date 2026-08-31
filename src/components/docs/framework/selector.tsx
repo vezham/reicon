@@ -24,7 +24,7 @@ export default function FrameworkSelector({
     return (
         <div className="mt-4">
             <div className="sidebar-separator">
-                <re-icon icon="code" size="12" />
+                <vx-icon icon="code" size="12" />
                 <span>Framework</span>
             </div>
             <div ref={dropdownRef} className="relative mb-2 px-3">
@@ -40,7 +40,7 @@ export default function FrameworkSelector({
                             </>
                         ) : (
                             <>
-                                <re-icon icon="code" size="14" className="text-text-base/40" />
+                                <vx-icon icon="code" size="14" className="text-text-base/40" />
                                 <span className="text-[12px] text-text-base/40 font-medium">Select</span>
                             </>
                         )}

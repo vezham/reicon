@@ -70,7 +70,7 @@ function Sidebar({
       <div className="reicon-sidebar-group">
         <div className="sidebar-section-header">
           <div className="sidebar-icon-box">
-            <re-icon icon="palette" size="13" />
+            <vx-icon icon="palette" size="13" />
           </div>
           <span>Weights</span>
         </div>
@@ -91,7 +91,7 @@ function Sidebar({
       <div className="reicon-sidebar-group">
         <div className="sidebar-section-header">
           <div className="sidebar-icon-box">
-            <re-icon icon="ruler" size="13" />
+            <vx-icon icon="ruler" size="13" />
           </div>
           <span>Grid Size</span>
         </div>
@@ -107,7 +107,7 @@ function Sidebar({
       <div className="reicon-sidebar-group">
         <div className="sidebar-section-header">
           <div className="sidebar-icon-box">
-            <re-icon icon="category2" size="13" />
+            <vx-icon icon="category2" size="13" />
           </div>
           <span>Categories</span>
         </div>
@@ -274,7 +274,7 @@ function Sidebar({
           <span style={{ fontWeight: 600, fontSize: '14px', color: 'var(--text-base)' }}>Filters</span>
           {onClose && (
             <button onClick={onClose} className="reicon-sidebar-close" aria-label="Close sidebar">
-              <re-icon icon="x" size="16" color="currentColor" style={{ color: 'var(--text-muted)' }} />
+              <vx-icon icon="x" size="16" color="currentColor" style={{ color: 'var(--text-muted)' }} />
             </button>
           )}
         </div>
