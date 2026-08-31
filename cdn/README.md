@@ -12,12 +12,12 @@ This folder holds the compiled, self-contained JavaScript files ready for servin
 
 > **Note:** These files are git-ignored and automatically generated during compilation.
 
-* **`reicon.js`**: Core vanilla JS runtime bundle containing all standard icons registered as custom web components (e.g. `<re-icon name="arrow-up"></re-icon>`).
-* **`reicon-brands.js`**: Specialized bundle containing custom brand and social media icons.
+* **`vezham-icon.js`**: Core vanilla JS runtime bundle containing all standard icons registered as custom web components (e.g. `<re-icon name="arrow-up"></re-icon>`).
+* **`vezham-brands.js`**: Specialized bundle containing custom brand and social media icons.
 
 ## 🛠️ How to Generate
 
-1. The raw bundles are built from `packages/reicon/scripts/build.cjs` by running:
+1. The raw bundles are built from `packages/icons/scripts/build.cjs` by running:
    ```bash
    npm run build:js
    ```

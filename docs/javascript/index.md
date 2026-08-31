@@ -74,9 +74,9 @@ Perfect for static HTML websites, legacy applications, and prototyping. Include 
 ### Register Custom Element (`<re-icon>`)
 Include the script tag inside your HTML page. This registers a reactive `<re-icon>` component that supports dynamic styling, sizes, weights, and gradients.
 ```html
-<script src="https://unpkg.com/reicon/cdn/reicon.js"></script>
+<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icon.js"></script>
 ```
-*Or load a specific version:* `https://unpkg.com/reicon@latest/cdn/reicon.js`
+*Or load a specific version:* `https://unpkg.com/@vezham/icons@latest/cdn/vezham-icon.js`
 
 ### Basic CDN Usage
 Simply add the `<re-icon>` tags directly in your HTML:
@@ -88,7 +88,7 @@ Simply add the `<re-icon>` tags directly in your HTML:
 ### Load Functions globally via Script tag
 If you want to use the global `reicon` object functions directly in a browser script tag:
 ```html
-<script src="https://unpkg.com/reicon@latest/umd/reicon.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/umd/vezham-icon.js"></script>
 <script>
   // Create icon elements via global object
   document.body.appendChild(reicon.Home({ size: 32 }));
@@ -136,7 +136,7 @@ A complete HTML document importing Reicon via CDN and showcasing customizations:
 <head>
   <meta charset="UTF-8">
   <title>Reicon Page</title>
-  <script src="https://unpkg.com/reicon@latest/cdn/reicon.js"></script>
+  <script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icon.js"></script>
 </head>
 <body>
   <nav>

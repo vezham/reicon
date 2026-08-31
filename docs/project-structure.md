@@ -34,8 +34,8 @@ reicon/
 │   └── mcp/index.md             # MCP Server guide for agents and CLI
 │
 ├── cdn/                         # Generated CDN bundles (git-ignored)
-│   ├── reicon.js               # Main icon runtime (<re-icon>)
-│   └── reicon-brands.js
+│   ├── vezham-icon.js               # Main icon runtime (<re-icon>)
+│   └── vezham-brands.js
 │
 ├── public/                      # Static assets
 │   ├── favicon/                # Favicon bundle (ico, svg, pngs, manifest)

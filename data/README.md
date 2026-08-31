@@ -87,11 +87,11 @@ A `{ "<icon-name>": ["tag", "tag"] }` map for enriching search / SEO metadata ou
 
 | Output | Built by | Command | Who runs it |
 | :---- | :------- | :------- | :---------- |
-| Website + CDN bundle | `packages/reicon/scripts/build.cjs` | `npm run build` | Automatic on every deploy |
-| `packages/reicon/dist` (npm) | `packages/reicon/scripts/build.cjs` | `npm run build:js` | **Maintainer only** |
-| `packages/reicon-react/dist` (npm) | `packages/reicon-react/scripts/build.cjs` | `npm run build:react` | **Maintainer only** |
-| `packages/reicon-vue/dist` (npm) | `packages/reicon-vue/scripts/build.cjs` | `npm run build:vue` | **Maintainer only** |
-| `packages/reicon-svelte/dist` (npm) | `packages/reicon-svelte/scripts/build.cjs` | `npm run build:svelte` | **Maintainer only** |
+| Website + CDN bundle | `packages/icons/scripts/build.cjs` | `npm run build` | Automatic on every deploy |
+| `packages/icons/dist` (npm) | `packages/icons/scripts/build.cjs` | `npm run build:js` | **Maintainer only** |
+| `packages/icons-react/dist` (npm) | `packages/icons-react/scripts/build.cjs` | `npm run build:react` | **Maintainer only** |
+| `packages/icons-vue/dist` (npm) | `packages/icons-vue/scripts/build.cjs` | `npm run build:vue` | **Maintainer only** |
+| `packages/icons-svelte/dist` (npm) | `packages/icons-svelte/scripts/build.cjs` | `npm run build:svelte` | **Maintainer only** |
 
 > [!IMPORTANT]
 > **Contributors only edit `data/icon-data.json`.** The website automatically shows new icons on the next deploy. npm packages are rebuilt and published by the maintainer in a separate release step — you do not need to run `build:packages` in your PR.

@@ -3,7 +3,7 @@
  * sync-icon-names.mjs
  *
  * Regenerates scripts/icon-names.json from data/icon-data.json.
- * This file is the single source of truth for icon slugs — packages/reicon-react/dist/
+ * This file is the single source of truth for icon slugs — packages/icons-react/dist/
  * also emits one, but scripts/ uses THIS copy so the build scripts (sitemap, prerender)
  * are never out of sync with the actual icon set.
  *

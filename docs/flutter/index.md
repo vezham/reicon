@@ -57,5 +57,5 @@ SvgPicture.string(
 
 ## Links
 
-- [pub.dev](https://pub.dev/packages/reicon_flutter)
-- [Source](./packages/reicon-flutter)
+- [pub.dev](https://pub.dev/packages/icons_flutter)
+- [Source](./packages/icons-flutter)

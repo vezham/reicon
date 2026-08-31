@@ -1,0 +1,15 @@
+{
+  "name": "@vezham/icons-vue",
+  "version": "1.0.0-alpha.1",
+  "type": "module",
+  "description": "Vue icon components for Reicon.",
+  "scripts": {
+    "build": "node scripts/build.cjs"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "vue": "^3.0.0"
+  }
+}

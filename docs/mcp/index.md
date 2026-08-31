@@ -51,7 +51,7 @@ For a local development build:
   "mcpServers": {
     "reicon": {
       "command": "node",
-      "args": ["./packages/reicon-mcp/bin/run.cjs"]
+      "args": ["./packages/icons-mcp/bin/run.cjs"]
     }
   }
 }

@@ -37,12 +37,12 @@ Reicon is organized as a monorepo. Here is a breakdown of what each folder conta
 | :--- | :--- |
 | [`data/icon-data.json`](file:///Users/devchauhan/Documents/Website/reicon/data/icon-data.json) | **Single source of truth.** Every icon's raw SVG markup (Outline & Filled weights) and metadata live here. |
 | [`packages/`](file:///Users/devchauhan/Documents/Website/reicon/packages) | Framework packages rebuilt automatically from `data/icon-data.json`. |
-| ├─ [`reicon/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon) | Vanilla JS & CDN core library. |
-| ├─ [`reicon-react/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon-react) | React wrapper components. |
-| ├─ [`reicon-vue/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon-vue) | Vue 3 wrapper components. |
-| ├─ [`reicon-svelte/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon-svelte) | Svelte wrapper components. |
-| ├─ [`reicon-figma/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon-figma) | Figma plugin build environment. |
-| └─ [`reicon-vscode/`](file:///Users/devchauhan/Documents/Website/reicon/packages/reicon-vscode) | VS Code Extension helper. |
+| ├─ [`reicon/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons) | Vanilla JS & CDN core library. |
+| ├─ [`reicon-react/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-react) | React wrapper components. |
+| ├─ [`reicon-vue/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vue) | Vue 3 wrapper components. |
+| ├─ [`reicon-svelte/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-svelte) | Svelte wrapper components. |
+| ├─ [`reicon-figma/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-figma) | Figma plugin build environment. |
+| └─ [`reicon-vscode/`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vscode) | VS Code Extension helper. |
 | [`scripts/`](file:///Users/devchauhan/Documents/Website/reicon/scripts) | Build and tooling utilities (Sitemap, SEO auditing, OG image generation). |
 | [`src/`](file:///Users/devchauhan/Documents/Website/reicon/src) | Reicon documentation website source (Vite + React). |
 | [`public/`](file:///Users/devchauhan/Documents/Website/reicon/public) | Website static assets, favicons, `robots.txt`, and `llms.txt`. |

@@ -71,8 +71,8 @@ export const PACKAGES: PackageItem[] = [
         npmPkg: 'reicon_flutter',
         description: 'Official Flutter/Dart package for Reicon. 2700+ SVG icons as path strings. Works with flutter_svg.',
         icon: <FlutterIcon size={48} />,
-        npmUrl: 'https://pub.dev/packages/reicon_flutter',
-        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-flutter',
+        npmUrl: 'https://pub.dev/packages/icons_flutter',
+        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/icons-flutter',
         guideUrl: '/docs/flutter',
     },
 ];
@@ -99,7 +99,7 @@ export const TOOLS: ToolItem[] = [
         icon: <FigmaIcon size={48} />,
         guideUrl: '/docs/figma',
         primaryAction: { label: 'Open in Figma', href: 'https://www.figma.com/community/plugin/1652983191908763066' },
-        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-figma',
+        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/icons-figma',
     },
     {
         id: 'vscode',
@@ -110,7 +110,7 @@ export const TOOLS: ToolItem[] = [
         icon: <VscVscodeInsiders className="text-[#007ACC]" size={48} />,
         guideUrl: '/docs/vscode',
         primaryAction: { label: 'Use', href: 'https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon' },
-        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-vscode',
+        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/icons-vscode',
     },
     {
         id: 'mcp',
@@ -121,7 +121,7 @@ export const TOOLS: ToolItem[] = [
         icon: <McpIcon size={48} />,
         guideUrl: '/docs/mcp',
         primaryAction: { label: 'npm', href: 'https://www.npmjs.com/package/reicon-mcp' },
-        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/reicon-mcp',
+        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/icons-mcp',
     },
 ];
 

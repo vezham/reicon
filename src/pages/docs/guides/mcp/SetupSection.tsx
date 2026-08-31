@@ -70,7 +70,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         {'\n      '}
         <span className="text-[#e06c75]">"args"</span>
         <span className="text-text-base/40">: [</span>
-        <span className="text-[#98c379]">"./packages/reicon-mcp/bin/run.cjs"</span>
+        <span className="text-[#98c379]">"./packages/icons-mcp/bin/run.cjs"</span>
         <span className="text-text-base/40">]</span>
         {'\n    '}
         <span className="text-text-base/40">{'}'}</span>

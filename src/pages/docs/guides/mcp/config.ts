@@ -11,7 +11,7 @@ export const MCP_DEV_CONFIG = `{
   "mcpServers": {
     "reicon": {
       "command": "node",
-      "args": ["./packages/reicon-mcp/bin/run.cjs"]
+      "args": ["./packages/icons-mcp/bin/run.cjs"]
     }
   }
 }`;

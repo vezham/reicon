@@ -20,14 +20,14 @@ const ROOT = resolve(__dirname, '..');
 
 // ── package manifest ──────────────────────────────────────────────────────
 const PACKAGES = [
-  { key: 'reicon',         path: 'packages/reicon/package.json' },
-  { key: 'reicon-react',   path: 'packages/reicon-react/package.json' },
-  { key: 'reicon-vue',     path: 'packages/reicon-vue/package.json' },
-  { key: 'reicon-svelte',  path: 'packages/reicon-svelte/package.json' },
-  { key: 'reicon-react-native', path: 'packages/reicon-react-native/package.json' },
-  { key: 'reicon-vscode',  path: 'packages/reicon-vscode/package.json' },
-  { key: 'reicon-mcp',     path: 'packages/reicon-mcp/package.json' },
-  { key: 'reicon-figma',   path: 'packages/reicon-figma/Reicon/package.json' },
+  { key: 'reicon',         path: 'packages/icons/package.json' },
+  { key: 'reicon-react',   path: 'packages/icons-react/package.json' },
+  { key: 'reicon-vue',     path: 'packages/icons-vue/package.json' },
+  { key: 'reicon-svelte',  path: 'packages/icons-svelte/package.json' },
+  { key: 'reicon-react-native', path: 'packages/icons-react-native/package.json' },
+  { key: 'reicon-vscode',  path: 'packages/icons-vscode/package.json' },
+  { key: 'reicon-mcp',     path: 'packages/icons-mcp/package.json' },
+  { key: 'reicon-figma',   path: 'packages/icons-figma/Reicon/package.json' },
   { key: 'reicon-docs',    path: 'package.json' },
 ];
 
