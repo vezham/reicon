@@ -17,5 +17,43 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0"
-  }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./icons/*": {
+      "import": "./dist/icons/*.js",
+      "types": "./dist/icons/*.d.ts"
+    },
+    "./createIcon": {
+      "import": "./dist/createIcon.js",
+      "types": "./dist/createIcon.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "icons",
+    "react",
+    "react-icons",
+    "svg-icons",
+    "icon-library",
+    "outline",
+    "filled",
+    "tree-shakeable",
+    "typescript"
+  ],
+  "author": {
+    "name": "devchauhan",
+    "email": "dev@devchauhan.in",
+    "url": "https://devchauhan.in"
+  },
+  "license": "MIT"
 }

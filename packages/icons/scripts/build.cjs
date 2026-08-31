@@ -727,7 +727,6 @@ const pkg = {
     'vanilla-js',
     'svg-icons',
     'icon-library',
-    'reicon',
     'outline',
     'filled',
     'tree-shakeable',

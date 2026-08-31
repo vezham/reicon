@@ -240,7 +240,6 @@ const pkg = {
     'react-icons',
     'svg-icons',
     'icon-library',
-    'reicon',
     'outline',
     'filled',
     'tree-shakeable',

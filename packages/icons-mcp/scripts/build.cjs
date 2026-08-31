@@ -109,11 +109,18 @@ const pkg = {
     'reicon-mcp': 'bin/run.cjs',
   },
   main: './server/index.js',
+  types: './server/index.d.ts',
+  exports: {
+    '.': {
+      import: './server/index.js',
+      types: './server/index.d.ts',
+    },
+  },
   files: ['bin', 'cli', 'server', 'core', 'data', 'README.md', 'LICENSE'],
   scripts: {
     build: 'node scripts/build.cjs',
   },
-  keywords: ['reicon', 'icons', 'mcp', 'model-context-protocol', 'svg'],
+  keywords: ['icons', 'mcp', 'model-context-protocol', 'svg'],
   author: 'Dev Chauhan',
   license: 'MIT',
   repository: {

@@ -14,5 +14,54 @@
   "homepage": "https://vezham.com",
   "scripts": {
     "build": "node scripts/build.cjs"
-  }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./icons/*": {
+      "import": "./dist/icons/*.js",
+      "types": "./dist/icons/*.d.ts"
+    },
+    "./createIcon": {
+      "import": "./dist/createIcon.js",
+      "types": "./dist/createIcon.d.ts"
+    },
+    "./umd/vezham-icons.js": {
+      "import": "./dist/umd/vezham-icons.js"
+    },
+    "./cdn/vezham-icons.js": {
+      "import": "./dist/cdn/vezham-icons.js"
+    },
+    "./cdn/*": {
+      "import": "./dist/cdn/*.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "unpkg": "./dist/umd/vezham-icons.js",
+  "jsdelivr": "./dist/umd/vezham-icons.js",
+  "browser": "./dist/umd/vezham-icons.js",
+  "keywords": [
+    "icons",
+    "vanilla-js",
+    "svg-icons",
+    "icon-library",
+    "outline",
+    "filled",
+    "tree-shakeable",
+    "typescript"
+  ],
+  "author": {
+    "name": "devchauhan",
+    "email": "dev@devchauhan.in",
+    "url": "https://devchauhan.in"
+  },
+  "license": "MIT"
 }

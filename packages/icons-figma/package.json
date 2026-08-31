@@ -11,7 +11,7 @@
     "url": "https://github.com/vezham/reicon/issues"
   },
   "homepage": "https://vezham.com",
-  "main": "code.js",
+  "main": "./dist/code.js",
   "scripts": {
     "build": "node scripts/build.cjs",
     "lint": "eslint .",
@@ -27,5 +27,8 @@
     "eslint": "^9.39.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

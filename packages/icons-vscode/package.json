@@ -15,7 +15,6 @@
     "heroicons",
     "icon picker",
     "icon browser",
-    "reicon",
     "vue-icons",
     "svelte-icons",
     "outline icons",
@@ -54,6 +53,14 @@
   "homepage": "https://vezham.com",
   "activationEvents": [],
   "main": "./extension.js",
+  "files": [
+    "dist",
+    "extension.js",
+    "resources",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "contributes": {
     "viewsContainers": {
       "activitybar": [

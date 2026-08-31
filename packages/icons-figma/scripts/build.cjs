@@ -115,7 +115,7 @@ try {
     repository: srcPkg.repository,
     bugs: srcPkg.bugs,
     homepage: srcPkg.homepage,
-    main: srcPkg.main,
+    main: 'code.js',
     files: ['code.js', 'ui.html', 'manifest.json', 'icon.png', 'README.md', 'CHANGELOG.md', 'LICENSE'],
     author: srcPkg.author,
     license: srcPkg.license,

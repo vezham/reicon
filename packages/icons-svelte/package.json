@@ -17,5 +17,55 @@
   },
   "peerDependencies": {
     "svelte": ">=3.0.0"
-  }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./icons/*.svelte": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.svelte",
+      "default": "./dist/icons/*.svelte"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.svelte",
+      "default": "./dist/icons/*.svelte"
+    },
+    "./Icon.svelte": {
+      "types": "./dist/Icon.svelte.d.ts",
+      "svelte": "./dist/Icon.svelte",
+      "default": "./dist/Icon.svelte"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "icons",
+    "svelte",
+    "svelte3",
+    "svelte4",
+    "svelte5",
+    "svelte-icons",
+    "svg-icons",
+    "icon-library",
+    "outline",
+    "filled",
+    "tree-shakeable",
+    "typescript"
+  ],
+  "author": {
+    "name": "devchauhan",
+    "email": "dev@devchauhan.in",
+    "url": "https://devchauhan.in"
+  },
+  "license": "MIT"
 }
