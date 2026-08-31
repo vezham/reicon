@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
+const ROOT = path.join(__dirname, '..');
 const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
 const TEMPLATE_HTML_PATH = path.join(__dirname, '..', 'src', 'ui.html');
-const OUTPUT_HTML_PATH = path.join(__dirname, '..', 'ui.html');
+const DIST = path.join(ROOT, 'dist');
+const OUTPUT_HTML_PATH = path.join(DIST, 'ui.html');
 const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'icon-light.webp');
 
-console.log('Compiling Reicon Figma icons database and inlining into ui.html...');
+console.log('Building Reicon Figma plugin package...');
 
 try {
   if (!fs.existsSync(DATA_PATH)) {
@@ -16,6 +19,17 @@ try {
   if (!fs.existsSync(TEMPLATE_HTML_PATH)) {
     throw new Error(`Template HTML file not found at ${TEMPLATE_HTML_PATH}`);
   }
+
+  fs.rmSync(DIST, { recursive: true, force: true });
+  fs.mkdirSync(DIST, { recursive: true });
+
+  execFileSync('node', [
+    path.join(ROOT, 'node_modules', 'typescript', 'bin', 'tsc'),
+    '-p',
+    path.join(ROOT, 'tsconfig.json'),
+    '--outDir',
+    DIST,
+  ], { cwd: ROOT, stdio: 'inherit' });
 
   const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
   const compactData = {};
@@ -79,14 +93,37 @@ try {
     templateContent = templateContent.replace('</head>', `${inlineScripts}\n</head>`);
   }
 
-  // Ensure output directory exists
-  const outputDir = path.dirname(OUTPUT_HTML_PATH);
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+  fs.writeFileSync(OUTPUT_HTML_PATH, templateContent, 'utf-8');
+
+  for (const file of ['manifest.json', 'icon.png', 'README.md', 'CHANGELOG.md']) {
+    const source = path.join(ROOT, file);
+    if (fs.existsSync(source)) {
+      fs.copyFileSync(source, path.join(DIST, file));
+    }
   }
 
-  fs.writeFileSync(OUTPUT_HTML_PATH, templateContent, 'utf-8');
-  console.log(`Successfully compiled ${Object.keys(compactData).length} icons directly into ${OUTPUT_HTML_PATH}`);
+  const licensePath = path.join(ROOT, '..', '..', 'LICENSE');
+  if (fs.existsSync(licensePath)) {
+    fs.copyFileSync(licensePath, path.join(DIST, 'LICENSE'));
+  }
+
+  const srcPkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf-8'));
+  const pkg = {
+    name: srcPkg.name,
+    version: srcPkg.version,
+    description: srcPkg.description,
+    repository: srcPkg.repository,
+    bugs: srcPkg.bugs,
+    homepage: srcPkg.homepage,
+    main: srcPkg.main,
+    files: ['code.js', 'ui.html', 'manifest.json', 'icon.png', 'README.md', 'CHANGELOG.md', 'LICENSE'],
+    author: srcPkg.author,
+    license: srcPkg.license,
+  };
+
+  fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) + '\n');
+
+  console.log(`Successfully built ${Object.keys(compactData).length} icons into ${DIST}`);
 } catch (error) {
   console.error('Error compiling Figma plugin UI:', error);
   process.exit(1);
