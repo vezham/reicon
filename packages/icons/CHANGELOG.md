@@ -1,5 +1,11 @@
 # @vezham/icons
 
+## 1.0.0
+
+### Patch Changes
+
+- [`4bc7ae2`](https://github.com/vezham/reicon/commit/4bc7ae21342fe26c90359bc0d5cbb74258b32fe7) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.1
 
 ### Patch Changes
