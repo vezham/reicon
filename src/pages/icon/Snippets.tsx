@@ -125,7 +125,7 @@ export function CdnSnippet({ name, filled }: { name: string; filled: boolean }) 
     <>
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span>
       <span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span>
-      <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/cdn/vezham-icon.js"</span>
+      <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"</span>
       <span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
       {'\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">re-icon</span>

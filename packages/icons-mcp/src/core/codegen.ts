@@ -83,7 +83,7 @@ export function generateCode(
       return { importStatement, docsSnippet };
     }
     case 'html': {
-      const importStatement = '<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icon.js"></script>';
+      const importStatement = '<script src="https://unpkg.com/@vezham/icons/cdn/vezham-icons.js"></script>';
       const props = [
         ` icon="${icon.name}"`,
         sizeProp(size, 'html'),

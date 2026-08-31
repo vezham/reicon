@@ -12,7 +12,7 @@ This folder holds the compiled, self-contained JavaScript files ready for servin
 
 > **Note:** These files are git-ignored and automatically generated during compilation.
 
-* **`vezham-icon.js`**: Core vanilla JS runtime bundle containing all standard icons registered as custom web components (e.g. `<re-icon name="arrow-up"></re-icon>`).
+* **`vezham-icons.js`**: Core vanilla JS runtime bundle containing all standard icons registered as custom web components (e.g. `<re-icon name="arrow-up"></re-icon>`).
 * **`vezham-brands.js`**: Specialized bundle containing custom brand and social media icons.
 
 ## 🛠️ How to Generate

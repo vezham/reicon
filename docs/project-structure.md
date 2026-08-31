@@ -34,7 +34,7 @@ reicon/
 │   └── mcp/index.md             # MCP Server guide for agents and CLI
 │
 ├── cdn/                         # Generated CDN bundles (git-ignored)
-│   ├── vezham-icon.js               # Main icon runtime (<re-icon>)
+│   ├── vezham-icons.js               # Main icon runtime (<re-icon>)
 │   └── vezham-brands.js
 │
 ├── public/                      # Static assets

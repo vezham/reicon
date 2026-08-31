@@ -307,7 +307,7 @@ const umdBundle = `(function (global, factory) {
 }));
 `;
 
-fs.writeFileSync(path.join(DIST, 'umd', 'vezham-icon.js'), umdBundle);
+fs.writeFileSync(path.join(DIST, 'umd', 'vezham-icons.js'), umdBundle);
 console.log(`  UMD bundle:  ${(Buffer.byteLength(umdBundle) / 1024 / 1024).toFixed(2)} MB`);
 
 // ── CDN bundle ─────────────────────────────────────────────────────────────
@@ -680,7 +680,7 @@ const runtimeJS = `/*!
 
 const cdnDist = path.join(DIST, 'cdn');
 fs.mkdirSync(cdnDist, { recursive: true });
-fs.writeFileSync(path.join(cdnDist, 'vezham-icon.js'), runtimeJS);
+fs.writeFileSync(path.join(cdnDist, 'vezham-icons.js'), runtimeJS);
 console.log(`  CDN bundle:  ${(Buffer.byteLength(runtimeJS) / 1024 / 1024).toFixed(2)} MB`);
 
 // ── package.json ───────────────────────────────────────────────────────────
@@ -694,9 +694,9 @@ const pkg = {
   main: './index.js',
   module: './index.js',
   types: './index.d.ts',
-  unpkg: './umd/vezham-icon.js',
-  jsdelivr: './umd/vezham-icon.js',
-  browser: './umd/vezham-icon.js',
+  unpkg: './umd/vezham-icons.js',
+  jsdelivr: './umd/vezham-icons.js',
+  browser: './umd/vezham-icons.js',
   exports: {
     '.': {
       import: './index.js',
@@ -710,11 +710,11 @@ const pkg = {
       import: './createIcon.js',
       types: './createIcon.d.ts',
     },
-    './umd/vezham-icon.js': {
-      import: './umd/vezham-icon.js',
+    './umd/vezham-icons.js': {
+      import: './umd/vezham-icons.js',
     },
-    './cdn/vezham-icon.js': {
-      import: './cdn/vezham-icon.js',
+    './cdn/vezham-icons.js': {
+      import: './cdn/vezham-icons.js',
     },
     './cdn/*': {
       import: './cdn/*.js',
