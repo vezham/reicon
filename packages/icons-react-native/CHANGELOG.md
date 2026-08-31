@@ -1,5 +1,11 @@
 # @vezham/icons-react-native
 
+## 1.0.1
+
+### Patch Changes
+
+- [`4806b30`](https://github.com/vezham/reicon/commit/4806b301dbc3172a6b9cfd3c3e76879c8997aa23) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.0
 
 ### Patch Changes
