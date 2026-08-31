@@ -125,14 +125,14 @@ export default function Integrations() {
                     icon={<SiHtml5 size={16} color="#E34F26" />}
                     title="CDN / HTML"
                     guideUrl="/docs/vanilla"
-                    copyText={`<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>\n\n<vx-icon icon="home" size="24"></vx-icon>`}
+                    copyText={`<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>\n\n<vx-icon icon="home" size="24"></vx-icon>`}
                     lines={<>
                         <div>
                             <span className="text-text-base/20">&lt;</span>
                             <span className="text-[#e06c75]">script</span>
                             <span className="text-[#d19a66]"> src</span>
                             <span className="text-text-base/30">=</span>
-                            <span className="text-[#98c379] text-[11px] break-all">"unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"</span>
+                            <span className="text-[#98c379] text-[11px] break-all">"unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span>
                             <span className="text-text-base/20">&gt;&lt;/</span>
                             <span className="text-[#e06c75]">script</span>
                             <span className="text-text-base/20">&gt;</span>

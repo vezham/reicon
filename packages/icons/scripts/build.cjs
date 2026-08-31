@@ -800,7 +800,7 @@ yarn add reicon
 ### CDN (no build step required)
 
 \`\`\`html
-<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 \`\`\`
 
 No bundler, no framework — just a \`<script>\` tag.
@@ -850,7 +850,7 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 ### CDN / Script tag
 
 \`\`\`html
-<script src="https://unpkg.com/@vezham/icons@latest/cdn/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 <script>
   document.body.appendChild(reicon.Home());
   document.body.appendChild(reicon.ShieldCheck({ size: 32, color: '#d97757' }));
