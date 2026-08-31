@@ -1,5 +1,11 @@
 # @vezham/icons-svelte
 
+## 1.0.2
+
+### Patch Changes
+
+- [`4d77cc0`](https://github.com/vezham/reicon/commit/4d77cc06e255e5afb6b9c9a20fab5add9e81d39b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - tag update
+
 ## 1.0.1
 
 ### Patch Changes
