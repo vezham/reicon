@@ -37,7 +37,7 @@
     },
     {
       "url": "https://img.shields.io/badge/license-MIT-6C5CE7",
-      "href": "https://github.com/dqev/reicon/blob/main/LICENSE",
+      "href": "https://github.com/vezham/reicon/blob/main/LICENSE",
       "description": "MIT License"
     }
   ],
@@ -45,12 +45,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dqev/reicon.git"
+    "url": "https://github.com/vezham/reicon",
+    "directory": "packages/icons-vscode"
   },
   "bugs": {
-    "url": "https://github.com/dqev/reicon/issues"
+    "url": "https://github.com/vezham/reicon/issues"
   },
-  "homepage": "https://reicon.dev",
+  "homepage": "https://vezham.com",
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {

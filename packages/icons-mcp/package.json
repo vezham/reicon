@@ -4,6 +4,15 @@
   "private": true,
   "type": "module",
   "description": "MCP server and CLI for browsing and applying Reicon icons.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/reicon",
+    "directory": "packages/icons-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/vezham/reicon/issues"
+  },
+  "homepage": "https://vezham.com",
   "bin": {
     "reicon-mcp": "bin/run.cjs"
   },

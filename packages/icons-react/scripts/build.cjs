@@ -207,7 +207,7 @@ for (const icon of icons) {
 // ── package.json ───────────────────────────────────────────────────────────
 const srcPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf-8'));
 const pkg = {
-  name: 'reicon-react',
+  name: srcPkg.name,
   version: srcPkg.version,
   type: 'module',
   description:
@@ -252,9 +252,9 @@ const pkg = {
     url: 'https://devchauhan.in',
   },
   license: 'MIT',
-  repository: { type: 'git', url: 'https://github.com/dqev/reicon.git' },
-  bugs: { url: 'https://github.com/dqev/reicon/issues' },
-  homepage: 'https://reicon.dev',
+  repository: { type: 'git', url: 'https://github.com/vezham/reicon', directory: 'packages/icons-react' },
+  bugs: { url: 'https://github.com/vezham/reicon/issues' },
+  homepage: 'https://vezham.com',
 };
 
 fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) + '\n');

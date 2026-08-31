@@ -101,7 +101,7 @@ execSync('node ../../node_modules/typescript/bin/tsc -p tsconfig.json', { cwd: R
 
 const srcPkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf-8'));
 const pkg = {
-  name: 'reicon-mcp',
+  name: srcPkg.name,
   version: srcPkg.version,
   type: 'module',
   description: 'MCP server and CLI for browsing and applying Reicon icons.',
@@ -118,12 +118,12 @@ const pkg = {
   license: 'MIT',
   repository: {
     type: 'git',
-    url: 'https://github.com/dqev/reicon.git',
+    url: 'https://github.com/vezham/reicon',
     directory: 'packages/icons-mcp',
   },
-  homepage: 'https://reicon.dev',
+  homepage: 'https://vezham.com',
   bugs: {
-    url: 'https://github.com/dqev/reicon/issues',
+    url: 'https://github.com/vezham/reicon/issues',
   },
   dependencies: {
     '@modelcontextprotocol/sdk': '^1.12.0',

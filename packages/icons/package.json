@@ -3,6 +3,15 @@
   "version": "1.0.1",
   "type": "module",
   "description": "Vanilla JS core icon package for Reicon.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/reicon",
+    "directory": "packages/icons"
+  },
+  "bugs": {
+    "url": "https://github.com/vezham/reicon/issues"
+  },
+  "homepage": "https://vezham.com",
   "scripts": {
     "build": "node scripts/build.cjs"
   }
