@@ -1,6 +1,6 @@
 {
   "name": "@vezham/icons-figma",
-  "version": "1.0.1",
+  "version": "1.0.0-alpha.1",
   "description": "Your Figma Plugin",
   "repository": {
     "type": "git",
