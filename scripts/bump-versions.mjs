@@ -27,7 +27,7 @@ const PACKAGES = [
   { key: 'reicon-react-native', path: 'packages/icons-react-native/package.json' },
   { key: 'reicon-vscode',  path: 'packages/icons-vscode/package.json' },
   { key: 'reicon-mcp',     path: 'packages/icons-mcp/package.json' },
-  { key: 'reicon-figma',   path: 'packages/icons-figma/Reicon/package.json' },
+  { key: 'reicon-figma',   path: 'packages/icons-figma/package.json' },
   { key: 'reicon-docs',    path: 'package.json' },
 ];
 

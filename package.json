@@ -54,6 +54,8 @@
     "reicon-react": "^1.0.4"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.10",
     "@cloudflare/vite-plugin": "^1.46.0",
     "@modelcontextprotocol/sdk": "^1.12.0",
     "@testing-library/jest-dom": "^6.9.1",

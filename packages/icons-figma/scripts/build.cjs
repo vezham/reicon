@@ -4,7 +4,7 @@ const path = require('path');
 
 const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
 const TEMPLATE_HTML_PATH = path.join(__dirname, '..', 'src', 'ui.html');
-const OUTPUT_HTML_PATH = path.join(__dirname, '..', 'Reicon', 'ui.html');
+const OUTPUT_HTML_PATH = path.join(__dirname, '..', 'ui.html');
 const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'icon-light.webp');
 
 console.log('Compiling Reicon Figma icons database and inlining into ui.html...');
