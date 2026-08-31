@@ -1,6 +1,6 @@
 {
   "name": "@vezham/icons-vue",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "type": "module",
   "description": "Vue icon components for Reicon.",
   "scripts": {
