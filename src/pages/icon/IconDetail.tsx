@@ -15,7 +15,7 @@ export default function IconDetail() {
   const {
     name, copiedField, activeWeight, previewSize, toast, exportSize,
     codeTab, setCodeTab, iconCategory, contributorGithub, useCustomColor, customColor,
-    isColorPickerOpen, pascalName, fw, relatedIcons,
+    isColorPickerOpen, pascalName, relatedIcons,
     setCopiedField, setActiveWeight, setPreviewSize,
     setExportSize, setUseCustomColor, setCustomColor, setIsColorPickerOpen,
     flashToast, handleCopy, handleCopySvg,
@@ -123,7 +123,9 @@ export default function IconDetail() {
                 activeTab={activeTab}
                 pascalName={pascalName}
                 name={name || ''}
-                fw={fw}
+                activeWeight={activeWeight}
+                size={previewSize}
+                color={useCustomColor ? customColor : undefined}
               />
 
               <div>
@@ -131,7 +133,7 @@ export default function IconDetail() {
                 <TypeTable rows={[
                   { prop: 'size', type: 'number | string', default: '24', description: 'Icon size in pixels' },
                   { prop: 'color', type: 'string', default: 'currentColor', description: 'Any valid CSS color' },
-                  { prop: 'weight', type: '"Outline" | "Filled"', default: 'Outline', description: 'Icon weight' },
+                  { prop: 'weight', type: '"outline" | "filled" | "duotone"', default: 'outline', description: 'Icon weight' },
                   { prop: 'className?', type: 'string', default: null, description: 'Extra CSS classes' },
                 ]} />
               </div>

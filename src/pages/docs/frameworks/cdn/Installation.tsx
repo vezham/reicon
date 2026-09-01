@@ -41,23 +41,23 @@ export default function Installation({ markdownContent, copiedField, onCopy }: P
       </p>
 
       <SyntaxBlock
-        title="HTML (UNPKG CDN)"
-        onCopy={() => onCopy('<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>', 'cdn-script')}
+        title="HTML (jsDelivr CDN)"
+        onCopy={() => onCopy('<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>', 'cdn-script')}
         copied={copiedField === 'cdn-script'}
       >
         <span className="text-text-base/70">{'<'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-[#d19a66]"> src</span>
         <span className="text-text-base/50">=</span>
-        <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span>
+        <span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span>
         <span className="text-text-base/70">{'></'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-text-base/70">{'>'}</span>
       </SyntaxBlock>
 
       <div className="mt-4 mb-8">
-        <p className="text-text-base/40 text-[13px]">
-          Or load a specific version: <code className="text-text-base/60 bg-text-base/4 px-1 py-0.5 rounded font-mono break-all">https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js</code>
+        <p className="text-text-base/40 text-[13px] leading-relaxed">
+          Use jsDelivr for production pages and pinned npm versions. Use unpkg for quick testing or npm file browsing. Browsers automatically request gzip or Brotli from both CDNs, so keep the script URL pointed at <code className="text-text-base/60 bg-text-base/4 px-1 py-0.5 rounded font-mono">.js</code>, not <code className="text-text-base/60 bg-text-base/4 px-1 py-0.5 rounded font-mono">.js.gz</code>.
         </p>
       </div>
 

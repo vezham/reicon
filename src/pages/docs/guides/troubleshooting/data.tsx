@@ -12,13 +12,13 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   {
     question: "Icons are not rendering (CDN)",
     answer: "Make sure the CDN script is loaded before any <vx-icon> elements. Place the script tag in your <head> or before your markup.",
-    copyText: '<!-- ✅ Place in <head> -->\n<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>',
+    copyText: '<!-- ✅ Place in <head> -->\n<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>',
     copyField: "faq-cdn",
     syntaxNode: (
       <>
         <span className="text-text-base/30">{'<!-- ✅ Place in <head> -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
       </>
     )
   },

@@ -2,7 +2,21 @@ import { FlutterIcon } from '../../components/docs/framework/icons';
 
 export const FlutterLogo = () => <FlutterIcon size={14} />;
 
-export function FlutterSnippet({ pascalName, flutterName, filled }: { pascalName: string; flutterName: string; filled: boolean }) {
+export type IconSnippetWeight = 'outline' | 'filled' | 'duotone';
+
+interface SnippetOptions {
+  activeWeight: IconSnippetWeight;
+  size: number;
+  color?: string;
+}
+
+function toSvgUrlFilename(name: string, weight: IconSnippetWeight) {
+  if (weight === 'filled') return `${name}-filled.svg`;
+  if (weight === 'duotone') return `${name}-duotone.svg`;
+  return `${name}.svg`;
+}
+
+export function FlutterSnippet({ flutterName, activeWeight, size }: { flutterName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:flutter_svg/flutter_svg.dart'</span><span className="text-text-base/30">;</span>
@@ -11,11 +25,11 @@ export function FlutterSnippet({ pascalName, flutterName, filled }: { pascalName
       {'\n\n'}
       <span className="text-[#61afef]">SvgPicture</span><span className="text-text-base/70">.string(</span>
       {'\n'}
-      <span className="text-text-base/70">  </span><span className="text-[#61afef]">reiconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Reicon</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{filled ? 'filled' : 'outline'}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
+      <span className="text-text-base/70">  </span><span className="text-[#61afef]">reiconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Reicon</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{activeWeight}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
       {'\n'}
-      <span className="text-text-base/70">  width: </span><span className="text-[#d19a66]">24</span><span className="text-text-base/30">,</span>
+      <span className="text-text-base/70">  width: </span><span className="text-[#d19a66]">{size}</span><span className="text-text-base/30">,</span>
       {'\n'}
-      <span className="text-text-base/70">  height: </span><span className="text-[#d19a66]">24</span><span className="text-text-base/30">,</span>
+      <span className="text-text-base/70">  height: </span><span className="text-[#d19a66]">{size}</span><span className="text-text-base/30">,</span>
       {'\n'}
       <span className="text-text-base/70">)</span>
     </>
@@ -31,15 +45,16 @@ export function VueLogo() {
   );
 }
 
-export function VanillaSnippet({ pascalName, filled }: { pascalName: string; filled: boolean }) {
+export function VanillaSnippet({ pascalName, activeWeight, size, color }: { pascalName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
       <span className="text-[#e5c07b]">{pascalName}</span><span className="text-text-base/70">{' } '}</span>
       <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
-      <span className="text-[#c678dd]">const</span><span className="text-text-base/70"> icon = </span><span className="text-[#61afef]">{pascalName}</span><span className="text-text-base/70">({'{'} size: </span><span className="text-[#d19a66]">24</span>
-      {filled && (<><span className="text-text-base/70">, weight: </span><span className="text-[#98c379]">'Filled'</span></>)}
+      <span className="text-[#c678dd]">const</span><span className="text-text-base/70"> icon = </span><span className="text-[#61afef]">{pascalName}</span><span className="text-text-base/70">({'{'} size: </span><span className="text-[#d19a66]">{size}</span>
+      <span className="text-text-base/70">, weight: </span><span className="text-[#98c379]">'{activeWeight}'</span>
+      {color && (<><span className="text-text-base/70">, color: </span><span className="text-[#98c379]">'{color}'</span></>)}
       <span className="text-text-base/70"> {'}'});</span>
       {'\n'}
       <span className="text-text-base/70">document.body.</span><span className="text-[#61afef]">appendChild</span><span className="text-text-base/70">(icon);</span>
@@ -47,7 +62,7 @@ export function VanillaSnippet({ pascalName, filled }: { pascalName: string; fil
   );
 }
 
-export function ReactSnippet({ pascalName, filled }: { pascalName: string; filled: boolean }) {
+export function ReactSnippet({ pascalName, activeWeight, size, color }: { pascalName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
@@ -55,14 +70,15 @@ export function ReactSnippet({ pascalName, filled }: { pascalName: string; fille
       <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
-      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span>
-      {filled && (<><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span></>)}
+      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}{size}{'}'}</span>
+      <span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{activeWeight}"</span>
+      {color && (<><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{color}"</span></>)}
       <span className="text-text-base/70"> /{'>'}</span>
     </>
   );
 }
 
-export function ReactNativeSnippet({ pascalName, filled }: { pascalName: string; filled: boolean }) {
+export function ReactNativeSnippet({ pascalName, activeWeight, size, color }: { pascalName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
@@ -70,14 +86,15 @@ export function ReactNativeSnippet({ pascalName, filled }: { pascalName: string;
       <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react-native'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
-      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span>
-      {filled && (<><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span></>)}
+      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}{size}{'}'}</span>
+      <span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{activeWeight}"</span>
+      {color && (<><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{color}"</span></>)}
       <span className="text-text-base/70"> /{'>'}</span>
     </>
   );
 }
 
-export function VueSnippet({ pascalName, filled }: { pascalName: string; filled: boolean }) {
+export function VueSnippet({ pascalName, activeWeight, size, color }: { pascalName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
@@ -85,14 +102,15 @@ export function VueSnippet({ pascalName, filled }: { pascalName: string; filled:
       <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-vue'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
-      <span className="text-[#d19a66]"> :size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"24"</span>
-      {filled && (<><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span></>)}
+      <span className="text-[#d19a66]"> :size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{String(size)}"</span>
+      <span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{activeWeight}"</span>
+      {color && (<><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{color}"</span></>)}
       <span className="text-text-base/70"> /{'>'}</span>
     </>
   );
 }
 
-export function SvelteSnippet({ pascalName, filled }: { pascalName: string; filled: boolean }) {
+export function SvelteSnippet({ pascalName, activeWeight, size, color }: { pascalName: string } & SnippetOptions) {
   return (
     <>
       <span className="text-text-base/30">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/30">{'>'}</span>
@@ -104,8 +122,9 @@ export function SvelteSnippet({ pascalName, filled }: { pascalName: string; fill
       <span className="text-text-base/30">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/30">{'>'}</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
-      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span>
-      {filled && (<><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span></>)}
+      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}{size}{'}'}</span>
+      <span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{activeWeight}"</span>
+      {color && (<><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{color}"</span></>)}
       <span className="text-text-base/70"> /{'>'}</span>
     </>
   );
@@ -120,31 +139,35 @@ export function DirectSnippet({ pascalName }: { pascalName: string }) {
   );
 }
 
-export function SvgUrlSnippet({ name, filled }: { name: string; filled: boolean }) {
-  const filename = `${name}${filled ? '-filled' : ''}.svg`;
+export function SvgUrlSnippet({ name, activeWeight, size }: { name: string } & SnippetOptions) {
+  const filename = toSvgUrlFilename(name, activeWeight);
 
   return (
     <>
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">img</span>
       <span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span>
       <span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{filename}"</span>
+      <span className="text-[#d19a66]"> width</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{String(size)}"</span>
+      <span className="text-[#d19a66]"> height</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{String(size)}"</span>
       <span className="text-[#d19a66]"> alt</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{name} icon"</span>
       <span className="text-text-base/70"> /{'>'}</span>
     </>
   );
 }
 
-export function CdnSnippet({ name, filled }: { name: string; filled: boolean }) {
+export function CdnSnippet({ name, activeWeight, size, color }: { name: string } & SnippetOptions) {
   return (
     <>
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span>
       <span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span>
-      <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span>
+      <span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span>
       <span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
       {'\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span>
       <span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{name}"</span>
-      {filled && (<><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span></>)}
+      <span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{activeWeight}"</span>
+      <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{String(size)}"</span>
+      {color && (<><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{color}"</span></>)}
       <span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
     </>
   );

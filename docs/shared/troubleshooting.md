@@ -8,7 +8,7 @@ Common issues and their solutions. If you don't find your answer here, open an i
 Make sure the CDN script is loaded before any `<vx-icon>` elements. Place the script tag in your `<head>` or before your markup.
 ```html
 <!-- ✅ Place in <head> -->
-<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 ```
 
 ---

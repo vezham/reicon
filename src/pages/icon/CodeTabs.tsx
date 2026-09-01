@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { VanillaSnippet, CdnSnippet, ReactSnippet, ReactNativeSnippet, VueSnippet, SvelteSnippet, FlutterSnippet, DirectSnippet, SvgUrlSnippet } from './Snippets';
+import { VanillaSnippet, CdnSnippet, ReactSnippet, ReactNativeSnippet, VueSnippet, SvelteSnippet, FlutterSnippet, DirectSnippet, SvgUrlSnippet, type IconSnippetWeight } from './Snippets';
 import { EASE } from './utils';
 
 interface CodeTabsProps {
@@ -11,12 +11,14 @@ interface CodeTabsProps {
   activeTab: { id: string; label: string; icon: React.ReactNode; raw: string };
   pascalName: string;
   name: string;
-  fw: boolean;
+  activeWeight: IconSnippetWeight;
+  size: number;
+  color?: string;
 }
 
 export default function CodeTabs({
   codeTab, setCodeTab, copiedField, handleCopy,
-  CODE_TABS, activeTab, pascalName, name, fw,
+  CODE_TABS, activeTab, pascalName, name, activeWeight, size, color,
 }: CodeTabsProps) {
   return (
     <figure className="relative rounded-xl bg-text-base/3 border border-text-base/8 text-sm">
@@ -54,14 +56,14 @@ export default function CodeTabs({
               transition={{ duration: 0.18, ease: EASE }}
               className="p-4 text-[13px] font-mono leading-[1.7] overflow-x-auto whitespace-pre focus-visible:outline-none text-text-base"
             >
-              {codeTab === 'vanilla' && <VanillaSnippet pascalName={pascalName} filled={fw} />}
-              {codeTab === 'cdn' && <CdnSnippet name={name} filled={fw} />}
-              {codeTab === 'svg-url' && <SvgUrlSnippet name={name} filled={fw} />}
-              {codeTab === 'react' && <ReactSnippet pascalName={pascalName} filled={fw} />}
-              {codeTab === 'react-native' && <ReactNativeSnippet pascalName={pascalName} filled={fw} />}
-              {codeTab === 'vue' && <VueSnippet pascalName={pascalName} filled={fw} />}
-              {codeTab === 'svelte' && <SvelteSnippet pascalName={pascalName} filled={fw} />}
-              {codeTab === 'flutter' && <FlutterSnippet pascalName={pascalName} flutterName={name ? name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()) : ''} filled={fw} />}
+              {codeTab === 'vanilla' && <VanillaSnippet pascalName={pascalName} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'cdn' && <CdnSnippet name={name} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'svg-url' && <SvgUrlSnippet name={name} activeWeight={activeWeight} size={size} />}
+              {codeTab === 'react' && <ReactSnippet pascalName={pascalName} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'react-native' && <ReactNativeSnippet pascalName={pascalName} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'vue' && <VueSnippet pascalName={pascalName} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'svelte' && <SvelteSnippet pascalName={pascalName} activeWeight={activeWeight} size={size} color={color} />}
+              {codeTab === 'flutter' && <FlutterSnippet flutterName={name ? name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()) : ''} activeWeight={activeWeight} size={size} />}
               {codeTab === 'direct' && <DirectSnippet pascalName={pascalName} />}
             </motion.pre>
           </AnimatePresence>

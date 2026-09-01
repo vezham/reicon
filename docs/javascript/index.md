@@ -74,9 +74,21 @@ Perfect for static HTML websites, legacy applications, and prototyping. Include 
 ### Register Custom Element (`<vx-icon>`)
 Include the script tag inside your HTML page. This registers a reactive `<vx-icon>` component that supports dynamic styling, sizes, weights, and gradients.
 ```html
+<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
+```
+
+### CDN Provider
+Use **jsDelivr** for production pages because it is optimized as a global CDN and works well with pinned npm versions:
+```html
+<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
+```
+
+Use **unpkg** for quick testing or npm file browsing:
+```html
 <script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 ```
-*Or load a specific version:* `https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js`
+
+Browsers automatically request gzip or Brotli compression from both CDNs. Keep the script URL pointed at `.js`, not `.js.gz`.
 
 ### Basic CDN Usage
 Simply add the `<vx-icon>` tags directly in your HTML:

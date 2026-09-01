@@ -85,16 +85,19 @@ export default function useIconDetail() {
     setIsColorPickerOpen(false);
   }, [setActiveWeight]);
 
-  const fw = activeWeight === 'filled';
+  const svgUrlFilename = `${name}${activeWeight === 'filled' ? '-filled' : activeWeight === 'duotone' ? '-duotone' : ''}.svg`;
+  const snippetColor = useCustomColor ? customColor : undefined;
+  const jsColorProp = snippetColor ? `, color: '${snippetColor}'` : '';
+  const htmlColorAttr = snippetColor ? ` color="${snippetColor}"` : '';
 
-  const vanillaRaw = `import { ${pascalName} } from 'reicon';\n\nconst icon = ${pascalName}({ size: 24${fw ? ", weight: 'Filled'" : ''} });\ndocument.body.appendChild(icon);`;
-  const cdnRaw = `<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"><\/script>\n<vx-icon icon="${name}"${fw ? ' weight="filled"' : ''}></vx-icon>`;
-  const svgUrlRaw = `<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/${name}${fw ? '-filled' : ''}.svg" alt="${name} icon" />`;
-  const reactRaw = `import { ${pascalName} } from 'reicon-react';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
-  const reactNativeRaw = `import { ${pascalName} } from 'reicon-react-native';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
-  const vueRaw = `import { ${pascalName} } from 'reicon-vue';\n\n<${pascalName} :size="24"${fw ? ' weight="Filled"' : ''} />`;
-  const svelteRaw = `<script>\n  import { ${pascalName} } from 'reicon-svelte';\n</script>\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
-  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:reicon_flutter/reicon_flutter.dart';\n\nSvgPicture.string(\n  reiconSvg(Reicon.${fw ? 'filled' : 'outline'}.${flutterName}),\n  width: 24,\n  height: 24,\n)`;
+  const vanillaRaw = `import { ${pascalName} } from 'reicon';\n\nconst icon = ${pascalName}({ size: ${previewSize}, weight: '${activeWeight}'${jsColorProp} });\ndocument.body.appendChild(icon);`;
+  const cdnRaw = `<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"><\/script>\n<vx-icon icon="${name}" weight="${activeWeight}" size="${previewSize}"${htmlColorAttr}></vx-icon>`;
+  const svgUrlRaw = `<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/${svgUrlFilename}" width="${previewSize}" height="${previewSize}" alt="${name} icon" />`;
+  const reactRaw = `import { ${pascalName} } from 'reicon-react';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
+  const reactNativeRaw = `import { ${pascalName} } from 'reicon-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
+  const vueRaw = `import { ${pascalName} } from 'reicon-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
+  const svelteRaw = `<script>\n  import { ${pascalName} } from 'reicon-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
+  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:reicon_flutter/reicon_flutter.dart';\n\nSvgPicture.string(\n  reiconSvg(Reicon.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
   const directRaw = `import ${pascalName} from 'reicon-react/icons/${pascalName}';`;
 
   const CODE_TABS = useMemo(() => [
@@ -175,7 +178,7 @@ export default function useIconDetail() {
     name,
     copiedField, activeWeight, previewSize, toast, exportSize,
     codeTab, iconCategory, contributorGithub, useCustomColor, customColor,
-    isColorPickerOpen, pascalName, fw, relatedIcons,
+    isColorPickerOpen, pascalName, relatedIcons,
     setCopiedField, setActiveWeight, setPreviewSize, setExportSize,
     setCodeTab, setUseCustomColor, setCustomColor, setIsColorPickerOpen,
     setToast,
