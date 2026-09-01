@@ -823,12 +823,10 @@
   },
   {
     "n": "archive2",
-    "c": "notes",
+    "c": "newicons",
     "t": [
       "archive2",
-      "minimalist",
-      "folder",
-      "task-list"
+      "archive"
     ]
   },
   {
@@ -1986,11 +1984,10 @@
   },
   {
     "n": "bag2",
-    "c": "shopping",
+    "c": "newicons",
     "t": [
       "bag2",
-      "backpack",
-      "luggage"
+      "bag"
     ]
   },
   {
@@ -2926,11 +2923,10 @@
   },
   {
     "n": "book2",
-    "c": "school",
+    "c": "newicons",
     "t": [
       "book2",
-      "textbook",
-      "reading material"
+      "book"
     ]
   },
   {
@@ -3052,9 +3048,10 @@
   },
   {
     "n": "bookmark2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
-      "bookmark2"
+      "bookmark2",
+      "bookmark"
     ]
   },
   {
@@ -3171,18 +3168,18 @@
   },
   {
     "n": "box2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
       "box2",
-      "cube",
-      "prism"
+      "box"
     ]
   },
   {
     "n": "box3",
-    "c": "ui",
+    "c": "newicons",
     "t": [
-      "box3"
+      "box3",
+      "box"
     ]
   },
   {
@@ -3822,12 +3819,10 @@
   },
   {
     "n": "calendar2",
-    "c": "time",
+    "c": "newicons",
     "t": [
       "calendar2",
-      "datebook",
-      "calendrical",
-      "appointment"
+      "calendar"
     ]
   },
   {
@@ -6858,11 +6853,10 @@
   },
   {
     "n": "crown2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
       "crown2",
-      "crown",
-      "regal"
+      "crown"
     ]
   },
   {
@@ -11613,20 +11607,18 @@
   },
   {
     "n": "home2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
       "home2",
-      "house icon",
-      "dwelling symbol"
+      "home"
     ]
   },
   {
     "n": "home3",
-    "c": "ui",
+    "c": "newicons",
     "t": [
       "home3",
-      "house",
-      "roof"
+      "home"
     ]
   },
   {
@@ -12646,29 +12638,27 @@
   },
   {
     "n": "link2",
-    "c": "text-formatting",
+    "c": "newicons",
     "t": [
       "link2",
-      "connection",
-      "network"
+      "link"
     ]
   },
   {
     "n": "link3",
-    "c": "text-formatting",
+    "c": "newicons",
     "t": [
       "link3",
-      "refresh",
-      "reload"
+      "link"
     ]
   },
   {
     "n": "link4",
-    "c": "text-formatting",
+    "c": "newicons",
     "t": [
       "link4",
-      "loop",
-      "swirl"
+      "link",
+      "21"
     ]
   },
   {
@@ -13077,9 +13067,10 @@
   },
   {
     "n": "lock2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
-      "lock2"
+      "lock2",
+      "lock"
     ]
   },
   {
@@ -13832,9 +13823,10 @@
   },
   {
     "n": "menu2",
-    "c": "ui",
+    "c": "newicons",
     "t": [
-      "menu2"
+      "menu2",
+      "menu"
     ]
   },
   {
@@ -21441,11 +21433,10 @@
   },
   {
     "n": "sun2",
-    "c": "weather",
+    "c": "newicons",
     "t": [
       "sun2",
-      "solar",
-      "heliosphere"
+      "sun"
     ]
   },
   {
@@ -22192,9 +22183,10 @@
   },
   {
     "n": "ticket3",
-    "c": "shopping",
+    "c": "newicons",
     "t": [
-      "ticket3"
+      "ticket3",
+      "ticket"
     ]
   },
   {

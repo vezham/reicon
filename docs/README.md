@@ -28,6 +28,6 @@ This directory contains comprehensive guides, design system definitions, and int
 
 ## ✍️ Updating Documentation
 
-* Documentation should reflect changes in `data/icon-data.json` or package build behaviors.
+* Documentation should reflect changes in `data/icons` or package build behaviors.
 * Maintain clear, visual examples inside each framework subfolder's files.
 * Ensure styling tokens align with Reicon's core design system specifications.

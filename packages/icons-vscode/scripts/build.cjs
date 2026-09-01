@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
 
-const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
 const TEMPLATE_HTML_PATH = path.join(__dirname, '..', 'src', 'ui.html');
 const OUTPUT_HTML_PATH = path.join(__dirname, '..', 'dist', 'ui.html');
 const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'apple-touch-icon.png');
@@ -10,14 +10,11 @@ const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'apple-touch-
 console.log('Compiling Reicon VS Code icons database and inlining into ui.html...');
 
 try {
-  if (!fs.existsSync(DATA_PATH)) {
-    throw new Error(`Data file not found at ${DATA_PATH}`);
-  }
   if (!fs.existsSync(TEMPLATE_HTML_PATH)) {
     throw new Error(`Template HTML file not found at ${TEMPLATE_HTML_PATH}`);
   }
 
-  const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+  const rawData = loadIconData();
   const compactData = {};
   const categoriesList = [];
 

@@ -1,12 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 import JSZip from 'jszip';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const require = createRequire(import.meta.url);
+const { loadIconData } = require('./lib/icon-source.cjs');
 
-const DATA_PATH = path.join(__dirname, '..', 'data', 'icon-data.json');
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const ZIP_OUT_PATH = path.join(PUBLIC_DIR, 'reicon-icons.zip');
 
@@ -19,11 +21,7 @@ function rewriteColors(svg) {
 
 async function run() {
   try {
-    if (!fs.existsSync(DATA_PATH)) {
-      throw new Error(`Data file not found at ${DATA_PATH}`);
-    }
-
-    const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+    const rawData = loadIconData();
     const zip = new JSZip();
     
     // Create folders inside zip

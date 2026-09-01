@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.cjs — Generates the `reicon` vanilla JS package from data/icon-data.json
+ * build.cjs — Generates the `reicon` vanilla JS package from data/icons
  *
  * Usage:  node packages/icons/scripts/build.cjs  (or: npm run build:js)
  *
@@ -13,10 +13,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
 
 // ── paths ──────────────────────────────────────────────────────────────────
-const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
-const TAGS_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-tags.json');
 const SRC = path.join(__dirname, '..', 'src');
 const DIST = path.join(__dirname, '..', 'dist');
 
@@ -66,14 +65,8 @@ function buildStandaloneSvg(inner) {
 }
 
 // ── read data ──────────────────────────────────────────────────────────────
-console.log('Reading icondata.json …');
-const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
-
-let TAGS = {};
-if (fs.existsSync(TAGS_PATH)) {
-  TAGS = JSON.parse(fs.readFileSync(TAGS_PATH, 'utf-8'));
-  console.log(`Read ${Object.keys(TAGS).length} tag entries`);
-}
+console.log('Reading data/icons …');
+const data = loadIconData();
 
 // ── collect icons ──────────────────────────────────────────────────────────
 const icons = [];
@@ -89,20 +82,26 @@ for (const [catKey, catData] of Object.entries(data.categories || {})) {
     pascalLowerSet.add(pascal.toLowerCase());
 
     const weights = {};
+    const directWeights = {};
     for (const [wName, wData] of Object.entries(icon.weights || {})) {
       const short = W_KEY[wName];
-      if (short && wData.code) {
-        weights[short] = rewriteColors(stripSvgWrapper(wData.code));
+      if (wData.code) {
+        const code = rewriteColors(stripSvgWrapper(wData.code));
+        if (short) weights[short] = code;
+        if (wName === 'Outline') directWeights.O = code;
+        if (wName === 'Filled') directWeights.F = code;
+        if (wName === 'Duotone') directWeights.D = code;
       }
     }
 
-    if (Object.keys(weights).length > 0) {
+    if (Object.keys(weights).length > 0 || Object.keys(directWeights).length > 0) {
       icons.push({
         kebab: iconKey,
         pascal,
         category: catKey,
         weights,
-        tags: TAGS[iconKey] || icon.description || [],
+        directWeights,
+        tags: icon.description || [],
         // contributor is optional — only set when the icon was community-contributed
         contributor: icon.contributor || null,
       });
@@ -705,13 +704,17 @@ function writeDirectSvg(relativePath, inner) {
 }
 
 for (const icon of icons) {
-  const outline = icon.weights.O || icon.weights.F;
+  const outline = icon.directWeights.O || icon.directWeights.F || icon.directWeights.D;
   if (outline) {
     writeDirectSvg(`${icon.kebab}.svg`, outline);
   }
 
-  if (icon.weights.F) {
-    writeDirectSvg(`${icon.kebab}-filled.svg`, icon.weights.F);
+  if (icon.directWeights.F) {
+    writeDirectSvg(`${icon.kebab}-filled.svg`, icon.directWeights.F);
+  }
+
+  if (icon.directWeights.D) {
+    writeDirectSvg(`${icon.kebab}-duotone.svg`, icon.directWeights.D);
   }
 }
 console.log(`  Direct SVGs: ${directSvgFiles}`);

@@ -7,7 +7,12 @@ This document provides a detailed breakdown of the file structure and directory 
 ```
 reicon/
 ├── data/                        # ⭐ Single source of truth
-│   ├── icon-data.json          # Every icon (Outline + Filled) lives here
+│   ├── icons/                  # Category/icon folders with SVG weights
+│   │   └── arrows/arrow-down2/
+│   │       ├── outline.svg
+│   │       ├── filled.svg
+│   │       ├── duotone.svg
+│   │       └── meta.json
 │   └── README.md               # Dataset schema & build pipeline
 │
 ├── packages/                    # Local npm packages
@@ -173,6 +178,6 @@ reicon/
 └── README.md                # Main repository README
 ```
 
-> **Note:** `packages/` and `cdn/` are generated from `data/icon-data.json`.
+> **Note:** `packages/` and `cdn/` are generated from `data/icons`.
 > While `cdn/` is git-ignored, `packages/` is committed and tracked. Build them with
 > `npm run build:packages`. Never edit those outputs by hand.

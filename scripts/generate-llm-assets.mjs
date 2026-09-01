@@ -8,27 +8,32 @@
 import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
+const { loadIconData } = require('./lib/icon-source.cjs');
 
 const ICON_NAMES_JSON = resolve(__dirname, 'icon-names.json');
-const CATS_JSON = resolve(__dirname, '../data/icons-names-categories.json');
 const OUTPUT_FILE = resolve(__dirname, '../public/llms-icons.txt');
 
 function generateIcons() {
   console.log('Generating LLM Icon Directory...');
 
-  if (!existsSync(ICON_NAMES_JSON) || !existsSync(CATS_JSON)) {
+  if (!existsSync(ICON_NAMES_JSON)) {
     return;
   }
 
   const iconNames = JSON.parse(readFileSync(ICON_NAMES_JSON, 'utf-8'));
-  const catsData = JSON.parse(readFileSync(CATS_JSON, 'utf-8'));
-
+  const iconData = loadIconData();
   const categoryMap = {};
-  for (const entry of catsData) {
-    if (entry.name && entry.category) {
-      categoryMap[entry.name] = entry.category;
+  const seenNames = new Set();
+
+  for (const [category, categoryData] of Object.entries(iconData.categories || {})) {
+    for (const name of Object.keys(categoryData.icons || {})) {
+      if (seenNames.has(name)) continue;
+      seenNames.add(name);
+      categoryMap[name] = category;
     }
   }
 
@@ -71,7 +76,7 @@ This file lists every icon in the Reicon SVG icon library by category. Use it to
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (\`arrow-up-right\` → \`ArrowUpRight\`)
 - **CDN**: use the kebab-case name as-is: \`<vx-icon icon="arrow-up-right">\`
-- **Direct SVG CDN**: use \`https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{name}.svg\` for outline or \`{name}-filled.svg\` for filled
+- **Direct SVG CDN**: use \`https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{name}.svg\` for outline, \`{name}-filled.svg\` for filled, or \`{name}-duotone.svg\` when available
 
 ## Stats
 - **Total**: ${totalCount} unique designs (${totalCount * 2} icons counting both weights)

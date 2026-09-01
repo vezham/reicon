@@ -2,7 +2,7 @@
 /**
  * sync-icon-names.mjs
  *
- * Regenerates scripts/icon-names.json from data/icon-data.json.
+ * Regenerates scripts/icon-names.json from data/icons.
  * This file is the single source of truth for icon slugs — packages/icons-react/dist/
  * also emits one, but scripts/ uses THIS copy so the build scripts (sitemap, prerender)
  * are never out of sync with the actual icon set.
@@ -14,19 +14,21 @@
  * Sorted alphabetically by kebab name for stable diffs.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = resolve(__dirname, '../data/icon-data.json');
 const OUT_PATH = resolve(__dirname, 'icon-names.json');
+const require = createRequire(import.meta.url);
+const { loadIconData } = require('./lib/icon-source.cjs');
 
 function toPascalCase(str) {
   return str.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join('');
 }
 
-const data = JSON.parse(readFileSync(DATA_PATH, 'utf-8'));
+const data = loadIconData();
 
 // Collect all icons with PascalCase names, handling duplicates the same way
 // the build scripts do (append category suffix on collision).

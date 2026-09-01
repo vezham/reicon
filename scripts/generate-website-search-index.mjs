@@ -1,13 +1,16 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = resolve(__dirname, '../data/icon-data.json');
 const OUT_PATH = resolve(__dirname, '../src/data/search-index.json');
+const DUOTONE_OUT_PATH = resolve(__dirname, '../src/data/duotone-icons.json');
+const require = createRequire(import.meta.url);
+const { loadDuotoneIcons, loadIconData } = require('./lib/icon-source.cjs');
 
-const data = JSON.parse(readFileSync(DATA_PATH, 'utf-8'));
+const data = loadIconData();
 
 const entries = [];
 const seenNames = new Set();
@@ -46,3 +49,7 @@ entries.sort((a, b) => a.n.localeCompare(b.n));
 
 writeFileSync(OUT_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf-8');
 console.log(`generate-website-search-index: wrote ${entries.length} entries to src/data/search-index.json`);
+
+const duotoneData = loadDuotoneIcons();
+writeFileSync(DUOTONE_OUT_PATH, JSON.stringify(duotoneData, null, 2) + '\n', 'utf-8');
+console.log(`generate-website-search-index: wrote ${Object.keys(duotoneData.icons).length} entries to src/data/duotone-icons.json`);

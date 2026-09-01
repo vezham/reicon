@@ -25,7 +25,7 @@ This directory contains individual npm libraries and integration extension packa
 
 Downstream packages are generated programmatically using Node.js scripts. 
 
-* The build scripts take `data/icon-data.json` as input.
+* The build scripts take `data/icons` as input.
 * They parse raw SVGs, strip header boilerplate, normalize colors (`fill="white"` → `fill="currentColor"`), and wrap them in template wrappers specific to each framework.
 * They output direct ES module definitions, types declarations (`.d.ts`), and bundle index wrappers.
 

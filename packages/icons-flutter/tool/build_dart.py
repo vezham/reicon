@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_dart.py — Generates Dart icon constants from data/icon-data.json
+build_dart.py — Generates Dart icon constants from data/icons
 
 Usage:  python3 tool/build_dart.py
 
@@ -8,13 +8,12 @@ Output:
   lib/src/icons.dart    Dart file with all icon SVG path data
 """
 
-import json
 import os
 import re
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-DATA_PATH = os.path.join(ROOT, 'data', 'icon-data.json')
+ICONS_DIR = os.path.join(ROOT, 'data', 'icons')
 OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'lib', 'src')
 OUT_PATH = os.path.join(OUT_DIR, 'icons.dart')
 
@@ -34,35 +33,49 @@ def strip_svg(code: str) -> str:
     return code.strip()
 
 
-def generate():
-    print(f'Reading {DATA_PATH} ...')
-    with open(DATA_PATH, 'r') as f:
-        data = json.load(f)
+def read_weight(icon_dir: str, filename: str) -> str:
+    path = os.path.join(icon_dir, filename)
+    if not os.path.exists(path):
+        return ''
+    with open(path, 'r') as f:
+        return strip_svg(f.read())
 
-    categories = data.get('categories', {})
+
+def iter_icon_dirs():
+    if not os.path.isdir(ICONS_DIR):
+        raise FileNotFoundError(f'Icon source directory not found at {ICONS_DIR}')
+
+    for category in sorted(os.listdir(ICONS_DIR)):
+        category_dir = os.path.join(ICONS_DIR, category)
+        if not os.path.isdir(category_dir):
+            continue
+        for icon_name in sorted(os.listdir(category_dir)):
+            icon_dir = os.path.join(category_dir, icon_name)
+            if os.path.isdir(icon_dir):
+                yield category, icon_name, icon_dir
+
+
+def generate():
+    print(f'Reading {ICONS_DIR} ...')
 
     outline_map = {}
     filled_map = {}
     seen = set()
 
-    for cat_key, cat_data in categories.items():
-        for icon_key, icon in cat_data.get('icons', {}).items():
-            weights = icon.get('weights', {})
-            name = to_camel(icon_key)
+    for cat_key, icon_key, icon_dir in iter_icon_dirs():
+        name = to_camel(icon_key)
 
-            if name in seen:
-                name = name + to_camel(cat_key).capitalize()
-            seen.add(name)
+        if name in seen:
+            name = name + to_camel(cat_key).capitalize()
+        seen.add(name)
 
-            ow = weights.get('Outline', {})
-            osvg = strip_svg(ow.get('code', ''))
-            if osvg:
-                outline_map[name] = osvg
+        osvg = read_weight(icon_dir, 'outline.svg')
+        if osvg:
+            outline_map[name] = osvg
 
-            fw = weights.get('Filled', {})
-            fsvg = strip_svg(fw.get('code', ''))
-            if fsvg:
-                filled_map[name] = fsvg
+        fsvg = read_weight(icon_dir, 'filled.svg')
+        if fsvg:
+            filled_map[name] = fsvg
 
     all_names = sorted(outline_map.keys())
     print(f'  Outline: {len(outline_map)}  Filled: {len(filled_map)}')

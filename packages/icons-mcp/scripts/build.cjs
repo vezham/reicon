@@ -3,9 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
 
 const ROOT = path.join(__dirname, '..');
-const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
 const INDEX_OUT = path.join(ROOT, 'src', 'data', 'icon-index.json');
 const DIST_DATA = path.join(ROOT, 'dist', 'data');
 const DIST_INDEX = path.join(DIST_DATA, 'icon-index.json');
@@ -86,7 +86,7 @@ function buildIndex(data) {
 
 console.log('Building reicon-mcp …');
 
-const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+const data = loadIconData();
 const index = buildIndex(data);
 
 fs.mkdirSync(path.dirname(INDEX_OUT), { recursive: true });

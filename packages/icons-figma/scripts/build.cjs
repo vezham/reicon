@@ -2,9 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
 
 const ROOT = path.join(__dirname, '..');
-const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
 const TEMPLATE_HTML_PATH = path.join(__dirname, '..', 'src', 'ui.html');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT_HTML_PATH = path.join(DIST, 'ui.html');
@@ -13,9 +13,6 @@ const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'icon-light.w
 console.log('Building Reicon Figma plugin package...');
 
 try {
-  if (!fs.existsSync(DATA_PATH)) {
-    throw new Error(`Data file not found at ${DATA_PATH}`);
-  }
   if (!fs.existsSync(TEMPLATE_HTML_PATH)) {
     throw new Error(`Template HTML file not found at ${TEMPLATE_HTML_PATH}`);
   }
@@ -31,7 +28,7 @@ try {
     DIST,
   ], { cwd: ROOT, stdio: 'inherit' });
 
-  const rawData = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+  const rawData = loadIconData();
   const compactData = {};
   const categoriesList = [];
 

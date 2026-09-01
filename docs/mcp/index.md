@@ -149,6 +149,6 @@ This replaces the exact marker with the docs snippet and inserts the import at t
 
 ## Offline Operation
 
-The search index is bundled at build time from `data/icon-data.json`. No network calls are made at runtime. Once installed, the server works fully offline.
+The search index is bundled at build time from `data/icons`. No network calls are made at runtime. Once installed, the server works fully offline.
 
 > **Note:** Rebuild with `npm run build:mcp` after the icon dataset changes to refresh the bundled index.

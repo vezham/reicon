@@ -1,100 +1,88 @@
 <p align="center">
   <a href="https://reicon.dev">
-    <img src="../public/readme-banner.png" alt="Reicon — Free Open-Source Icon Library" width="100%" />
+    <img src="../public/readme-banner.png" alt="Reicon - Free Open-Source Icon Library" width="100%" />
   </a>
 </p>
 
-# 📊 Reicon Dataset (Single Source of Truth)
+# Reicon Dataset
 
-This folder holds the **single source of truth** for every Reicon icon.
+This folder holds the source assets for every Reicon icon.
 
-## `icon-data.json`
+## Source Layout
 
-The canonical dataset. Everything downstream — the CDN bundle, the website, the SEO pre-rendered pages, and the npm packages — is generated from this one file.
+Icons are stored by category, then icon name, then weight:
 
-### Full schema
+```txt
+data/icons/
+  arrows/
+    arrow-down2/
+      outline.svg
+      filled.svg
+      duotone.svg
+      meta.json
+```
 
-```jsonc
+Weight filenames are always lowercase:
+
+```txt
+outline.svg
+filled.svg
+duotone.svg
+```
+
+`outline.svg` should exist for normal icon package output. `filled.svg` and `duotone.svg` are optional when a variant does not exist.
+
+## Metadata
+
+Each icon can include a small `meta.json` file beside the SVGs:
+
+```json
 {
-  "version": "1.0.0",
-  "categories": {
-    "<category-key>": {              // lowercase kebab, e.g. "arrows", "ui", "files"
-      "icons": {
-        "<icon-name>": {             // lowercase kebab, e.g. "arrow-down", "home-2"
-          "description": ["tag", "alias"],   // optional — used for search & SEO
-          "contributor": {                   // optional — only for community icons
-            "github": "username"             // GitHub username of the designer
-          },
-          "weights": {
-            "Outline": { "code": "<svg>…</svg>" },
-            "Filled":  { "code": "<svg>…</svg>" }
-          }
-        }
-      }
-    }
+  "description": ["down arrow", "chevron"],
+  "contributor": {
+    "github": "username"
   }
 }
 ```
-
-#### Field notes
 
 | Field | Required | Description |
 | :---- | :------- | :---------- |
-| `description` | No | Array of search tags / aliases. Used by the icon browser search and SEO meta. |
-| `contributor.github` | No | GitHub username of the person who contributed this icon. When set, their avatar and a link to their profile appears on the icon's detail page on reicon.dev. |
-| `weights.Outline.code` | Yes | Full `<svg>` markup. Build scripts strip the wrapper and normalise `fill="white"` → `currentColor`. |
-| `weights.Filled.code` | No | Same as Outline. Omit if a filled variant doesn't make sense for the icon. |
+| `description` | No | Search tags and aliases used by the website, MCP index, SEO, and generated package metadata. |
+| `contributor.github` | No | GitHub username for community-contributed icons. |
 
-**Icon names** are `kebab-case` and become `PascalCase` component names in the packages:
-`arrow-up-right` → `ArrowUpRight`, `home-2` → `Home2`.
+Icon names are inferred from the folder path:
 
-#### Example — core icon (no contributor)
-
-```jsonc
-"star": {
-  "description": ["favourite", "bookmark", "rating"],
-  "weights": {
-    "Outline": { "code": "<path d=\"...\" fill=\"currentColor\"/>" },
-    "Filled":  { "code": "<path d=\"...\" fill=\"currentColor\"/>" }
-  }
-}
+```txt
+data/icons/arrows/arrow-down2/outline.svg
 ```
 
-#### Example — community-contributed icon
+becomes category `arrows`, icon name `arrow-down2`, and component name `ArrowDown2`.
 
-```jsonc
-"wave-hand": {
-  "description": ["hello", "greeting", "gesture"],
-  "contributor": { "github": "octocat" },
-  "weights": {
-    "Outline": { "code": "<path d=\"...\" fill=\"currentColor\"/>" },
-    "Filled":  { "code": "<path d=\"...\" fill=\"currentColor\"/>" }
-  }
-}
+## SVG Rules
+
+SVG files should be normal 24x24 SVG documents:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="..." fill="currentColor"/>
+</svg>
 ```
 
-When `contributor.github` is set, the icon detail page on reicon.dev automatically shows the contributor's GitHub profile picture and a link — no extra work needed.
+Build scripts strip the outer `<svg>` wrapper where needed and normalize `fill="white"` to `currentColor`.
 
----
+## Generated Data
 
-### `icon-tags.json` (optional override)
+Some compact JSON files are generated for the website and tools:
 
-A `{ "<icon-name>": ["tag", "tag"] }` map for enriching search / SEO metadata outside of `icon-data.json`. Build scripts merge it on top of each icon's inline `description` array when the file is present.
-
----
-
-## How it's consumed
-
-| Output | Built by | Command | Who runs it |
-| :---- | :------- | :------- | :---------- |
-| Website + CDN bundle | `packages/icons/scripts/build.cjs` | `npm run build` | Automatic on every deploy |
-| `packages/icons/dist` (npm) | `packages/icons/scripts/build.cjs` | `npm run build:js` | **Maintainer only** |
-| `packages/icons-react/dist` (npm) | `packages/icons-react/scripts/build.cjs` | `npm run build:react` | **Maintainer only** |
-| `packages/icons-vue/dist` (npm) | `packages/icons-vue/scripts/build.cjs` | `npm run build:vue` | **Maintainer only** |
-| `packages/icons-svelte/dist` (npm) | `packages/icons-svelte/scripts/build.cjs` | `npm run build:svelte` | **Maintainer only** |
+| Output | Built by |
+| :----- | :------- |
+| `src/data/search-index.json` | `node scripts/generate-website-search-index.mjs` |
+| `src/data/duotone-icons.json` | `node scripts/generate-website-search-index.mjs` |
+| `scripts/icon-names.json` | `node scripts/sync-icon-names.mjs` |
+| `packages/*/dist` | Package-specific build scripts |
 
 > [!IMPORTANT]
-> **Contributors only edit `data/icon-data.json`.** The website automatically shows new icons on the next deploy. npm packages are rebuilt and published by the maintainer in a separate release step — you do not need to run `build:packages` in your PR.
+> Contributors edit files inside `data/icons/`. Package outputs, CDN files, and generated JSON indexes are rebuilt from that folder.
 
 > [!WARNING]
-> Never manually edit files inside `packages/*/dist/` or `cdn/`. They are regenerated from `data/icon-data.json` and any hand-edits will be overwritten.
+> Never manually edit files inside `packages/*/dist/` or `cdn/`. They are regenerated and hand-edits will be overwritten.

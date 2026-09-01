@@ -26,7 +26,7 @@ export function useDuotoneData(activeStyle: string) {
     setLoading(true);
 
     if (!duotonePromise) {
-      duotonePromise = import('../../data/icon-duotone.json').then((module) => {
+      duotonePromise = import('../data/duotone-icons.json').then((module) => {
         const rawIcons = (module.default as any)?.icons || {};
         const parsed: Record<string, DuotoneIconInfo> = {};
         for (const [key, val] of Object.entries(rawIcons)) {

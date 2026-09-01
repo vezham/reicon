@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.cjs — Generates the `reicon-vue` Vue 3 package from icondata.json
+ * build.cjs — Generates the `reicon-vue` Vue 3 package from data/icons
  *
  * Usage:  node packages/icons-vue/scripts/build.cjs  (or: npm run build:vue)
  *
@@ -13,10 +13,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
 
 // ── paths ──────────────────────────────────────────────────────────────────
-const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
-const TAGS_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-tags.json');
 const SRC = path.join(__dirname, '..', 'src');
 const DIST = path.join(__dirname, '..', 'dist');
 
@@ -57,14 +56,8 @@ function buildPreviewDataUri(weights) {
 }
 
 // ── read data ──────────────────────────────────────────────────────────────
-console.log('Reading icondata.json …');
-const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
-
-let TAGS = {};
-if (fs.existsSync(TAGS_PATH)) {
-  TAGS = JSON.parse(fs.readFileSync(TAGS_PATH, 'utf-8'));
-  console.log(`Read ${Object.keys(TAGS).length} tag entries`);
-}
+console.log('Reading data/icons …');
+const data = loadIconData();
 
 // ── collect icons ──────────────────────────────────────────────────────────
 const icons = [];
@@ -93,7 +86,7 @@ for (const [catKey, catData] of Object.entries(data.categories || {})) {
         pascal,
         category: catKey,
         weights,
-        tags: TAGS[iconKey] || icon.description || [],
+        tags: icon.description || [],
       });
     }
   }
