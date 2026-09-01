@@ -109,6 +109,16 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 </script>
 ```
 
+### Direct SVG CDN
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+```
+
+Use `/dist/cdn/icons/{name}.svg` for the default outline SVG and `/dist/cdn/icons/{name}-filled.svg` for the filled SVG.
+Every direct SVG uses a flat kebab-case filename under `/dist/cdn/icons`.
+
 ### Direct icon import (smallest bundle)
 
 ```js

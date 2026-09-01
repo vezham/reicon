@@ -37,6 +37,9 @@
     "./cdn/vezham-icons.js": {
       "import": "./dist/cdn/vezham-icons.js"
     },
+    "./cdn/icons/*": {
+      "default": "./dist/cdn/icons/*"
+    },
     "./cdn/*": {
       "import": "./dist/cdn/*.js"
     }

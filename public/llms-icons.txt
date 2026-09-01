@@ -1,10 +1,11 @@
 # Reicon — Complete Icon Names & Component Mapping
 
-This file lists every icon in the Reicon SVG icon library by category. Use it to look up the correct import name (PascalCase) or CDN attribute value (kebab-case) for any icon.
+This file lists every icon in the Reicon SVG icon library by category. Use it to look up the correct import name (PascalCase), CDN attribute value (kebab-case), or direct SVG CDN URL for any icon.
 
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (`arrow-up-right` → `ArrowUpRight`)
 - **CDN**: use the kebab-case name as-is: `<vx-icon icon="arrow-up-right">`
+- **Direct SVG CDN**: use `https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{name}.svg` for outline or `{name}-filled.svg` for filled
 
 ## Stats
 - **Total**: 2628 unique designs (5256 icons counting both weights)

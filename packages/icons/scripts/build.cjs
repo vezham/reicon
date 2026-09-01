@@ -57,6 +57,10 @@ function buildPreviewDataUri(weights) {
   return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
 }
 
+function buildStandaloneSvg(inner) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>\n`;
+}
+
 // ── read data ──────────────────────────────────────────────────────────────
 console.log('Reading icondata.json …');
 const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
@@ -375,12 +379,6 @@ const runtimeJS = `/*!
   function parseIconAttr(raw) {
     if (!raw) return null;
     var category = null, spec = String(raw).trim();
-    if (spec.startsWith('reicon:')) {
-      var parts = spec.split(':');
-      if (parts.length === 3) { category = parts[1]; spec = parts[2]; }
-      else if (parts.length === 2) { spec = parts[1]; }
-      else return null;
-    }
     var name = spec, weight = null;
     var dash = spec.lastIndexOf('-');
     if (dash > 0) {
@@ -683,6 +681,36 @@ fs.mkdirSync(cdnDist, { recursive: true });
 fs.writeFileSync(path.join(cdnDist, 'vezham-icons.js'), runtimeJS);
 console.log(`  CDN bundle:  ${(Buffer.byteLength(runtimeJS) / 1024 / 1024).toFixed(2)} MB`);
 
+// ── direct CDN SVG files ───────────────────────────────────────────────────
+const cdnIconsDist = path.join(cdnDist, 'icons');
+fs.mkdirSync(cdnIconsDist, { recursive: true });
+
+let directSvgFiles = 0;
+const directSvgPaths = new Set();
+function writeDirectSvg(relativePath, inner) {
+  if (directSvgPaths.has(relativePath)) {
+    return;
+  }
+  directSvgPaths.add(relativePath);
+
+  const outPath = path.join(cdnIconsDist, relativePath);
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, buildStandaloneSvg(inner));
+  directSvgFiles++;
+}
+
+for (const icon of icons) {
+  const outline = icon.weights.O || icon.weights.F;
+  if (outline) {
+    writeDirectSvg(`${icon.kebab}.svg`, outline);
+  }
+
+  if (icon.weights.F) {
+    writeDirectSvg(`${icon.kebab}-filled.svg`, icon.weights.F);
+  }
+}
+console.log(`  Direct SVGs: ${directSvgFiles}`);
+
 // ── package.json ───────────────────────────────────────────────────────────
 const srcPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf-8'));
 const pkg = {
@@ -715,6 +743,9 @@ const pkg = {
     },
     './cdn/vezham-icons.js': {
       import: './cdn/vezham-icons.js',
+    },
+    './cdn/icons/*': {
+      default: './cdn/icons/*',
     },
     './cdn/*': {
       import: './cdn/*.js',
@@ -857,6 +888,16 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 </script>
 \`\`\`
 
+### Direct SVG CDN
+
+\`\`\`html
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+\`\`\`
+
+Use \`/dist/cdn/icons/{name}.svg\` for the default outline SVG and \`/dist/cdn/icons/{name}-filled.svg\` for the filled SVG.
+Every direct SVG uses a flat kebab-case filename under \`/dist/cdn/icons\`.
+
 ### Direct icon import (smallest bundle)
 
 \`\`\`js
@@ -986,7 +1027,7 @@ for (const icon of icons) {
 fs.writeFileSync(path.join(DIST, 'icon-names.json'), JSON.stringify(nameMap, null, 2));
 
 // ── summary ────────────────────────────────────────────────────────────────
-const totalFiles = (icons.length * 2) + 6;
+const totalFiles = (icons.length * 2) + directSvgFiles + 6;
 console.log(`\nDone!`);
 console.log(`  Icons:       ${icons.length}`);
 console.log(`  Weights:     Outline + Filled`);

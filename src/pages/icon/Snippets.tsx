@@ -120,6 +120,20 @@ export function DirectSnippet({ pascalName }: { pascalName: string }) {
   );
 }
 
+export function SvgUrlSnippet({ name, filled }: { name: string; filled: boolean }) {
+  const filename = `${name}${filled ? '-filled' : ''}.svg`;
+
+  return (
+    <>
+      <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">img</span>
+      <span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span>
+      <span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{filename}"</span>
+      <span className="text-[#d19a66]"> alt</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{name} icon"</span>
+      <span className="text-text-base/70"> /{'>'}</span>
+    </>
+  );
+}
+
 export function CdnSnippet({ name, filled }: { name: string; filled: boolean }) {
   return (
     <>

@@ -85,6 +85,16 @@ Simply add the `<vx-icon>` tags directly in your HTML:
 <vx-icon icon="shield-check" weight="filled" size="32" color="#6C5CE7"></vx-icon>
 ```
 
+### Direct SVG CDN
+Use a direct SVG URL when you want a specific icon file without loading the runtime:
+```html
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+```
+
+The default file is Outline. Add `-filled` before `.svg` for the Filled weight.
+Every direct SVG uses a flat kebab-case filename under `/dist/cdn/icons`.
+
 ### Load Functions globally via Script tag
 If you want to use the global `reicon` object functions directly in a browser script tag:
 ```html

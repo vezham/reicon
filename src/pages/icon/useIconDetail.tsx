@@ -1,6 +1,7 @@
 import { useParams, useSearchParams } from 'react-router-dom';
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { FaReact } from 'react-icons/fa';
+import { FiLink } from 'react-icons/fi';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSvelte } from 'react-icons/si';
 import { VueLogo, FlutterLogo } from './Snippets';
@@ -35,7 +36,7 @@ export default function useIconDetail() {
   const [previewSize, setPreviewSize] = useState(128);
   const [toast, setToast] = useState<string | null>(null);
   const [exportSize, setExportSize] = useState(64);
-  const [codeTab, setCodeTab] = useState<'vanilla' | 'cdn' | 'react' | 'react-native' | 'vue' | 'svelte' | 'flutter' | 'direct'>('vanilla');
+  const [codeTab, setCodeTab] = useState<'vanilla' | 'cdn' | 'svg-url' | 'react' | 'react-native' | 'vue' | 'svelte' | 'flutter' | 'direct'>('vanilla');
   const [iconCategory, setIconCategory] = useState('');
   const [contributorGithub, setContributorGithub] = useState<string | null>(null);
   const [useCustomColor, setUseCustomColor] = useState(false);
@@ -88,6 +89,7 @@ export default function useIconDetail() {
 
   const vanillaRaw = `import { ${pascalName} } from 'reicon';\n\nconst icon = ${pascalName}({ size: 24${fw ? ", weight: 'Filled'" : ''} });\ndocument.body.appendChild(icon);`;
   const cdnRaw = `<script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"><\/script>\n<vx-icon icon="${name}"${fw ? ' weight="filled"' : ''}></vx-icon>`;
+  const svgUrlRaw = `<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/${name}${fw ? '-filled' : ''}.svg" alt="${name} icon" />`;
   const reactRaw = `import { ${pascalName} } from 'reicon-react';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
   const reactNativeRaw = `import { ${pascalName} } from 'reicon-react-native';\n\n<${pascalName} size={24}${fw ? ' weight="Filled"' : ''} />`;
   const vueRaw = `import { ${pascalName} } from 'reicon-vue';\n\n<${pascalName} :size="24"${fw ? ' weight="Filled"' : ''} />`;
@@ -98,13 +100,14 @@ export default function useIconDetail() {
   const CODE_TABS = useMemo(() => [
     { id: 'vanilla' as const, label: 'JS', icon: <IoLogoJavascript className="text-yellow-400" size={14} />, raw: vanillaRaw },
     { id: 'cdn' as const, label: 'CDN', icon: <IoLogoJavascript className="text-[#F7DF1E]" size={14} />, raw: cdnRaw },
+    { id: 'svg-url' as const, label: 'SVG URL', icon: <FiLink className="text-[#6C5CE7]" size={14} />, raw: svgUrlRaw },
     { id: 'react' as const, label: 'React', icon: <FaReact className="text-[#61DAFB]" size={14} />, raw: reactRaw },
     { id: 'react-native' as const, label: 'React Native', icon: <FaReact className="text-[#61DAFB]" size={14} />, raw: reactNativeRaw },
     { id: 'vue' as const, label: 'Vue', icon: <VueLogo />, raw: vueRaw },
     { id: 'svelte' as const, label: 'Svelte', icon: <SiSvelte className="text-[#FF3E00]" size={14} />, raw: svelteRaw },
     { id: 'flutter' as const, label: 'Flutter', icon: <FlutterLogo />, raw: flutterRaw },
     { id: 'direct' as const, label: 'Direct', icon: <FaReact className="text-[#61DAFB]" size={14} />, raw: directRaw },
-  ], [vanillaRaw, cdnRaw, reactRaw, reactNativeRaw, vueRaw, svelteRaw, flutterRaw, directRaw]);
+  ], [vanillaRaw, cdnRaw, svgUrlRaw, reactRaw, reactNativeRaw, vueRaw, svelteRaw, flutterRaw, directRaw]);
 
   const activeTab = CODE_TABS.find((t) => t.id === codeTab)!;
 

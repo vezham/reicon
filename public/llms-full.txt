@@ -296,6 +296,12 @@ createIcon(displayName: string, iconData: Record<string, string>): IconFunction
 <vx-icon icon="shield-check" weight="outline" size="28" color="#6C5CE7"></vx-icon>
 ```
 
+**Direct SVG CDN:**
+```html
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+```
+
 **All attributes:**
 
 | Attribute | Type | Default | Description |

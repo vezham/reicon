@@ -200,6 +200,13 @@ Each icon is a callable function returning `SVGSVGElement`. Tree-shakeable.
 
 All icon data is inlined — zero network calls. Uses Shadow DOM for isolation.
 
+Direct SVG files are also available:
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+```
+
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `icon` | string | — | Kebab-case name (required) |
