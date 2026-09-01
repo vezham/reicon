@@ -1,5 +1,11 @@
 # @vezham/icons-react-native
 
+## 1.0.4
+
+### Patch Changes
+
+- [`6f36c9b`](https://github.com/vezham/reicon/commit/6f36c9be7ef6ff9b78059599c2c863bdb6ed7127) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - added gzip
+
 ## 1.0.3
 
 ### Patch Changes
