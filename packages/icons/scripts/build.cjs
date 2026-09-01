@@ -13,7 +13,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const zlib = require('zlib');
 
 // ── paths ──────────────────────────────────────────────────────────────────
 const DATA_PATH = path.join(__dirname, '..', '..', '..', 'data', 'icon-data.json');
@@ -59,7 +58,11 @@ function buildPreviewDataUri(weights) {
 }
 
 function buildStandaloneSvg(inner) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>`
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/>\s+</g, '><')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
 }
 
 // ── read data ──────────────────────────────────────────────────────────────
@@ -687,8 +690,6 @@ const cdnIconsDist = path.join(cdnDist, 'icons');
 fs.mkdirSync(cdnIconsDist, { recursive: true });
 
 let directSvgFiles = 0;
-let directSvgGzipFiles = 0;
-let directSvgGzipBytes = 0;
 const directSvgPaths = new Set();
 function writeDirectSvg(relativePath, inner) {
   if (directSvgPaths.has(relativePath)) {
@@ -698,13 +699,9 @@ function writeDirectSvg(relativePath, inner) {
 
   const outPath = path.join(cdnIconsDist, relativePath);
   const svg = buildStandaloneSvg(inner);
-  const gzip = zlib.gzipSync(svg, { level: 9 });
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, svg);
-  fs.writeFileSync(`${outPath}.gz`, gzip);
   directSvgFiles++;
-  directSvgGzipFiles++;
-  directSvgGzipBytes += gzip.byteLength;
 }
 
 for (const icon of icons) {
@@ -718,7 +715,6 @@ for (const icon of icons) {
   }
 }
 console.log(`  Direct SVGs: ${directSvgFiles}`);
-console.log(`  Direct SVG gzip: ${(directSvgGzipBytes / 1024 / 1024).toFixed(2)} MB (${directSvgGzipFiles} files)`);
 
 // ── package.json ───────────────────────────────────────────────────────────
 const srcPkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf-8'));
@@ -1036,7 +1032,7 @@ for (const icon of icons) {
 fs.writeFileSync(path.join(DIST, 'icon-names.json'), JSON.stringify(nameMap, null, 2));
 
 // ── summary ────────────────────────────────────────────────────────────────
-const totalFiles = (icons.length * 2) + directSvgFiles + directSvgGzipFiles + 6;
+const totalFiles = (icons.length * 2) + directSvgFiles + 6;
 console.log(`\nDone!`);
 console.log(`  Icons:       ${icons.length}`);
 console.log(`  Weights:     Outline + Filled`);
