@@ -1,5 +1,11 @@
 # @vezham/icons-vue
 
+## 1.0.5
+
+### Patch Changes
+
+- [`04f1b53`](https://github.com/vezham/reicon/commit/04f1b53e6197abbaeeae26d58eb80b10f5c4ab31) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - updated data icons dir
+
 ## 1.0.4
 
 ### Patch Changes
