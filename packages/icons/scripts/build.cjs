@@ -415,7 +415,7 @@ const runtimeJS = `/*!
   }
 
   function rewriteSvg(svg) {
-    return svg.replace(/currentColor/g, 'var(--ri-primary)');
+    return svg.replace(/currentColor/g, 'var(--vx-icon-primary)');
   }
 
   // ─── gradients ────────────────────────────────────────────────────────────
@@ -446,12 +446,12 @@ const runtimeJS = `/*!
     if (!opts.primary && !opts.secondary) return svg;
     var defs = [], out = svg;
     if (opts.primary) {
-      defs.push(opts.type === 'radial' ? buildRadialGradient('ri-primary', opts.primary) : buildLinearGradient('ri-primary', opts.primary, opts.angle));
-      out = out.replace(/var\\(--ri-primary\\)/g, 'url(#ri-primary)');
+      defs.push(opts.type === 'radial' ? buildRadialGradient('vx-icon-primary', opts.primary) : buildLinearGradient('vx-icon-primary', opts.primary, opts.angle));
+      out = out.replace(/var\\(--vx-icon-primary\\)/g, 'url(#vx-icon-primary)');
     }
     if (opts.secondary) {
-      defs.push(opts.type === 'radial' ? buildRadialGradient('ri-secondary', opts.secondary) : buildLinearGradient('ri-secondary', opts.secondary, opts.angle));
-      out = out.replace(/var\\(--ri-secondary\\)/g, 'url(#ri-secondary)');
+      defs.push(opts.type === 'radial' ? buildRadialGradient('vx-icon-secondary', opts.secondary) : buildLinearGradient('vx-icon-secondary', opts.secondary, opts.angle));
+      out = out.replace(/var\\(--vx-icon-secondary\\)/g, 'url(#vx-icon-secondary)');
     }
     return out.replace(/(<svg\\b[^>]*>)/i, '$1<defs>' + defs.join('') + '</defs>');
   }
@@ -541,13 +541,13 @@ const runtimeJS = `/*!
       if (this.shadowRoot.firstChild) return;
       var style = document.createElement('style');
       style.textContent =
-        ':host{display:inline-block;vertical-align:middle;line-height:0;width:var(--ri-size,1em);height:var(--ri-size,1em);color:var(--ri-primary,currentColor);contain:layout paint}' +
+        ':host{display:inline-block;vertical-align:middle;line-height:0;width:var(--vx-icon-size,1em);height:var(--vx-icon-size,1em);color:var(--vx-icon-primary,currentColor);contain:layout paint}' +
         ':host([hidden]){display:none}' +
-        '.wrap{display:block;width:100%;height:100%;transform:var(--ri-transform,none);transform-origin:50% 50%}' +
-        ':host([spin]) .wrap{animation:ri-spin 1.6s linear infinite}' +
-        '@keyframes ri-spin{to{transform:var(--ri-transform,rotate(0)) rotate(360deg)}}' +
+        '.wrap{display:block;width:100%;height:100%;transform:var(--vx-icon-transform,none);transform-origin:50% 50%}' +
+        ':host([spin]) .wrap{animation:vx-icon-spin 1.6s linear infinite}' +
+        '@keyframes vx-icon-spin{to{transform:var(--vx-icon-transform,rotate(0)) rotate(360deg)}}' +
         'svg{display:block;width:100%;height:100%;shape-rendering:geometricPrecision;overflow:visible}' +
-        'svg [stroke]:not([stroke="none"]){stroke-width:var(--ri-stroke-width,inherit)}';
+        'svg [stroke]:not([stroke="none"]){stroke-width:var(--vx-icon-stroke-width,inherit)}';
       var wrap = document.createElement('div');
       wrap.className = 'wrap';
       this.shadowRoot.append(style, wrap);
@@ -563,11 +563,11 @@ const runtimeJS = `/*!
       var flip = this.getAttribute('flip');
       var s = this.style;
       function set(k, v) { if (v == null || v === '') s.removeProperty(k); else s.setProperty(k, v); }
-      set('--ri-size', size);
-      set('--ri-primary', color);
-      set('--ri-secondary', secondary);
-      set('--ri-stroke-width', stroke);
-      set('--ri-transform', buildTransform(rotate, flip));
+      set('--vx-icon-size', size);
+      set('--vx-icon-primary', color);
+      set('--vx-icon-secondary', secondary);
+      set('--vx-icon-stroke-width', stroke);
+      set('--vx-icon-transform', buildTransform(rotate, flip));
     }
 
     _applyA11y() {

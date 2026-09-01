@@ -63,8 +63,8 @@ export async function getSvgString(
     clone.setAttribute('width', String(size));
     clone.setAttribute('height', String(size));
     svgStr = clone.outerHTML
-      .replace(/var\(--ri-primary[^)]*\)/g, 'currentColor')
-      .replace(/var\(--ri-secondary[^)]*\)/g, 'currentColor');
+      .replace(/var\(--vx-icon-primary[^)]*\)/g, 'currentColor')
+      .replace(/var\(--vx-icon-secondary[^)]*\)/g, 'currentColor');
   }
 
   document.body.removeChild(el);

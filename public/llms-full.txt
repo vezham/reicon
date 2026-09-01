@@ -335,7 +335,7 @@ Reicon.contributorOf('wave-hand');             // GitHub username or null
 
 **Technical:**
 - Shadow DOM (`attachShadow({ mode: 'open' })`) for style isolation
-- CSS custom properties: `--ri-size`, `--ri-primary`, `--ri-secondary`, `--ri-stroke-width`, `--ri-transform`
+- CSS custom properties: `--vx-icon-size`, `--vx-icon-primary`, `--vx-icon-secondary`, `--vx-icon-stroke-width`, `--vx-icon-transform`
 - All icon data inlined at build time — zero network calls
 - `attributeChangedCallback` for reactive updates
 - Weight aliases: `filled`/`bold` → Filled, `outline`/`linear` → Outline
