@@ -14,20 +14,20 @@ The official Vue 3 package for Reicon. Import beautifully crafted icons as Vue c
 
 ## Installation
 ```bash
-npm install reicon-vue
+npm install @vezham/icons-vue
 # or
-yarn add reicon-vue
+yarn add @vezham/icons-vue
 # or
-pnpm add reicon-vue
+pnpm add @vezham/icons-vue
 ```
 
 ---
 
 ## Basic Usage
-Import icons by their PascalCase name from `reicon-vue`. Each icon is a Vue component that accepts standard props.
+Import icons by their PascalCase name from `@vezham/icons-vue`. Each icon is a Vue component that accepts standard props.
 ```html
 <script setup>
-import { Home, ShieldCheck, AltArrowDown } from 'reicon-vue';
+import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';
 </script>
 
 <template>
@@ -64,7 +64,7 @@ Every icon component accepts the following props to customize its appearance. Yo
 ## Direct Import for Smaller Bundles
 For the absolute smallest bundle size, import each icon directly from its own module.
 ```javascript
-import Home from 'reicon-vue/icons/Home';
+import Home from '@vezham/icons-vue/icons/Home';
 ```
 
 ---
@@ -73,7 +73,7 @@ import Home from 'reicon-vue/icons/Home';
 Use Vue's `<component :is="..." />` pattern with `shallowRef` for dynamic icon switching.
 ```html
 <script setup>
-import { Home, Settings, User } from 'reicon-vue';
+import { Home, Settings, User } from '@vezham/icons-vue';
 import { shallowRef } from 'vue';
 
 const currentIcon = shallowRef(Home);
@@ -90,7 +90,7 @@ const currentIcon = shallowRef(Home);
 Works out of the box with Nuxt 3 — just import and use. No plugins or configuration needed.
 ```html
 <script setup>
-import { Home } from 'reicon-vue';
+import { Home } from '@vezham/icons-vue';
 </script>
 
 <template>

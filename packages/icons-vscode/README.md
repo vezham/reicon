@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://reicon.dev">
-    <img src="https://reicon.dev/readme-banner.png" alt="Reicon for VS Code — SVG Icon Library for VS Code" width="100%" />
+    <img src="https://reicon.dev/readme-banner.png" alt="Vezham Icons for VS Code — SVG Icon Library for VS Code" width="100%" />
   </a>
 </p>
 
@@ -12,10 +12,10 @@
   <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
 </p>
 
-<h1 align="center">Reicon for VS Code</h1>
+<h1 align="center">Vezham Icons for VS Code</h1>
 
 <p align="center">
-  <b>Browse and insert 2674+ Reicon icons</b> • Outline & Filled weights • React, Vue, Svelte, SVG, JSX • Smart code insertion
+  <b>Browse and insert 2674+ Vezham icons</b> • Outline & Filled weights • React, Vue, Svelte, SVG, JSX • Smart code insertion
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
   <a href="#links">Links</a>
 </p>
 
-**Reicon for VS Code** brings the official, pixel-perfect Reicon library directly into your code editor. Browse, search, customize, and insert icons instantly in multiple formats with zero context switching.
+**Vezham Icons for VS Code** brings the official, pixel-perfect Vezham Icons library directly into your code editor. Browse, search, customize, and insert icons instantly in multiple formats with zero context switching.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
@@ -56,7 +56,7 @@
 ## Quick Start
 
 1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon)
-2. Click the **Reicon** logo in the Activity Bar on the left
+2. Click the **Vezham Icons** logo in the Activity Bar on the left
 3. Search for icons by name, category, or description keywords
 4. Set your preferred **Format** (React, Vue, Svelte, SVG), **Size**, and **Color**
 5. Click on any icon grid card to instantly insert the code at your cursor
@@ -77,10 +77,10 @@
 
 | Package | Description |
 |---------|-------------|
-| [`reicon`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN runtime. No framework required. |
-| [`reicon-react`](https://npmjs.com/package/reicon-react) | React components for 2674+ icons. |
-| [`reicon-vue`](https://npmjs.com/package/reicon-vue) | Vue 3 components for 2674+ icons. |
-| [`reicon-svelte`](https://npmjs.com/package/reicon-svelte) | Svelte components for 2674+ icons. |
+| [`/icons`](https://npmjs.com/package/@vezham/icons) | Core vanilla JS + CDN runtime. No framework required. |
+| [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for 2674+ icons. |
+| [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for 2674+ icons. |
+| [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for 2674+ icons. |
 
 ---
 

@@ -17,7 +17,7 @@ export default function InstallSection({ copiedField, onCopy }: InstallSectionPr
       </p>
 
       <InstallTabs
-        packageName="reicon-mcp"
+        packageName="vezham-icons-mcp"
         copiedField={copiedField}
         onCopy={onCopy}
       />

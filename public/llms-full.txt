@@ -41,12 +41,12 @@ arrow-down-circle    → ArrowDownCircle
 
 | Package | npm | Version | Peer Dependencies |
 |---------|-----|---------|-------------------|
-| Vanilla JS | `reicon` | 1.1.1 | none |
-| React | `reicon-react` | 1.1.3 | `react >= 16.8.0` |
-| Vue 3 | `reicon-vue` | 1.1.1 | `vue ^3.0.0` |
-| Svelte | `reicon-svelte` | 1.0.0 | `svelte >= 3.0.0` |
-| React Native | `reicon-react-native` | 1.0.0 | `react >= 16.8.0`, `react-native >= 0.64.0`, `react-native-svg >= 12.0.0` |
-| MCP Server | `reicon-mcp` | 1.1.0 | Node >= 18 |
+| Vanilla JS | `@vezham/icons` | 1.1.1 | none |
+| React | `@vezham/icons-react` | 1.1.3 | `react >= 16.8.0` |
+| Vue 3 | `@vezham/icons-vue` | 1.1.1 | `vue ^3.0.0` |
+| Svelte | `@vezham/icons-svelte` | 1.0.0 | `svelte >= 3.0.0` |
+| React Native | `@vezham/icons-react-native` | 1.0.0 | `react >= 16.8.0`, `react-native >= 0.64.0`, `react-native-svg >= 12.0.0` |
+| MCP Server | `vezham-icons-mcp` | 1.1.0 | Node >= 18 |
 | VS Code | `DevChauhan.reicon` | 1.0.3 | VS Code ^1.80.0 |
 | Figma | Community Plugin | 1.0.0 | Figma |
 
@@ -54,13 +54,13 @@ arrow-down-circle    → ArrowDownCircle
 
 ## 4. Full Framework References
 
-### 4.1 React (`reicon-react`)
+### 4.1 React (`@vezham/icons-react`)
 
-**Install**: `npm install reicon-react`
+**Install**: `npm install @vezham/icons-react`
 
 **Named import** (tree-shakeable):
 ```jsx
-import { Home, Search, Bell, ShieldCheck } from 'reicon-react';
+import { Home, Search, Bell, ShieldCheck } from '@vezham/icons-react';
 
 <Home size={24} weight="Outline" color="currentColor" />
 <Search size={20} color="#6C5CE7" />
@@ -70,8 +70,8 @@ import { Home, Search, Bell, ShieldCheck } from 'reicon-react';
 
 **Direct import** (maximum tree-shaking):
 ```jsx
-import Home from 'reicon-react/icons/Home';
-import Bell from 'reicon-react/icons/Bell';
+import Home from '@vezham/icons-react/icons/Home';
+import Bell from '@vezham/icons-react/icons/Bell';
 ```
 
 **Props:**
@@ -106,14 +106,14 @@ interface IconProps {
 
 ---
 
-### 4.2 Vue 3 / Nuxt 3 (`reicon-vue`)
+### 4.2 Vue 3 / Nuxt 3 (`@vezham/icons-vue`)
 
-**Install**: `npm install reicon-vue`
+**Install**: `npm install @vezham/icons-vue`
 
 **Named import** (tree-shakeable):
 ```vue
 <script setup>
-import { Home, Search, Bell } from 'reicon-vue';
+import { Home, Search, Bell } from '@vezham/icons-vue';
 </script>
 
 <template>
@@ -126,7 +126,7 @@ import { Home, Search, Bell } from 'reicon-vue';
 **Direct import**:
 ```vue
 <script setup>
-import Home from 'reicon-vue/icons/Home';
+import Home from '@vezham/icons-vue/icons/Home';
 </script>
 ```
 
@@ -134,7 +134,7 @@ import Home from 'reicon-vue/icons/Home';
 ```vue
 <script setup>
 import { shallowRef } from 'vue';
-import { Home, Settings } from 'reicon-vue';
+import { Home, Settings } from '@vezham/icons-vue';
 const currentIcon = shallowRef(Home);
 </script>
 <template>
@@ -157,14 +157,14 @@ SSR-compatible with Nuxt 3 out of the box.
 
 ---
 
-### 4.3 Svelte / SvelteKit (`reicon-svelte`)
+### 4.3 Svelte / SvelteKit (`@vezham/icons-svelte`)
 
-**Install**: `npm install reicon-svelte`
+**Install**: `npm install @vezham/icons-svelte`
 
 **Named import**:
 ```svelte
 <script>
-import { Home, Search, Bell } from 'reicon-svelte';
+import { Home, Search, Bell } from '@vezham/icons-svelte';
 </script>
 
 <Home size={24} weight="Outline" color="currentColor" />
@@ -175,7 +175,7 @@ import { Home, Search, Bell } from 'reicon-svelte';
 **Direct import**:
 ```svelte
 <script>
-import Home from 'reicon-svelte/icons/Home.svelte';
+import Home from '@vezham/icons-svelte/icons/Home.svelte';
 </script>
 ```
 
@@ -192,13 +192,13 @@ SSR-compatible with SvelteKit.
 
 ---
 
-### 4.4 React Native (`reicon-react-native`)
+### 4.4 React Native (`@vezham/icons-react-native`)
 
-**Install**: `npm install reicon-react-native react-native-svg`
+**Install**: `npm install @vezham/icons-react-native react-native-svg`
 
 **Named import**:
 ```tsx
-import { Home, ShieldCheck } from 'reicon-react-native';
+import { Home, ShieldCheck } from '@vezham/icons-react-native';
 
 <View>
   <Home size={24} color="#000000" />
@@ -208,7 +208,7 @@ import { Home, ShieldCheck } from 'reicon-react-native';
 
 **Direct import**:
 ```tsx
-import Home from 'reicon-react-native/icons/Home';
+import Home from '@vezham/icons-react-native/icons/Home';
 ```
 
 **Props:**
@@ -225,12 +225,12 @@ Metro bundler tree-shakes automatically.
 
 ---
 
-### 4.5 Vanilla JS / ESM (`reicon`)
+### 4.5 Vanilla JS / ESM (`@vezham/icons`)
 
-**Install**: `npm install reicon`
+**Install**: `npm install @vezham/icons`
 
 ```js
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 // Append to DOM — function returns SVGSVGElement
 const svgEl = Home({ size: 24, color: 'red', weight: 'Outline' });
@@ -240,7 +240,7 @@ document.body.appendChild(svgEl);
 const svgString = Home.toSvg({ size: 32, color: '#d97757' });
 
 // Direct import (smallest bundle)
-import Home from 'reicon/icons/Home';
+import Home from '@vezham/icons/Home';
 ```
 
 **Options (IconOptions):**
@@ -322,15 +322,15 @@ createIcon(displayName: string, iconData: Record<string, string>): IconFunction
 | `gradient-type` | `string` | `"linear"` | `"linear"` or `"radial"` |
 | `gradient-angle` | `string` | `"135"` | Degrees for linear gradient |
 
-**JavaScript API (`window.Reicon`):**
+**JavaScript API (`window.VezhamIcons`):**
 ```js
-Reicon.preload(['home', 'heart']);           // Pre-warm SVG cache
-Reicon.ready;                                  // Promise, resolves immediately
-Reicon.icons;                                  // Array of all icon names
-Reicon.categories;                             // Array of all category names
-Reicon.categoryOf('home');                     // Returns category string
-Reicon.categoryMap;                            // { iconName: categoryName }
-Reicon.contributorOf('wave-hand');             // GitHub username or null
+VezhamIcons.preload(['home', 'heart']);           // Pre-warm SVG cache
+VezhamIcons.ready;                                // Promise, resolves immediately
+VezhamIcons.icons;                                // Array of all icon names
+VezhamIcons.categories;                           // Array of all category names
+VezhamIcons.categoryOf('home');                   // Returns category string
+VezhamIcons.categoryMap;                          // { iconName: categoryName }
+VezhamIcons.contributorOf('wave-hand');           // GitHub username or null
 ```
 
 **Technical:**
@@ -342,20 +342,20 @@ Reicon.contributorOf('wave-hand');             // GitHub username or null
 
 **UMD bundle (without web component):**
 ```html
-<script src="https://unpkg.com/reicon"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/dist/umd/vezham-icons.js"></script>
 <script>
-  const svg = reicon.Home({ size: 24, color: '#6C5CE7' });
+  const svg = VezhamIcons.Home({ size: 24, color: '#6C5CE7' });
   document.body.appendChild(svg);
 </script>
 ```
 
 ---
 
-### 4.7 MCP Server (`reicon-mcp`)
+### 4.7 MCP Server (`vezham-icons-mcp`)
 
 For AI agents. Works fully offline — search index is bundled at build time.
 
-**Install**: `npm install reicon-mcp`
+**Install**: `npm install vezham-icons-mcp`
 **Node**: >= 18
 
 **MCP config** (for Cursor, Claude Desktop, VS Code, etc.):
@@ -364,7 +364,7 @@ For AI agents. Works fully offline — search index is bundled at build time.
   "mcpServers": {
     "reicon": {
       "command": "npx",
-      "args": ["reicon-mcp"]
+      "args": ["vezham-icons-mcp"]
     }
   }
 }
@@ -383,11 +383,11 @@ For AI agents. Works fully offline — search index is bundled at build time.
 
 **CLI usage** (non-MCP mode):
 ```bash
-npx reicon-mcp search "shopping cart"
-npx reicon-mcp view heart --weight Filled
-npx reicon-mcp apply heart --framework react --size 32 --color "#ef4444"
-npx reicon-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
-npx reicon-mcp categories
+npx vezham-icons-mcp search "shopping cart"
+npx vezham-icons-mcp view heart --weight Filled
+npx vezham-icons-mcp apply heart --framework react --size 32 --color "#ef4444"
+npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
+npx vezham-icons-mcp categories
 ```
 
 The `--file --marker` mode replaces a marker in a file with the generated snippet and inserts the import at the top.
@@ -471,11 +471,11 @@ Every icon is an independent ES module. Named imports and direct imports are bot
 
 | Package | `sideEffects` | Direct path | Named path |
 |---------|--------------|-------------|------------|
-| `reicon` | `false` | `reicon/icons/Home` | `reicon` |
-| `reicon-react` | `false` | `reicon-react/icons/Home` | `reicon-react` |
-| `reicon-vue` | `false` | `reicon-vue/icons/Home` | `reicon-vue` |
-| `reicon-svelte` | `false` | `reicon-svelte/icons/Home.svelte` | `reicon-svelte` |
-| `reicon-react-native` | `false` | `reicon-react-native/icons/Home` | `reicon-react-native` |
+| `@vezham/icons` | `false` | `@vezham/icons/Home` | `@vezham/icons` |
+| `@vezham/icons-react` | `false` | `@vezham/icons-react/icons/Home` | `@vezham/icons-react` |
+| `@vezham/icons-vue` | `false` | `@vezham/icons-vue/icons/Home` | `@vezham/icons-vue` |
+| `@vezham/icons-svelte` | `false` | `@vezham/icons-svelte/icons/Home.svelte` | `@vezham/icons-svelte` |
+| `@vezham/icons-react-native` | `false` | `@vezham/icons-react-native/icons/Home` | `@vezham/icons-react-native` |
 
 ~1 KB per icon (gzipped, average). Modern bundlers (Vite, Webpack, Rollup, esbuild, Next.js, Remix, Metro) only bundle what's imported.
 
@@ -538,7 +538,7 @@ Every icon is an independent ES module. Named imports and direct imports are bot
 A: A free, open-source SVG icon library with 2,700+ handcrafted icons in Outline and Filled weights. Available for React, Vue 3, Svelte, React Native, vanilla JS, CDN/web component, Figma, VS Code, and AI via MCP server. MIT license.
 
 **Q: How do I install it?**
-A: `npm install reicon-react` (React), `reicon-vue` (Vue), `reicon-svelte` (Svelte), `reicon-react-native` (React Native), `reicon` (vanilla JS), or use the CDN script tag for zero-install HTML.
+A: `npm install @vezham/icons-react` (React), `@vezham/icons-vue` (Vue), `@vezham/icons-svelte` (Svelte), `@vezham/icons-react-native` (React Native), `@vezham/icons` (vanilla JS), or use the CDN script tag for zero-install HTML.
 
 **Q: What's the difference between Outline and Filled?**
 A: Outline (default) uses 1.5px uniform strokes. Filled uses solid paths. Pass `weight="Filled"` to switch.
@@ -559,7 +559,7 @@ A: Yes. All packages ship with first-class typings. No `@types/` packages needed
 A: Yes. React, Vue, Svelte packages are SSR-compatible. Vanilla JS has `toSvg()` for raw SVG strings.
 
 **Q: Is there an MCP server for AI agents?**
-A: Yes — `reicon-mcp`. It provides `search_icons`, `view_icon`, `apply_icon`, and `list_categories` tools. Works fully offline.
+A: Yes — `vezham-icons-mcp`. It provides `search_icons`, `view_icon`, `apply_icon`, and `list_categories` tools. Works fully offline.
 
 **Q: How do I use the CDN?**
 A: Add `<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>`, then use `<vx-icon icon="home"></vx-icon>`.
@@ -586,7 +586,7 @@ A: Yes. Edit `data/icon-data.json` in the monorepo. Add `contributor.github` for
 - **Library name**: "Reicon" (one word, capital R)
 - **Description**: "Reicon is a free, open-source SVG icon library with 2,700+ handcrafted, pixel-perfect icons for React, Vue, Svelte, React Native, Figma, and the web, released under the MIT license."
 - **Always disambiguate** from "ReIcon" by Sordum (Windows tool)
-- **npm packages**: `reicon-react`, `reicon-vue`, `reicon-svelte`, `reicon-react-native`, `reicon`, `reicon-mcp`
+- **npm packages**: `@vezham/icons-react`, `@vezham/icons-vue`, `@vezham/icons-svelte`, `@vezham/icons-react-native`, `@vezham/icons`, `@vezham/icons-mcp`
 - **Icon naming**: kebab-case for CDN/data (`arrow-down`), PascalCase for components (`ArrowDown`)
 
 ---

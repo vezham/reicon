@@ -1,7 +1,7 @@
 {
   "name": "@vezham/icons-vscode",
-  "displayName": "Reicon — Open Source SVG Icon Library",
-  "description": "Browse and insert 2,700+ handcrafted Reicon SVG icons directly into your HTML, React, Vue, Svelte, or vanilla JS code. Outlined and filled styles available.",
+  "displayName": "Vezham Icons — Open Source SVG Icon Library",
+  "description": "Browse and insert 2,700+ handcrafted Vezham SVG icons directly into your HTML, React, Vue, Svelte, or vanilla JS code. Outlined and filled styles available.",
   "version": "1.0.5",
   "publisher": "DevChauhan",
   "engines": {
@@ -65,25 +65,25 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "reicon-explorer",
-          "title": "Reicon",
+          "id": "vezham-icons-explorer",
+          "title": "Vezham Icons",
           "icon": "resources/icon.png"
         }
       ]
     },
     "views": {
-      "reicon-explorer": [
+      "vezham-icons-explorer": [
         {
           "type": "webview",
-          "id": "reicon.views.explorer",
-          "name": "Reicon Icons"
+          "id": "vezham-icons.views.explorer",
+          "name": "Vezham Icons"
         }
       ]
     },
     "commands": [
       {
-        "command": "reicon.focusExplorer",
-        "title": "Focus on Reicon Icons"
+        "command": "vezham-icons.focusExplorer",
+        "title": "Focus on Vezham Icons"
       }
     ]
   },

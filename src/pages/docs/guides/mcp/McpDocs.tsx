@@ -24,7 +24,7 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        The <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-mcp</code> package exposes Reicon icons to AI agents through the{' '}
+        The <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham-icons-mcp</code> package exposes Reicon icons to AI agents through the{' '}
         <a href="https://modelcontextprotocol.io" className="text-[#6C5CE7] hover:underline" target="_blank" rel="noopener noreferrer">
           Model Context Protocol
         </a>
@@ -55,19 +55,19 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
       <div className="flex flex-col gap-4 mb-8">
         <SyntaxBlock
           title="Search"
-          onCopy={() => onCopy('npx reicon-mcp search "shopping cart"', 'mcp-search')}
+          onCopy={() => onCopy('npx vezham-icons-mcp search "shopping cart"', 'mcp-search')}
           copied={copiedField === 'mcp-search'}
         >
-          <span className="text-[#98c379]">npx reicon-mcp search</span>
+          <span className="text-[#98c379]">npx vezham-icons-mcp search</span>
           <span className="text-[#e5c07b]"> "shopping cart"</span>
         </SyntaxBlock>
 
         <SyntaxBlock
           title="View"
-          onCopy={() => onCopy('npx reicon-mcp view heart --weight Filled', 'mcp-view')}
+          onCopy={() => onCopy('npx vezham-icons-mcp view heart --weight Filled', 'mcp-view')}
           copied={copiedField === 'mcp-view'}
         >
-          <span className="text-[#98c379]">npx reicon-mcp view</span>
+          <span className="text-[#98c379]">npx vezham-icons-mcp view</span>
           <span className="text-[#e5c07b]"> heart</span>
           <span className="text-[#56b6c2]"> --weight</span>
           <span className="text-[#98c379]"> Filled</span>
@@ -75,10 +75,10 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
 
         <SyntaxBlock
           title="Apply"
-          onCopy={() => onCopy('npx reicon-mcp apply heart --framework react --size 32 --color "#ef4444"', 'mcp-apply')}
+          onCopy={() => onCopy('npx vezham-icons-mcp apply heart --framework react --size 32 --color "#ef4444"', 'mcp-apply')}
           copied={copiedField === 'mcp-apply'}
         >
-          <span className="text-[#98c379]">npx reicon-mcp apply</span>
+          <span className="text-[#98c379]">npx vezham-icons-mcp apply</span>
           <span className="text-[#e5c07b]"> heart</span>
           <span className="text-[#56b6c2]"> --framework</span>
           <span className="text-text-base/70"> react</span>
@@ -90,10 +90,10 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
 
         <SyntaxBlock
           title="Categories"
-          onCopy={() => onCopy('npx reicon-mcp categories', 'mcp-categories')}
+          onCopy={() => onCopy('npx vezham-icons-mcp categories', 'mcp-categories')}
           copied={copiedField === 'mcp-categories'}
         >
-          <span className="text-[#98c379]">npx reicon-mcp categories</span>
+          <span className="text-[#98c379]">npx vezham-icons-mcp categories</span>
         </SyntaxBlock>
       </div>
 
@@ -110,7 +110,7 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
         onCopy={() => onCopy(FILE_MARKER_CMD, 'mcp-file-marker')}
         copied={copiedField === 'mcp-file-marker'}
       >
-        <span className="text-[#98c379]">npx reicon-mcp apply</span>
+        <span className="text-[#98c379]">npx vezham-icons-mcp apply</span>
         <span className="text-[#e5c07b]"> heart</span>
         <span className="text-[#56b6c2]"> --framework</span>
         <span className="text-text-base/70"> react</span>

@@ -63,10 +63,10 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Direct Import"
-        onCopy={() => onCopy("import Home from 'reicon-svelte/icons/Home.svelte';", 'svelte-direct')}
+        onCopy={() => onCopy("import Home from '@vezham/icons-svelte/icons/Home.svelte';", 'svelte-direct')}
         copied={copiedField === 'svelte-direct'}
       >
-        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> 'reicon-svelte/icons/Home.svelte'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> '@vezham/icons-svelte/icons/Home.svelte'</span><span className="text-text-base/30">;</span>
       </SyntaxBlock>
 
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">SvelteKit</h3>
@@ -76,7 +76,7 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="SvelteKit"
-        onCopy={() => onCopy("<script>\n  import { Home } from 'reicon-svelte';\n</script>\n\n<Home size={24} />", 'svelte-kit')}
+        onCopy={() => onCopy("<script>\n  import { Home } from '@vezham/icons-svelte';\n</script>\n\n<Home size={24} />", 'svelte-kit')}
         copied={copiedField === 'svelte-kit'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
@@ -86,7 +86,7 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">Home</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-svelte'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#98c379]"> '@vezham/icons-svelte'</span><span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}

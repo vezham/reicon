@@ -13,7 +13,7 @@
   },
   "homepage": "https://vezham.com",
   "bin": {
-    "reicon-mcp": "./dist/bin/run.cjs"
+    "vezham-icons-mcp": "./dist/bin/run.cjs"
   },
   "scripts": {
     "build": "node scripts/build.cjs"

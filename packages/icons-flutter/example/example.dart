@@ -1,6 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 //
-// This is a simple usage example for the `reicon` package.
+// This is a simple usage example for the `/icons` package.
 //
 // Run with: dart example/reicon_example.dart
 

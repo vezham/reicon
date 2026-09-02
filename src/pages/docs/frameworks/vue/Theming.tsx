@@ -16,7 +16,7 @@ export default function Theming({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Dynamic"
-        onCopy={() => onCopy("<script setup>\nimport { Home, Settings, User } from 'reicon-vue';\nimport { shallowRef } from 'vue';\n\nconst currentIcon = shallowRef(Home);\n</script>\n\n<template>\n  <component :is=\"currentIcon\" :size=\"32\" />\n</template>", 'vue-dynamic')}
+        onCopy={() => onCopy("<script setup>\nimport { Home, Settings, User } from '@vezham/icons-vue';\nimport { shallowRef } from 'vue';\n\nconst currentIcon = shallowRef(Home);\n</script>\n\n<template>\n  <component :is=\"currentIcon\" :size=\"32\" />\n</template>", 'vue-dynamic')}
         copied={copiedField === 'vue-dynamic'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script setup</span><span className="text-text-base/70">{'>'}</span>
@@ -28,7 +28,7 @@ export default function Theming({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">User</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-vue'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#98c379]"> '@vezham/icons-vue'</span><span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-[#c678dd]">import</span>
         <span className="text-text-base/70">{' { '}</span>
@@ -56,7 +56,7 @@ export default function Theming({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Nuxt 3"
-        onCopy={() => onCopy("<script setup>\nimport { Home } from 'reicon-vue';\n</script>\n\n<template>\n  <Home :size=\"24\" />\n</template>", 'vue-nuxt')}
+        onCopy={() => onCopy("<script setup>\nimport { Home } from '@vezham/icons-vue';\n</script>\n\n<template>\n  <Home :size=\"24\" />\n</template>", 'vue-nuxt')}
         copied={copiedField === 'vue-nuxt'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script setup</span><span className="text-text-base/70">{'>'}</span>
@@ -66,7 +66,7 @@ export default function Theming({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">Home</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-vue'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#98c379]"> '@vezham/icons-vue'</span><span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
         {'\n\n'}

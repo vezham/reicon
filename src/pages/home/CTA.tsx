@@ -4,12 +4,12 @@ import { Star, Search3, Copy, Pointer } from '@vezham/icons-react';
 import ClayButton from '../../components/ui/Button';
 
 const PACKAGES = [
-    'reicon',
+    '@vezham/icons',
     '@vezham/icons-react',
-    '/icons-react-native',
-    'reicon-vue',
-    'reicon-svelte',
-    'reicon-mcp',
+    '@vezham/icons-react-native',
+    '@vezham/icons-vue',
+    '@vezham/icons-svelte',
+    'vezham-icons-mcp',
 ];
 
 const TRANSITION = 'filter 0.28s ease, opacity 0.28s ease, transform 0.28s ease';

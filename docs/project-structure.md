@@ -16,10 +16,10 @@ reicon/
 │   └── README.md               # Dataset schema & build pipeline
 │
 ├── packages/                    # Local npm packages
-│   ├── reicon-react/            # reicon-react  (React)
+│   ├── @vezham/icons-react/            # @vezham/icons-react  (React)
 │   │   ├── scripts/build.cjs    # React package builder
 │   │   └── dist/                # Package compilation output
-│   ├── reicon-vue/              # reicon-vue    (Vue 3)
+│   ├── @vezham/icons-vue/              # @vezham/icons-vue    (Vue 3)
 │   │   ├── scripts/build.cjs    # Vue package builder
 │   │   └── dist/                # Package compilation output
 │   ├── reicon/                  # reicon        (vanilla JS)
@@ -27,7 +27,7 @@ reicon/
 │   │   │   ├── build.cjs        # Main package builder
 │   │   │   └── build-cdn.cjs    # CDN web component builder
 │   │   └── dist/                # Package compilation output
-│   ├── reicon-mcp/              # reicon-mcp    (MCP Server & CLI)
+│   ├── vezham-icons-mcp/              # vezham-icons-mcp    (MCP Server & CLI)
 │   │   ├── scripts/build.cjs    # Bundles offline search index + server
 │   │   ├── src/server/          # MCP stdio server and tool handlers
 │   │   └── dist/                # Package compilation output

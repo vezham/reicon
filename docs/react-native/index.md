@@ -4,14 +4,14 @@ Complete guide for using Reicon icons in React Native applications.
 
 ## Installation
 
-Install both `reicon-react-native` and `react-native-svg`:
+Install both `@vezham/icons-react-native` and `react-native-svg`:
 
 ```bash
-npm install reicon-react-native react-native-svg
+npm install @vezham/icons-react-native react-native-svg
 # or
-yarn add reicon-react-native react-native-svg
+yarn add @vezham/icons-react-native react-native-svg
 # or
-bun add reicon-react-native react-native-svg
+bun add @vezham/icons-react-native react-native-svg
 ```
 
 ### Additional Setup
@@ -37,7 +37,7 @@ See [react-native-svg documentation](https://github.com/software-mansion/react-n
 Import icons directly from the package:
 
 ```tsx
-import { Home, Settings, User } from 'reicon-react-native';
+import { Home, Settings, User } from '@vezham/icons-react-native';
 
 function MyComponent() {
   return (
@@ -74,7 +74,7 @@ Plus all standard `react-native-svg` props like `onPress`, `testID`, etc.
 ### Basic Icon
 
 ```tsx
-import { Home } from 'reicon-react-native';
+import { Home } from '@vezham/icons-react-native';
 
 <Home />
 ```
@@ -82,7 +82,7 @@ import { Home } from 'reicon-react-native';
 ### Custom Size and Color
 
 ```tsx
-import { ShieldCheck } from 'reicon-react-native';
+import { ShieldCheck } from '@vezham/icons-react-native';
 
 <ShieldCheck 
   size={48} 
@@ -93,7 +93,7 @@ import { ShieldCheck } from 'reicon-react-native';
 ### Filled Weight
 
 ```tsx
-import { Heart } from 'reicon-react-native';
+import { Heart } from '@vezham/icons-react-native';
 
 <Heart 
   weight="Filled"
@@ -104,7 +104,7 @@ import { Heart } from 'reicon-react-native';
 ### With Touch Handler
 
 ```tsx
-import { Settings } from 'reicon-react-native';
+import { Settings } from '@vezham/icons-react-native';
 
 <TouchableOpacity onPress={() => console.log('Settings pressed')}>
   <Settings size={28} color="#6366F1" />
@@ -114,7 +114,7 @@ import { Settings } from 'reicon-react-native';
 ### With Custom Stroke Width
 
 ```tsx
-import { Menu } from 'reicon-react-native';
+import { Menu } from '@vezham/icons-react-native';
 
 <Menu 
   strokeWidth={1.5}
@@ -127,7 +127,7 @@ import { Menu } from 'reicon-react-native';
 Some icons support secondary colors:
 
 ```tsx
-import { UserCircle } from 'reicon-react-native';
+import { UserCircle } from '@vezham/icons-react-native';
 
 <UserCircle 
   color="#3b82f6"
@@ -142,8 +142,8 @@ import { UserCircle } from 'reicon-react-native';
 Import specific icons for optimal bundle size:
 
 ```tsx
-import Home from 'reicon-react-native/icons/Home';
-import Settings from 'reicon-react-native/icons/Settings';
+import Home from '@vezham/icons-react-native/icons/Home';
+import Settings from '@vezham/icons-react-native/icons/Settings';
 
 function App() {
   return (
@@ -164,7 +164,7 @@ Metro bundler automatically tree-shakes unused icons, so both approaches work we
 Full TypeScript support with type definitions:
 
 ```tsx
-import { Home, IconProps, IconWeight } from 'reicon-react-native';
+import { Home, IconProps, IconWeight } from '@vezham/icons-react-native';
 
 // Type-safe props
 const iconProps: IconProps = {
@@ -204,7 +204,7 @@ Browse all icons at [reicon.dev](https://reicon.dev).
 ### Using Style Prop
 
 ```tsx
-import { Home } from 'reicon-react-native';
+import { Home } from '@vezham/icons-react-native';
 
 <Home 
   style={{
@@ -218,7 +218,7 @@ import { Home } from 'reicon-react-native';
 
 ```tsx
 import { Pressable } from 'react-native';
-import { Heart } from 'reicon-react-native';
+import { Heart } from '@vezham/icons-react-native';
 
 function LikeButton() {
   const [liked, setLiked] = useState(false);
@@ -245,10 +245,10 @@ Every icon is a separate module, ensuring only imported icons are bundled:
 
 ```tsx
 // ✅ Good - only Home is bundled
-import { Home } from 'reicon-react-native';
+import { Home } from '@vezham/icons-react-native';
 
 // ✅ Also good - explicit path
-import Home from 'reicon-react-native/icons/Home';
+import Home from '@vezham/icons-react-native/icons/Home';
 ```
 
 ### Memoization
@@ -257,7 +257,7 @@ For icons in lists or frequently re-rendered components:
 
 ```tsx
 import { memo } from 'react';
-import { Star } from 'reicon-react-native';
+import { Star } from '@vezham/icons-react-native';
 
 const StarIcon = memo(({ filled }: { filled: boolean }) => (
   <Star 
@@ -275,7 +275,7 @@ const StarIcon = memo(({ filled }: { filled: boolean }) => (
 
 ```tsx
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
-import { IconComponent } from 'reicon-react-native';
+import { IconComponent } from '@vezham/icons-react-native';
 
 interface IconButtonProps extends TouchableOpacityProps {
   icon: IconComponent;
@@ -297,7 +297,7 @@ function IconButton({
 }
 
 // Example
-import { Settings } from 'reicon-react-native';
+import { Settings } from '@vezham/icons-react-native';
 
 <IconButton 
   icon={Settings}
@@ -309,7 +309,7 @@ import { Settings } from 'reicon-react-native';
 
 ```tsx
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Search, User } from 'reicon-react-native';
+import { Home, Search, User } from '@vezham/icons-react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -383,6 +383,6 @@ Make sure your `tsconfig.json` includes:
 
 - 🌐 [Browse all icons](https://reicon.dev)
 - 📖 [Full documentation](https://reicon.dev/docs)
-- 📦 [npm package](https://npmjs.com/package/reicon-react-native)
+- 📦 [npm package](https://npmjs.com/package/@vezham/icons-react-native)
 - 🐙 [GitHub repository](https://github.com/dqev/reicon)
 - 🐛 [Report issues](https://github.com/dqev/reicon/issues)

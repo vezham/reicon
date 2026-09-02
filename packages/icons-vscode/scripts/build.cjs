@@ -7,7 +7,7 @@ const TEMPLATE_HTML_PATH = path.join(__dirname, '..', 'src', 'ui.html');
 const OUTPUT_HTML_PATH = path.join(__dirname, '..', 'dist', 'ui.html');
 const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'apple-touch-icon.png');
 
-console.log('Compiling Reicon VS Code icons database and inlining into ui.html...');
+console.log('Compiling Vezham Icons VS Code icons database and inlining into ui.html...');
 
 try {
   if (!fs.existsSync(TEMPLATE_HTML_PATH)) {

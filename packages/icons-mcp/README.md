@@ -1,4 +1,4 @@
-# reicon-mcp
+# vezham-icons-mcp
 
 MCP server and CLI for searching, previewing, and applying Reicon icons. Works fully offline with a prebuilt search index.
 
@@ -11,7 +11,7 @@ Add to your MCP client config:
   "mcpServers": {
     "reicon": {
       "command": "npx",
-      "args": ["reicon-mcp"]
+      "args": ["vezham-icons-mcp"]
     }
   }
 }
@@ -42,10 +42,10 @@ Or point directly at the local binary after building:
 ## CLI
 
 ```bash
-npx reicon-mcp search "shopping cart"
-npx reicon-mcp view heart --weight Filled
-npx reicon-mcp apply heart --framework react --size 32 --color "#ef4444"
-npx reicon-mcp categories
+npx vezham-icons-mcp search "shopping cart"
+npx vezham-icons-mcp view heart --weight Filled
+npx vezham-icons-mcp apply heart --framework react --size 32 --color "#ef4444"
+npx vezham-icons-mcp categories
 ```
 
 ### File write mode
@@ -53,7 +53,7 @@ npx reicon-mcp categories
 For scripted insertion, replace a marker string in a target file:
 
 ```bash
-npx reicon-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
+npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
 ```
 
 The marker must exist exactly once. The command exits non-zero if the marker is not found.

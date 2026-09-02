@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.cjs — Generates the `reicon-react-native` package from data/icons
+ * build.cjs — Generates the `@vezham/icons-react-native` package from data/icons
  *
  * Usage:  node packages/icons-react-native/scripts/build.cjs  (or: npm run build:react-native)
  *
@@ -257,8 +257,8 @@ fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) +
 
 // ── README.md ──────────────────────────────────────────────────────────────
 const readme = `<p align="center">
-  <a href="https://npmjs.com/package/reicon-react-native"><img src="https://img.shields.io/npm/v/reicon-react-native?color=black&label=npm" alt="npm version" /></a>
-  <a href="https://npmjs.com/package/reicon-react-native"><img src="https://img.shields.io/npm/dm/reicon-react-native?color=black&label=downloads" alt="npm downloads" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/v/@vezham/icons-react-native?color=black&label=npm" alt="npm version" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/dm/@vezham/icons-react-native?color=black&label=downloads" alt="npm downloads" /></a>
   <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
   <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
 </p>
@@ -271,7 +271,7 @@ const readme = `<p align="center">
 
 - 🔗 **Website & icon browser:** [reicon.dev](https://reicon.dev)
 - 📦 **Core package:** [reicon](https://npmjs.com/package/reicon)
-- ⚛️ **React package:** [reicon-react](https://npmjs.com/package/reicon-react)
+- ⚛️ **React package:** [@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react)
 - 🎨 **Figma plugin:** [reicon.dev/figma](https://reicon.dev/figma)
 
 ---
@@ -279,11 +279,11 @@ const readme = `<p align="center">
 ## Install
 
 \`\`\`bash
-npm i reicon-react-native react-native-svg
+npm i @vezham/icons-react-native react-native-svg
 # or
-yarn add reicon-react-native react-native-svg
+yarn add @vezham/icons-react-native react-native-svg
 # or
-bun add reicon-react-native react-native-svg
+bun add @vezham/icons-react-native react-native-svg
 \`\`\`
 
 **Note:** This package requires \`react-native-svg\` as a peer dependency. Make sure to install it and follow its [setup instructions](https://github.com/software-mansion/react-native-svg#installation).
@@ -293,7 +293,7 @@ bun add reicon-react-native react-native-svg
 ## Usage
 
 \`\`\`jsx
-import { Home, ShieldCheck, AltArrowDown } from 'reicon-react-native';
+import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-react-native';
 
 function App() {
   return (
@@ -324,7 +324,7 @@ Plus all standard \`react-native-svg\` SVG props.
 - **Filled** — solid filled style
 
 \`\`\`jsx
-import { Home } from 'reicon-react-native';
+import { Home } from '@vezham/icons-react-native';
 
 <Home />                           {/* Outline (default) */}
 <Home weight="Filled" />           {/* Filled */}
@@ -334,7 +334,7 @@ import { Home } from 'reicon-react-native';
 ### Direct icon import (smallest bundle)
 
 \`\`\`jsx
-import Home from 'reicon-react-native/icons/Home';
+import Home from '@vezham/icons-react-native/icons/Home';
 \`\`\`
 
 ### All react-native-svg props are supported
@@ -356,7 +356,7 @@ Every icon is a standalone ES module. Metro bundler will tree-shake unused icons
 
 \`\`\`jsx
 // ✅ Only Home is included in your bundle
-import { Home } from 'reicon-react-native';
+import { Home } from '@vezham/icons-react-native';
 \`\`\`
 
 ---
@@ -382,7 +382,7 @@ Browse all ${icons.length}+ icons at [reicon.dev](https://reicon.dev).
 Full TypeScript support out of the box:
 
 \`\`\`tsx
-import { Home, IconProps, IconWeight } from 'reicon-react-native';
+import { Home, IconProps, IconWeight } from '@vezham/icons-react-native';
 
 const weight: IconWeight = 'Filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
@@ -410,10 +410,10 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | Package | Description |
 |---------|-------------|
 | [\`reicon\`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN |
-| [\`reicon-react\`](https://npmjs.com/package/reicon-react) | React components for all ${icons.length}+ icons |
-| [\`reicon-react-native\`](https://npmjs.com/package/reicon-react-native) | **This package.** React Native components for all ${icons.length}+ icons |
-| [\`reicon-vue\`](https://npmjs.com/package/reicon-vue) | Vue 3 components for all ${icons.length}+ icons |
-| [\`reicon-svelte\`](https://npmjs.com/package/reicon-svelte) | Svelte components for all ${icons.length}+ icons |
+| [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | React components for all ${icons.length}+ icons |
+| [\`@vezham/icons-react-native\`](https://npmjs.com/package/@vezham/icons-react-native) | **This package.** React Native components for all ${icons.length}+ icons |
+| [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for all ${icons.length}+ icons |
+| [\`@vezham/icons-svelte\`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for all ${icons.length}+ icons |
 
 ---
 
@@ -421,7 +421,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 - 🌐 Website: [reicon.dev](https://reicon.dev)
 - 📖 Documentation: [reicon.dev/docs](https://reicon.dev/docs)
-- 📦 npm (React Native): [npmjs.com/package/reicon-react-native](https://npmjs.com/package/reicon-react-native)
+- 📦 npm (React Native): [npmjs.com/package/@vezham/icons-react-native](https://npmjs.com/package/@vezham/icons-react-native)
 - 🐙 GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
 - 🐛 Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
 

@@ -20,7 +20,7 @@ const socials = [
     ),
   },
   {
-    href: 'https://www.npmjs.com/package//icons-react',
+    href: 'https://www.npmjs.com/package/@vezham/icons-react',
     label: 'npm',
     icon: (
       <svg viewBox="0 0 2500 2500" fill="currentColor" className="w-4 h-4">

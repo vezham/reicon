@@ -1,6 +1,6 @@
 # Performance & Tree-Shaking
 
-All Reicon packages (`reicon`, `reicon-react`, `reicon-vue`) declare `"sideEffects": false` in their package configurations. Modern bundlers (Vite, Webpack, Rollup) automatically eliminate unused icons from your production bundle.
+All Vezham icon packages (`@vezham/icons`, `@vezham/icons-react`, `@vezham/icons-vue`) declare `"sideEffects": false` in their package configurations. Modern bundlers (Vite, Webpack, Rollup) automatically eliminate unused icons from your production bundle.
 
 ---
 
@@ -8,7 +8,7 @@ All Reicon packages (`reicon`, `reicon-react`, `reicon-vue`) declare `"sideEffec
 Import icons by name from the main entry point. Your bundler will strip out everything you don't use.
 ```javascript
 // Only Home and Bell are included in the bundle
-import { Home, Bell } from 'reicon'; // or 'reicon-react' or 'reicon-vue'
+import { Home, Bell } from '@vezham/icons'; // or '@vezham/icons-react' or '@vezham/icons-vue'
 ```
 
 ---
@@ -17,8 +17,8 @@ import { Home, Bell } from 'reicon'; // or 'reicon-react' or 'reicon-vue'
 For absolute minimal bundle size, import each icon directly from its own module. This guarantees only that single icon's code is included — no bundler analysis needed.
 ```javascript
 // Guaranteed single-icon inclusion
-import Home from 'reicon/icons/Home';
-import Bell from 'reicon/icons/Bell';
+import Home from '@vezham/icons/Home';
+import Bell from '@vezham/icons/Bell';
 ```
 
 ---
@@ -27,10 +27,10 @@ import Bell from 'reicon/icons/Bell';
 Avoid wildcard or star imports — they pull in every icon in the package and defeat tree-shaking.
 ```javascript
 // ❌ Imports ALL icons — entire library in bundle
-import * as Icons from 'reicon';
+import * as Icons from '@vezham/icons';
 
 // ❌ Re-exporting everything defeats tree-shaking
-export * from 'reicon';
+export * from '@vezham/icons';
 ```
 
 ---
@@ -40,8 +40,8 @@ When using the CDN element, icons are fetched on demand and cached in the browse
 
 | Method | Bundle Impact | Best For |
 |---|---|---|
-| `reicon` | Only used icons | Vanilla JS, SPAs, custom setups |
-| `reicon/icons/*` | Single icon per import | Production builds (Vanilla JS) |
-| `reicon-react` | Only used icons | React / Next.js apps |
-| `reicon-vue` | Only used icons | Vue / Nuxt apps |
+| `@vezham/icons` | Only used icons | Vanilla JS, SPAs, custom setups |
+| `@vezham/icons/*` | Single icon per import | Production builds (Vanilla JS) |
+| `@vezham/icons-react` | Only used icons | React / Next.js apps |
+| `@vezham/icons-vue` | Only used icons | Vue / Nuxt apps |
 | `CDN script` | On-demand fetching | Static sites, quick prototyping |

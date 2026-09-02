@@ -70,11 +70,11 @@ export default function HomePage() {
           "keywords": ["SVG icons", "React icons", "React Native icons", "Vue icons", "Svelte icons", "Figma icons", "open source", "MIT"],
           "isAccessibleForFree": true,
           "distribution": [
-            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/reicon", "name": "reicon (npm)" },
-            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package//icons-react", "name": "/icons-react (npm)" },
-            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package//icons-react-native", "name": "/icons-react-native (npm)" },
-            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/reicon-vue", "name": "reicon-vue (npm)" },
-            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/reicon-svelte", "name": "reicon-svelte (npm)" },
+            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/@vezham/icons", "name": "@vezham/icons (npm)" },
+            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/@vezham/icons-react", "name": "@vezham/icons-react (npm)" },
+            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/@vezham/icons-react-native", "name": "@vezham/icons-react-native (npm)" },
+            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/@vezham/icons-vue", "name": "@vezham/icons-vue (npm)" },
+            { "@type": "DataDownload", "encodingFormat": "application/zip", "contentUrl": "https://www.npmjs.com/package/@vezham/icons-svelte", "name": "@vezham/icons-svelte (npm)" },
           ],
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -84,7 +84,7 @@ export default function HomePage() {
           "description": "Install Reicon icons in a React, React Native, Vue, Svelte, or vanilla HTML project.",
           "totalTime": "PT2M",
           "step": [
-            { "@type": "HowToStep", "name": "Install the package", "text": "Run 'npm install /icons-react' for React, 'npm install /icons-react-native' for React Native, 'npm install reicon-vue' for Vue 3, or 'npm install reicon-svelte' for Svelte.", "url": "https://reicon.dev/docs" },
+            { "@type": "HowToStep", "name": "Install the package", "text": "Run 'npm install @vezham/icons-react' for React, 'npm install @vezham/icons-react-native' for React Native, 'npm install @vezham/icons-vue' for Vue 3, or 'npm install @vezham/icons-svelte' for Svelte.", "url": "https://reicon.dev/docs" },
             { "@type": "HowToStep", "name": "Import the icon", "text": "Import by name: import { Home } from '@vezham/icons-react';", "url": "https://reicon.dev/docs" },
             { "@type": "HowToStep", "name": "Render with props", "text": "Render: <Home size={24} weight=\"Outline\" color=\"currentColor\" />", "url": "https://reicon.dev/docs" },
           ],

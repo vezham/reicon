@@ -183,11 +183,11 @@ Browse and search all 2674+ icons at <a href="https://reicon.dev">reicon.dev</a>
 
 | Package | Description |
 |---------|-------------|
-| [`reicon`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN |
-| [`reicon-react`](https://npmjs.com/package/reicon-react) | React components for all 2674+ icons |
-| [`reicon-vue`](https://npmjs.com/package/reicon-vue) | Vue 3 components for all 2674+ icons |
-| [`reicon-svelte`](https://npmjs.com/package/reicon-svelte) | Svelte components for all 2674+ icons |
-| [`reicon-react-native`](https://npmjs.com/package/reicon-react-native) | React Native components |
+| [`/icons`](https://npmjs.com/package/@vezham/icons) | Core vanilla JS + CDN |
+| [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for all 2674+ icons |
+| [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for all 2674+ icons |
+| [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for all 2674+ icons |
+| [`@vezham/icons-react-native`](https://npmjs.com/package/@vezham/icons-react-native) | React Native components |
 | [reicon-figma](https://reicon.dev/figma) | Figma plugin |
 
 ---

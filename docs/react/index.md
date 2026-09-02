@@ -14,19 +14,19 @@ The official React package for Reicon. Import beautifully crafted icons as React
 
 ## Installation
 ```bash
-npm install reicon-react
+npm install @vezham/icons-react
 # or
-yarn add reicon-react
+yarn add @vezham/icons-react
 # or
-pnpm add reicon-react
+pnpm add @vezham/icons-react
 ```
 
 ---
 
 ## Basic Usage
-Import icons by their PascalCase name from `reicon-react`. Each icon is a React component that accepts standard props.
+Import icons by their PascalCase name from `@vezham/icons-react`. Each icon is a React component that accepts standard props.
 ```jsx
-import { Home, ShieldCheck, Bell } from 'reicon-react';
+import { Home, ShieldCheck, Bell } from '@vezham/icons-react';
 
 function App() {
   return (
@@ -66,8 +66,8 @@ Every icon component accepts the following props to customize its appearance. Yo
 ## Direct Import for Smaller Bundles
 For the absolute smallest bundle size, you can import each icon directly from its own module. This guarantees only that single icon's code is included, which is ideal for production apps.
 ```jsx
-import Home from 'reicon-react/icons/Home';
-import ShieldCheck from 'reicon-react/icons/ShieldCheck';
+import Home from '@vezham/icons-react/icons/Home';
+import ShieldCheck from '@vezham/icons-react/icons/ShieldCheck';
 ```
 > **Tip:** Direct imports are recommended for production apps where bundle size matters. Each icon is its own module, so the bundler can't accidentally pull in other icons.
 
@@ -89,7 +89,7 @@ Reicon works seamlessly with Tailwind CSS. Use the `className` prop to apply Tai
 ## Full Component Example
 Here's a complete example of a React component using multiple Reicon icons with different configurations.
 ```jsx
-import { Home, Bell, User, Star, ShieldCheck } from 'reicon-react';
+import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-react';
 
 export default function Navbar() {
   return (

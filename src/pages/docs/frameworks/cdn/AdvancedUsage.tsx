@@ -16,7 +16,7 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="JavaScript (SSR)"
-        onCopy={() => onCopy("import { Home } from 'reicon';\n\n// Get raw SVG string - works on server side!\nconst svgString = Home.toSvg({ size: 24, color: 'currentColor' });\n\n// Inject into HTML output\nres.send(`<div class=\"icon-wrap\">${svgString}</div>`);", 'vanilla-ssr')}
+        onCopy={() => onCopy("import { Home } from '@vezham/icons';\n\n// Get raw SVG string - works on server side!\nconst svgString = Home.toSvg({ size: 24, color: 'currentColor' });\n\n// Inject into HTML output\nres.send(`<div class=\"icon-wrap\">${svgString}</div>`);", 'vanilla-ssr')}
         copied={copiedField === 'vanilla-ssr'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -24,7 +24,7 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">Home</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon'</span>
+        <span className="text-[#98c379]"> '@vezham/icons'</span>
         <span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// Get raw SVG string - works on server side!'}</span>
@@ -65,13 +65,13 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="JavaScript"
-        onCopy={() => onCopy("import Home from 'reicon/icons/Home';\nconst homeSvg = Home({ size: 24 });", 'vanilla-direct')}
+        onCopy={() => onCopy("import Home from '@vezham/icons/Home';\nconst homeSvg = Home({ size: 24 });", 'vanilla-direct')}
         copied={copiedField === 'vanilla-direct'}
       >
         <span className="text-[#c678dd]">import</span>
         <span className="text-[#e5c07b]"> Home</span>
         <span className="text-[#c678dd]"> from</span>
-        <span className="text-[#98c379]"> 'reicon/icons/Home'</span>
+        <span className="text-[#98c379]"> '@vezham/icons/Home'</span>
         <span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-[#c678dd]">const</span>
@@ -85,19 +85,19 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
       {/* UMD Functions script tag */}
       <h4 className="text-md font-medium text-text-base mb-4 mt-10">Load Functions globally via Script tag</h4>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        If you want to use the global <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon</code> object functions directly in a browser script tag:
+        If you want to use the global <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">VezhamIcons</code> object functions directly in a browser script tag:
       </p>
 
       <SyntaxBlock
         title="HTML & JS"
-        onCopy={() => onCopy('<script src="https://unpkg.com/@vezham/icons@latest/umd/vezham-icons.js"></script>\n<script>\n  // Create icon elements via global object\n  document.body.appendChild(reicon.Home({ size: 32 }));\n</script>', 'cdn-umd')}
+        onCopy={() => onCopy('<script src="https://unpkg.com/@vezham/icons@latest/dist/umd/vezham-icons.js"></script>\n<script>\n  // Create icon elements via global object\n  document.body.appendChild(VezhamIcons.Home({ size: 32 }));\n</script>', 'cdn-umd')}
         copied={copiedField === 'cdn-umd'}
       >
         <span className="text-text-base/70">{'<'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-[#d19a66]"> src</span>
         <span className="text-text-base/50">=</span>
-        <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/umd/vezham-icons.js"</span>
+        <span className="text-[#98c379]">"https://unpkg.com/@vezham/icons@latest/dist/umd/vezham-icons.js"</span>
         <span className="text-text-base/70">{'></'}</span>
         <span className="text-[#e06c75]">script</span>
         <span className="text-text-base/70">{'>'}</span>
@@ -107,7 +107,7 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
         <span className="text-text-base/70">{'>'}</span>
         {'\n  '}
         <span className="text-[#c678dd]">const</span>
-        <span className="text-text-base/70"> home = reicon.</span>
+        <span className="text-text-base/70"> home = VezhamIcons.</span>
         <span className="text-[#61afef]">Home</span>
         <span className="text-text-base/70">({'{'} size: </span>
         <span className="text-[#d19a66]">32</span>
@@ -188,7 +188,7 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
       </SyntaxBlock>
 
       <div className="mt-6 bg-yellow-500/5 border border-yellow-500/15 rounded-xl p-4 text-[13px] text-text-base/50 leading-relaxed">
-        <span className="text-yellow-400 font-medium">Note:</span> If you are compiling your project with modern bundlers (e.g. Vite, Webpack, rollup), prefer installing via <code className="text-text-base/70 bg-text-base/6 px-1 py-0.5 rounded font-mono">npm install reicon</code> to enjoy full tree-shaking, static typing, and faster loading speeds.
+        <span className="text-yellow-400 font-medium">Note:</span> If you are compiling your project with modern bundlers (e.g. Vite, Webpack, rollup), prefer installing via <code className="text-text-base/70 bg-text-base/6 px-1 py-0.5 rounded font-mono">npm install @vezham/icons</code> to enjoy full tree-shaking, static typing, and faster loading speeds.
       </div>
     </>
   );

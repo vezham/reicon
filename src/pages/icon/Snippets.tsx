@@ -50,7 +50,7 @@ export function VanillaSnippet({ pascalName, activeWeight, size, color }: { pasc
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
       <span className="text-[#e5c07b]">{pascalName}</span><span className="text-text-base/70">{' } '}</span>
-      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-[#c678dd]">const</span><span className="text-text-base/70"> icon = </span><span className="text-[#61afef]">{pascalName}</span><span className="text-text-base/70">({'{'} size: </span><span className="text-[#d19a66]">{size}</span>
       <span className="text-text-base/70">, weight: </span><span className="text-[#98c379]">'{activeWeight}'</span>
@@ -83,7 +83,7 @@ export function ReactNativeSnippet({ pascalName, activeWeight, size, color }: { 
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
       <span className="text-[#e5c07b]">{pascalName}</span><span className="text-text-base/70">{' } '}</span>
-      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '/icons-react-native'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-react-native'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
       <span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}{size}{'}'}</span>
@@ -99,7 +99,7 @@ export function VueSnippet({ pascalName, activeWeight, size, color }: { pascalNa
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70">{' { '}</span>
       <span className="text-[#e5c07b]">{pascalName}</span><span className="text-text-base/70">{' } '}</span>
-      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-vue'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-vue'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">{pascalName}</span>
       <span className="text-[#d19a66]"> :size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"{String(size)}"</span>
@@ -117,7 +117,7 @@ export function SvelteSnippet({ pascalName, activeWeight, size, color }: { pasca
       {'\n'}
       <span className="text-[#c678dd]">  import</span><span className="text-text-base/70">{' { '}</span>
       <span className="text-[#e5c07b]">{pascalName}</span><span className="text-text-base/70">{' } '}</span>
-      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-svelte'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-svelte'</span><span className="text-text-base/30">;</span>
       {'\n'}
       <span className="text-text-base/30">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/30">{'>'}</span>
       {'\n\n'}

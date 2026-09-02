@@ -14,7 +14,7 @@ export default function Installation({ copiedField, onCopy }: Props) {
       </p>
 
       <InstallTabs
-        packageName="reicon-svelte"
+        packageName="@vezham/icons-svelte"
         copiedField={copiedField}
         onCopy={onCopy}
       />

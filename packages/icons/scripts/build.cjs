@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.cjs — Generates the `reicon` vanilla JS package from data/icons
+ * build.cjs — Generates the `@vezham/icons` vanilla JS package from data/icons
  *
  * Usage:  node packages/icons/scripts/build.cjs  (or: npm run build:js)
  *
@@ -226,7 +226,7 @@ const umdIconEntries = icons
 const umdBundle = `(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.reicon = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.VezhamIcons = {}));
 })(this, (function (exports) { 'use strict';
 
   var W_MAP = { Filled: 'F', Outline: 'O' };
@@ -252,7 +252,7 @@ const umdBundle = `(function (global, factory) {
 
       if (typeof document === 'undefined') {
         if (typeof console !== 'undefined' && console.warn) {
-          console.warn('reicon: document is not defined when rendering icon "' + displayName + '". Use toSvg() for Server-Side Rendering (SSR).');
+          console.warn('@vezham/icons: document is not defined when rendering icon "' + displayName + '". Use toSvg() for Server-Side Rendering (SSR).');
         }
         return null;
       }
@@ -263,7 +263,7 @@ const umdBundle = `(function (global, factory) {
       svg.setAttribute('height', String(size));
       svg.setAttribute('viewBox', '0 0 24 24');
       svg.setAttribute('fill', 'none');
-      svg.setAttribute('class', className ? 'reicon ' + className : 'reicon');
+      svg.setAttribute('class', className ? 'vx-icon ' + className : 'vx-icon');
       if (color != null) svg.style.color = color;
 
       var attrKeys = Object.keys(attrs);
@@ -296,7 +296,7 @@ const umdBundle = `(function (global, factory) {
 
       var extraAttrs = Object.keys(attrs).map(function(k) { return escAttr(k) + '="' + escAttr(attrs[k]) + '"'; }).join(' ');
       var styleAttr = color != null ? ' style="color: ' + escAttr(color) + '"' : '';
-      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + escAttr(size) + '" height="' + escAttr(size) + '" viewBox="0 0 24 24" fill="none" class="' + escAttr(className ? 'reicon ' + className : 'reicon') + '"' + styleAttr + (extraAttrs ? ' ' + extraAttrs : '') + '>' + html + '</svg>';
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + escAttr(size) + '" height="' + escAttr(size) + '" viewBox="0 0 24 24" fill="none" class="' + escAttr(className ? 'vx-icon ' + className : 'vx-icon') + '"' + styleAttr + (extraAttrs ? ' ' + extraAttrs : '') + '>' + html + '</svg>';
     };
 
     return icon;
@@ -337,7 +337,7 @@ const catsJSON = JSON.stringify(catList);
 const iconsJSON = JSON.stringify(cdnIconsMap);
 
 const runtimeJS = `/*!
- * Reicon CDN — drop-in web component for 1000+ icons, 2 weights (Outline & Filled).
+ * Vezham Icons CDN — drop-in web component for 1000+ icons, 2 weights (Outline & Filled).
  * ALL icon data is inlined — zero network fetch, instant rendering.
  *
  *   <vx-icon icon="home"></vx-icon>
@@ -349,10 +349,10 @@ const runtimeJS = `/*!
  *   gradient, gradient-type, gradient-angle, secondary-gradient
  *
  * JS API:
- *   Reicon.preload([...names])     warm cache for given icons
- *   Reicon.ready                   Promise (resolves immediately — data is inline)
- *   Reicon.icons                   Array of all icon names
- *   Reicon.categories              Array of all category names
+ *   VezhamIcons.preload([...names])     warm cache for given icons
+ *   VezhamIcons.ready                   Promise (resolves immediately — data is inline)
+ *   VezhamIcons.icons                   Array of all icon names
+ *   VezhamIcons.categories              Array of all category names
  */
 (function (global) {
   'use strict';
@@ -493,7 +493,7 @@ const runtimeJS = `/*!
   }
 
   // ─── element ──────────────────────────────────────────────────────────────
-  class ReiconElement extends HTMLElement {
+  class VezhamIconElement extends HTMLElement {
     static get observedAttributes() {
       return [
         'icon', 'weight', 'size', 'color', 'secondary-color', 'stroke-width',
@@ -631,7 +631,7 @@ const runtimeJS = `/*!
   }
 
   // ─── public JS API ────────────────────────────────────────────────────────
-  var Reicon = {
+  var VezhamIcons = {
     preload: function (names) {
       if (!names || !Array.isArray(names)) return;
       for (var i = 0; i < names.length; i++) {
@@ -669,12 +669,12 @@ const runtimeJS = `/*!
   };
 
   if (!customElements.get('vx-icon')) {
-    customElements.define('vx-icon', ReiconElement);
+    customElements.define('vx-icon', VezhamIconElement);
   }
-  global.Reicon = Reicon;
+  global.VezhamIcons = VezhamIcons;
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { ReiconElement: ReiconElement, Reicon: Reicon };
+    module.exports = { VezhamIconElement: VezhamIconElement, VezhamIcons: VezhamIcons };
   }
 })(typeof window !== 'undefined' ? window : globalThis);
 `;
@@ -792,8 +792,8 @@ const readme = `<p align="center">
 </p>
 
 <p align="center">
-  <a href="https://npmjs.com/package/reicon"><img src="https://img.shields.io/npm/v/reicon?color=black&label=npm" alt="npm version" /></a>
-  <a href="https://npmjs.com/package/reicon"><img src="https://img.shields.io/npm/dm/reicon?color=black&label=downloads" alt="npm downloads" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/v/reicon?color=black&label=npm" alt="npm version" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/dm/reicon?color=black&label=downloads" alt="npm downloads" /></a>
   <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
   <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
   <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
@@ -821,7 +821,7 @@ const readme = `<p align="center">
 |---|---|
 | 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
 | 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
-| ⚛️ &nbsp; React package | [reicon-react](https://npmjs.com/package/reicon-react) |
+| ⚛️ &nbsp; React package | [@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react) |
 | 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
 
 ---
@@ -829,11 +829,11 @@ const readme = `<p align="center">
 ## Install
 
 \`\`\`bash
-npm i reicon
+npm i @vezham/icons
 # or
-bun add reicon
+bun add @vezham/icons
 # or
-yarn add reicon
+yarn add @vezham/icons
 \`\`\`
 
 ### CDN (no build step required)
@@ -851,7 +851,7 @@ No bundler, no framework — just a \`<script>\` tag.
 ### Vanilla JS — create SVG elements
 
 \`\`\`js
-import { Home, ShieldCheck, AltArrowDown } from 'reicon';
+import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons';
 
 document.body.appendChild(Home());
 document.body.appendChild(ShieldCheck({ size: 32, color: '#d97757' }));
@@ -861,7 +861,7 @@ document.body.appendChild(AltArrowDown({ weight: 'Filled' }));
 ### Get SVG as a string
 
 \`\`\`js
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 const svgString = Home.toSvg({ size: 32, color: 'red' });
 element.innerHTML = svgString;
@@ -872,7 +872,7 @@ element.innerHTML = svgString;
 Every icon ships in two weights — **Outline** (default) and **Filled**:
 
 \`\`\`js
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 Home()                    // Outline (default)
 Home({ weight: 'Filled' }) // Filled
@@ -891,8 +891,8 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 \`\`\`html
 <script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 <script>
-  document.body.appendChild(reicon.Home());
-  document.body.appendChild(reicon.ShieldCheck({ size: 32, color: '#d97757' }));
+  document.body.appendChild(VezhamIcons.Home());
+  document.body.appendChild(VezhamIcons.ShieldCheck({ size: 32, color: '#d97757' }));
 </script>
 \`\`\`
 
@@ -909,8 +909,8 @@ Every direct SVG uses a flat kebab-case filename under \`/dist/cdn/icons\`.
 ### Direct icon import (smallest bundle)
 
 \`\`\`js
-import Home from 'reicon/icons/Home';
-import ShieldCheck from 'reicon/icons/ShieldCheck';
+import Home from '@vezham/icons/Home';
+import ShieldCheck from '@vezham/icons/ShieldCheck';
 \`\`\`
 
 ---
@@ -934,10 +934,10 @@ Every icon is a standalone ES module. Modern bundlers — **Vite**, **Webpack**,
 
 \`\`\`js
 // ✅ Only Home is included in your production bundle
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 // ✅ Even smaller — direct path import skips the barrel file entirely
-import Home from 'reicon/icons/Home';
+import Home from '@vezham/icons/Home';
 \`\`\`
 
 The package is marked \`"sideEffects": false\` for optimal dead-code elimination.
@@ -965,7 +965,7 @@ Browse and search all ${icons.length}+ icons at <a href="https://reicon.dev">rei
 Full type declarations ship with the package — no separate \`@types/\` installation needed.
 
 \`\`\`ts
-import { Home, IconOptions, IconWeight } from 'reicon';
+import { Home, IconOptions, IconWeight } from '@vezham/icons';
 
 const weight: IconWeight = 'Filled';
 const options: IconOptions = { size: 32, color: '#d97757', weight };
@@ -1000,10 +1000,10 @@ document.body.appendChild(svg);
 
 | Package | Description |
 |---------|-------------|
-| [\`reicon\`](https://npmjs.com/package/reicon) | **This package.** Core vanilla JS + CDN runtime. No framework required. |
-| [\`reicon-react\`](https://npmjs.com/package/reicon-react) | React components for ${icons.length}+ icons. |
-| [\`reicon-vue\`](https://npmjs.com/package/reicon-vue) | Vue 3 components for ${icons.length}+ icons. |
-| [\`reicon-svelte\`](https://npmjs.com/package/reicon-svelte) | Svelte components for ${icons.length}+ icons. |
+| [\`reicon\`](https://npmjs.com/package/@vezham/icons) | **This package.** Core vanilla JS + CDN runtime. No framework required. |
+| [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | React components for ${icons.length}+ icons. |
+| [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for ${icons.length}+ icons. |
+| [\`@vezham/icons-svelte\`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for ${icons.length}+ icons. |
 
 ---
 
@@ -1011,7 +1011,7 @@ document.body.appendChild(svg);
 
 - 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
 - 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
-- 📦 &nbsp; npm: [npmjs.com/package/reicon](https://npmjs.com/package/reicon)
+- 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons](https://npmjs.com/package/@vezham/icons)
 - 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
 - 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
 

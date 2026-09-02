@@ -20,15 +20,15 @@ const ROOT = resolve(__dirname, '..');
 
 // ── package manifest ──────────────────────────────────────────────────────
 const PACKAGES = [
-  { key: 'reicon',         path: 'packages/icons/package.json' },
-  { key: 'reicon-react',   path: 'packages/icons-react/package.json' },
-  { key: 'reicon-vue',     path: 'packages/icons-vue/package.json' },
-  { key: 'reicon-svelte',  path: 'packages/icons-svelte/package.json' },
-  { key: 'reicon-react-native', path: 'packages/icons-react-native/package.json' },
-  { key: 'reicon-vscode',  path: 'packages/icons-vscode/package.json' },
-  { key: 'reicon-mcp',     path: 'packages/icons-mcp/package.json' },
-  { key: 'reicon-figma',   path: 'packages/icons-figma/package.json' },
-  { key: 'reicon-docs',    path: 'package.json' },
+  { key: '@vezham/icons',         path: 'packages/icons/package.json' },
+  { key: '@vezham/icons-react',   path: 'packages/icons-react/package.json' },
+  { key: '@vezham/icons-vue',     path: 'packages/icons-vue/package.json' },
+  { key: '@vezham/icons-svelte',  path: 'packages/icons-svelte/package.json' },
+  { key: '@vezham/icons-react-native', path: 'packages/icons-react-native/package.json' },
+  { key: '@vezham/icons-vscode',  path: 'packages/icons-vscode/package.json' },
+  { key: '@vezham/icons-mcp',     path: 'packages/icons-mcp/package.json' },
+  { key: '@vezham/icons-figma',   path: 'packages/icons-figma/package.json' },
+  { key: '@vezham/icons-docs',    path: 'package.json' },
 ];
 
 // Website display versions are in src/pages/packages/data.tsx (TOOLS array)
@@ -107,7 +107,7 @@ async function main() {
   const cur = readCurrent();
   for (const pkg of PACKAGES) {
     const v = cur[pkg.key];
-    const couldSkip = v === '?' || v === '? (not found)' || pkg.key === 'reicon-docs';
+    const couldSkip = v === '?' || v === '? (not found)' || pkg.key === '@vezham/icons-docs';
     console.log(`  ${pkg.key.padEnd(22)} ${v}${couldSkip ? '  (skipped)' : ''}`);
   }
 
@@ -121,7 +121,7 @@ async function main() {
 
   for (const pkg of PACKAGES) {
     const curV = cur[pkg.key];
-    if (pkg.key === 'reicon-docs' || curV === '?' || curV === '? (not found)') continue;
+    if (pkg.key === '@vezham/icons-docs' || curV === '?' || curV === '? (not found)') continue;
 
     const autoSuggestion = curV.split('.').map((s, i) => i === 2 ? String(Number(s) + 1) : s).join('.');
     const answer = await ask(`  ${pkg.key} (${curV}) [${autoSuggestion}]: `);
@@ -146,7 +146,7 @@ async function main() {
   // Update display versions in data.tsx
   console.log('\n── Update display versions on website? ──');
   for (const [toolKey] of Object.entries(disp)) {
-    const pkgMap = { figma: 'reicon-figma', vscode: 'reicon-vscode', mcp: 'reicon-mcp' };
+    const pkgMap = { figma: '@vezham/icons-figma', vscode: '@vezham/icons-vscode', mcp: '@vezham/icons-mcp' };
     const pkgKey = pkgMap[toolKey];
     if (!pkgKey) continue;
     const json = readJson(PACKAGES.find(p => p.key === pkgKey).path);

@@ -14,20 +14,20 @@ The official Svelte package for Reicon. Import beautifully crafted icons as Svel
 
 ## Installation
 ```bash
-npm install reicon-svelte
+npm install @vezham/icons-svelte
 # or
-yarn add reicon-svelte
+yarn add @vezham/icons-svelte
 # or
-pnpm add reicon-svelte
+pnpm add @vezham/icons-svelte
 ```
 
 ---
 
 ## Basic Usage
-Import icons by their PascalCase name from `reicon-svelte`. Each icon is a Svelte component that accepts standard props.
+Import icons by their PascalCase name from `@vezham/icons-svelte`. Each icon is a Svelte component that accepts standard props.
 ```svelte
 <script>
-  import { Home, ShieldCheck, Bell } from 'reicon-svelte';
+  import { Home, ShieldCheck, Bell } from '@vezham/icons-svelte';
 </script>
 
 <Home size={24} />
@@ -41,7 +41,7 @@ Import icons by their PascalCase name from `reicon-svelte`. Each icon is a Svelt
 Every icon component accepts the following props to customize its appearance. You can also pass any standard SVG attributes.
 ```svelte
 <script>
-  import { Home, Heart, Star } from 'reicon-svelte';
+  import { Home, Heart, Star } from '@vezham/icons-svelte';
 </script>
 
 <!-- Size -->
@@ -66,8 +66,8 @@ Every icon component accepts the following props to customize its appearance. Yo
 ## Direct Import for Smaller Bundles
 For the absolute smallest bundle size, import each icon directly from its own module. This guarantees only that single icon's code is included.
 ```javascript
-import Home from 'reicon-svelte/icons/Home.svelte';
-import ShieldCheck from 'reicon-svelte/icons/ShieldCheck.svelte';
+import Home from '@vezham/icons-svelte/icons/Home.svelte';
+import ShieldCheck from '@vezham/icons-svelte/icons/ShieldCheck.svelte';
 ```
 > **Tip:** Direct imports are recommended for production apps where bundle size matters.
 
@@ -77,7 +77,7 @@ import ShieldCheck from 'reicon-svelte/icons/ShieldCheck.svelte';
 Reicon works seamlessly with Tailwind CSS. The icon inherits `currentColor` by default, so Tailwind's text color classes work out of the box.
 ```svelte
 <script>
-  import { Home, ShieldCheck } from 'reicon-svelte';
+  import { Home, ShieldCheck } from '@vezham/icons-svelte';
 </script>
 
 <Home class="text-gray-500 hover:text-gray-700 transition-colors" />
@@ -95,7 +95,7 @@ Works out of the box with SvelteKit — just import and use. No plugins or confi
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script>
-  import { Home, User } from 'reicon-svelte';
+  import { Home, User } from '@vezham/icons-svelte';
 </script>
 
 <nav>
@@ -110,7 +110,7 @@ Works out of the box with SvelteKit — just import and use. No plugins or confi
 Here's a complete example of a Svelte component using multiple Reicon icons with different configurations.
 ```svelte
 <script>
-  import { Home, Bell, User, Star, ShieldCheck } from 'reicon-svelte';
+  import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-svelte';
 </script>
 
 <nav class="flex items-center gap-4 p-4">

@@ -209,7 +209,7 @@ export const GLOBAL_JSON_LD = [
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     'name': 'Reicon',
-    'alternateName': ['Reicon Icons', 'Reicon Icon Library', 'reicon-mcp'],
+    'alternateName': ['Reicon Icons', 'Reicon Icon Library', 'vezham-icons-mcp'],
     'url': SITE,
     'description': 'Reicon is a free, open-source SVG icon library for designers and developers. Pixel-perfect, handcrafted icons for React, React Native, Vue, Svelte, Flutter, Figma, and the web. Includes an MCP server and CLI for AI agent icon search and codegen.',
     'disambiguatingDescription': 'Reicon (reicon.dev) is an open-source SVG icon library for web designers and developers. It is not the Windows desktop icon restore utility ReIcon by Sordum.org.',
@@ -263,17 +263,17 @@ export const GLOBAL_JSON_LD = [
       {
         '@type': 'Question',
         'name': 'Does Reicon work with React, React Native, Vue, and Svelte?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Install reicon-react for React, reicon-react-native for React Native, reicon-vue for Vue 3, or reicon-svelte for Svelte.' },
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Install @vezham/icons-react for React, @vezham/icons-react-native for React Native, @vezham/icons-vue for Vue 3, or @vezham/icons-svelte for Svelte.' },
       },
       {
         '@type': 'Question',
         'name': 'How do I install Reicon?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': "Run 'npm install reicon-react' for React, 'npm install reicon-react-native' for React Native, or use the CDN. See reicon.dev/docs for full instructions." },
+        'acceptedAnswer': { '@type': 'Answer', 'text': "Run 'npm install @vezham/icons-react' for React, 'npm install @vezham/icons-react-native' for React Native, or use the CDN. See reicon.dev/docs for full instructions." },
       },
       {
         '@type': 'Question',
         'name': 'Does Reicon have an MCP server or CLI?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. reicon-mcp is a Model Context Protocol server and CLI that lets AI agents search 2,700+ icons, preview SVGs, and generate React, React Native, Vue, Svelte, or HTML code. Run it with: npx reicon-mcp. See reicon.dev/docs/mcp.' },
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. vezham-icons-mcp is a Model Context Protocol server and CLI that lets AI agents search 2,700+ icons, preview SVGs, and generate React, React Native, Vue, Svelte, or HTML code. Run it with: npx vezham-icons-mcp. See reicon.dev/docs/mcp.' },
       },
       {
         '@type': 'Question',

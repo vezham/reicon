@@ -10,12 +10,12 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
     <>
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Basic Usage</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Import icons by their PascalCase name from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-svelte</code>. Each icon is a Svelte component that accepts standard props.
+        Import icons by their PascalCase name from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-svelte</code>. Each icon is a Svelte component that accepts standard props.
       </p>
 
       <SyntaxBlock
         title="Svelte"
-        onCopy={() => onCopy("<script>\n  import { Home, ShieldCheck, AltArrowDown } from 'reicon-svelte';\n</script>\n\n<Home />\n<ShieldCheck size={32} color=\"#d97757\" />\n<AltArrowDown weight=\"Filled\" />", 'svelte-basic')}
+        onCopy={() => onCopy("<script>\n  import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-svelte';\n</script>\n\n<Home />\n<ShieldCheck size={32} color=\"#d97757\" />\n<AltArrowDown weight=\"Filled\" />", 'svelte-basic')}
         copied={copiedField === 'svelte-basic'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
@@ -29,7 +29,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">AltArrowDown</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-svelte'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-svelte'</span>
         <span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>

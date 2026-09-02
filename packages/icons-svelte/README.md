@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://npmjs.com/package/reicon-svelte"><img src="https://img.shields.io/npm/v/reicon-svelte?color=black&label=npm" alt="npm version" /></a>
-  <a href="https://npmjs.com/package/reicon-svelte"><img src="https://img.shields.io/npm/dm/reicon-svelte?color=black&label=downloads" alt="npm downloads" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-svelte"><img src="https://img.shields.io/npm/v/@vezham/icons-svelte?color=black&label=npm" alt="npm version" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-svelte"><img src="https://img.shields.io/npm/dm/@vezham/icons-svelte?color=black&label=downloads" alt="npm downloads" /></a>
   <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
   <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
   <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
@@ -33,7 +33,7 @@
 |---|---|
 | 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
 | 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
-| 📦 &nbsp; Core package (vanilla JS) | [reicon](https://npmjs.com/package/reicon) |
+| 📦 &nbsp; Core package (vanilla JS) | [reicon](https://npmjs.com/package/@vezham/icons) |
 | 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
 
 ---
@@ -41,11 +41,11 @@
 ## Install
 
 ```bash
-npm i reicon-svelte
+npm i @vezham/icons-svelte
 # or
-bun add reicon-svelte
+bun add @vezham/icons-svelte
 # or
-yarn add reicon-svelte
+yarn add @vezham/icons-svelte
 ```
 
 <details>
@@ -64,7 +64,7 @@ yarn add reicon-svelte
 
 ```svelte
 <script>
-  import { Home, ShieldCheck, AltArrowDown } from 'reicon-svelte';
+  import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-svelte';
 </script>
 
 <Home />
@@ -94,8 +94,8 @@ Every icon ships in two weights — **Outline** (default) and **Filled**:
 For the absolute minimum bundle size, import icons directly from the sub-path:
 
 ```js
-import Home from 'reicon-svelte/icons/Home.svelte';
-import ShieldCheck from 'reicon-svelte/icons/ShieldCheck.svelte';
+import Home from '@vezham/icons-svelte/icons/Home.svelte';
+import ShieldCheck from '@vezham/icons-svelte/icons/ShieldCheck.svelte';
 ```
 
 ### All SVG attributes are supported
@@ -136,10 +136,10 @@ Every icon is a standalone ES module. Modern bundlers — **Vite**, **Webpack**,
 
 ```js
 // ✅ Only Home is included in your production bundle
-import { Home } from 'reicon-svelte';
+import { Home } from '@vezham/icons-svelte';
 
 // ✅ Even smaller — direct path import skips the barrel file entirely
-import Home from 'reicon-svelte/icons/Home.svelte';
+import Home from '@vezham/icons-svelte/icons/Home.svelte';
 ```
 
 The package is marked `"sideEffects": false` for optimal dead-code elimination.
@@ -167,7 +167,7 @@ Browse and search all 2679+ icons at <a href="https://reicon.dev">reicon.dev</a>
 Full type declarations ship with the package — no separate `@types/` installation needed.
 
 ```ts
-import { Home, type IconProps, type IconWeight } from 'reicon-svelte';
+import { Home, type IconProps, type IconWeight } from '@vezham/icons-svelte';
 
 const weight: IconWeight = 'Filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
@@ -198,10 +198,10 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 | Package | Description |
 |---------|-------------|
-| [`reicon`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN runtime. No framework required. |
-| [`reicon-react`](https://npmjs.com/package/reicon-react) | React components for 2679+ icons. |
-| [`reicon-vue`](https://npmjs.com/package/reicon-vue) | Vue 3 components for 2679+ icons. |
-| [`reicon-svelte`](https://npmjs.com/package/reicon-svelte) | **You are here.** Svelte components for 2679+ icons. |
+| [`/icons`](https://npmjs.com/package/@vezham/icons) | Core vanilla JS + CDN runtime. No framework required. |
+| [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for 2679+ icons. |
+| [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for 2679+ icons. |
+| [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | **You are here.** Svelte components for 2679+ icons. |
 
 ---
 
@@ -209,7 +209,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 - 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
 - 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
-- 📦 &nbsp; npm: [npmjs.com/package/reicon-svelte](https://npmjs.com/package/reicon-svelte)
+- 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons-svelte](https://npmjs.com/package/@vezham/icons-svelte)
 - 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
 - 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
 

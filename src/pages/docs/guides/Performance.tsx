@@ -113,7 +113,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
           </thead>
           <tbody className="text-text-base/60">
             <tr className="border-b border-text-base/4">
-              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">/icons-react</code></td>
+              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-react</code></td>
               <td className="px-4 py-3">Only used icons</td>
               <td className="px-4 py-3">React / Next.js apps</td>
             </tr>
@@ -123,7 +123,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
               <td className="px-4 py-3">Production builds</td>
             </tr>
             <tr className="border-b border-text-base/4">
-              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">reicon-vue</code></td>
+              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-vue</code></td>
               <td className="px-4 py-3">Only used icons</td>
               <td className="px-4 py-3">Vue / Nuxt apps</td>
             </tr>

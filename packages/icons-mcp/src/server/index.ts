@@ -7,7 +7,7 @@ import { handleSearchIcons } from './tools/search-icons.js';
 import { handleViewIcon } from './tools/view-icon.js';
 
 const server = new McpServer({
-  name: 'reicon-mcp',
+  name: 'vezham-icons-mcp',
   version: '1.1.0',
 });
 

@@ -8,7 +8,7 @@
 
 When a user asks you to use Reicon icons, illustrations, or brand logos, follow these steps:
 
-1. **Icons**: Use `reicon-react`, `reicon-vue`, `reicon-svelte`, `reicon-react-native`, `reicon_flutter`, or `reicon` (vanilla CDN). Browse: `https://reicon.dev/icons`
+1. **Icons**: Use `@vezham/icons-react`, `@vezham/icons-vue`, `@vezham/icons-svelte`, `@vezham/icons-react-native`, `@vezham/icons`, or `reicon_flutter`. Browse: `https://reicon.dev/icons`
 2. **Illustrations**: Direct CDN URL format `https://cdn.reicon.dev/{slug}.svg` (e.g. `https://cdn.reicon.dev/aspen.svg`, `https://cdn.reicon.dev/bag.svg`). Browse: `https://reicon.dev/illustration`
 3. **Brand Logos**: Direct CDN URL format `https://cdn.reicon.dev/logos/{slug}/{variant}.svg` (e.g. `https://cdn.reicon.dev/logos/react/original.svg`, `https://cdn.reicon.dev/logos/github/wordmark.svg`). Browse: `https://reicon.dev/logos`
 
@@ -59,10 +59,10 @@ Reicon provides 71,000+ free, open-source vector SVG illustrations across 75+ ca
 ## React
 
 ```bash
-npm install reicon-react
+npm install @vezham/icons-react
 ```
 ```jsx
-import { Home, Search, Bell } from 'reicon-react';
+import { Home, Search, Bell } from '@vezham/icons-react';
 
 <Home size={24} weight="Outline" color="currentColor" />
 <Search size={20} color="#6C5CE7" />
@@ -85,11 +85,11 @@ Peer dep: `react >= 16.8.0`. Forwards any SVG/HTML attribute. Tree-shakeable.
 ## Vue 3
 
 ```bash
-npm install reicon-vue
+npm install @vezham/icons-vue
 ```
 ```vue
 <script setup>
-import { Home, Search, Bell } from 'reicon-vue';
+import { Home, Search, Bell } from '@vezham/icons-vue';
 </script>
 <template>
   <Home :size="24" weight="Outline" color="currentColor" />
@@ -113,11 +113,11 @@ Peer dep: `vue ^3.0.0`. SSR-compatible with Nuxt 3. Tree-shakeable.
 ## Svelte
 
 ```bash
-npm install reicon-svelte
+npm install @vezham/icons-svelte
 ```
 ```svelte
 <script>
-import { Home, Search, Bell } from 'reicon-svelte';
+import { Home, Search, Bell } from '@vezham/icons-svelte';
 </script>
 
 <Home size={24} weight="Outline" color="currentColor" />
@@ -138,10 +138,10 @@ Peer dep: `svelte >= 3.0.0`. SSR-compatible with SvelteKit. Tree-shakeable.
 ## React Native
 
 ```bash
-npm install reicon-react-native react-native-svg
+npm install @vezham/icons-react-native react-native-svg
 ```
 ```tsx
-import { Home, ShieldCheck } from 'reicon-react-native';
+import { Home, ShieldCheck } from '@vezham/icons-react-native';
 
 <Home size={24} color="#000000" />
 <ShieldCheck size={32} color="#d97757" weight="Filled" />
@@ -162,10 +162,10 @@ Peer deps: `react >= 16.8.0`, `react-native >= 0.64.0`, `react-native-svg >= 12.
 ## Vanilla JS (ESM)
 
 ```bash
-npm install reicon
+npm install @vezham/icons
 ```
 ```js
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 // Append to DOM
 const svgEl = Home({ size: 24, color: 'currentColor', weight: 'Outline' });
@@ -236,7 +236,7 @@ Global API: `Reicon.preload()`, `Reicon.icons`, `Reicon.categories`, `Reicon.cat
   "mcpServers": {
     "reicon": {
       "command": "npx",
-      "args": ["reicon-mcp"]
+      "args": ["vezham-icons-mcp"]
     }
   }
 }
@@ -249,7 +249,7 @@ Global API: `Reicon.preload()`, `Reicon.icons`, `Reicon.categories`, `Reicon.cat
 | `apply_icon` | `{ name, weight, framework, size?, color? }` | Import + code snippet |
 | `list_categories` | (none) | All category names |
 
-Frameworks: `react`, `vue`, `svelte`, `html`, `svg`. CLI also available: `npx reicon-mcp search "cart"`.
+Frameworks: `react`, `vue`, `svelte`, `html`, `svg`. CLI also available: `npx vezham-icons-mcp search "cart"`.
 
 ---
 
@@ -272,11 +272,11 @@ Search, filter by weight, set color, drag-and-drop vector insertion.
 ## Direct Imports (Maximum Tree-shaking)
 
 ```
-React:        import Home from 'reicon-react/icons/Home'
-Vue:          import Home from 'reicon-vue/icons/Home'
-Svelte:       import Home from 'reicon-svelte/icons/Home.svelte'
-React Native: import Home from 'reicon-react-native/icons/Home'
-Vanilla JS:   import Home from 'reicon/icons/Home'
+React:        import Home from '@vezham/icons-react/icons/Home'
+Vue:          import Home from '@vezham/icons-vue/icons/Home'
+Svelte:       import Home from '@vezham/icons-svelte/icons/Home.svelte'
+React Native: import Home from '@vezham/icons-react-native/icons/Home'
+Vanilla JS:   import Home from '@vezham/icons/Home'
 ```
 
 ---

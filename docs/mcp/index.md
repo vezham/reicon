@@ -1,6 +1,6 @@
 # Reicon MCP Server Guide
 
-The `reicon-mcp` package exposes Reicon icons to AI agents and automation tools through the Model Context Protocol. Agents can search the icon library, inspect SVG markup, and generate copy-pasteable code snippets for React, Vue, Svelte, HTML, or raw SVG without human intervention.
+The `vezham-icons-mcp` package exposes Reicon icons to AI agents and automation tools through the Model Context Protocol. Agents can search the icon library, inspect SVG markup, and generate copy-pasteable code snippets for React, Vue, Svelte, HTML, or raw SVG without human intervention.
 
 ## What you can accomplish
 - Search 2,700+ icons by keyword with ranked results
@@ -16,7 +16,7 @@ The `reicon-mcp` package exposes Reicon icons to AI agents and automation tools 
 Install from npm or build from the monorepo:
 
 ```bash
-npm install reicon-mcp
+npm install vezham-icons-mcp
 ```
 
 From source:
@@ -31,14 +31,14 @@ npm run build:mcp
 
 ## MCP Configuration
 
-Add the server to your MCP client. With no arguments, `reicon-mcp` starts a stdio MCP server.
+Add the server to your MCP client. With no arguments, `vezham-icons-mcp` starts a stdio MCP server.
 
 ```json
 {
   "mcpServers": {
     "reicon": {
       "command": "npx",
-      "args": ["reicon-mcp"]
+      "args": ["vezham-icons-mcp"]
     }
   }
 }
@@ -129,10 +129,10 @@ No input. Returns all distinct category values from the dataset.
 The same binary supports CLI mode when arguments are provided:
 
 ```bash
-npx reicon-mcp search "shopping cart"
-npx reicon-mcp view heart --weight Filled
-npx reicon-mcp apply heart --framework react --size 32 --color "#ef4444"
-npx reicon-mcp categories
+npx vezham-icons-mcp search "shopping cart"
+npx vezham-icons-mcp view heart --weight Filled
+npx vezham-icons-mcp apply heart --framework react --size 32 --color "#ef4444"
+npx vezham-icons-mcp categories
 ```
 
 ### Scripted file insertion
@@ -140,7 +140,7 @@ npx reicon-mcp categories
 For CI or scripts without an agent supervising edits:
 
 ```bash
-npx reicon-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
+npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
 ```
 
 This replaces the exact marker with the docs snippet and inserts the import at the top if missing. Exits non-zero if the marker is not found.

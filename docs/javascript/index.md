@@ -17,17 +17,17 @@ Install the package using your preferred package manager and import tree-shakeab
 
 ### Installation
 ```bash
-npm install reicon
+npm install @vezham/icons
 # or
-yarn add reicon
+yarn add @vezham/icons
 # or
-pnpm add reicon
+pnpm add @vezham/icons
 ```
 
 ### Creating DOM Elements
-Import named icons directly from `reicon`. Each icon is a factory function that returns a native `SVGSVGElement`.
+Import named icons directly from `@vezham/icons`. Each icon is a factory function that returns a native `SVGSVGElement`.
 ```javascript
-import { Home, ShieldCheck } from 'reicon';
+import { Home, ShieldCheck } from '@vezham/icons';
 
 // Create SVG elements
 const home = Home({ size: 24 });
@@ -41,7 +41,7 @@ document.body.appendChild(shield);
 ### Server-Side Rendering (SSR) & SVG Strings
 To render icons on the server (SSR, Node.js, or framework environments), use the `toSvg()` method on the icon functions. This returns raw SVG strings without using DOM APIs.
 ```javascript
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 
 // Get raw SVG string - works on server side!
 const svgString = Home.toSvg({ size: 24, color: 'currentColor' });
@@ -51,9 +51,9 @@ res.send(`<div class="icon-wrap">${svgString}</div>`);
 ```
 
 ### Registering Custom Element (`<vx-icon>`)
-You can register and import the web component runtime right from your npm installation. Simply import `reicon/element` once in your application entry point.
+You can register and import the web component runtime right from your npm installation. Simply import `@vezham/icons/element` once in your application entry point.
 ```javascript
-import 'reicon/element';
+import '@vezham/icons/element';
 
 // Now use <vx-icon icon="home"></vx-icon> in your HTML templates!
 ```
@@ -61,7 +61,7 @@ import 'reicon/element';
 ### Direct Import for Smallest Bundles
 For optimal build performance, import individual icons directly from their path:
 ```javascript
-import Home from 'reicon/icons/Home';
+import Home from '@vezham/icons/Home';
 const homeSvg = Home({ size: 24 });
 ```
 
@@ -108,12 +108,12 @@ The default file is Outline. Add `-filled` before `.svg` for the Filled weight.
 Every direct SVG uses a flat kebab-case filename under `/dist/cdn/icons`.
 
 ### Load Functions globally via Script tag
-If you want to use the global `reicon` object functions directly in a browser script tag:
+If you want to use the global `VezhamIcons` object functions directly in a browser script tag:
 ```html
-<script src="https://unpkg.com/@vezham/icons@latest/umd/vezham-icons.js"></script>
+<script src="https://unpkg.com/@vezham/icons@latest/dist/umd/vezham-icons.js"></script>
 <script>
   // Create icon elements via global object
-  document.body.appendChild(reicon.Home({ size: 32 }));
+  document.body.appendChild(VezhamIcons.Home({ size: 32 }));
 </script>
 ```
 
@@ -175,4 +175,4 @@ A complete HTML document importing Reicon via CDN and showcasing customizations:
 </html>
 ```
 
-> **Note:** If you are compiling your project with modern bundlers (e.g. Vite, Webpack, rollup), prefer installing via `npm install reicon` to enjoy full tree-shaking, static typing, and faster loading speeds.
+> **Note:** If you are compiling your project with modern bundlers (e.g. Vite, Webpack, rollup), prefer installing via `npm install @vezham/icons` to enjoy full tree-shaking, static typing, and faster loading speeds.

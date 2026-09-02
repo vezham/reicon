@@ -84,7 +84,7 @@ function buildIndex(data) {
   };
 }
 
-console.log('Building reicon-mcp …');
+console.log('Building vezham-icons-mcp …');
 
 const data = loadIconData();
 const index = buildIndex(data);
@@ -106,7 +106,7 @@ const pkg = {
   type: 'module',
   description: 'MCP server and CLI for browsing and applying Reicon icons.',
   bin: {
-    'reicon-mcp': 'bin/run.cjs',
+    'vezham-icons-mcp': 'bin/run.cjs',
   },
   main: './server/index.js',
   types: './server/index.d.ts',
@@ -147,4 +147,4 @@ fs.copyFileSync(path.join(ROOT, 'LICENSE'), path.join(ROOT, 'dist', 'LICENSE'));
 fs.cpSync(path.join(ROOT, 'bin'), path.join(ROOT, 'dist', 'bin'), { recursive: true });
 fs.chmodSync(path.join(ROOT, 'dist', 'bin', 'run.cjs'), 0o755);
 
-console.log('reicon-mcp build complete');
+console.log('vezham-icons-mcp build complete');

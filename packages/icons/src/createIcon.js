@@ -37,7 +37,7 @@ const createIcon = (displayName, iconData) => {
 
     if (typeof document === 'undefined') {
       if (typeof console !== 'undefined' && console.warn) {
-        console.warn('reicon: document is not defined when rendering icon "' + displayName + '". Use toSvg() for Server-Side Rendering (SSR).');
+        console.warn('@vezham/icons: document is not defined when rendering icon "' + displayName + '". Use toSvg() for Server-Side Rendering (SSR).');
       }
       return null;
     }
@@ -48,7 +48,7 @@ const createIcon = (displayName, iconData) => {
     svg.setAttribute('height', String(size));
     svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('fill', 'none');
-    svg.setAttribute('class', className ? 'reicon ' + className : 'reicon');
+    svg.setAttribute('class', className ? 'vx-icon ' + className : 'vx-icon');
     if (color != null) svg.style.color = color;
 
     for (const [k, v] of Object.entries(attrs)) {
@@ -92,7 +92,7 @@ const createIcon = (displayName, iconData) => {
       .join(' ');
 
     const colorStyle = color != null ? ` style="color: ${escAttr(color)}"` : '';
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${escAttr(size)}" height="${escAttr(size)}" viewBox="0 0 24 24" fill="none" class="${escAttr(className ? 'reicon ' + className : 'reicon')}"${colorStyle}${extraAttrs ? ' ' + extraAttrs : ''}>${html}</svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${escAttr(size)}" height="${escAttr(size)}" viewBox="0 0 24 24" fill="none" class="${escAttr(className ? 'vx-icon ' + className : 'vx-icon')}"${colorStyle}${extraAttrs ? ' ' + extraAttrs : ''}>${html}</svg>`;
   };
 
   return icon;

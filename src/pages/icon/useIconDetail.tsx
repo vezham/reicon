@@ -90,13 +90,13 @@ export default function useIconDetail() {
   const jsColorProp = snippetColor ? `, color: '${snippetColor}'` : '';
   const htmlColorAttr = snippetColor ? ` color="${snippetColor}"` : '';
 
-  const vanillaRaw = `import { ${pascalName} } from 'reicon';\n\nconst icon = ${pascalName}({ size: ${previewSize}, weight: '${activeWeight}'${jsColorProp} });\ndocument.body.appendChild(icon);`;
+  const vanillaRaw = `import { ${pascalName} } from '@vezham/icons';\n\nconst icon = ${pascalName}({ size: ${previewSize}, weight: '${activeWeight}'${jsColorProp} });\ndocument.body.appendChild(icon);`;
   const cdnRaw = `<script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"><\/script>\n<vx-icon icon="${name}" weight="${activeWeight}" size="${previewSize}"${htmlColorAttr}></vx-icon>`;
   const svgUrlRaw = `<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/${svgUrlFilename}" width="${previewSize}" height="${previewSize}" alt="${name} icon" />`;
   const reactRaw = `import { ${pascalName} } from '@vezham/icons-react';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
-  const reactNativeRaw = `import { ${pascalName} } from '/icons-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
-  const vueRaw = `import { ${pascalName} } from 'reicon-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
-  const svelteRaw = `<script>\n  import { ${pascalName} } from 'reicon-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
+  const reactNativeRaw = `import { ${pascalName} } from '@vezham/icons-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
+  const vueRaw = `import { ${pascalName} } from '@vezham/icons-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
+  const svelteRaw = `<script>\n  import { ${pascalName} } from '@vezham/icons-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
   const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:reicon_flutter/reicon_flutter.dart';\n\nSvgPicture.string(\n  reiconSvg(Reicon.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
   const directRaw = `import ${pascalName} from '@vezham/icons-react/icons/${pascalName}';`;
 

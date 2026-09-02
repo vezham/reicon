@@ -66,8 +66,8 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   },
   {
     question: "TypeScript can't find icon names",
-    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"reicon\" for vanilla JS or \"/icons-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
-    copyText: "// ✅ For React projects\nimport { Home } from '@vezham/icons-react';\n\n// ✅ For vanilla JS projects\nimport { Home } from 'reicon';",
+    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"reicon\" for vanilla JS or \"@vezham/icons-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
+    copyText: "// ✅ For React projects\nimport { Home } from '@vezham/icons-react';\n\n// ✅ For vanilla JS projects\nimport { Home } from '@vezham/icons';",
     copyField: "faq-ts",
     syntaxNode: (
       <>
@@ -77,7 +77,7 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
         {'\n\n'}
         <span className="text-text-base/30">{'// ✅ For vanilla JS projects'}</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon'</span><span className="text-text-base/70">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons'</span><span className="text-text-base/70">;</span>
       </>
     )
   },

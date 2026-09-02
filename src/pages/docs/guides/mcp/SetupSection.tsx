@@ -13,7 +13,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         MCP Configuration
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Add the server to your MCP client (like Claude Desktop or Cursor). With no arguments, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-mcp</code> starts a stdio MCP server.
+        Add the server to your MCP client (like Claude Desktop or Cursor). With no arguments, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham-icons-mcp</code> starts a stdio MCP server.
       </p>
 
       <SyntaxBlock
@@ -36,7 +36,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         {'\n      '}
         <span className="text-[#e06c75]">"args"</span>
         <span className="text-text-base/40">: [</span>
-        <span className="text-[#98c379]">"reicon-mcp"</span>
+        <span className="text-[#98c379]">"vezham-icons-mcp"</span>
         <span className="text-text-base/40">]</span>
         {'\n    '}
         <span className="text-text-base/40">{'}'}</span>

@@ -12,14 +12,14 @@ This directory contains individual npm libraries and integration extension packa
 
 | Package | Framework / Runtime | Output | Build Script Command |
 | :--- | :--- | :--- | :--- |
-| [`reicon`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons) | Vanilla JS & CDN Web Component | `dist/` | `npm run build:js` |
-| [`reicon-react`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-react) | React / JSX Component Wrapper | `dist/` | `npm run build:react` |
-| [`reicon-react-native`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-react-native) | React Native Component Wrapper | `dist/` | `npm run build:react-native` |
-| [`reicon-vue`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vue) | Vue 3 Component Wrapper | `dist/` | `npm run build:vue` |
-| [`reicon-svelte`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-svelte) | Svelte Component Wrapper | `dist/` | `npm run build:svelte` |
-| [`reicon-figma`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-figma) | Figma Plugin Web UI | `Reicon/ui.html` | `npm run build:figma` |
-| [`reicon-vscode`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vscode) | VS Code Intellisense Extension | `dist/ui.html` | `npm run build:vscode` |
-| [`reicon-mcp`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-mcp) | MCP Server & CLI for Agents | `dist/` | `npm run build:mcp` |
+| [`@vezham/icons`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons) | Vanilla JS & CDN Web Component | `dist/` | `npm run build:js` |
+| [`@vezham/icons-react`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-react) | React / JSX Component Wrapper | `dist/` | `npm run build:react` |
+| [`@vezham/icons-react-native`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-react-native) | React Native Component Wrapper | `dist/` | `npm run build:react-native` |
+| [`@vezham/icons-vue`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vue) | Vue 3 Component Wrapper | `dist/` | `npm run build:vue` |
+| [`@vezham/icons-svelte`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-svelte) | Svelte Component Wrapper | `dist/` | `npm run build:svelte` |
+| [`@vezham/icons-figma`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-figma) | Figma Plugin Web UI | `Reicon/ui.html` | `npm run build:figma` |
+| [`@vezham/icons-vscode`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-vscode) | VS Code Intellisense Extension | `dist/ui.html` | `npm run build:vscode` |
+| [`@vezham/icons-mcp`](file:///Users/devchauhan/Documents/Website/reicon/packages/icons-mcp) | MCP Server & CLI for Agents | `dist/` | `npm run build:mcp` |
 
 ## ⚙️ How Packaging Works
 

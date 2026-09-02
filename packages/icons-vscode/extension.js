@@ -6,21 +6,21 @@ const fs = require('fs');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-    const provider = new ReiconWebviewViewProvider(context.extensionUri);
+    const provider = new VezhamIconsWebviewViewProvider(context.extensionUri);
 
     context.subscriptions.push(
-        vscode.window.registerWebviewViewProvider(ReiconWebviewViewProvider.viewType, provider)
+        vscode.window.registerWebviewViewProvider(VezhamIconsWebviewViewProvider.viewType, provider)
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('reicon.focusExplorer', () => {
-            vscode.commands.executeCommand('workbench.view.extension.reicon-explorer');
+        vscode.commands.registerCommand('vezham-icons.focusExplorer', () => {
+            vscode.commands.executeCommand('workbench.view.extension.vezham-icons-explorer');
         })
     );
 }
 
-class ReiconWebviewViewProvider {
-    static viewType = 'reicon.views.explorer';
+class VezhamIconsWebviewViewProvider {
+    static viewType = 'vezham-icons.views.explorer';
 
     constructor(extensionUri) {
         this._extensionUri = extensionUri;
@@ -75,9 +75,9 @@ class ReiconWebviewViewProvider {
             editBuilder.insert(editor.selection.active, snippet);
         }).then(success => {
             if (success) {
-                vscode.window.setStatusBarMessage(`Inserted Reicon "${name}"`, 3000);
+                vscode.window.setStatusBarMessage(`Inserted Vezham icon "${name}"`, 3000);
             } else {
-                vscode.window.showErrorMessage(`Failed to insert Reicon "${name}"`);
+                vscode.window.showErrorMessage(`Failed to insert Vezham icon "${name}"`);
             }
         });
     }
@@ -93,7 +93,7 @@ class ReiconWebviewViewProvider {
                 <html lang="en">
                 <head>
                     <meta charset="UTF-8">
-                    <title>Reicon Icons</title>
+                    <title>Vezham Icons</title>
                     <style>
                         body {
                             font-family: sans-serif;
@@ -104,8 +104,8 @@ class ReiconWebviewViewProvider {
                     </style>
                 </head>
                 <body>
-                    <h3>Reicon Webview file not found</h3>
-                    <p>Please make sure you have run the build command inside the reicon-vscode directory.</p>
+                    <h3>Vezham Icons webview file not found</h3>
+                    <p>Please make sure you have run the build command inside the icons-vscode directory.</p>
                 </body>
                 </html>
             `;

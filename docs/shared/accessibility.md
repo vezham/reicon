@@ -46,7 +46,7 @@ For buttons that contain only an icon, add `aria-label` to the button itself and
 All Reicon components use `forwardRef`, so you can attach a ref to the underlying SVG for focus management or measurements.
 ```jsx
 import { useRef } from 'react';
-import { Star } from 'reicon-react';
+import { Star } from '@vezham/icons-react';
 
 function App() {
   const iconRef = useRef(null);

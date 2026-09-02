@@ -43,7 +43,7 @@ export function generateCode(
 
   switch (input.framework) {
     case 'react': {
-      const importStatement = `import { ${component} } from 'reicon-react';`;
+      const importStatement = `import { ${component} } from '@vezham/icons-react';`;
       const props = [
         sizeProp(size, 'react'),
         colorAttr('react'),
@@ -53,7 +53,7 @@ export function generateCode(
       return { importStatement, docsSnippet };
     }
     case 'react-native': {
-      const importStatement = `import { ${component} } from 'reicon-react-native';`;
+      const importStatement = `import { ${component} } from '@vezham/icons-react-native';`;
       const props = [
         sizeProp(size, 'react-native'),
         colorAttr('react-native'),
@@ -63,7 +63,7 @@ export function generateCode(
       return { importStatement, docsSnippet };
     }
     case 'vue': {
-      const importStatement = `import { ${component} } from 'reicon-vue';`;
+      const importStatement = `import { ${component} } from '@vezham/icons-vue';`;
       const props = [
         sizeProp(size, 'vue'),
         colorAttr('vue'),
@@ -73,7 +73,7 @@ export function generateCode(
       return { importStatement, docsSnippet };
     }
     case 'svelte': {
-      const importStatement = `import { ${component} } from 'reicon-svelte';`;
+      const importStatement = `import { ${component} } from '@vezham/icons-svelte';`;
       const props = [
         sizeProp(size, 'svelte'),
         colorAttr('svelte'),

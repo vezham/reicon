@@ -26,13 +26,13 @@ The `weight` prop is case-sensitive in the React/Vue packages. Use `"Outline"` o
 ---
 
 ## 3. TypeScript can't find icon names
-Make sure you're importing from the correct package depending on your environment (e.g. `"reicon"` for vanilla JS or `"reicon-react"` for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.
+Make sure you're importing from the correct package depending on your environment (e.g. `"reicon"` for vanilla JS or `"@vezham/icons-react"` for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.
 ```typescript
 // ✅ For React projects
-import { Home } from 'reicon-react';
+import { Home } from '@vezham/icons-react';
 
 // ✅ For vanilla JS projects
-import { Home } from 'reicon';
+import { Home } from '@vezham/icons';
 ```
 
 ---
@@ -41,10 +41,10 @@ import { Home } from 'reicon';
 Avoid wildcard or star imports — they pull in every icon and defeat tree-shaking.
 ```javascript
 // ❌ Pulls in everything
-import * as Icons from 'reicon';
+import * as Icons from '@vezham/icons';
 
 // ✅ Tree-shakeable
-import { Home, Bell } from 'reicon';
+import { Home, Bell } from '@vezham/icons';
 
 // ✅ Smallest possible
 import Home from 'reicon/icons/Home';

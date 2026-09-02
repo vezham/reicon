@@ -10,11 +10,11 @@ export default function Installation({ copiedField, onCopy }: Props) {
         <>
             <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Installation</h3>
             <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-                Install both <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">/icons-react-native</code> and <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">react-native-svg</code> as the package requires SVG support.
+                Install both <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-react-native</code> and <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">react-native-svg</code> as the package requires SVG support.
             </p>
 
             <InstallTabs
-                packageName="/icons-react-native react-native-svg"
+                packageName="@vezham/icons-react-native react-native-svg"
                 copiedField={copiedField}
                 onCopy={onCopy}
             />

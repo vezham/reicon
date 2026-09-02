@@ -2,7 +2,7 @@ export const MCP_CONFIG = `{
   "mcpServers": {
     "reicon": {
       "command": "npx",
-      "args": ["reicon-mcp"]
+      "args": ["vezham-icons-mcp"]
     }
   }
 }`;
@@ -26,4 +26,4 @@ export const APPLY_TOOL = `apply_icon({
   color: "#ef4444"
 })`;
 
-export const FILE_MARKER_CMD = `npx reicon-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"`;
+export const FILE_MARKER_CMD = `npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"`;

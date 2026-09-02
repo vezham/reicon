@@ -71,7 +71,7 @@ export async function run(argv: string[]) {
   const command = positional[0];
 
   if (!command) {
-    console.error('Usage: reicon-mcp <search|view|apply|categories> [args]');
+    console.error('Usage: vezham-icons-mcp <search|view|apply|categories> [args]');
     process.exit(1);
   }
 
@@ -79,7 +79,7 @@ export async function run(argv: string[]) {
     case 'search': {
       const query = positional.slice(1).join(' ');
       if (!query) {
-        console.error('Usage: reicon-mcp search <query>');
+        console.error('Usage: vezham-icons-mcp search <query>');
         process.exit(1);
       }
       const result = handleSearchIcons({
@@ -94,7 +94,7 @@ export async function run(argv: string[]) {
     case 'view': {
       const name = positional[1];
       if (!name) {
-        console.error('Usage: reicon-mcp view <name> --weight Outline|Filled');
+        console.error('Usage: vezham-icons-mcp view <name> --weight Outline|Filled');
         process.exit(1);
       }
       const weight = (flags.weight as IconWeight) || 'Outline';
@@ -106,7 +106,7 @@ export async function run(argv: string[]) {
     case 'apply': {
       const name = positional[1];
       if (!name) {
-        console.error('Usage: reicon-mcp apply <name> --framework react|react-native|vue|svelte|html|svg [--weight Outline|Filled] [--size 24] [--color #hex] [--file path] [--marker "{/* ICON */}"]');
+        console.error('Usage: vezham-icons-mcp apply <name> --framework react|react-native|vue|svelte|html|svg [--weight Outline|Filled] [--size 24] [--color #hex] [--file path] [--marker "{/* ICON */}"]');
         process.exit(1);
       }
       const framework = (flags.framework as Framework) || 'react';

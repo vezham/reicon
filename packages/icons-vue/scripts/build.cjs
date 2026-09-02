@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build.cjs — Generates the `reicon-vue` Vue 3 package from data/icons
+ * build.cjs — Generates the `@vezham/icons-vue` Vue 3 package from data/icons
  *
  * Usage:  node packages/icons-vue/scripts/build.cjs  (or: npm run build:vue)
  *
@@ -254,8 +254,8 @@ const readme = `<p align="center">
 </p>
 
 <p align="center">
-  <a href="https://npmjs.com/package/reicon-vue"><img src="https://img.shields.io/npm/v/reicon-vue?color=black&label=npm" alt="npm version" /></a>
-  <a href="https://npmjs.com/package/reicon-vue"><img src="https://img.shields.io/npm/dm/reicon-vue?color=black&label=downloads" alt="npm downloads" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-vue"><img src="https://img.shields.io/npm/v/@vezham/icons-vue?color=black&label=npm" alt="npm version" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons-vue"><img src="https://img.shields.io/npm/dm/@vezham/icons-vue?color=black&label=downloads" alt="npm downloads" /></a>
   <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
   <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
   <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
@@ -290,11 +290,11 @@ const readme = `<p align="center">
 ## Install
 
 \`\`\`bash
-npm i reicon-vue
+npm i @vezham/icons-vue
 # or
-bun add reicon-vue
+bun add @vezham/icons-vue
 # or
-yarn add reicon-vue
+yarn add @vezham/icons-vue
 \`\`\`
 
 <details>
@@ -313,7 +313,7 @@ yarn add reicon-vue
 
 \`\`\`vue
 <script setup>
-import { Home, ShieldCheck, AltArrowDown } from 'reicon-vue';
+import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';
 </script>
 
 <template>
@@ -347,8 +347,8 @@ Every icon ships in two weights — **Outline** (default) and **Filled**:
 For the absolute minimum bundle size, import icons directly from the sub-path:
 
 \`\`\`js
-import Home from 'reicon-vue/icons/Home';
-import ShieldCheck from 'reicon-vue/icons/ShieldCheck';
+import Home from '@vezham/icons-vue/icons/Home';
+import ShieldCheck from '@vezham/icons-vue/icons/ShieldCheck';
 \`\`\`
 
 ### All SVG attributes are supported
@@ -389,10 +389,10 @@ Every icon is a standalone ES module. Modern bundlers — **Vite**, **Webpack**,
 
 \`\`\`js
 // ✅ Only Home is included in your production bundle
-import { Home } from 'reicon-vue';
+import { Home } from '@vezham/icons-vue';
 
 // ✅ Even smaller — direct path import skips the barrel file entirely
-import Home from 'reicon-vue/icons/Home';
+import Home from '@vezham/icons-vue/icons/Home';
 \`\`\`
 
 The package is marked \`"sideEffects": false\` for optimal dead-code elimination.
@@ -420,7 +420,7 @@ Browse and search all ${icons.length}+ icons at <a href="https://reicon.dev">rei
 Full type declarations ship with the package — no separate \`@types/\` installation needed.
 
 \`\`\`ts
-import { Home, type IconProps, type IconWeight } from 'reicon-vue';
+import { Home, type IconProps, type IconWeight } from '@vezham/icons-vue';
 
 const weight: IconWeight = 'Filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
@@ -452,9 +452,9 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | Package | Description |
 |---------|-------------|
 | [\`reicon\`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN runtime. No framework required. |
-| [\`reicon-react\`](https://npmjs.com/package/reicon-react) | React components for ${icons.length}+ icons. |
-| [\`reicon-vue\`](https://npmjs.com/package/reicon-vue) | **You are here.** Vue 3 components for ${icons.length}+ icons. |
-| [\`reicon-svelte\`](https://npmjs.com/package/reicon-svelte) | Svelte components for ${icons.length}+ icons. |
+| [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | React components for ${icons.length}+ icons. |
+| [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | **You are here.** Vue 3 components for ${icons.length}+ icons. |
+| [\`@vezham/icons-svelte\`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for ${icons.length}+ icons. |
 
 ---
 
@@ -462,7 +462,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 - 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
 - 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
-- 📦 &nbsp; npm: [npmjs.com/package/reicon-vue](https://npmjs.com/package/reicon-vue)
+- 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons-vue](https://npmjs.com/package/@vezham/icons-vue)
 - 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
 - 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
 

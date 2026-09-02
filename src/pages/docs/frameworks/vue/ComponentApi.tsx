@@ -51,10 +51,10 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Direct Import"
-        onCopy={() => onCopy("import Home from 'reicon-vue/icons/Home';", 'vue-direct')}
+        onCopy={() => onCopy("import Home from '@vezham/icons-vue/icons/Home';", 'vue-direct')}
         copied={copiedField === 'vue-direct'}
       >
-        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> 'reicon-vue/icons/Home'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> '@vezham/icons-vue/icons/Home'</span><span className="text-text-base/30">;</span>
       </SyntaxBlock>
     </>
   );
