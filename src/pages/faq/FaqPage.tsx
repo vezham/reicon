@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from 'motion/react';
-import { Search3 } from 'reicon-react';
+import { Search3 } from '@vezham/icons-react';
 import DocsActionsBar from '../../components/docs/ActionsBar';
 import { docsSidebarStyles } from '../../components/docs/sidebar/styles';
 import DocsRightSidebar from '../../components/docs/sidebar/Right';
@@ -54,10 +54,10 @@ const FAQ_CATEGORIES = [
       {
         id: "what-is-reicon",
         question: "What is Reicon?",
-        markdownAnswer: "Reicon is a free, open-source vector graphics library providing 3,900+ UI icons in Outline, Filled, and Duotone weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (reicon-react), React Native (reicon-react-native), Vue 3 (reicon-vue), Svelte (reicon-svelte), Flutter (reicon_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
+        markdownAnswer: "Reicon is a free, open-source vector graphics library providing 3,900+ UI icons in Outline, Filled, and Duotone weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (/icons-react), React Native (/icons-react-native), Vue 3 (reicon-vue), Svelte (reicon-svelte), Flutter (reicon_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
         answer: (
           <p>
-            Reicon is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in Outline, Filled, and Duotone weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>reicon-react</Code>), React Native (<Code>reicon-react-native</Code>), Vue 3 (<Code>reicon-vue</Code>), Svelte (<Code>reicon-svelte</Code>), Flutter (<Code>reicon_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
+            Reicon is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in Outline, Filled, and Duotone weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>/icons-react</Code>), React Native (<Code>/icons-react-native</Code>), Vue 3 (<Code>reicon-vue</Code>), Svelte (<Code>reicon-svelte</Code>), Flutter (<Code>reicon_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
           </p>
         ),
       },
@@ -116,10 +116,10 @@ const FAQ_CATEGORIES = [
       {
         id: 'tree-shaking',
         question: 'Does it support tree-shaking?',
-        markdownAnswer: 'Yes! All packages — reicon-react, reicon-react-native, reicon-vue, and reicon-svelte — are bundled as ES modules and declare "sideEffects": false. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.',
+        markdownAnswer: 'Yes! All packages — /icons-react, /icons-react-native, reicon-vue, and reicon-svelte — are bundled as ES modules and declare "sideEffects": false. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.',
         answer: (
           <p>
-            Yes! All packages — <Code>reicon-react</Code>, <Code>reicon-react-native</Code>, <Code>reicon-vue</Code>, and <Code>reicon-svelte</Code> — are bundled as ES modules and declare <Code>"sideEffects": false</Code>. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.
+            Yes! All packages — <Code>/icons-react</Code>, <Code>/icons-react-native</Code>, <Code>reicon-vue</Code>, and <Code>reicon-svelte</Code> — are bundled as ES modules and declare <Code>"sideEffects": false</Code>. Modern bundlers (Vite, Webpack, Rollup, Metro) automatically include only the icons you actually import.
           </p>
         ),
       },

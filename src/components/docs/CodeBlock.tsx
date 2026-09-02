@@ -1,4 +1,4 @@
-import { Copy } from 'reicon-react';
+import { Copy } from '@vezham/icons-react';
 
 interface CodeBlockProps {
   code: string;

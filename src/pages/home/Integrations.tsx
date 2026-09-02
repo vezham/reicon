@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Copy } from 'reicon-react';
+import { Copy } from '@vezham/icons-react';
 import { SiHtml5, SiJavascript, SiModelcontextprotocol, SiReact, SiSvelte } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 
@@ -174,10 +174,10 @@ export default function Integrations() {
                     icon={<SiReact size={16} color="#61dafb" />}
                     title="React"
                     guideUrl="/docs/react"
-                    copyText={`import { Home } from 'reicon-react';\n\n<Home size={24} weight="Outline" />`}
+                    copyText={`import { Home } from '@vezham/icons-react';\n\n<Home size={24} weight="Outline" />`}
                     lines={<>
-                        <NpmInstall pkg="reicon-react" />
-                        <ImportLine name="Home" from="reicon-react" />
+                        <NpmInstall pkg="@vezham/icons-react" />
+                        <ImportLine name="Home" from="@vezham/icons-react" />
                         <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
                     </>}
                 />
@@ -187,10 +187,10 @@ export default function Integrations() {
                     icon={<FaReact size={16} color="#61dafb" />}
                     title="React Native"
                     guideUrl="/docs/react-native"
-                    copyText={`import { Home } from 'reicon-react-native';\n\n<Home size={24} weight="Outline" />`}
+                    copyText={`import { Home } from '/icons-react-native';\n\n<Home size={24} weight="Outline" />`}
                     lines={<>
-                        <NpmInstall pkg="reicon-react-native" />
-                        <ImportLine name="Home" from="reicon-react-native" />
+                        <NpmInstall pkg="/icons-react-native" />
+                        <ImportLine name="Home" from="/icons-react-native" />
                         <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
                     </>}
                 />

@@ -8,7 +8,7 @@ import IconCount from './IconCount';
 import IconGrid from './IconGrid';
 import LoadingScreen from '../../components/ui/LoadingScreen';
 import { loadIconData } from '../../lib/icon-data';
-import { waitForReicon } from '../../lib/reicon-loader';
+import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/reicon-loader';
 import { useDuotoneData } from '../../hooks/useDuotoneData';
 import { SortOption } from '../../components/ui/DesktopFilterDropdown';
 
@@ -96,13 +96,25 @@ export default function IconsPage() {
     let cancelled = false;
     (async () => {
       try {
-        await Promise.all([loadIconData(), waitForReicon()]);
+        const data = await loadIconData();
         if (cancelled) return;
-        if (window.Reicon?.icons) {
-          setAllIcons(window.Reicon.icons);
-          saveCache(window.Reicon.icons, window.Reicon.categoryMap);
-          setCategoryMap(window.Reicon.categoryMap);
-        }
+        const localCategoryMap = Object.fromEntries(data.searchIndex.map((entry) => [entry.n, entry.c]));
+        const localIcons = Object.keys(data.iconNames);
+        setAllIcons(localIcons);
+        setCategoryMap(localCategoryMap);
+        saveCache(localIcons, localCategoryMap);
+        setReady(true);
+
+        try {
+          await waitForVezhamIcons();
+          if (cancelled) return;
+          const runtime = getVezhamIconsRuntime();
+          if (runtime?.icons) {
+            setAllIcons(runtime.icons);
+            saveCache(runtime.icons, runtime.categoryMap);
+            setCategoryMap(runtime.categoryMap);
+          }
+        } catch {}
         setReady(true);
       } catch {
         if (!cancelled) setLoadError('Failed to load icon data');
@@ -140,8 +152,9 @@ export default function IconsPage() {
   }, [filteredIcons, sortBy, deferredQuery]);
 
   useEffect(() => {
-    if (window.Reicon?.preload && sortedIcons.length > 0) {
-      window.Reicon.preload(sortedIcons.slice(0, BATCH_SIZE));
+    const runtime = getVezhamIconsRuntime();
+    if (runtime?.preload && sortedIcons.length > 0) {
+      runtime.preload(sortedIcons.slice(0, BATCH_SIZE));
     }
   }, [sortedIcons]);
 

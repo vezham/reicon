@@ -1,6 +1,6 @@
 import 'react';
 
-interface ReIconElementProps extends React.HTMLAttributes<HTMLElement> {
+interface VxIconElementProps extends React.HTMLAttributes<HTMLElement> {
   icon?: string;
   weight?: string;
   size?: number | string;
@@ -12,7 +12,7 @@ interface ReIconElementProps extends React.HTMLAttributes<HTMLElement> {
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'vx-icon': ReIconElementProps;
+      'vx-icon': VxIconElementProps;
     }
   }
 }
@@ -20,7 +20,7 @@ declare module 'react' {
 declare module 'react/jsx-runtime' {
   namespace JSX {
     interface IntrinsicElements {
-      'vx-icon': ReIconElementProps;
+      'vx-icon': VxIconElementProps;
     }
   }
 }
@@ -29,18 +29,18 @@ declare global {
   namespace React {
     namespace JSX {
       interface IntrinsicElements {
-        'vx-icon': ReIconElementProps;
+        'vx-icon': VxIconElementProps;
       }
     }
   }
   namespace JSX {
     interface IntrinsicElements {
-      'vx-icon': ReIconElementProps;
+      'vx-icon': VxIconElementProps;
     }
   }
 
   interface Window {
-    Reicon?: {
+    VezhamIcons?: {
       icons: string[];
       categories: string[];
       ready: Promise<void>;
@@ -50,6 +50,7 @@ declare global {
       /** Returns the GitHub username of the contributor who designed this icon, or null if it's a core icon. */
       contributorOf: (name: string) => string | null;
     };
+    Reicon?: Window['VezhamIcons'];
   }
 }
 

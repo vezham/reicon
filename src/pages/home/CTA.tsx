@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Search3, Copy, Pointer } from 'reicon-react';
+import { Star, Search3, Copy, Pointer } from '@vezham/icons-react';
 import ClayButton from '../../components/ui/Button';
 
 const PACKAGES = [
     'reicon',
-    'reicon-react',
-    'reicon-react-native',
+    '@vezham/icons-react',
+    '/icons-react-native',
     'reicon-vue',
     'reicon-svelte',
     'reicon-mcp',

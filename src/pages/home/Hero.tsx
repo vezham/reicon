@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HandHeart, Search3, Doc, PenSparkle } from 'reicon-react';
+import { HandHeart, Search3, Doc, PenSparkle } from '@vezham/icons-react';
 import { SiJavascript, SiReact } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 import Background from '../../components/layout/Background';

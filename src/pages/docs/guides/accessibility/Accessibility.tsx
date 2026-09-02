@@ -97,7 +97,7 @@ export default function Accessibility({ markdownContent, copiedField, onCopy }: 
 
       <SyntaxBlock
         title="Using Refs"
-        onCopy={() => onCopy("import { useRef } from 'react';\nimport { Star } from 'reicon-react';\n\nfunction App() {\n  const iconRef = useRef<SVGSVGElement>(null);\n  return <Star ref={iconRef} size={24} tabIndex={0} />;\n}", 'a11y-ref')}
+        onCopy={() => onCopy("import { useRef } from 'react';\nimport { Star } from '@vezham/icons-react';\n\nfunction App() {\n  const iconRef = useRef<SVGSVGElement>(null);\n  return <Star ref={iconRef} size={24} tabIndex={0} />;\n}", 'a11y-ref')}
         copied={copiedField === 'a11y-ref'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -113,7 +113,7 @@ export default function Accessibility({ markdownContent, copiedField, onCopy }: 
         <span className="text-[#e5c07b]">Star</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span>
         <span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-[#c678dd]">function</span>

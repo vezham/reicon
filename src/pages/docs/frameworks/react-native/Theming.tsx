@@ -16,7 +16,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
 
             <SyntaxBlock
                 title="Navigation Example"
-                onCopy={() => onCopy("import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';\nimport { Home, Search, User } from 'reicon-react-native';\n\nconst Tab = createBottomTabNavigator();\n\nfunction AppTabs() {\n  return (\n    <Tab.Navigator\n      screenOptions={({ route }) => ({\n        tabBarIcon: ({ focused, color, size }) => {\n          let Icon;\n          if (route.name === 'Home') Icon = Home;\n          else if (route.name === 'Search') Icon = Search;\n          else Icon = User;\n          \n          return <Icon size={size} color={color} weight={focused ? 'Filled' : 'Outline'} />;\n        },\n      })}\n    >\n      <Tab.Screen name=\"Home\" component={HomeScreen} />\n      <Tab.Screen name=\"Search\" component={SearchScreen} />\n      <Tab.Screen name=\"Profile\" component={ProfileScreen} />\n    </Tab.Navigator>\n  );\n}", 'rn-nav')}
+                onCopy={() => onCopy("import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';\nimport { Home, Search, User } from '/icons-react-native';\n\nconst Tab = createBottomTabNavigator();\n\nfunction AppTabs() {\n  return (\n    <Tab.Navigator\n      screenOptions={({ route }) => ({\n        tabBarIcon: ({ focused, color, size }) => {\n          let Icon;\n          if (route.name === 'Home') Icon = Home;\n          else if (route.name === 'Search') Icon = Search;\n          else Icon = User;\n          \n          return <Icon size={size} color={color} weight={focused ? 'Filled' : 'Outline'} />;\n        },\n      })}\n    >\n      <Tab.Screen name=\"Home\" component={HomeScreen} />\n      <Tab.Screen name=\"Search\" component={SearchScreen} />\n      <Tab.Screen name=\"Profile\" component={ProfileScreen} />\n    </Tab.Navigator>\n  );\n}", 'rn-nav')}
                 copied={copiedField === 'rn-nav'}
             >
                 <span className="text-[#c678dd]">import</span>
@@ -34,7 +34,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
                 <span className="text-[#e5c07b]">User</span>
                 <span className="text-text-base/70">{' } '}</span>
                 <span className="text-[#c678dd]">from</span>
-                <span className="text-[#98c379]"> 'reicon-react-native'</span>
+                <span className="text-[#98c379]"> '/icons-react-native'</span>
                 <span className="text-text-base/30">;</span>
                 {'\n\n'}
                 <span className="text-[#c678dd]">const</span><span className="text-[#e5c07b]"> Tab</span><span className="text-text-base/70"> = </span><span className="text-[#61afef]">createBottomTabNavigator</span><span className="text-text-base/70">();</span>
@@ -76,7 +76,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
 
             <SyntaxBlock
                 title="Pressable Example"
-                onCopy={() => onCopy("import { Pressable } from 'react-native';\nimport { Heart } from 'reicon-react-native';\n\nfunction LikeButton() {\n  const [liked, setLiked] = useState(false);\n  \n  return (\n    <Pressable onPress={() => setLiked(!liked)}>\n      <Heart\n        weight={liked ? 'Filled' : 'Outline'}\n        color={liked ? '#ef4444' : '#6b7280'}\n        size={28}\n      />\n    </Pressable>\n  );\n}", 'rn-pressable')}
+                onCopy={() => onCopy("import { Pressable } from 'react-native';\nimport { Heart } from '/icons-react-native';\n\nfunction LikeButton() {\n  const [liked, setLiked] = useState(false);\n  \n  return (\n    <Pressable onPress={() => setLiked(!liked)}>\n      <Heart\n        weight={liked ? 'Filled' : 'Outline'}\n        color={liked ? '#ef4444' : '#6b7280'}\n        size={28}\n      />\n    </Pressable>\n  );\n}", 'rn-pressable')}
                 copied={copiedField === 'rn-pressable'}
             >
                 <span className="text-[#c678dd]">import</span>
@@ -92,7 +92,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
                 <span className="text-[#e5c07b]">Heart</span>
                 <span className="text-text-base/70">{' } '}</span>
                 <span className="text-[#c678dd]">from</span>
-                <span className="text-[#98c379]"> 'reicon-react-native'</span>
+                <span className="text-[#98c379]"> '/icons-react-native'</span>
                 <span className="text-text-base/30">;</span>
                 {'\n\n'}
                 <span className="text-[#c678dd]">function</span><span className="text-[#61afef]"> LikeButton</span><span className="text-text-base/70">() {'{'}</span>

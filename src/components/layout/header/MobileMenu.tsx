@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
-import { Star, Sun, Moon } from 'reicon-react';
+import { Star, Sun, Moon } from '@vezham/icons-react';
 import ClayButton from '../../ui/Button';
 import BuyMeACoffeeIcon from '../../ui/BuyMeACoffeeIcon';
 

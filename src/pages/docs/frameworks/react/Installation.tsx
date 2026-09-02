@@ -14,7 +14,7 @@ export default function Installation({ copiedField, onCopy }: Props) {
       </p>
 
       <InstallTabs
-        packageName="reicon-react"
+        packageName="@vezham/icons-react"
         copiedField={copiedField}
         onCopy={onCopy}
       />

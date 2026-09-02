@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { STYLE_OPTIONS, SIZE_OPTIONS } from './constants';
+import { loadIconData } from '../../../lib/icon-data';
+import { getVezhamIconsRuntime } from '../../../lib/reicon-loader';
 
 interface SidebarProps {
   activeSet: string;
@@ -28,14 +30,25 @@ function Sidebar({
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
+    let cancelled = false;
+    loadIconData()
+      .then((data) => {
+        if (cancelled) return;
+        setCategories([...new Set(data.searchIndex.map((entry) => entry.c))].sort());
+      })
+      .catch(() => {});
+
     function load() {
-      if (window.Reicon?.categories) {
-        setCategories(window.Reicon.categories);
+      if (cancelled) return;
+      const runtime = getVezhamIconsRuntime();
+      if (runtime?.categories) {
+        setCategories(runtime.categories);
       } else {
         setTimeout(load, 100);
       }
     }
     load();
+    return () => { cancelled = true; };
   }, []);
 
   const fmt = (name: string) =>

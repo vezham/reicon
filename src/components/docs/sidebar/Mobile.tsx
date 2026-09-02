@@ -1,4 +1,4 @@
-import { ChevronExpandY } from 'reicon-react';
+import { ChevronExpandY } from '@vezham/icons-react';
 import { FrameworkIcon } from '../framework/icons';
 import { FRAMEWORKS, Framework } from '../framework/constants';
 

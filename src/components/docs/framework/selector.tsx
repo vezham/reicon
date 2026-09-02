@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ChevronExpandY } from 'reicon-react';
+import { ChevronExpandY } from '@vezham/icons-react';
 import { FrameworkIcon } from './icons';
 import { FRAMEWORKS, Framework } from './constants';
 

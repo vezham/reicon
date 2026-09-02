@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Restart } from 'reicon-react';
+import { Restart } from '@vezham/icons-react';
 import {
   IllustrationItem,
   loadFeaturedIllustrations,

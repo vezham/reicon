@@ -66,14 +66,14 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   },
   {
     question: "TypeScript can't find icon names",
-    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"reicon\" for vanilla JS or \"reicon-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
-    copyText: "// ✅ For React projects\nimport { Home } from 'reicon-react';\n\n// ✅ For vanilla JS projects\nimport { Home } from 'reicon';",
+    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"reicon\" for vanilla JS or \"/icons-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
+    copyText: "// ✅ For React projects\nimport { Home } from '@vezham/icons-react';\n\n// ✅ For vanilla JS projects\nimport { Home } from 'reicon';",
     copyField: "faq-ts",
     syntaxNode: (
       <>
         <span className="text-text-base/30">{'// ✅ For React projects'}</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react'</span><span className="text-text-base/70">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-react'</span><span className="text-text-base/70">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// ✅ For vanilla JS projects'}</span>
         {'\n'}
@@ -84,21 +84,21 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   {
     question: "Bundle size is too large",
     answer: 'You might be using a wildcard import. Switch to named imports (tree-shakeable) or direct imports for the smallest possible bundle.',
-    copyText: "// ❌ Pulls in everything\nimport * as Icons from 'reicon-react';\n\n// ✅ Tree-shakeable\nimport { Home, Bell } from 'reicon-react';\n\n// ✅ Smallest possible\nimport Home from 'reicon-react/icons/Home';",
+    copyText: "// ❌ Pulls in everything\nimport * as Icons from '@vezham/icons-react';\n\n// ✅ Tree-shakeable\nimport { Home, Bell } from '@vezham/icons-react';\n\n// ✅ Smallest possible\nimport Home from '@vezham/icons-react/icons/Home';",
     copyField: "faq-bundle",
     syntaxNode: (
       <>
         <span className="text-text-base/30">{'// ❌ Pulls in everything'}</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> * </span><span className="text-[#c678dd]">as</span><span className="text-text-base/70"> Icons </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react'</span><span className="text-text-base/70">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> * </span><span className="text-[#c678dd]">as</span><span className="text-text-base/70"> Icons </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-react'</span><span className="text-text-base/70">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// ✅ Tree-shakeable'}</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70">, </span><span className="text-[#e5c07b]">Bell</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react'</span><span className="text-text-base/70">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> {'{'} </span><span className="text-[#e5c07b]">Home</span><span className="text-text-base/70">, </span><span className="text-[#e5c07b]">Bell</span><span className="text-text-base/70"> {'}'} </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-react'</span><span className="text-text-base/70">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// ✅ Smallest possible'}</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> Home </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> 'reicon-react/icons/Home'</span><span className="text-text-base/70">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> Home </span><span className="text-[#c678dd]">from</span><span className="text-[#98c379]"> '@vezham/icons-react/icons/Home'</span><span className="text-text-base/70">;</span>
       </>
     )
   },

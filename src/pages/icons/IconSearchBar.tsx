@@ -1,4 +1,4 @@
-import { Search3 } from 'reicon-react';
+import { Search3 } from '@vezham/icons-react';
 import DesktopFilterDropdown, { SortOption } from '../../components/ui/DesktopFilterDropdown';
 
 interface IconSearchBarProps {

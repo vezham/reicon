@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef } from 'react';
 import { motion } from 'motion/react';
-import { ChevronExpandY } from 'reicon-react';
+import { ChevronExpandY } from '@vezham/icons-react';
 import { FrameworkIcon } from '../framework/icons';
 import { FRAMEWORKS, NAV_ITEMS, Framework } from '../framework/constants';
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Cookie } from 'reicon-react';
+import { Cookie } from '@vezham/icons-react';
 
 import { getStoredConsent, setStoredConsent, type CookiePreferences } from './storage';
 import CookieToggle from './CookieToggle';

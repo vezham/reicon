@@ -24,7 +24,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
 
       <SyntaxBlock
         title="Named Imports"
-        onCopy={() => onCopy("// ✅ Only Home and Bell are included in the bundle\nimport { Home, Bell } from 'reicon-react';", 'perf-named')}
+        onCopy={() => onCopy("// ✅ Only Home and Bell are included in the bundle\nimport { Home, Bell } from '@vezham/icons-react';", 'perf-named')}
         copied={copiedField === 'perf-named'}
       >
         <span className="text-text-base/30">{'// ✅ Only Home and Bell are included in the bundle'}</span>
@@ -36,7 +36,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
         <span className="text-[#e5c07b]">Bell</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span>
         <span className="text-text-base/30">;</span>
       </SyntaxBlock>
 
@@ -48,7 +48,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
 
       <SyntaxBlock
         title="Direct Imports"
-        onCopy={() => onCopy("// ✅ Guaranteed single-icon inclusion\nimport Home from 'reicon-react/icons/Home';\nimport Bell from 'reicon-react/icons/Bell';", 'perf-direct')}
+        onCopy={() => onCopy("// ✅ Guaranteed single-icon inclusion\nimport Home from '@vezham/icons-react/icons/Home';\nimport Bell from '@vezham/icons-react/icons/Bell';", 'perf-direct')}
         copied={copiedField === 'perf-direct'}
       >
         <span className="text-text-base/30">{'// ✅ Guaranteed single-icon inclusion'}</span>
@@ -56,13 +56,13 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
         <span className="text-[#c678dd]">import</span>
         <span className="text-[#e5c07b]"> Home</span>
         <span className="text-[#c678dd]"> from</span>
-        <span className="text-[#98c379]"> 'reicon-react/icons/Home'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react/icons/Home'</span>
         <span className="text-text-base/30">;</span>
         {'\n'}
         <span className="text-[#c678dd]">import</span>
         <span className="text-[#e5c07b]"> Bell</span>
         <span className="text-[#c678dd]"> from</span>
-        <span className="text-[#98c379]"> 'reicon-react/icons/Bell'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react/icons/Bell'</span>
         <span className="text-text-base/30">;</span>
       </SyntaxBlock>
 
@@ -74,7 +74,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
 
       <SyntaxBlock
         title="Anti-patterns"
-        onCopy={() => onCopy("// ❌ Imports ALL icons — entire library in bundle\nimport * as Icons from 'reicon-react';\n\n// ❌ Re-exporting everything defeats tree-shaking\nexport * from 'reicon-react';", 'perf-avoid')}
+        onCopy={() => onCopy("// ❌ Imports ALL icons — entire library in bundle\nimport * as Icons from '@vezham/icons-react';\n\n// ❌ Re-exporting everything defeats tree-shaking\nexport * from '@vezham/icons-react';", 'perf-avoid')}
         copied={copiedField === 'perf-avoid'}
       >
         <span className="text-text-base/30">{'// ❌ Imports ALL icons — entire library in bundle'}</span>
@@ -84,7 +84,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
         <span className="text-[#c678dd]">as</span>
         <span className="text-[#e5c07b]"> Icons</span>
         <span className="text-[#c678dd]"> from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span>
         <span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// ❌ Re-exporting everything defeats tree-shaking'}</span>
@@ -92,7 +92,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
         <span className="text-[#c678dd]">export</span>
         <span className="text-text-base/70"> * </span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span>
         <span className="text-text-base/30">;</span>
       </SyntaxBlock>
 
@@ -113,12 +113,12 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
           </thead>
           <tbody className="text-text-base/60">
             <tr className="border-b border-text-base/4">
-              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">reicon-react</code></td>
+              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">/icons-react</code></td>
               <td className="px-4 py-3">Only used icons</td>
               <td className="px-4 py-3">React / Next.js apps</td>
             </tr>
             <tr className="border-b border-text-base/4">
-              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">reicon-react/icons/*</code></td>
+              <td className="px-4 py-3"><code className="text-[#b3a8ff] bg-[#6C5CE7]/14 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-react/icons/*</code></td>
               <td className="px-4 py-3">Single icon per import</td>
               <td className="px-4 py-3">Production builds</td>
             </tr>

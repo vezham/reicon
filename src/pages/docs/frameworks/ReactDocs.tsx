@@ -51,12 +51,12 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
 
       <SyntaxBlock
         title="Direct Import"
-        onCopy={() => onCopy("import Home from 'reicon-react/icons/Home';\nimport ShieldCheck from 'reicon-react/icons/ShieldCheck';", 'react-direct')}
+        onCopy={() => onCopy("import Home from '@vezham/icons-react/icons/Home';\nimport ShieldCheck from '@vezham/icons-react/icons/ShieldCheck';", 'react-direct')}
         copied={copiedField === 'react-direct'}
       >
-        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> 'reicon-react/icons/Home'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> Home</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> '@vezham/icons-react/icons/Home'</span><span className="text-text-base/30">;</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> ShieldCheck</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> 'reicon-react/icons/ShieldCheck'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span><span className="text-[#e5c07b]"> ShieldCheck</span><span className="text-[#c678dd]"> from</span><span className="text-[#98c379]"> '@vezham/icons-react/icons/ShieldCheck'</span><span className="text-text-base/30">;</span>
       </SyntaxBlock>
 
       <div className="mt-4 bg-[#6C5CE7]/5 border border-[#6C5CE7]/15 rounded-xl p-4 text-[13px] text-text-base/50 leading-relaxed">
@@ -73,7 +73,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
 
       <SyntaxBlock
         title="Complete Example"
-        onCopy={() => onCopy("import { Home, Bell, User, Star, ShieldCheck } from 'reicon-react';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"flex items-center gap-4 p-4\">\n      <Home size={20} />\n      <Bell size={20} />\n      <User size={20} />\n      <Star size={20} weight=\"Filled\" color=\"#f59e0b\" />\n      <ShieldCheck size={20} color=\"#6C5CE7\" />\n    </nav>\n  );\n}", 'react-full')}
+        onCopy={() => onCopy("import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-react';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"flex items-center gap-4 p-4\">\n      <Home size={20} />\n      <Bell size={20} />\n      <User size={20} />\n      <Star size={20} weight=\"Filled\" color=\"#f59e0b\" />\n      <ShieldCheck size={20} color=\"#6C5CE7\" />\n    </nav>\n  );\n}", 'react-full')}
         copied={copiedField === 'react-full'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -85,7 +85,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
         <span className="text-[#e5c07b]">ShieldCheck</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span><span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-[#c678dd]">export default function</span><span className="text-[#61afef]"> Navbar</span><span className="text-text-base/70">() {'{'}</span>
         {'\n  '}

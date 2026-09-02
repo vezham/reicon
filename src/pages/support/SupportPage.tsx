@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
-import { Heart, HandHeart, Sparkles, Star, Code, Check } from 'reicon-react';
+import { Heart, HandHeart, Sparkles, Star, Code, Check } from '@vezham/icons-react';
 import BuyMeACoffeeIcon from '../../components/ui/BuyMeACoffeeIcon';
 import { PAGE_META } from '../../data/page-meta';
 import DocsActionsBar from '../../components/docs/ActionsBar';

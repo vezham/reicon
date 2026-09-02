@@ -1,6 +1,6 @@
 import { useState, useEffect, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Sun, Moon } from 'reicon-react';
+import { Star, Sun, Moon } from '@vezham/icons-react';
 import ClayButton from '../../ui/Button';
 import { useTheme } from '../ThemeContext';
 import NavLinks from './NavLinks';

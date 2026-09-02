@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { SiBun, SiNpm, SiPnpm, SiYarn } from 'react-icons/si';
-import { Copy } from 'reicon-react';
+import { Copy } from '@vezham/icons-react';
 
 const TABS = [
   { id: 'pnpm', label: 'pnpm', icon: SiPnpm, color: '#F69220', cmd: 'pnpm add' },

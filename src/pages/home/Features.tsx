@@ -1,4 +1,4 @@
-import { ShieldCheck, Code, Palette, Layers, HandHeart, Box } from 'reicon-react';
+import { ShieldCheck, Code, Palette, Layers, HandHeart, Box } from '@vezham/icons-react';
 
 function FeatureBlock({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
     return (

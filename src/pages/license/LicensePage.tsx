@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PAGE_META } from '../../data/page-meta';
-import { Copy, Check } from 'reicon-react';
+import { Copy, Check } from '@vezham/icons-react';
 import DocsActionsBar from '../../components/docs/ActionsBar';
 
 const LICENSE_TEXT = `MIT License

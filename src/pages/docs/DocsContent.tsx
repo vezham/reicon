@@ -112,8 +112,8 @@ export default function DocsContent({
                   <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
                     Reicon is a free, open-source vector graphics library combining <strong>3,900+ UI icons</strong>, <strong>71,000+ vector illustrations</strong>, and <strong>4,900+ brand logos</strong>.
                     The ecosystem offers native packages for <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon</code> (vanilla JS &amp; CDN),{' '}
-                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-react</code>,{' '}
-                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-react-native</code>,{' '}
+                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">/icons-react</code>,{' '}
+                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">/icons-react-native</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-vue</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-svelte</code>, and{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon_flutter</code>.

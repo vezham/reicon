@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Ghost, ArrowLeft, Search3 } from 'reicon-react';
+import { Ghost, ArrowLeft, Search3 } from '@vezham/icons-react';
 
 export default function NotFound() {
   return (

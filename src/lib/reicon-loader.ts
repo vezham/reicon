@@ -1,12 +1,26 @@
 let ready: Promise<void> | null = null;
 
-export function waitForReicon(timeoutMs = 5000): Promise<void> {
+export type VezhamIconsRuntime = {
+  icons: string[];
+  categories: string[];
+  ready: Promise<void>;
+  preload: (names: string[]) => void;
+  categoryOf: (name: string) => string | null;
+  categoryMap: Record<string, string>;
+  contributorOf: (name: string) => string | null;
+};
+
+export function getVezhamIconsRuntime(): VezhamIconsRuntime | undefined {
+  return (window as any).VezhamIcons || (window as any).Reicon;
+}
+
+export function waitForVezhamIcons(timeoutMs = 5000): Promise<void> {
   if (!ready) {
     ready = new Promise((resolve, reject) => {
-      const timer = setTimeout(() => reject(new Error('Reicon failed to load')), timeoutMs);
+      const timer = setTimeout(() => reject(new Error('Vezham Icons failed to load')), timeoutMs);
 
       function check() {
-        if ((window as any).Reicon) {
+        if (getVezhamIconsRuntime()) {
           clearTimeout(timer);
           resolve();
         } else {
@@ -18,3 +32,5 @@ export function waitForReicon(timeoutMs = 5000): Promise<void> {
   }
   return ready;
 }
+
+export const waitForReicon = waitForVezhamIcons;

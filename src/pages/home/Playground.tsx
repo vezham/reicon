@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, PenSparkle } from 'reicon-react';
+import { Sparkles, PenSparkle } from '@vezham/icons-react';
 import { loadIconData } from '../../lib/icon-data';
-import { waitForReicon } from '../../lib/reicon-loader';
+import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/reicon-loader';
 import PlaygroundPreview from './playground/PlaygroundPreview';
 import PlaygroundControls from './playground/PlaygroundControls';
 import PlaygroundCode from './playground/PlaygroundCode';
@@ -80,9 +80,9 @@ export default function Playground({ theme }: { theme: string }) {
     let active = true;
     (async () => {
       try {
-        await waitForReicon();
+        await waitForVezhamIcons();
         if (!active) return;
-        const available = (window as any).Reicon?.icons as string[] | undefined;
+        const available = getVezhamIconsRuntime()?.icons;
         if (!available) return;
         const availableSet = new Set(available);
         const filtered = initialShuffled.filter((n) => availableSet.has(n));

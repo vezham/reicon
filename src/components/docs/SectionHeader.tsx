@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link as LinkIcon, Copy as CopyIcon } from 'reicon-react';
+import { Link as LinkIcon, Copy as CopyIcon } from '@vezham/icons-react';
 
 interface Props {
   id: string;

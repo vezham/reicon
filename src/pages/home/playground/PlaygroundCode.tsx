@@ -1,4 +1,4 @@
-import { Copy } from 'reicon-react';
+import { Copy } from '@vezham/icons-react';
 import { useState } from 'react';
 
 export default function PlaygroundCode({

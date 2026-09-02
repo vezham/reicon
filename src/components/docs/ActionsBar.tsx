@@ -1,4 +1,4 @@
-import { ChevronExpandY } from 'reicon-react';
+import { ChevronExpandY } from '@vezham/icons-react';
 import { SiClaude, SiGithub } from 'react-icons/si';
 
 interface Props {

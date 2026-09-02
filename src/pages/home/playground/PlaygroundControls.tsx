@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { HexColorPicker } from 'react-colorful';
-import { Restart } from 'reicon-react';
+import { Restart } from '@vezham/icons-react';
 
 const HEX_RE = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
 

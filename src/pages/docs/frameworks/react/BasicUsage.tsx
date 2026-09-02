@@ -10,12 +10,12 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
     <>
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Basic Usage</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Import icons by their PascalCase name from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon-react</code>. Each icon is a React component that accepts standard props.
+        Import icons by their PascalCase name from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">/icons-react</code>. Each icon is a React component that accepts standard props.
       </p>
 
       <SyntaxBlock
         title="JSX"
-        onCopy={() => onCopy("import { Home, ShieldCheck, Bell } from 'reicon-react';\n\nfunction App() {\n  return (\n    <div>\n      <Home size={24} />\n      <ShieldCheck size={24} color=\"#6C5CE7\" />\n      <Bell size={24} weight=\"Filled\" />\n    </div>\n  );\n}", 'react-basic')}
+        onCopy={() => onCopy("import { Home, ShieldCheck, Bell } from '@vezham/icons-react';\n\nfunction App() {\n  return (\n    <div>\n      <Home size={24} />\n      <ShieldCheck size={24} color=\"#6C5CE7\" />\n      <Bell size={24} weight=\"Filled\" />\n    </div>\n  );\n}", 'react-basic')}
         copied={copiedField === 'react-basic'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -27,7 +27,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         <span className="text-[#e5c07b]">Bell</span>
         <span className="text-text-base/70">{' } '}</span>
         <span className="text-[#c678dd]">from</span>
-        <span className="text-[#98c379]"> 'reicon-react'</span>
+        <span className="text-[#98c379]"> '@vezham/icons-react'</span>
         <span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-[#c678dd]">function</span>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRightUp } from 'reicon-react';
+import { ArrowRightUp } from '@vezham/icons-react';
 
 const STORAGE_KEY = 'reicon-brands-overlay-v2';
 const COOKIE_KEY = 'reicon_cookie_consent';
