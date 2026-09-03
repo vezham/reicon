@@ -33,12 +33,22 @@ def strip_svg(code: str) -> str:
     return code.strip()
 
 
+def normalize_svg_colors(code: str) -> str:
+    return (
+        code
+        .replace('#1C274C', 'currentColor')
+        .replace('#1c274c', 'currentColor')
+        .replace('fill="white"', 'fill="currentColor"')
+        .replace('stroke="white"', 'stroke="currentColor"')
+    )
+
+
 def read_weight(icon_dir: str, filename: str) -> str:
     path = os.path.join(icon_dir, filename)
     if not os.path.exists(path):
         return ''
     with open(path, 'r') as f:
-        return strip_svg(f.read())
+        return strip_svg(normalize_svg_colors(f.read()))
 
 
 def iter_icon_dirs():

@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
+const { loadIconData, normalizeSvgColors } = require('../../../scripts/lib/icon-source.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const INDEX_OUT = path.join(ROOT, 'src', 'data', 'icon-index.json');
@@ -33,7 +33,7 @@ function stripSvgWrapper(code) {
 }
 
 function rewriteColors(svg) {
-  return svg.replace(/fill="white"/g, 'fill="currentColor"');
+  return normalizeSvgColors(svg);
 }
 
 function buildIndex(data) {

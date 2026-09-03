@@ -15,7 +15,10 @@ function stripSvgWrapper(code: string): string {
 }
 
 function rewriteColors(svg: string): string {
-  return svg.replace(/fill="white"/g, 'fill="currentColor"');
+  return svg
+    .replace(/#1C274C/gi, 'currentColor')
+    .replace(/fill="white"/g, 'fill="currentColor"')
+    .replace(/stroke="white"/g, 'stroke="currentColor"');
 }
 
 function generateTags(name: string, description: string[]): string[] {

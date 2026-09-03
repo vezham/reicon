@@ -31,6 +31,13 @@ function minifySvg(svg) {
     .trim();
 }
 
+function normalizeSvgColors(svg) {
+  return svg
+    .replace(/#1C274C/gi, 'currentColor')
+    .replace(/fill="white"/g, 'fill="currentColor"')
+    .replace(/stroke="white"/g, 'stroke="currentColor"');
+}
+
 function stripSvgWrapper(svg) {
   const match = svg.match(/^<svg\b([^>]*)>([\s\S]*?)<\/svg>\s*$/i);
   if (!match) return { code: svg.trim(), viewBox: undefined };
@@ -44,7 +51,7 @@ function stripSvgWrapper(svg) {
 }
 
 function readSvgWeight(filePath) {
-  const raw = minifySvg(fs.readFileSync(filePath, 'utf-8'));
+  const raw = minifySvg(normalizeSvgColors(fs.readFileSync(filePath, 'utf-8')));
   const parsed = stripSvgWrapper(raw);
   const weight = { code: parsed.code };
   if (parsed.viewBox && parsed.viewBox !== '0 0 24 24') {
@@ -155,4 +162,5 @@ module.exports = {
   loadDuotoneIcons,
   loadIconData,
   minifySvg,
+  normalizeSvgColors,
 };

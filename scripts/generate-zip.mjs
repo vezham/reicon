@@ -7,7 +7,7 @@ import JSZip from 'jszip';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const require = createRequire(import.meta.url);
-const { loadIconData } = require('./lib/icon-source.cjs');
+const { loadIconData, normalizeSvgColors } = require('./lib/icon-source.cjs');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const ZIP_OUT_PATH = path.join(PUBLIC_DIR, 'vezham-icons.zip');
@@ -16,8 +16,7 @@ const WEIGHTS = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
 console.log('Generating compressed ZIP archive for all Vezham icons...');
 
 function rewriteColors(svg) {
-  let code = svg.replace(/fill="white"/g, 'fill="#000000"');
-  return code.replace(/currentColor/g, '#000000');
+  return normalizeSvgColors(svg);
 }
 
 async function run() {

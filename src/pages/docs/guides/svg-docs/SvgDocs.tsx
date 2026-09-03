@@ -29,7 +29,7 @@ export default function SvgDocs({ markdownContent, copiedField, onCopy }: Props)
         Download ZIP Archive
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Get the complete, compressed package containing all 2,700+ icon designs across outline, filled, duotone-outline, and duotone-filled weights. All icons are compressed and optimized for lightweight load speeds, pre-colored in black (#000000) for standard vector previews.
+        Get the complete, compressed package containing all 2,700+ icon designs across outline, filled, duotone-outline, and duotone-filled weights. All icons are compressed and optimized for lightweight load speeds, using currentColor for CSS-driven coloring.
       </p>
 
       <div className="mb-8">

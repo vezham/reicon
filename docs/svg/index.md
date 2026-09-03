@@ -6,7 +6,7 @@ Download and integrate raw SVG vector files directly into vanilla HTML layouts, 
 
 Get the complete, compressed package containing all 2,700+ icon designs across outline, filled, duotone-outline, and duotone-filled weights.
 
-All icons are compressed and optimized for lightweight load speeds, pre-colored in black (#000000) for standard vector previews.
+All icons are compressed and optimized for lightweight load speeds, using `currentColor` for CSS-driven coloring.
 
 [Download SVG Assets (.zip)](/vezham-icons.zip)
 

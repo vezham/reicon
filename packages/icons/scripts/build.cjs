@@ -13,7 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { loadIconData } = require('../../../scripts/lib/icon-source.cjs');
+const { loadIconData, normalizeSvgColors } = require('../../../scripts/lib/icon-source.cjs');
 
 // ── paths ──────────────────────────────────────────────────────────────────
 const SRC = path.join(__dirname, '..', 'src');
@@ -35,9 +35,9 @@ function stripSvgWrapper(code) {
   return code.replace(/^<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').trim();
 }
 
-// Fix hardcoded fill="white" → currentColor so user color option works correctly.
+// Normalize legacy hardcoded icon colors so user color options work correctly.
 function rewriteColors(svg) {
-  return svg.replace(/fill="white"/g, 'fill="currentColor"');
+  return normalizeSvgColors(svg);
 }
 
 function escapeForJS(s) {
