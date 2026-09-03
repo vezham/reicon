@@ -1,5 +1,11 @@
 # @vezham/icons-react
 
+## 1.0.7
+
+### Patch Changes
+
+- [`c43db4f`](https://github.com/vezham/reicon/commit/c43db4f097764211f4be548959ef3838c0dd2dd8) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.6
 
 ### Patch Changes
