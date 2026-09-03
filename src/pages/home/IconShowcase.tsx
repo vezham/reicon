@@ -2,6 +2,8 @@ export type OrbitItem =
   | { type: 'icon'; name: string }
   | { type: 'logo'; src: string; name: string };
 
+const VEZHAM_LOGO_URL = 'https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/vezham-logo.svg';
+
 const ORBIT_INNER: OrbitItem[] = [
   { type: 'icon', name: 'home' },
   { type: 'logo', src: '/cdn-proxy/logos/google/original.svg', name: 'Google' },
@@ -83,11 +85,15 @@ export default function IconShowcase({ theme }: { theme: string }) {
             <div className="relative w-full aspect-square max-w-[480px] sm:max-w-[580px] md:max-w-[620px] mx-auto sm:[mask-image:radial-gradient(circle,black_70%,transparent_100%)] overflow-visible">
                 {/* Clean borderless center logo */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                    <img
-                        src={theme === 'dark' ? '/icon-light.webp' : '/icon-dark.webp'}
-                        alt="Vezham"
-                        loading="lazy"
-                        className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-md select-none pointer-events-none"
+                    <span
+                        role="img"
+                        aria-label="vezham-logo icon"
+                        className="block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 drop-shadow-md select-none pointer-events-none"
+                        style={{
+                            backgroundColor: theme === 'dark' ? '#ffffff' : '#111111',
+                            WebkitMask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+                            mask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+                        }}
                     />
                 </div>
 

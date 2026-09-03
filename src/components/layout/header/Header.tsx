@@ -8,6 +8,8 @@ import MobileMenu from './MobileMenu';
 
 import BuyMeACoffeeIcon from '../../ui/BuyMeACoffeeIcon';
 
+const VEZHAM_LOGO_URL = 'https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/vezham-logo.svg';
+
 interface HeaderProps {
   className?: string;
 }
@@ -34,7 +36,16 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
           to="/"
           className="flex items-center gap-2 text-text-base font-semibold text-[14px] bg-text-base/[0.04] backdrop-blur-lg rounded-full px-3.5 py-[7px] hover:bg-text-base/10 transition-all duration-150 shadow-2xs shrink-0"
         >
-          <img src={theme === 'dark' ? '/icon-light.webp' : '/icon-dark.webp'} alt="Vezham" loading="lazy" className="w-4.5 h-4.5" />
+          <span
+            role="img"
+            aria-label="vezham-logo icon"
+            className="w-4.5 h-4.5"
+            style={{
+              backgroundColor: theme === 'dark' ? '#ffffff' : '#111111',
+              WebkitMask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+              mask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+            }}
+          />
           <span>Vezham</span>
         </Link>
 

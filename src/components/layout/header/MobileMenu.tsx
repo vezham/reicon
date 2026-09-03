@@ -5,6 +5,8 @@ import { Star, Sun, Moon } from '@vezham/icons-react';
 import ClayButton from '../../ui/Button';
 import BuyMeACoffeeIcon from '../../ui/BuyMeACoffeeIcon';
 
+const VEZHAM_LOGO_URL = 'https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/vezham-logo.svg';
+
 interface MobileMenuProps {
   stars: number | null;
   theme: string;
@@ -100,7 +102,16 @@ export default function MobileMenu({ stars, theme, toggleTheme }: MobileMenuProp
                 className="flex items-center gap-2 font-semibold text-[15px]"
                 style={{ color: isDark ? '#ffffff' : '#111111' }}
               >
-                <img src={isDark ? '/icon-light.webp' : '/icon-dark.webp'} alt="Vezham" loading="lazy" className="w-5 h-5" />
+                <span
+                  role="img"
+                  aria-label="vezham-logo icon"
+                  className="w-5 h-5"
+                  style={{
+                    backgroundColor: isDark ? '#ffffff' : '#111111',
+                    WebkitMask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+                    mask: `url("${VEZHAM_LOGO_URL}") center / contain no-repeat`,
+                  }}
+                />
                 <span>Vezham</span>
               </Link>
 
