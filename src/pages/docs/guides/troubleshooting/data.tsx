@@ -66,7 +66,7 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   },
   {
     question: "TypeScript can't find icon names",
-    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"reicon\" for vanilla JS or \"@vezham/icons-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
+    answer: "Make sure you're importing from the correct package depending on your environment (e.g. \"vezham\" for vanilla JS or \"@vezham/icons-react\" for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.",
     copyText: "// ✅ For React projects\nimport { Home } from '@vezham/icons-react';\n\n// ✅ For vanilla JS projects\nimport { Home } from '@vezham/icons';",
     copyField: "faq-ts",
     syntaxNode: (

@@ -24,7 +24,7 @@ export default function FlutterDocs({ markdownContent, copiedField, onCopy }: Pr
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        The official Flutter &amp; Dart package for Reicon. Import 2700+ handcrafted SVG icons as raw path strings and render them with your preferred SVG library in any Dart or Flutter project.
+        The official Flutter &amp; Dart package for Vezham. Import 2700+ handcrafted SVG icons as raw path strings and render them with your preferred SVG library in any Dart or Flutter project.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">What you can accomplish:</p>

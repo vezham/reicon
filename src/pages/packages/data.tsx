@@ -67,12 +67,12 @@ export const PACKAGES: PackageItem[] = [
     },
     {
         id: 'flutter',
-        name: 'reicon_flutter',
-        npmPkg: 'reicon_flutter',
-        description: 'Official Flutter/Dart package for Reicon. 2700+ SVG icons as path strings. Works with flutter_svg.',
+        name: 'vezham_icons_flutter',
+        npmPkg: 'vezham_icons_flutter',
+        description: 'Official Flutter/Dart package for Vezham. 2700+ SVG icons as path strings. Works with flutter_svg.',
         icon: <FlutterIcon size={48} />,
-        npmUrl: 'https://pub.dev/packages/icons_flutter',
-        sourceUrl: 'https://github.com/dqev/reicon/tree/main/packages/icons-flutter',
+        npmUrl: 'https://pub.dev/packages/vezham_icons_flutter',
+        sourceUrl: 'https://github.com/vezham/reicon/tree/main/packages/icons-flutter',
         guideUrl: '/docs/flutter',
     },
 ];
@@ -109,7 +109,7 @@ export const TOOLS: ToolItem[] = [
         description: "Browse and insert Vezham icons directly into your HTML, React, Vue, Svelte, or vanilla JS code from your editor's sidebar panel.",
         icon: <VscVscodeInsiders className="text-[#007ACC]" size={48} />,
         guideUrl: '/docs/vscode',
-        primaryAction: { label: 'Use', href: 'https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon' },
+        primaryAction: { label: 'Use', href: 'https://marketplace.visualstudio.com/items?itemName=Vezham.icons' },
         sourceUrl: 'https://github.com/vezham/reicon/tree/main/packages/icons-vscode',
     },
     {
@@ -126,9 +126,9 @@ export const TOOLS: ToolItem[] = [
 ];
 
 export const SVG_PACKAGE = {
-    name: 'reicon-svg',
+    name: 'vezham-svg',
     guideUrl: '/docs/svg',
-    downloadUrl: '/reicon-icons.zip',
-    description: 'Download the complete raw vector assets. Includes all Reicon icons in both outline and filled weights in black SVG format, fully compressed.',
+    downloadUrl: '/vezham-icons.zip',
+    description: 'Download the complete raw vector assets. Includes all Vezham icons in both outline and filled weights in black SVG format, fully compressed.',
     icon: <SvgIcon size={48} />,
 };

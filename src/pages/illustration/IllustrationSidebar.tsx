@@ -82,7 +82,7 @@ function IllustrationSidebar({
   const sidebarContent = (
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       {/* Grid Size */}
-      <div className="reicon-sidebar-group">
+      <div className="vezham-sidebar-group">
         <div className="sidebar-section-header">
           <div className="sidebar-icon-box">
             <vx-icon icon="ruler" size="13" />
@@ -98,7 +98,7 @@ function IllustrationSidebar({
       </div>
 
       {/* Categories */}
-      <div className="reicon-sidebar-group">
+      <div className="vezham-sidebar-group">
         <div className="sidebar-section-header">
           <div className="sidebar-icon-box">
             <vx-icon icon="category2" size="13" />
@@ -205,13 +205,13 @@ function IllustrationSidebar({
         }
         #nd-sidebar-illustration::-webkit-scrollbar { display: none; }
 
-        .reicon-sidebar-group {
+        .vezham-sidebar-group {
           position: relative;
           display: flex;
           flex-direction: column;
           margin-top: 1.25rem;
         }
-        .reicon-sidebar-group:first-child {
+        .vezham-sidebar-group:first-child {
           margin-top: 0;
         }
         .sidebar-section-header {
@@ -279,11 +279,11 @@ function IllustrationSidebar({
           background: transparent;
         }
 
-        .reicon-sidebar-backdrop {
+        .vezham-sidebar-backdrop {
           position: fixed; inset: 0; z-index: 40;
           background: var(--shadow-color); backdrop-filter: blur(6px);
         }
-        .reicon-sidebar-drawer {
+        .vezham-sidebar-drawer {
           position: fixed; top: 0; left: 0; bottom: 0; z-index: 50; width: 16rem;
           background: var(--bg-base); border-right: 1px solid var(--border-muted);
           padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;
@@ -291,22 +291,22 @@ function IllustrationSidebar({
           transition: transform 0.28s cubic-bezier(0.25,0.46,0.45,0.94);
           scrollbar-width: none;
         }
-        .reicon-sidebar-drawer::-webkit-scrollbar { display: none; }
-        .reicon-sidebar-drawer.is-open { transform: translateX(0); }
-        .reicon-sidebar-drawer-head {
+        .vezham-sidebar-drawer::-webkit-scrollbar { display: none; }
+        .vezham-sidebar-drawer.is-open { transform: translateX(0); }
+        .vezham-sidebar-drawer-head {
           display: flex; align-items: center; justify-content: space-between;
           padding-bottom: 0.75rem; margin-bottom: 0.25rem;
           border-bottom: 1px solid var(--border-muted);
         }
-        .reicon-sidebar-close {
+        .vezham-sidebar-close {
           display: inline-flex; align-items: center; justify-content: center;
           width: 28px; height: 28px; border-radius: 9999px;
           background: var(--surface-base); border: none;
           color: var(--text-muted); cursor: pointer;
           transition: color 0.15s, background-color 0.15s;
         }
-        .reicon-sidebar-close:hover { background: var(--surface-hover); color: var(--text-base); }
-        @media(min-width: 1024px) { .reicon-sidebar-backdrop,.reicon-sidebar-drawer{display:none;} }
+        .vezham-sidebar-close:hover { background: var(--surface-hover); color: var(--text-base); }
+        @media(min-width: 1024px) { .vezham-sidebar-backdrop,.vezham-sidebar-drawer{display:none;} }
         @media(max-width: 1023.98px) { #nd-sidebar-illustration{display:none;} }
       `}</style>
 
@@ -314,13 +314,13 @@ function IllustrationSidebar({
         {sidebarContent}
       </aside>
 
-      {isOpen && <div onClick={onClose} className="reicon-sidebar-backdrop" aria-hidden />}
+      {isOpen && <div onClick={onClose} className="vezham-sidebar-backdrop" aria-hidden />}
 
-      <aside className={`reicon-sidebar-drawer ${isOpen ? 'is-open' : ''}`} data-lenis-prevent>
-        <div className="reicon-sidebar-drawer-head">
+      <aside className={`vezham-sidebar-drawer ${isOpen ? 'is-open' : ''}`} data-lenis-prevent>
+        <div className="vezham-sidebar-drawer-head">
           <span style={{ fontWeight: 600, fontSize: '14px', color: 'var(--text-base)' }}>Filters</span>
           {onClose && (
-            <button onClick={onClose} className="reicon-sidebar-close" aria-label="Close sidebar">
+            <button onClick={onClose} className="vezham-sidebar-close" aria-label="Close sidebar">
               <vx-icon icon="x" size="16" color="currentColor" style={{ color: 'var(--text-muted)' }} />
             </button>
           )}

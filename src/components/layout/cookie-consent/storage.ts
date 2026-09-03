@@ -1,4 +1,4 @@
-const COOKIE_KEY = 'reicon_cookie_consent';
+const COOKIE_KEY = 'vezham_cookie_consent';
 
 export type CookiePreferences = {
   necessary: boolean;

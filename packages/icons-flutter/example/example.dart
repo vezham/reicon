@@ -2,23 +2,23 @@
 //
 // This is a simple usage example for the `/icons` package.
 //
-// Run with: dart example/reicon_example.dart
+// Run with: dart example/vezham_example.dart
 
-import 'package:reicon_flutter/reicon_flutter.dart';
+import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';
 
 void main() {
-  print('=== Reicon Icon Library ===\n');
+  print('=== Vezham Icon Library ===\n');
 
   // 1. Access SVG path data
-  final homePath = Reicon.outline.home;
-  final settingsFilled = Reicon.filled.settings;
+  final homePath = Vezham.outline.home;
+  final settingsFilled = Vezham.filled.settings;
 
   print('Outline home path length: ${homePath.length} chars');
   print('Filled settings path length: ${settingsFilled.length} chars');
 
   // 2. Build a complete SVG string
-  final svg = reiconSvg(
-    Reicon.outline.star,
+  final svg = vezhamIconSvg(
+    Vezham.outline.star,
     size: 32,
     color: '#d97757',
   );
@@ -27,19 +27,19 @@ void main() {
 
   // 3. Iterate over icons
   print('\nFirst 5 outline icons:');
-  for (final name in Reicon.outline.names.take(5)) {
+  for (final name in Vezham.outline.names.take(5)) {
     print('  - $name');
   }
 
   // 4. Look up by name
-  final icon = Reicon.outline['home'];
+  final icon = Vezham.outline['home'];
   print('\nHome icon by lookup: ${icon != null}');
 
   // 5. Metadata
-  print('\nOutline: ${Reicon.outline.length} icons');
-  print('Filled:  ${Reicon.filled.length} icons');
+  print('\nOutline: ${Vezham.outline.length} icons');
+  print('Filled:  ${Vezham.filled.length} icons');
 
   // 6. Weight name
-  print('Weight: ${Reicon.outline.name}');
-  print('Weight: ${Reicon.filled.name}');
+  print('Weight: ${Vezham.outline.name}');
+  print('Weight: ${Vezham.filled.name}');
 }

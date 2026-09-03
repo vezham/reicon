@@ -121,10 +121,10 @@ import createIcon from '../createIcon.js';
 /**
  * @component
  * @name ${icon.pascal}
- * @description Reicon SVG icon component, renders SVG Element with children.
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs — Documentation
- * @param {import('../createIcon').IconProps} props — Reicon icon props and any valid SVG attribute
+ * @description Vezham SVG icon component, renders SVG Element with children.
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs — Documentation
+ * @param {import('../createIcon').IconProps} props — Vezham icon props and any valid SVG attribute
  * @returns {JSX.Element} JSX Element
  */
 const ${icon.pascal} = createIcon('${icon.pascal}', {
@@ -143,10 +143,10 @@ export default ${icon.pascal};
 /**
  * @component
  * @name ${icon.pascal}
- * @description Reicon SVG icon component, renders SVG Element with children.
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs — Documentation
- * @param {import('../createIcon').IconProps} props — Reicon icon props and any valid SVG attribute
+ * @description Vezham SVG icon component, renders SVG Element with children.
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs — Documentation
+ * @param {import('../createIcon').IconProps} props — Vezham icon props and any valid SVG attribute
  * @returns {JSX.Element} JSX Element
  */
 declare const ${icon.pascal}: IconComponent;
@@ -253,20 +253,20 @@ fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) +
 
 // ── README.md ──────────────────────────────────────────────────────────────
 const readme = `<p align="center">
-  <a href="https://reicon.dev">
-    <img src="https://reicon.dev/readme-banner.png" alt="Reicon React — SVG Icon Library for React" width="100%" />
+  <a href="https://vezham.com">
+    <img src="https://vezham.com/readme-banner.png" alt="Vezham React — SVG Icon Library for React" width="100%" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://npmjs.com/package/@vezham/icons-react"><img src="https://img.shields.io/npm/v/@vezham/icons-react?color=black&label=npm" alt="npm version" /></a>
   <a href="https://npmjs.com/package/@vezham/icons-react"><img src="https://img.shields.io/npm/dm/@vezham/icons-react?color=black&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
-  <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon"><img src="https://img.shields.io/badge/github-Vezham-black" alt="GitHub" /></a>
 </p>
 
-<h1 align="center">Reicon React</h1>
+<h1 align="center">Vezham React</h1>
 
 <p align="center">
   <b>${icons.length}+ pixel-perfect SVG icons</b> • Outline & Filled weights • React component wrapper • Zero dependencies • MIT Licensed
@@ -281,14 +281,14 @@ const readme = `<p align="center">
   <a href="#typescript">TypeScript</a>
 </p>
 
-**Reicon React** is the official React package for <a href="https://reicon.dev">Reicon</a> — a free, open-source SVG icon library featuring ${icons.length}+ handcrafted, grid-aligned icons. Every component is tree-shakeable, fully TypeScript-ready, and ships with zero dependencies.
+**Vezham React** is the official React package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring ${icons.length}+ handcrafted, grid-aligned icons. Every component is tree-shakeable, fully TypeScript-ready, and ships with zero dependencies.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
-| 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
-| 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
-| 📦 &nbsp; Core package (vanilla JS) | [reicon](https://npmjs.com/package/reicon) |
-| 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
+| 🌐 &nbsp; Website & icon browser | [vezham.com](https://vezham.com) |
+| 📖 &nbsp; Documentation | [vezham.com/docs](https://vezham.com/docs) |
+| 📦 &nbsp; Core package (vanilla JS) | [vezham](https://npmjs.com/package/vezham) |
+| 🎨 &nbsp; Figma plugin | [vezham.com/docs/figma](https://vezham.com/docs/figma) |
 
 ---
 
@@ -419,7 +419,7 @@ Icons use **PascalCase**, derived from their original kebab-case file names:
 | \`user-circle\` | \`UserCircle\` |
 | \`arrow-right-up\` | \`ArrowRightUp\` |
 
-Browse and search all ${icons.length}+ icons at <a href="https://reicon.dev">reicon.dev</a>.
+Browse and search all ${icons.length}+ icons at <a href="https://vezham.com">vezham.com</a>.
 
 ---
 
@@ -462,7 +462,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 | Package | Description |
 |---------|-------------|
-| [\`reicon\`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN runtime. No framework required. |
+| [\`vezham\`](https://npmjs.com/package/vezham) | Core vanilla JS + CDN runtime. No framework required. |
 | [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | **You are here.** React components for ${icons.length}+ icons. |
 | [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for ${icons.length}+ icons. |
 | [\`@vezham/icons-svelte\`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for ${icons.length}+ icons. |
@@ -471,11 +471,11 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ## Links
 
-- 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
-- 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
+- 🌐 &nbsp; Website: [vezham.com](https://vezham.com)
+- 📖 &nbsp; Documentation: [vezham.com/docs](https://vezham.com/docs)
 - 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react)
-- 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🐙 &nbsp; GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 &nbsp; Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

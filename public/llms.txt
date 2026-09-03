@@ -1,25 +1,25 @@
-# Reicon — Icons, Illustrations & Brand Logos Library
+# Vezham — Icons, Illustrations & Brand Logos Library
 
 > Free, open-source SVG icon, illustration, and logo library — **3,900+ vector icons** (Outline, Filled, Duotone), **71,000+ free SVG illustrations**, and **4,900+ vector brand logos**. Available for React, Vue 3, Svelte, React Native, Flutter, vanilla JS, CDN, Figma, VS Code, and AI MCP Server. 100% MIT licensed.
 >
-> ⚠️ **Not** the Windows tool "ReIcon" by Sordum — completely unrelated.
+> ⚠️ **Not** the Windows tool "Vezham Icons" by Sordum — completely unrelated.
 
 ## Agent Quick Start
 
-When a user asks you to use Reicon icons, illustrations, or brand logos, follow these steps:
+When a user asks you to use Vezham icons, illustrations, or brand logos, follow these steps:
 
-1. **Icons**: Use `@vezham/icons-react`, `@vezham/icons-vue`, `@vezham/icons-svelte`, `@vezham/icons-react-native`, `@vezham/icons`, or `reicon_flutter`. Browse: `https://reicon.dev/icons`
-2. **Illustrations**: Direct CDN URL format `https://cdn.reicon.dev/{slug}.svg` (e.g. `https://cdn.reicon.dev/aspen.svg`, `https://cdn.reicon.dev/bag.svg`). Browse: `https://reicon.dev/illustration`
-3. **Brand Logos**: Direct CDN URL format `https://cdn.reicon.dev/logos/{slug}/{variant}.svg` (e.g. `https://cdn.reicon.dev/logos/react/original.svg`, `https://cdn.reicon.dev/logos/github/wordmark.svg`). Browse: `https://reicon.dev/logos`
+1. **Icons**: Use `@vezham/icons-react`, `@vezham/icons-vue`, `@vezham/icons-svelte`, `@vezham/icons-react-native`, `@vezham/icons`, or `vezham_icons_flutter`. Browse: `https://vezham.com/icons`
+2. **Illustrations**: Direct CDN URL format `https://cdn.vezham.com/{slug}.svg` (e.g. `https://cdn.vezham.com/aspen.svg`, `https://cdn.vezham.com/bag.svg`). Browse: `https://vezham.com/illustration`
+3. **Brand Logos**: Direct CDN URL format `https://cdn.vezham.com/logos/{slug}/{variant}.svg` (e.g. `https://cdn.vezham.com/logos/react/original.svg`, `https://cdn.vezham.com/logos/github/wordmark.svg`). Browse: `https://vezham.com/logos`
 
 ---
 
 ## 🏷️ Brand Logos (4,900+ Vector Logos)
 
-Reicon provides 4,900+ clean, official vector SVG logos for tech companies, frameworks, AI tools, and global brands.
+Vezham provides 4,900+ clean, official vector SVG logos for tech companies, frameworks, AI tools, and global brands.
 
 ### CDN URL Pattern:
-`https://cdn.reicon.dev/logos/{slug}/{variant}.svg`
+`https://cdn.vezham.com/logos/{slug}/{variant}.svg`
 
 ### Variants:
 - `original` (default full color brand logo)
@@ -29,30 +29,30 @@ Reicon provides 4,900+ clean, official vector SVG logos for tech companies, fram
 
 ### React / HTML Usage:
 ```html
-<img src="https://cdn.reicon.dev/logos/react/original.svg" alt="React Logo" width="32" height="32" />
+<img src="https://cdn.vezham.com/logos/react/original.svg" alt="React Logo" width="32" height="32" />
 ```
 
 ---
 
 ## 🎨 SVG Illustrations (71,000+ Free SVGs)
 
-Reicon provides 71,000+ free, open-source vector SVG illustrations across 75+ categories.
+Vezham provides 71,000+ free, open-source vector SVG illustrations across 75+ categories.
 
 ### CDN URL Pattern:
-`https://cdn.reicon.dev/{slug}.svg`
+`https://cdn.vezham.com/{slug}.svg`
 
 ### React / HTML Usage:
 ```html
-<img src="https://cdn.reicon.dev/aspen.svg" alt="Aspen Illustration" width="180" height="180" />
+<img src="https://cdn.vezham.com/aspen.svg" alt="Aspen Illustration" width="180" height="180" />
 ```
 ```jsx
-<img src="https://cdn.reicon.dev/bag.svg" alt="Bag Illustration" width={180} height={180} />
+<img src="https://cdn.vezham.com/bag.svg" alt="Bag Illustration" width={180} height={180} />
 ```
 
 ### Features:
 - **71,000+ Vector Designs**: Doodling, object, people, mark, and scene illustrations.
 - **MIT License**: Free for commercial and personal projects.
-- **CDN Hosted**: Hosted on lightning-fast global CDN (`https://cdn.reicon.dev`).
+- **CDN Hosted**: Hosted on lightning-fast global CDN (`https://cdn.vezham.com`).
 
 ---
 
@@ -225,7 +225,7 @@ Direct SVG files are also available:
 | `gradient-type` | string | `"linear"` | `"linear"` or `"radial"` |
 | `gradient-angle` | string | `"135"` | Degrees for linear gradient |
 
-Global API: `Reicon.preload()`, `Reicon.icons`, `Reicon.categories`, `Reicon.categoryOf()`, `Reicon.contributorOf()`.
+Global API: `Vezham.preload()`, `Vezham.icons`, `Vezham.categories`, `Vezham.categoryOf()`, `Vezham.contributorOf()`.
 
 ---
 
@@ -234,9 +234,9 @@ Global API: `Reicon.preload()`, `Reicon.icons`, `Reicon.categories`, `Reicon.cat
 ```json
 {
   "mcpServers": {
-    "reicon": {
+    "vezham": {
       "command": "npx",
-      "args": ["vezham-icons-mcp"]
+      "args": ["@vezham/icons-mcp"]
     }
   }
 }
@@ -249,13 +249,13 @@ Global API: `Reicon.preload()`, `Reicon.icons`, `Reicon.categories`, `Reicon.cat
 | `apply_icon` | `{ name, weight, framework, size?, color? }` | Import + code snippet |
 | `list_categories` | (none) | All category names |
 
-Frameworks: `react`, `vue`, `svelte`, `html`, `svg`. CLI also available: `npx vezham-icons-mcp search "cart"`.
+Frameworks: `react`, `vue`, `svelte`, `html`, `svg`. CLI also available: `npx @vezham/icons-mcp search "cart"`.
 
 ---
 
 ## VS Code Extension
 
-Search "Reicon" in extensions or run: `code --install-extension DevChauhan.reicon`
+Search "Vezham" in extensions or run: `code --install-extension Vezham.icons`
 
 Sidebar panel with icon browser, live size/color preview, and smart code insertion.
 
@@ -285,11 +285,11 @@ Vanilla JS:   import Home from '@vezham/icons/Home'
 
 | | |
 |---|---|
-| **Website** | https://reicon.dev |
-| **GitHub** | https://github.com/dqev/reicon |
+| **Website** | https://vezham.com |
+| **GitHub** | https://github.com/vezham/reicon |
 | **License** | MIT (free, no attribution needed) |
 | **Creator** | Dev Chauhan (https://devchauhan.in) |
-| **Contact** | hello@reicon.dev |
+| **Contact** | hello@vezham.com |
 | **Icons** | 2,700+ designs × 2 weights = 5,400+ total |
 | **Grid** | 24×24 px |
 | **Weights** | Outline (1.5px stroke), Filled |
@@ -300,7 +300,7 @@ Vanilla JS:   import Home from '@vezham/icons/Home'
 
 ## References
 
-- [llms-full.txt](https://reicon.dev/llms-full.txt) — Deep reference (versions, TS types, data architecture, FAQs, comparison table)
-- [llms-icons.txt](https://reicon.dev/llms-icons.txt) — All 2,700+ icons listed by category with kebab→Pascal mapping
-- [Docs](https://reicon.dev/docs)
-- [Changelog](https://github.com/dqev/reicon/blob/main/CHANGELOG.md)
+- [llms-full.txt](https://vezham.com/llms-full.txt) — Deep reference (versions, TS types, data architecture, FAQs, comparison table)
+- [llms-icons.txt](https://vezham.com/llms-icons.txt) — All 2,700+ icons listed by category with kebab→Pascal mapping
+- [Docs](https://vezham.com/docs)
+- [Changelog](https://github.com/vezham/reicon/blob/main/CHANGELOG.md)

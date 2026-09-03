@@ -1,18 +1,18 @@
 <p align="center">
-  <a href="https://reicon.dev">
-    <img src="https://reicon.dev/readme-banner.png" alt="Reicon Vue — SVG Icon Library for Vue 3" width="100%" />
+  <a href="https://vezham.com">
+    <img src="https://vezham.com/readme-banner.png" alt="Vezham Vue — SVG Icon Library for Vue 3" width="100%" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://npmjs.com/package/@vezham/icons-vue"><img src="https://img.shields.io/npm/v/@vezham/icons-vue?color=black&label=npm" alt="npm version" /></a>
   <a href="https://npmjs.com/package/@vezham/icons-vue"><img src="https://img.shields.io/npm/dm/@vezham/icons-vue?color=black&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
-  <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon"><img src="https://img.shields.io/badge/github-Vezham-black" alt="GitHub" /></a>
 </p>
 
-<h1 align="center">Reicon Vue</h1>
+<h1 align="center">Vezham Vue</h1>
 
 <p align="center">
   <b>2679+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vue 3 component wrapper • Zero dependencies • MIT Licensed
@@ -27,14 +27,14 @@
   <a href="#typescript">TypeScript</a>
 </p>
 
-**Reicon Vue** is the official Vue 3 package for <a href="https://reicon.dev">Reicon</a> — a free, open-source SVG icon library featuring 2679+ handcrafted, grid-aligned icons. Every component is tree-shakeable, fully TypeScript-ready, and ships with zero dependencies.
+**Vezham Vue** is the official Vue 3 package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring 2679+ handcrafted, grid-aligned icons. Every component is tree-shakeable, fully TypeScript-ready, and ships with zero dependencies.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
-| 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
-| 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
-| 📦 &nbsp; Core package (vanilla JS) | [reicon](https://npmjs.com/package/@vezham/icons) |
-| 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
+| 🌐 &nbsp; Website & icon browser | [vezham.com](https://vezham.com) |
+| 📖 &nbsp; Documentation | [vezham.com/docs](https://vezham.com/docs) |
+| 📦 &nbsp; Core package (vanilla JS) | [vezham](https://npmjs.com/package/vezham) |
+| 🎨 &nbsp; Figma plugin | [vezham.com/docs/figma](https://vezham.com/docs/figma) |
 
 ---
 
@@ -162,7 +162,7 @@ Icons use **PascalCase**, derived from their original kebab-case file names:
 | `shopping-cart` | `ShoppingCart` |
 | `user-circle` | `UserCircle` |
 
-Browse and search all 2679+ icons at <a href="https://reicon.dev">reicon.dev</a>.
+Browse and search all 2679+ icons at <a href="https://vezham.com">vezham.com</a>.
 
 ---
 
@@ -202,7 +202,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 | Package | Description |
 |---------|-------------|
-| [`/icons`](https://npmjs.com/package/@vezham/icons) | Core vanilla JS + CDN runtime. No framework required. |
+| [`vezham`](https://npmjs.com/package/vezham) | Core vanilla JS + CDN runtime. No framework required. |
 | [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for 2679+ icons. |
 | [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | **You are here.** Vue 3 components for 2679+ icons. |
 | [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for 2679+ icons. |
@@ -211,11 +211,11 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ## Links
 
-- 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
-- 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
+- 🌐 &nbsp; Website: [vezham.com](https://vezham.com)
+- 📖 &nbsp; Documentation: [vezham.com/docs](https://vezham.com/docs)
 - 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons-vue](https://npmjs.com/package/@vezham/icons-vue)
-- 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🐙 &nbsp; GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 &nbsp; Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

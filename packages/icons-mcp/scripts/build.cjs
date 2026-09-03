@@ -104,7 +104,7 @@ const pkg = {
   name: srcPkg.name,
   version: srcPkg.version,
   type: 'module',
-  description: 'MCP server and CLI for browsing and applying Reicon icons.',
+  description: 'MCP server and CLI for browsing and applying Vezham icons.',
   bin: {
     'vezham-icons-mcp': 'bin/run.cjs',
   },

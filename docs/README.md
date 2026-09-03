@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://reicon.dev">
-    <img src="../public/readme-banner.png" alt="Reicon — Free Open-Source Icon Library" width="100%" />
+  <a href="https://vezham.com">
+    <img src="../public/readme-banner.png" alt="Vezham — Free Open-Source Icon Library" width="100%" />
   </a>
 </p>
 
@@ -12,8 +12,8 @@ This directory contains comprehensive guides, design system definitions, and int
 
 | File / Folder | Purpose |
 | :--- | :--- |
-| [`design-system.md`](file:///Users/devchauhan/Documents/Website/reicon/docs/design-system.md) | Specs for Reicon's design constraints, grids, stroke-widths, and optical guidelines. |
-| [`project-structure.md`](file:///Users/devchauhan/Documents/Website/reicon/docs/project-structure.md) | Details on the monorepo layout, generated files, and asset mapping. |
+| [`design-system.md`](file:///Users/devchauhan/Documents/Website/vezham/docs/design-system.md) | Specs for Vezham's design constraints, grids, stroke-widths, and optical guidelines. |
+| [`project-structure.md`](file:///Users/devchauhan/Documents/Website/vezham/docs/project-structure.md) | Details on the monorepo layout, generated files, and asset mapping. |
 | **Platform Guides** | Subdirectories containing integration guides and code snippets: |
 | ├─ `react/` | React setup and component options. |
 | ├─ `vue/` | Vue 3 setup, compilation options, and prop docs. |
@@ -30,4 +30,4 @@ This directory contains comprehensive guides, design system definitions, and int
 
 * Documentation should reflect changes in `data/icons` or package build behaviors.
 * Maintain clear, visual examples inside each framework subfolder's files.
-* Ensure styling tokens align with Reicon's core design system specifications.
+* Ensure styling tokens align with Vezham's core design system specifications.

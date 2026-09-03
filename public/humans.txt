@@ -1,11 +1,11 @@
 /* TEAM */
 Creator: Dev Chauhan
 Site: https://devchauhan.in
-Contact: hello@reicon.dev
+Contact: hello@vezham.com
 
 /* SITE */
-Name: Reicon
-URL: https://reicon.dev
+Name: Vezham
+URL: https://vezham.com
 Description: Free, open-source SVG icon library built with obsessive precision.
 Standards: HTML5, CSS3, JavaScript (ES2022)
 Components: React, Vite, Tailwind CSS, Firebase

@@ -1,14 +1,14 @@
-/// Builds a complete SVG string from Reicon SVG path data.
+/// Builds a complete SVG string from Vezham SVG path data.
 ///
-/// [pathData] is raw SVG path markup from [ReiconWeight] getters.
+/// [pathData] is raw SVG path markup from [VezhamIconWeight] getters.
 /// [size] is the icon size in pixels (default 24).
 /// [color] is any valid CSS color value (default `"currentColor"`).
 ///
 /// ```dart
-/// final svg = reiconSvg(Reicon.outline.home);
-/// final colored = reiconSvg(Reicon.filled.star, size: 32, color: '#d97757');
+/// final svg = vezhamIconSvg(Vezham.outline.home);
+/// final colored = vezhamIconSvg(Vezham.filled.star, size: 32, color: '#d97757');
 /// ```
-String reiconSvg(
+String vezhamIconSvg(
   String pathData, {
   int size = 24,
   String color = 'currentColor',

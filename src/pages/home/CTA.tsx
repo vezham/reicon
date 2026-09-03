@@ -141,7 +141,7 @@ export default function CTA() {
                             Explore 4,900+ Logos
                         </Link>
                         <a
-                            href="https://github.com/dqev/reicon"
+                            href="https://github.com/vezham/reicon"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full justify-center bg-text-base/5 text-text-base border border-text-base/10 px-7 py-3 rounded-full font-medium text-[14px] hover:bg-text-base/10 active:scale-[0.97] transition-all inline-flex items-center gap-2 cursor-pointer"

@@ -23,7 +23,7 @@ interface TypeTableProps {
 /**
  * Animate-ui style props/type table — rounded chrome, header row in a slightly
  * lighter shade, prop chips in the site accent (#6C5CE7) and neutral chips for
- * type/default values. Stays on the Reicon dark palette.
+ * type/default values. Stays on the Vezham dark palette.
  */
 export default function TypeTable({ rows, showDescription, className = '' }: TypeTableProps) {
     const hasDesc = rows.some((r) => !!r.description);
@@ -32,8 +32,8 @@ export default function TypeTable({ rows, showDescription, className = '' }: Typ
     return (
         <>
             <TypeTableStyles />
-            <div className={`reicon-tt-wrap ${className}`}>
-                <table className="reicon-tt">
+            <div className={`vezham-tt-wrap ${className}`}>
+                <table className="vezham-tt">
                     <thead>
                         <tr>
                             <th style={{ width: renderDesc ? '30%' : '45%' }}>Prop</th>
@@ -46,9 +46,9 @@ export default function TypeTable({ rows, showDescription, className = '' }: Typ
                         {rows.map((row) => (
                             <tr key={row.prop}>
                                 <td>
-                                    <div className="reicon-tt-field">
+                                    <div className="vezham-tt-field">
                                         <code
-                                            className={`reicon-tt-chip reicon-tt-chip--prop${row.deprecated ? ' reicon-tt-chip--deprecated' : ''
+                                            className={`vezham-tt-chip vezham-tt-chip--prop${row.deprecated ? ' vezham-tt-chip--deprecated' : ''
                                                 }`}
                                         >
                                             {row.prop}
@@ -56,17 +56,17 @@ export default function TypeTable({ rows, showDescription, className = '' }: Typ
                                     </div>
                                 </td>
                                 <td>
-                                    <code className="reicon-tt-chip">{row.type}</code>
+                                    <code className="vezham-tt-chip">{row.type}</code>
                                 </td>
                                 <td>
                                     {row.default ? (
-                                        <code className="reicon-tt-chip">{row.default}</code>
+                                        <code className="vezham-tt-chip">{row.default}</code>
                                     ) : (
-                                        <span className="reicon-tt-dash">—</span>
+                                        <span className="vezham-tt-dash">—</span>
                                     )}
                                 </td>
                                 {renderDesc && (
-                                    <td className="reicon-tt-desc">{row.description ?? ''}</td>
+                                    <td className="vezham-tt-desc">{row.description ?? ''}</td>
                                 )}
                             </tr>
                         ))}
@@ -80,7 +80,7 @@ export default function TypeTable({ rows, showDescription, className = '' }: Typ
 function TypeTableStyles() {
     return (
         <style>{`
-      .reicon-tt-wrap {
+      .vezham-tt-wrap {
         margin-block: 0;
         overflow: auto;
         border-radius: 12px;
@@ -88,7 +88,7 @@ function TypeTableStyles() {
         background: var(--surface-base);
       }
 
-      .reicon-tt {
+      .vezham-tt {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
@@ -98,7 +98,7 @@ function TypeTableStyles() {
       }
 
       /* Header */
-      .reicon-tt thead th {
+      .vezham-tt thead th {
         text-align: start;
         padding: 0.625rem 1rem;
         background: var(--surface-hover);
@@ -110,28 +110,28 @@ function TypeTableStyles() {
         letter-spacing: 0.06em;
         color: var(--text-more-muted);
       }
-      .reicon-tt thead th:first-child { border-inline-start: none; }
+      .vezham-tt thead th:first-child { border-inline-start: none; }
 
       /* Body cells */
-      .reicon-tt tbody td {
+      .vezham-tt tbody td {
         text-align: start;
         padding: 0.625rem 1rem;
         border-inline-start: 1px solid var(--border-base);
         vertical-align: baseline;
       }
-      .reicon-tt tbody td:first-child { border-inline-start: none; }
+      .vezham-tt tbody td:first-child { border-inline-start: none; }
 
       /* Row separators */
-      .reicon-tt tbody tr:not(:last-child) td {
+      .vezham-tt tbody tr:not(:last-child) td {
         border-bottom: 1px solid var(--border-muted);
       }
 
-      .reicon-tt tbody tr:hover td {
+      .vezham-tt tbody tr:hover td {
         background: var(--surface-hover);
       }
 
       /* Field cell content */
-      .reicon-tt-field {
+      .vezham-tt-field {
         display: inline-flex;
         flex-direction: row;
         align-items: center;
@@ -139,7 +139,7 @@ function TypeTableStyles() {
       }
 
       /* Code chips */
-      .reicon-tt-chip {
+      .vezham-tt-chip {
         display: inline-block;
         border-radius: 6px;
         padding: 2px 7px;
@@ -152,24 +152,24 @@ function TypeTableStyles() {
       }
 
       /* Prop chip — accent color, like fd-primary/10 + text-fd-primary */
-      .reicon-tt-chip--prop {
+      .vezham-tt-chip--prop {
         background: rgba(108, 92, 231, 0.14);
         color: #b3a8ff;
         border-color: rgba(108, 92, 231, 0.25);
       }
 
-      .reicon-tt-chip--deprecated {
+      .vezham-tt-chip--deprecated {
         text-decoration: line-through;
         color: rgba(179, 168, 255, 0.5);
       }
 
-      .reicon-tt-dash {
+      .vezham-tt-dash {
         color: var(--text-more-muted);
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 12px;
       }
 
-      .reicon-tt-desc {
+      .vezham-tt-desc {
         color: var(--text-more-muted);
         white-space: normal;
         font-size: 12.5px;
@@ -177,11 +177,11 @@ function TypeTableStyles() {
 
       /* Mobile — collapse description column visually but keep ergonomic widths */
       @media (max-width: 640px) {
-        .reicon-tt {
+        .vezham-tt {
           font-size: 12.5px;
         }
-        .reicon-tt thead th,
-        .reicon-tt tbody td {
+        .vezham-tt thead th,
+        .vezham-tt tbody td {
           padding: 0.5rem 0.75rem;
         }
       }

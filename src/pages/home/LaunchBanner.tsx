@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SiFlutter } from 'react-icons/si';
 
-const BANNER_KEY = 'reicon-launch-banner-v4';
+const BANNER_KEY = 'vezham-launch-banner-v4';
 
 export default function LaunchBanner() {
     const [dismissed, setDismissed] = useState(() => {
@@ -25,7 +25,7 @@ export default function LaunchBanner() {
                     Flutter package is live
                 </a>
                 <span className="text-text-base/15">·</span>
-                <span className="font-mono text-[11px] bg-text-base/8 px-2 py-0.5 rounded text-text-base/40">dart pub add reicon_flutter</span>
+                <span className="font-mono text-[11px] bg-text-base/8 px-2 py-0.5 rounded text-text-base/40">dart pub add vezham_icons_flutter</span>
                 <a href="/docs/flutter" className="text-text-base/50 hover:text-text-base/80 transition-colors underline underline-offset-2 decoration-text-base/20 cursor-pointer">
                     Get started
                 </a>

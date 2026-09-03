@@ -10,9 +10,9 @@ const require = createRequire(import.meta.url);
 const { loadIconData } = require('./lib/icon-source.cjs');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
-const ZIP_OUT_PATH = path.join(PUBLIC_DIR, 'reicon-icons.zip');
+const ZIP_OUT_PATH = path.join(PUBLIC_DIR, 'vezham-icons.zip');
 
-console.log('Generating compressed ZIP archive for all Reicon icons...');
+console.log('Generating compressed ZIP archive for all Vezham icons...');
 
 function rewriteColors(svg) {
   let code = svg.replace(/fill="white"/g, 'fill="#000000"');
@@ -68,7 +68,7 @@ async function run() {
     }
 
     fs.writeFileSync(ZIP_OUT_PATH, content);
-    console.log(`Successfully generated and compressed Reicon ZIP archive at ${ZIP_OUT_PATH} (${(content.length / 1024 / 1024).toFixed(2)} MB)`);
+    console.log(`Successfully generated and compressed Vezham ZIP archive at ${ZIP_OUT_PATH} (${(content.length / 1024 / 1024).toFixed(2)} MB)`);
   } catch (error) {
     console.error('Error generating icons ZIP archive:', error);
     process.exit(1);

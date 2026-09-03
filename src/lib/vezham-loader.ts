@@ -32,5 +32,3 @@ export function waitForVezhamIcons(timeoutMs = 5000): Promise<void> {
   }
   return ready;
 }
-
-export const waitForReicon = waitForVezhamIcons;

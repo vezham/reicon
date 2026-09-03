@@ -1,6 +1,6 @@
 # Accessibility
 
-Reicon components pass all extra props (including ARIA attributes) directly to the underlying `<svg>` element. Use these patterns to make your icons accessible.
+Vezham components pass all extra props (including ARIA attributes) directly to the underlying `<svg>` element. Use these patterns to make your icons accessible.
 
 ---
 
@@ -43,7 +43,7 @@ For buttons that contain only an icon, add `aria-label` to the button itself and
 ---
 
 ## Ref Forwarding
-All Reicon components use `forwardRef`, so you can attach a ref to the underlying SVG for focus management or measurements.
+All Vezham components use `forwardRef`, so you can attach a ref to the underlying SVG for focus management or measurements.
 ```jsx
 import { useRef } from 'react';
 import { Star } from '@vezham/icons-react';
@@ -54,4 +54,4 @@ function App() {
 }
 ```
 
-> **Tip:** Since Reicon passes all props to the SVG element, you can use any standard SVG or ARIA attribute — `focusable`, `tabIndex`, `onFocus`, etc.
+> **Tip:** Since Vezham passes all props to the SVG element, you can use any standard SVG or ARIA attribute — `focusable`, `tabIndex`, `onFocus`, etc.

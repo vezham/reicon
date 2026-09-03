@@ -10,7 +10,7 @@ const DIST = path.join(ROOT, 'dist');
 const OUTPUT_HTML_PATH = path.join(DIST, 'ui.html');
 const LOGO_PATH = path.join(__dirname, '..', '..', '..', 'public', 'icon-light.webp');
 
-console.log('Building Reicon Figma plugin package...');
+console.log('Building Vezham Figma plugin package...');
 
 try {
   if (!fs.existsSync(TEMPLATE_HTML_PATH)) {

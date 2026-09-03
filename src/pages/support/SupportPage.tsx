@@ -6,7 +6,7 @@ import BuyMeACoffeeIcon from '../../components/ui/BuyMeACoffeeIcon';
 import { PAGE_META } from '../../data/page-meta';
 import DocsActionsBar from '../../components/docs/ActionsBar';
 
-const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/reicon';
+const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/vezham';
 
 const SUPPORT_TIERS = [
   {
@@ -42,7 +42,7 @@ const IMPACT_CARDS = [
   {
     icon: <HandHeart size={22} className="text-[#FFDD00]" />,
     title: '100% Free & Open Source',
-    description: 'Reicon is released under the permissive MIT license. Your support keeps all 2,700+ icons accessible to everyone worldwide without paywalls.',
+    description: 'Vezham is released under the permissive MIT license. Your support keeps all 2,700+ icons accessible to everyone worldwide without paywalls.',
   },
   {
     icon: <Sparkles size={22} className="text-[#6C5CE7]" />,
@@ -79,7 +79,7 @@ export default function SupportPage() {
   };
 
   const getPageMarkdown = () => {
-    return `# Support Reicon Development\n\nReicon is 100% free and open-source under the MIT license. If Reicon helps you ship faster apps or craft cleaner designs, consider buying a coffee to support its future.\n\nBuy a coffee: ${BUY_ME_A_COFFEE_URL}`;
+    return `# Support Vezham Development\n\nVezham is 100% free and open-source under the MIT license. If Vezham helps you ship faster apps or craft cleaner designs, consider buying a coffee to support its future.\n\nBuy a coffee: ${BUY_ME_A_COFFEE_URL}`;
   };
 
   const handleCopyPageMarkdown = async () => {
@@ -96,7 +96,7 @@ export default function SupportPage() {
   const openInLLM = async (platform: 'chatgpt' | 'claude' | 't3') => {
     const md = getPageMarkdown();
     try { await navigator.clipboard.writeText(md); } catch { /* silent */ }
-    const promptText = `Here is the Reicon Support page details. Please read it and help answer my questions:\n\n${md}`;
+    const promptText = `Here is the Vezham Support page details. Please read it and help answer my questions:\n\n${md}`;
     const urls = {
       chatgpt: `https://chatgpt.com/?hints=search&q=${encodeURIComponent(promptText)}`,
       claude: `https://claude.ai/new?q=${encodeURIComponent(promptText)}`,
@@ -120,14 +120,14 @@ export default function SupportPage() {
         <link rel="canonical" href={PAGE_META['/support'].url} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_META['/support'].url} />
-        <meta property="og:site_name" content="Reicon" />
+        <meta property="og:site_name" content="Vezham" />
         <meta property="og:title" content={PAGE_META['/support'].title} />
         <meta property="og:description" content={PAGE_META['/support'].description} />
         <meta property="og:image" content={PAGE_META['/support'].ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@reicon_dev" />
+        <meta name="twitter:site" content="@vezham" />
         <meta name="twitter:title" content={PAGE_META['/support'].title} />
         <meta name="twitter:description" content={PAGE_META['/support'].description} />
         <meta name="twitter:image" content={PAGE_META['/support'].ogImage} />
@@ -136,8 +136,8 @@ export default function SupportPage() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Reicon', item: 'https://reicon.dev' },
-              { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://reicon.dev/support' },
+              { '@type': 'ListItem', position: 1, name: 'Vezham', item: 'https://vezham.com' },
+              { '@type': 'ListItem', position: 2, name: 'Support', item: 'https://vezham.com/support' },
             ],
           })}
         </script>
@@ -147,11 +147,11 @@ export default function SupportPage() {
       <div className="text-center max-w-2xl mx-auto mb-14">
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-text-base font-semibold leading-tight tracking-tight mb-4">
-          Support Reicon Development
+          Support Vezham Development
         </h1>
 
         <p className="text-text-base/60 text-base sm:text-lg leading-relaxed mb-6">
-          Reicon is 100% free and open-source under the MIT license. If Reicon helps you ship faster apps or craft cleaner designs, consider buying a coffee to support its future.
+          Vezham is 100% free and open-source under the MIT license. If Vezham helps you ship faster apps or craft cleaner designs, consider buying a coffee to support its future.
         </p>
 
         <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -261,7 +261,7 @@ export default function SupportPage() {
           </div>
           <h3 className="text-xl font-serif font-semibold text-text-base">Built with passion by @devchauhan</h3>
           <p className="text-text-base/60 text-sm max-w-lg leading-relaxed">
-            Thank you for using Reicon! Building and perfecting over 2,700+ vector icons across multiple frameworks has been an incredible labor of love. Every coffee purchased gives direct motivation to keep expanding the collection.
+            Thank you for using Vezham! Building and perfecting over 2,700+ vector icons across multiple frameworks has been an incredible labor of love. Every coffee purchased gives direct motivation to keep expanding the collection.
           </p>
         </div>
 
@@ -272,7 +272,7 @@ export default function SupportPage() {
           className="shrink-0 bg-[#FFDD00] hover:bg-[#ffe533] text-[#0D0C22] font-semibold text-sm px-6 py-3 rounded-full transition-all shadow-md flex items-center gap-2"
         >
           <BuyMeACoffeeIcon size={18} />
-          <span>buymeacoffee.com/reicon</span>
+          <span>buymeacoffee.com/vezham</span>
         </a>
       </div>
 
@@ -282,8 +282,8 @@ export default function SupportPage() {
         copiedPage={copiedPage}
         openDropdown={openDropdown}
         openDropdownRef={openDropdownRef}
-        githubEditUrl="https://github.com/dqev/reicon/edit/main/src/pages/support/SupportPage.tsx"
-        githubUrl="https://github.com/dqev/reicon"
+        githubEditUrl="https://github.com/vezham/reicon/edit/main/src/pages/support/SupportPage.tsx"
+        githubUrl="https://github.com/vezham/reicon"
         onCopyMarkdown={handleCopyPageMarkdown}
         onOpenDropdown={setOpenDropdown}
         onOpenInLLM={openInLLM}

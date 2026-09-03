@@ -2,7 +2,7 @@
   "name": "@vezham/icons-mcp",
   "version": "1.0.5",
   "type": "module",
-  "description": "MCP server and CLI for browsing and applying Reicon icons.",
+  "description": "MCP server and CLI for browsing and applying Vezham icons.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

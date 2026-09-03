@@ -29,7 +29,7 @@ export interface LogoCategoriesMeta {
   categories: LogoCategory[];
 }
 
-const CDN_BASE = 'https://cdn.reicon.dev';
+const CDN_BASE = '/cdn-proxy';
 
 export function getLogoUrl(slug: string, variant: string = 'original'): string {
   return `${CDN_BASE}/logos/${slug}/${variant}.svg`;
@@ -265,5 +265,4 @@ export async function getRelatedLogos(slug: string): Promise<LogoItem[]> {
 
   return results;
 }
-
 

@@ -1,6 +1,6 @@
 import { createElement } from 'react';
 
-export interface ReIconProps {
+export interface VezhamIconProps {
     icon?: string;
     weight?: string;
     size?: number | string;
@@ -9,6 +9,6 @@ export interface ReIconProps {
     'aria-label'?: string;
 }
 
-export default function ReIcon(props: ReIconProps) {
+export default function VezhamIcon(props: VezhamIconProps) {
     return createElement('vx-icon', props as Record<string, unknown>);
 }

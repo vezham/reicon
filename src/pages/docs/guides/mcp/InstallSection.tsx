@@ -17,7 +17,7 @@ export default function InstallSection({ copiedField, onCopy }: InstallSectionPr
       </p>
 
       <InstallTabs
-        packageName="vezham-icons-mcp"
+        packageName="@vezham/icons-mcp"
         copiedField={copiedField}
         onCopy={onCopy}
       />
@@ -28,14 +28,14 @@ export default function InstallSection({ copiedField, onCopy }: InstallSectionPr
 
       <SyntaxBlock
         title="monorepo"
-        onCopy={() => onCopy('git clone https://github.com/dqev/reicon.git\ncd reicon\nnpm run build:mcp', 'mcp-source')}
+        onCopy={() => onCopy('git clone https://github.com/vezham/reicon.git\ncd vezham\nnpm run build:mcp', 'mcp-source')}
         copied={copiedField === 'mcp-source'}
       >
         <span className="text-[#98c379]">git clone</span>
-        <span className="text-text-base/70"> https://github.com/dqev/reicon.git</span>
+        <span className="text-text-base/70"> https://github.com/vezham/reicon.git</span>
         {'\n'}
         <span className="text-[#98c379]">cd</span>
-        <span className="text-text-base/70"> reicon</span>
+        <span className="text-text-base/70"> vezham</span>
         {'\n'}
         <span className="text-[#98c379]">npm run</span>
         <span className="text-text-base/70"> build:mcp</span>

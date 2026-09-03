@@ -1,4 +1,4 @@
-export const SITE = 'https://reicon.dev';
+export const SITE = 'https://vezham.com';
 export const SITE_DEFAULTS = {
   ogImage: `${SITE}/og/og.jpg`,
 };
@@ -17,7 +17,7 @@ export function buildMeta({ title, desc, url, ogImage = SITE_DEFAULTS.ogImage, o
     `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`,
     `<meta property="og:type" content="${isIconPage ? 'article' : 'website'}" />`,
     `<meta property="og:url" content="${esc(url)}" />`,
-    `<meta property="og:site_name" content="Reicon" />`,
+    `<meta property="og:site_name" content="Vezham" />`,
     `<meta property="og:locale" content="en_US" />`,
     `<meta property="og:title" content="${t}" />`,
     `<meta property="og:description" content="${d}" />`,
@@ -26,8 +26,8 @@ export function buildMeta({ title, desc, url, ogImage = SITE_DEFAULTS.ogImage, o
     ogImage ? `<meta property="og:image:height" content="630" />` : '',
     ogImage && ogImageAlt ? `<meta property="og:image:alt" content="${esc(ogImageAlt)}" />` : '',
     `<meta name="twitter:card" content="summary_large_image" />`,
-    `<meta name="twitter:site" content="@reicon_dev" />`,
-    `<meta name="twitter:creator" content="@reicon_dev" />`,
+    `<meta name="twitter:site" content="@vezham" />`,
+    `<meta name="twitter:creator" content="@vezham" />`,
     `<meta name="twitter:title" content="${t}" />`,
     `<meta name="twitter:description" content="${d}" />`,
     ogImage ? `<meta name="twitter:image" content="${esc(ogImage)}" />` : '',

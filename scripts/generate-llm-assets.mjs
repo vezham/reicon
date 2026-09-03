@@ -69,9 +69,9 @@ function generateIcons() {
     sections.push(lines.join('\n'));
   }
 
-  const output = `# Reicon — Complete Icon Names & Component Mapping
+  const output = `# Vezham — Complete Icon Names & Component Mapping
 
-This file lists every icon in the Reicon SVG icon library by category. Use it to look up the correct import name (PascalCase), CDN attribute value (kebab-case), or direct SVG CDN URL for any icon.
+This file lists every icon in the Vezham SVG icon library by category. Use it to look up the correct import name (PascalCase), CDN attribute value (kebab-case), or direct SVG CDN URL for any icon.
 
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (\`arrow-up-right\` → \`ArrowUpRight\`)
@@ -103,12 +103,12 @@ function generateIllustrations() {
 
   const data = JSON.parse(readFileSync(ILLUST_CATS, 'utf-8'));
   const lines = [
-    `# Reicon — 71,000+ Free SVG Illustrations Directory for AI Agents`,
+    `# Vezham — 71,000+ Free SVG Illustrations Directory for AI Agents`,
     ``,
     `> Browse and fetch 71,000+ free open-source vector SVG illustrations for React, Vue, HTML, and Figma.`,
-    `> **CDN URL Pattern**: \`https://cdn.reicon.dev/{slug}.svg\` (e.g., \`https://cdn.reicon.dev/aspen.svg\`)`,
-    `> **Browse Page**: https://reicon.dev/illustration`,
-    `> **Detail Page Pattern**: https://reicon.dev/illustration/{slug}`,
+    `> **CDN URL Pattern**: \`https://cdn.vezham.com/{slug}.svg\` (e.g., \`https://cdn.vezham.com/aspen.svg\`)`,
+    `> **Browse Page**: https://vezham.com/illustration`,
+    `> **Detail Page Pattern**: https://vezham.com/illustration/{slug}`,
     ``,
     `## Statistics`,
     `- **Total Illustrations**: ${data.total_icons || 71262}`,

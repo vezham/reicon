@@ -24,7 +24,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        The official React package for Reicon. Import beautifully crafted icons as React components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
+        The official React package for Vezham. Import beautifully crafted icons as React components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">What you can accomplish:</p>
@@ -68,7 +68,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
       {/* Full Component Example */}
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Full Component Example</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Here's a complete example of a React component using multiple Reicon icons with different configurations.
+        Here's a complete example of a React component using multiple Vezham icons with different configurations.
       </p>
 
       <SyntaxBlock

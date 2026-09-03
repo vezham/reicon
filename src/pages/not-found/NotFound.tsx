@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div>
       <Helmet>
-        <title>404 — Page Not Found | Reicon</title>
+        <title>404 — Page Not Found | Vezham</title>
         <meta name="robots" content="noindex" />
       </Helmet>
 

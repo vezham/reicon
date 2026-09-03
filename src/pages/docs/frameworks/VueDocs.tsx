@@ -29,7 +29,7 @@ export default function VueDocs({ markdownContent, copiedField, onCopy }: Props)
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        The official Vue 3 package for Reicon. Import beautifully crafted icons as Vue components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
+        The official Vue 3 package for Vezham. Import beautifully crafted icons as Vue components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">What you can accomplish:</p>

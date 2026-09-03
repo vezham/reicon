@@ -14,7 +14,7 @@ export default function DocsRightSidebar({
 
     return (
         <aside id="otp-sidebar" className="hidden xl:block" data-lenis-prevent>
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="list" size="13" />

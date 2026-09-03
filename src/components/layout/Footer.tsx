@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const socials = [
   {
-    href: 'https://github.com/dqev/reicon',
+    href: 'https://github.com/vezham/reicon',
     label: 'GitHub',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -11,7 +11,7 @@ const socials = [
     ),
   },
   {
-    href: 'https://www.linkedin.com/company/reicon-dev',
+    href: 'https://www.linkedin.com/company/vezham-dev',
     label: 'LinkedIn',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -29,7 +29,7 @@ const socials = [
     ),
   },
   {
-    href: 'https://bsky.app/profile/reicondev.bsky.social',
+    href: 'https://bsky.app/profile/vezham.bsky.social',
     label: 'Bluesky',
     icon: (
       <svg viewBox="0 0 256 226" fill="currentColor" className="w-4 h-4">
@@ -152,7 +152,7 @@ export default function Footer() {
             <div className="relative flex flex-col gap-1">
               <div className="absolute left-[10px] top-[-4px] bottom-[4px] w-[1px] transform -translate-x-1/2 pointer-events-none" style={{ background: 'linear-gradient(to bottom, var(--border-base) 0%, var(--border-base) 60%, transparent 100%)' }} />
               <Link to="/support" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
-                Support Reicon
+                Support Vezham
               </Link>
               <Link to="/faq" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 Questions & Answers
@@ -166,7 +166,7 @@ export default function Footer() {
               <Link to="/privacy" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 Privacy Policy
               </Link>
-              <a href="mailto:hello@reicon.dev" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">
+              <a href="mailto:hello@vezham.com" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium cursor-pointer">
                 Contact
               </a>
             </div>
@@ -210,12 +210,12 @@ export default function Footer() {
         {/* Big Branding Watermark Display */}
         <div className="pt-6 sm:pt-8 flex flex-col items-center justify-center text-center overflow-hidden">
           <h2 className="font-serif font-bold text-[clamp(44px,13vw,160px)] leading-none tracking-[-0.04em] text-text-base/6 select-none pointer-events-none transition-colors">
-            reicon<span className="text-[#6C5CE7]/35">.dev</span>
+            vezham<span className="text-[#6C5CE7]/35">.dev</span>
           </h2>
           <div className="mt-3 flex items-center justify-center gap-1.5 text-[12px] text-text-base/40">
             <span>Hosted & Powered by</span>
             <a
-              href="https://vercel.com/?utm_source=reicon&utm_campaign=oss"
+              href="https://vercel.com/?utm_source=vezham&utm_campaign=oss"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 hover:text-text-base transition-colors font-medium cursor-pointer"

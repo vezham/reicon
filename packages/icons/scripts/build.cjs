@@ -135,9 +135,9 @@ for (const icon of icons) {
 
 /**
  * @name ${icon.pascal}
- * @description Reicon SVG icon function, creates an SVG element.
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs - Documentation
+ * @description Vezham SVG icon function, creates an SVG element.
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs - Documentation
  * @param {import('../createIcon').IconOptions} [options] - Icon options
  * @returns {SVGSVGElement} SVG Element
  */
@@ -156,9 +156,9 @@ export default ${icon.pascal};
 
 /**
  * @name ${icon.pascal}
- * @description Reicon SVG icon function, creates an SVG element.
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs — Documentation
+ * @description Vezham SVG icon function, creates an SVG element.
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs — Documentation
  * @param {import('../createIcon').IconOptions} [options] — Icon options
  * @returns {SVGSVGElement} SVG Element
  */
@@ -786,20 +786,20 @@ fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) +
 
 // ── README.md ──────────────────────────────────────────────────────────────
 const readme = `<p align="center">
-  <a href="https://reicon.dev">
-    <img src="https://reicon.dev/jspackage.png" alt="Reicon — SVG Icon Library for Vanilla JS" width="100%" />
+  <a href="https://vezham.com">
+    <img src="https://vezham.com/jspackage.png" alt="Vezham — SVG Icon Library for Vanilla JS" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/v/reicon?color=black&label=npm" alt="npm version" /></a>
-  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/dm/reicon?color=black&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
-  <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/v/vezham?color=black&label=npm" alt="npm version" /></a>
+  <a href="https://npmjs.com/package/@vezham/icons"><img src="https://img.shields.io/npm/dm/vezham?color=black&label=downloads" alt="npm downloads" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon"><img src="https://img.shields.io/badge/github-Vezham-black" alt="GitHub" /></a>
 </p>
 
-<h1 align="center">Reicon</h1>
+<h1 align="center">Vezham</h1>
 
 <p align="center">
   <b>${icons.length}+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
@@ -815,14 +815,14 @@ const readme = `<p align="center">
   <a href="#cdn">CDN</a>
 </p>
 
-**Reicon** is the core vanilla JavaScript package for <a href="https://reicon.dev">Reicon</a> — a free, open-source SVG icon library featuring ${icons.length}+ handcrafted, grid-aligned icons. Use it directly as ES modules, or load via CDN with zero build step. Every icon is tree-shakeable, fully TypeScript-ready, and ships with no dependencies.
+**Vezham** is the core vanilla JavaScript package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring ${icons.length}+ handcrafted, grid-aligned icons. Use it directly as ES modules, or load via CDN with zero build step. Every icon is tree-shakeable, fully TypeScript-ready, and ships with no dependencies.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
-| 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
-| 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
+| 🌐 &nbsp; Website & icon browser | [vezham.com](https://vezham.com) |
+| 📖 &nbsp; Documentation | [vezham.com/docs](https://vezham.com/docs) |
 | ⚛️ &nbsp; React package | [@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react) |
-| 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
+| 🎨 &nbsp; Figma plugin | [vezham.com/docs/figma](https://vezham.com/docs/figma) |
 
 ---
 
@@ -956,7 +956,7 @@ Icons use **PascalCase**, derived from their original kebab-case file names:
 | \`shopping-cart\` | \`ShoppingCart\` |
 | \`user-circle\` | \`UserCircle\` |
 
-Browse and search all ${icons.length}+ icons at <a href="https://reicon.dev">reicon.dev</a>.
+Browse and search all ${icons.length}+ icons at <a href="https://vezham.com">vezham.com</a>.
 
 ---
 
@@ -1000,7 +1000,7 @@ document.body.appendChild(svg);
 
 | Package | Description |
 |---------|-------------|
-| [\`reicon\`](https://npmjs.com/package/@vezham/icons) | **This package.** Core vanilla JS + CDN runtime. No framework required. |
+| [\`vezham\`](https://npmjs.com/package/@vezham/icons) | **This package.** Core vanilla JS + CDN runtime. No framework required. |
 | [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | React components for ${icons.length}+ icons. |
 | [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for ${icons.length}+ icons. |
 | [\`@vezham/icons-svelte\`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for ${icons.length}+ icons. |
@@ -1009,11 +1009,11 @@ document.body.appendChild(svg);
 
 ## Links
 
-- 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
-- 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
+- 🌐 &nbsp; Website: [vezham.com](https://vezham.com)
+- 📖 &nbsp; Documentation: [vezham.com/docs](https://vezham.com/docs)
 - 📦 &nbsp; npm: [npmjs.com/package/@vezham/icons](https://npmjs.com/package/@vezham/icons)
-- 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🐙 &nbsp; GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 &nbsp; Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

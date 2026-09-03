@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getStoredConsent } from './cookie-consent/storage';
 
-const BANNER_SEEN_KEY = 'reicon_illustration_banner_seen_v4';
+const BANNER_SEEN_KEY = 'vezham_illustration_banner_seen_v4';
 
 // Aspen Illustration SVG
 function AspenIllustration() {
@@ -24,9 +24,9 @@ function BagMarblesIllustration() {
 
 const FIVE_ITEMS = [
   { type: 'illustration', component: AspenIllustration, label: 'Aspen', bg: 'bg-[#8B5CF6]/12 border-[#8B5CF6]/30', rotate: '-rotate-6 hover:rotate-0' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/google/original.svg', label: 'Google', bg: 'bg-[#ea4335]/12 border-[#ea4335]/30', rotate: 'rotate-6 hover:rotate-0' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/claude/original.svg', label: 'Claude', bg: 'bg-[#D97757]/12 border-[#D97757]/30', rotate: '-rotate-3 hover:rotate-0' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/openai/original.svg', label: 'OpenAI', bg: 'bg-[#10a37f]/12 border-[#10a37f]/30', rotate: 'rotate-8 hover:rotate-0' },
+  { type: 'logo', src: '/cdn-proxy/logos/google/original.svg', label: 'Google', bg: 'bg-[#ea4335]/12 border-[#ea4335]/30', rotate: 'rotate-6 hover:rotate-0' },
+  { type: 'logo', src: '/cdn-proxy/logos/claude/original.svg', label: 'Claude', bg: 'bg-[#D97757]/12 border-[#D97757]/30', rotate: '-rotate-3 hover:rotate-0' },
+  { type: 'logo', src: '/cdn-proxy/logos/openai/original.svg', label: 'OpenAI', bg: 'bg-[#10a37f]/12 border-[#10a37f]/30', rotate: 'rotate-8 hover:rotate-0' },
   { type: 'illustration', component: BagMarblesIllustration, label: 'Bag Marbles', bg: 'bg-[#EC4899]/12 border-[#EC4899]/30', rotate: '-rotate-6 hover:rotate-0' },
 ];
 
@@ -54,8 +54,8 @@ export default function IllustrationBanner() {
       setTimeout(() => checkAndShowModal(), 600);
     };
 
-    window.addEventListener('reicon-cookie-consent-dismissed', handleDismissed);
-    return () => window.removeEventListener('reicon-cookie-consent-dismissed', handleDismissed);
+    window.addEventListener('vezham-cookie-consent-dismissed', handleDismissed);
+    return () => window.removeEventListener('vezham-cookie-consent-dismissed', handleDismissed);
   }, []);
 
   useEffect(() => {

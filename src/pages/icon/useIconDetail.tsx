@@ -6,7 +6,7 @@ import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSvelte } from 'react-icons/si';
 import { VueLogo, FlutterLogo } from './Snippets';
 import { loadIconData } from '../../lib/icon-data';
-import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/reicon-loader';
+import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/vezham-loader';
 import {
   copyToClipboard as copyUtils,
   copySvg as copySvgUtils,
@@ -97,7 +97,7 @@ export default function useIconDetail() {
   const reactNativeRaw = `import { ${pascalName} } from '@vezham/icons-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
   const vueRaw = `import { ${pascalName} } from '@vezham/icons-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
   const svelteRaw = `<script>\n  import { ${pascalName} } from '@vezham/icons-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
-  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:reicon_flutter/reicon_flutter.dart';\n\nSvgPicture.string(\n  reiconSvg(Reicon.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
+  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons_flutter/vezham_icons_flutter.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
   const directRaw = `import ${pascalName} from '@vezham/icons-react/icons/${pascalName}';`;
 
   const CODE_TABS = useMemo(() => [
@@ -160,9 +160,9 @@ export default function useIconDetail() {
     return () => { cancelled = true; };
   }, [name]);
 
-  const pageTitle = `${pascalName} Icon \u2014 Reicon`;
-  const pageDesc = `Free ${pascalName} SVG icon from Reicon. Outline & filled weights. MIT licensed.`;
-  const pageUrl = `https://reicon.dev/icon/${name}`;
+  const pageTitle = `${pascalName} Icon \u2014 Vezham`;
+  const pageDesc = `Free ${pascalName} SVG icon from Vezham. Outline & filled weights. MIT licensed.`;
+  const pageUrl = `https://vezham.com/icon/${name}`;
 
   const relatedIcons = useMemo(() => {
     if (!name || !iconNames) return [];

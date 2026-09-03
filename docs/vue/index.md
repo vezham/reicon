@@ -1,6 +1,6 @@
-# Using Reicon with Vue
+# Using Vezham with Vue
 
-The official Vue 3 package for Reicon. Import beautifully crafted icons as Vue components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
+The official Vue 3 package for Vezham. Import beautifully crafted icons as Vue components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
 
 ## What you can accomplish
 - Import icons as individual Vue components

@@ -21,11 +21,11 @@ export function FlutterSnippet({ flutterName, activeWeight, size }: { flutterNam
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:flutter_svg/flutter_svg.dart'</span><span className="text-text-base/30">;</span>
       {'\n'}
-      <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:reicon_flutter/reicon_flutter.dart'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:vezham_icons_flutter/vezham_icons_flutter.dart'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-[#61afef]">SvgPicture</span><span className="text-text-base/70">.string(</span>
       {'\n'}
-      <span className="text-text-base/70">  </span><span className="text-[#61afef]">reiconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Reicon</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{activeWeight}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
+      <span className="text-text-base/70">  </span><span className="text-[#61afef]">vezhamIconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Vezham</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{activeWeight}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
       {'\n'}
       <span className="text-text-base/70">  width: </span><span className="text-[#d19a66]">{size}</span><span className="text-text-base/30">,</span>
       {'\n'}

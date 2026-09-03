@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function IllustrationHelmet() {
-  const title = "71,000+ Free SVG Illustrations — Open-Source Vector Graphics | Reicon";
+  const title = "71,000+ Free SVG Illustrations — Open-Source Vector Graphics | Vezham";
   const description = "Browse 71,000+ free open-source SVG vector illustrations for React, Vue, HTML, and Figma. Download high-resolution PNG & customizable SVGs. MIT licensed.";
-  const url = "https://reicon.dev/illustration";
-  const ogImage = "https://reicon.dev/og/illustration.jpg";
+  const url = "https://vezham.com/illustration";
+  const ogImage = "https://vezham.com/og/illustration.jpg";
   const keywords = "free SVG illustrations, free vector illustrations, open source illustrations, React SVG illustrations, Vue illustrations, Figma vector graphics, MIT license illustrations, doodle SVG, UI illustrations library, vector art SVG, free web graphics, 71000 illustrations";
 
   return (
@@ -20,7 +20,7 @@ export default function IllustrationHelmet() {
       {/* OpenGraph */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Reicon" />
+      <meta property="og:site_name" content="Vezham" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -29,7 +29,7 @@ export default function IllustrationHelmet() {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@reicon_dev" />
+      <meta name="twitter:site" content="@vezham" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
@@ -39,7 +39,7 @@ export default function IllustrationHelmet() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Reicon", "item": "https://reicon.dev" },
+          { "@type": "ListItem", "position": 1, "name": "Vezham", "item": "https://vezham.com" },
           { "@type": "ListItem", "position": 2, "name": "Illustrations", "item": url }
         ]
       })}</script>
@@ -51,18 +51,18 @@ export default function IllustrationHelmet() {
         "name": title,
         "description": description,
         "url": url,
-        "isPartOf": { "@type": "WebSite", "name": "Reicon", "url": "https://reicon.dev" }
+        "isPartOf": { "@type": "WebSite", "name": "Vezham", "url": "https://vezham.com" }
       })}</script>
 
       {/* Dataset Schema for Google Search indexing */}
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Dataset",
-        "name": "Reicon 71,000+ Free SVG Illustrations",
+        "name": "Vezham 71,000+ Free SVG Illustrations",
         "description": description,
         "url": url,
         "license": "https://opensource.org/licenses/MIT",
-        "creator": { "@type": "Organization", "name": "Reicon", "url": "https://reicon.dev" },
+        "creator": { "@type": "Organization", "name": "Vezham", "url": "https://vezham.com" },
         "keywords": ["SVG illustrations", "vector graphics", "free illustrations", "React SVG illustrations", "Figma illustrations"],
         "isAccessibleForFree": true
       })}</script>

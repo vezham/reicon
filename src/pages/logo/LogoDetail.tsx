@@ -145,10 +145,10 @@ export default function LogoDetail() {
   return (
     <div className="flex-1">
       <LogoHelmet
-        title={`${logo.name} Vector Logo SVG — Free Download & Code | Reicon`}
+        title={`${logo.name} Vector Logo SVG — Free Download & Code | Vezham`}
         description={`Free vector logo for ${logo.name}. Download SVG & PNG, copy clean code for React, Vue, HTML & CSS. High quality SVG vector logo.`}
-        image="https://reicon.dev/og/logos-detail.jpeg"
-        url={`https://reicon.dev/logo/${logo.slug}`}
+        image="https://vezham.com/og/logos-detail.jpeg"
+        url={`https://vezham.com/logo/${logo.slug}`}
       />
 
       <main className="flex-1 w-full overflow-x-hidden">
@@ -180,7 +180,7 @@ export default function LogoDetail() {
             </nav>
           </div>
 
-          <h1 className="sr-only">{logo.name} brand logo — Reicon</h1>
+          <h1 className="sr-only">{logo.name} brand logo — Vezham</h1>
 
           {/* Grid Layout matching IconDetail.tsx 100% */}
           <div className="grid lg:grid-cols-[360px_minmax(0,1fr)] gap-6 lg:gap-8">

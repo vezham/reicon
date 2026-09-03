@@ -15,7 +15,7 @@ export type Framework = typeof FRAMEWORKS[number]['id'];
 
 export const NAV_ITEMS = {
     intro: [
-        { id: 'what-is-reicon', label: 'What is Reicon?' },
+        { id: 'what-is-vezham', label: 'What is Vezham?' },
     ],
     basics: [
         { id: 'props', label: 'Props' },

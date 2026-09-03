@@ -1,15 +1,15 @@
 export const MCP_CONFIG = `{
   "mcpServers": {
-    "reicon": {
+    "vezham": {
       "command": "npx",
-      "args": ["vezham-icons-mcp"]
+      "args": ["@vezham/icons-mcp"]
     }
   }
 }`;
 
 export const MCP_DEV_CONFIG = `{
   "mcpServers": {
-    "reicon": {
+    "vezham": {
       "command": "node",
       "args": ["./packages/icons-mcp/bin/run.cjs"]
     }
@@ -26,4 +26,4 @@ export const APPLY_TOOL = `apply_icon({
   color: "#ef4444"
 })`;
 
-export const FILE_MARKER_CMD = `npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"`;
+export const FILE_MARKER_CMD = `npx @vezham/icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"`;

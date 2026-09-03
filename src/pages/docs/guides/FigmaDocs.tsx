@@ -33,7 +33,7 @@ export default function FigmaDocs({ markdownContent }: Props) {
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        Integrate Reicon directly into your design system workspace using the official Figma plugin. Search, customize stroke weights, and drag-and-drop vector icons directly onto your active canvases.
+        Integrate Vezham directly into your design system workspace using the official Figma plugin. Search, customize stroke weights, and drag-and-drop vector icons directly onto your active canvases.
       </p>
 
       {/* Installation */}
@@ -70,7 +70,7 @@ export default function FigmaDocs({ markdownContent }: Props) {
           </div>
           <div className="flex-1">
             <h4 className="text-text-base font-medium mb-1">Open the plugin panel</h4>
-            <p>Right-click inside any Figma project canvas, select <strong>Plugins</strong> &rarr; <strong>Reicon</strong>, or search for "Reicon" in the resource panel (Cmd/Ctrl + I).</p>
+            <p>Right-click inside any Figma project canvas, select <strong>Plugins</strong> &rarr; <strong>Vezham</strong>, or search for "Vezham" in the resource panel (Cmd/Ctrl + I).</p>
           </div>
         </div>
 

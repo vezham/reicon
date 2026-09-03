@@ -1,6 +1,6 @@
-# Using Reicon with Svelte
+# Using Vezham with Svelte
 
-The official Svelte package for Reicon. Import beautifully crafted icons as Svelte components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
+The official Svelte package for Vezham. Import beautifully crafted icons as Svelte components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
 
 ## What you can accomplish
 - Import icons as individual Svelte components
@@ -74,7 +74,7 @@ import ShieldCheck from '@vezham/icons-svelte/icons/ShieldCheck.svelte';
 ---
 
 ## Using with Tailwind CSS
-Reicon works seamlessly with Tailwind CSS. The icon inherits `currentColor` by default, so Tailwind's text color classes work out of the box.
+Vezham works seamlessly with Tailwind CSS. The icon inherits `currentColor` by default, so Tailwind's text color classes work out of the box.
 ```svelte
 <script>
   import { Home, ShieldCheck } from '@vezham/icons-svelte';
@@ -107,7 +107,7 @@ Works out of the box with SvelteKit — just import and use. No plugins or confi
 ---
 
 ## Full Component Example
-Here's a complete example of a Svelte component using multiple Reicon icons with different configurations.
+Here's a complete example of a Svelte component using multiple Vezham icons with different configurations.
 ```svelte
 <script>
   import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-svelte';

@@ -26,7 +26,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         <span className="text-[#e06c75]">"mcpServers"</span>
         <span className="text-text-base/40">: {'{'}</span>
         {'\n    '}
-        <span className="text-[#e06c75]">"reicon"</span>
+        <span className="text-[#e06c75]">"vezham"</span>
         <span className="text-text-base/40">: {'{'}</span>
         {'\n      '}
         <span className="text-[#e06c75]">"command"</span>
@@ -36,7 +36,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         {'\n      '}
         <span className="text-[#e06c75]">"args"</span>
         <span className="text-text-base/40">: [</span>
-        <span className="text-[#98c379]">"vezham-icons-mcp"</span>
+        <span className="text-[#98c379]">"@vezham/icons-mcp"</span>
         <span className="text-text-base/40">]</span>
         {'\n    '}
         <span className="text-text-base/40">{'}'}</span>
@@ -60,7 +60,7 @@ export default function SetupSection({ copiedField, onCopy }: SetupSectionProps)
         <span className="text-[#e06c75]">"mcpServers"</span>
         <span className="text-text-base/40">: {'{'}</span>
         {'\n    '}
-        <span className="text-[#e06c75]">"reicon"</span>
+        <span className="text-[#e06c75]">"vezham"</span>
         <span className="text-text-base/40">: {'{'}</span>
         {'\n      '}
         <span className="text-[#e06c75]">"command"</span>

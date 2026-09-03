@@ -12,7 +12,7 @@ export default function Styling({ markdownContent, copiedField, onCopy }: Props)
     <section id="styling" data-section className="mb-16 scroll-mt-24">
       <SectionHeader id="styling" title="Styling & Color" level="h2" markdownContent={markdownContent} />
       <p className="text-text-base/50 text-[14px] mb-6 leading-relaxed">
-        Reicon icons render as inline SVGs that inherit <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">currentColor</code> by
+        Vezham icons render as inline SVGs that inherit <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">currentColor</code> by
         default. You can control appearance via props, CSS, or Tailwind utilities.
       </p>
 

@@ -51,7 +51,7 @@ export default function MobileMenu({ stars, theme, toggleTheme }: MobileMenuProp
       {/* Mobile Bar: Single pill button containing GitHub icon + Hamburger menu button */}
       <div className="h-[34px] flex items-center gap-0.5 bg-text-base/[0.04] backdrop-blur-lg rounded-full px-1 shadow-2xs">
         <a
-          href="https://github.com/dqev/reicon"
+          href="https://github.com/vezham/reicon"
           target="_blank"
           rel="noopener noreferrer"
           className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-text-base/10 text-text-base/80 hover:text-text-base transition-colors cursor-pointer"
@@ -100,8 +100,8 @@ export default function MobileMenu({ stars, theme, toggleTheme }: MobileMenuProp
                 className="flex items-center gap-2 font-semibold text-[15px]"
                 style={{ color: isDark ? '#ffffff' : '#111111' }}
               >
-                <img src={isDark ? '/icon-light.webp' : '/icon-dark.webp'} alt="Reicon" loading="lazy" className="w-5 h-5" />
-                <span>Reicon</span>
+                <img src={isDark ? '/icon-light.webp' : '/icon-dark.webp'} alt="Vezham" loading="lazy" className="w-5 h-5" />
+                <span>Vezham</span>
               </Link>
 
               <div className="flex items-center gap-2">
@@ -166,7 +166,7 @@ export default function MobileMenu({ stars, theme, toggleTheme }: MobileMenuProp
                 </Link>
 
                 <a
-                  href="https://github.com/dqev/reicon"
+                  href="https://github.com/vezham/reicon"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}

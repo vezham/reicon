@@ -14,7 +14,7 @@ const server = new McpServer({
 server.tool(
   'search_icons',
   [
-    'Search 2,700+ Reicon icons by any keyword, phrase, or description.',
+    'Search 2,700+ Vezham icons by any keyword, phrase, or description.',
     'Understands synonyms ("round" → circle, "del" → delete/trash), misspellings ("calender" → calendar),',
     'multi-word queries ("user circle", "credit card", "volume up"), and name parts ("up" → arrow-up).',
     'Returns ranked matches. Short specific terms work best but full phrases also work.',
@@ -48,7 +48,7 @@ server.tool(
 server.tool(
   'view_icon',
   [
-    'Fetch raw SVG markup and metadata for a specific Reicon icon.',
+    'Fetch raw SVG markup and metadata for a specific Vezham icon.',
     'Use this to inspect the SVG before applying, or when you only need the raw markup.',
     'For generating import/docs code, prefer apply_icon instead.',
   ].join(' '),
@@ -67,7 +67,7 @@ server.tool(
 server.tool(
   'apply_icon',
   [
-    'Generate ready-to-paste import and docs code for a Reicon icon.',
+    'Generate ready-to-paste import and docs code for a Vezham icon.',
     'Returns importStatement and docsSnippet for the chosen framework.',
     'Supported frameworks: react, react-native, vue, svelte, html (CDN custom element), svg (raw markup).',
     'Insert importStatement at the top of the file and docsSnippet where the icon should appear.',
@@ -106,7 +106,7 @@ server.tool(
 server.tool(
   'list_categories',
   [
-    'List all icon categories available in the Reicon dataset.',
+    'List all icon categories available in the Vezham dataset.',
     'Use this to explore what types of icons exist before searching.',
     'Each category can be used as a search keyword with search_icons.',
   ].join(' '),

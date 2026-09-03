@@ -4,33 +4,33 @@ export type OrbitItem =
 
 const ORBIT_INNER: OrbitItem[] = [
   { type: 'icon', name: 'home' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/google/original.svg', name: 'Google' },
+  { type: 'logo', src: '/cdn-proxy/logos/google/original.svg', name: 'Google' },
   { type: 'icon', name: 'star' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/claude/original.svg', name: 'Claude' },
+  { type: 'logo', src: '/cdn-proxy/logos/claude/original.svg', name: 'Claude' },
   { type: 'icon', name: 'search' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/openai/original.svg', name: 'OpenAI' },
+  { type: 'logo', src: '/cdn-proxy/logos/openai/original.svg', name: 'OpenAI' },
 ];
 
 const ORBIT_MIDDLE: OrbitItem[] = [
   { type: 'icon', name: 'camera' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/figma/original.svg', name: 'Figma' },
+  { type: 'logo', src: '/cdn-proxy/logos/figma/original.svg', name: 'Figma' },
   { type: 'icon', name: 'lightning' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/react/original.svg', name: 'React' },
+  { type: 'logo', src: '/cdn-proxy/logos/react/original.svg', name: 'React' },
   { type: 'icon', name: 'palette' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/github/original.svg', name: 'GitHub' },
+  { type: 'logo', src: '/cdn-proxy/logos/github/original.svg', name: 'GitHub' },
   { type: 'icon', name: 'code' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/vercel/original.svg', name: 'Vercel' },
+  { type: 'logo', src: '/cdn-proxy/logos/vercel/original.svg', name: 'Vercel' },
 ];
 
 const ORBIT_OUTER: OrbitItem[] = [
   { type: 'icon', name: 'compass' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/apple/original.svg', name: 'Apple' },
+  { type: 'logo', src: '/cdn-proxy/logos/apple/original.svg', name: 'Apple' },
   { type: 'icon', name: 'wifi' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/stripe/original.svg', name: 'Stripe' },
+  { type: 'logo', src: '/cdn-proxy/logos/stripe/original.svg', name: 'Stripe' },
   { type: 'icon', name: 'pen' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/typescript/original.svg', name: 'TypeScript' },
+  { type: 'logo', src: '/cdn-proxy/logos/typescript/original.svg', name: 'TypeScript' },
   { type: 'icon', name: 'lamp' },
-  { type: 'logo', src: 'https://cdn.reicon.dev/logos/nextjs/original.svg', name: 'Next.js' },
+  { type: 'logo', src: '/cdn-proxy/logos/nextjs/original.svg', name: 'Next.js' },
   { type: 'icon', name: 'flag' },
   { type: 'icon', name: 'rocket' },
 ];
@@ -85,7 +85,7 @@ export default function IconShowcase({ theme }: { theme: string }) {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <img
                         src={theme === 'dark' ? '/icon-light.webp' : '/icon-dark.webp'}
-                        alt="Reicon"
+                        alt="Vezham"
                         loading="lazy"
                         className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-md select-none pointer-events-none"
                     />

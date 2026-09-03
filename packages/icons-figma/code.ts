@@ -1,4 +1,4 @@
-// Reicon Figma Plugin Backend Script
+// Vezham Figma Plugin Backend Script
 figma.showUI(__html__, { width: 560, height: 640, themeColors: true });
 
 figma.ui.onmessage = (msg) => {
@@ -19,7 +19,7 @@ figma.ui.onmessage = (msg) => {
       // 1. Create a frame from the SVG code
       // Note: figma.createNodeFromSvg returns a FrameNode containing vector children
       const node = figma.createNodeFromSvg(svg);
-      node.name = `Reicon / ${name}`;
+      node.name = `Vezham / ${name}`;
 
       // 2. Scale the icon to the requested size (default is 24px)
       const scaleFactor = size / 24;

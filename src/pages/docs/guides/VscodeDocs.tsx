@@ -20,7 +20,7 @@ export default function VscodeDocs({ markdownContent, copiedField, onCopy }: Pro
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        Browse, configure, and insert Reicon code snippets directly into your HTML, React, Vue, Svelte, or vanilla JS code from your editor's sidebar panel.
+        Browse, configure, and insert Vezham code snippets directly into your HTML, React, Vue, Svelte, or vanilla JS code from your editor's sidebar panel.
       </p>
 
       {/* Installation */}
@@ -28,7 +28,7 @@ export default function VscodeDocs({ markdownContent, copiedField, onCopy }: Pro
         Installation
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Open the Extensions panel in VS Code (Cmd+Shift+X or Ctrl+Shift+X), search for <strong>Reicon</strong>, and click install.
+        Open the Extensions panel in VS Code (Cmd+Shift+X or Ctrl+Shift+X), search for <strong>Vezham</strong>, and click install.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4 mt-6">
@@ -37,11 +37,11 @@ export default function VscodeDocs({ markdownContent, copiedField, onCopy }: Pro
 
       <SyntaxBlock
         title="CLI Installation"
-        onCopy={() => onCopy("code --install-extension DevChauhan.reicon", "vsce-install")}
+        onCopy={() => onCopy("code --install-extension Vezham.icons", "vsce-install")}
         copied={copiedField === 'vsce-install'}
       >
         <span className="text-[#98c379]">code</span>
-        <span className="text-text-base/70"> --install-extension DevChauhan.reicon</span>
+        <span className="text-text-base/70"> --install-extension Vezham.icons</span>
       </SyntaxBlock>
 
       {/* Workflow & Sidebar Panel */}
@@ -59,7 +59,7 @@ export default function VscodeDocs({ markdownContent, copiedField, onCopy }: Pro
           </div>
           <div className="flex-1">
             <h4 className="text-text-base font-medium mb-1">Open the Sidebar Explorer</h4>
-            <p>Click on the <strong>Reicon</strong> logo in the VS Code Activity Bar (located on the left-side toolbar).</p>
+            <p>Click on the <strong>Vezham</strong> logo in the VS Code Activity Bar (located on the left-side toolbar).</p>
           </div>
         </div>
 

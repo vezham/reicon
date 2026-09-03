@@ -29,7 +29,7 @@ export function useDocs() {
   const [framework, setFramework] = useState<Framework>(
     FRAMEWORKS.some((f) => f.id === initialFw) ? initialFw : 'vanilla'
   );
-  const [activeSection, setActiveSection] = useState('what-is-reicon');
+  const [activeSection, setActiveSection] = useState('what-is-vezham');
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -48,14 +48,14 @@ export function useDocs() {
   const frameworkLabel = getFrameworkLabel(framework);
 
   const introItems = !fwParam
-    ? [{ id: 'what-is-reicon', label: 'What is Reicon?' }]
-    : [{ id: 'what-is-reicon', label: 'Introduction' }];
+    ? [{ id: 'what-is-vezham', label: 'What is Vezham?' }]
+    : [{ id: 'what-is-vezham', label: 'Introduction' }];
 
   const onThisPage = !fwParam
-    ? [{ id: 'what-is-reicon', label: 'What is Reicon?' }]
+    ? [{ id: 'what-is-vezham', label: 'What is Vezham?' }]
     : getOnThisPageSections(framework);
 
-  const githubUrl = 'https://github.com/dqev/reicon';
+  const githubUrl = 'https://github.com/vezham/reicon';
 
   const getDocsPath = () => {
     switch (framework) {
@@ -72,7 +72,7 @@ export function useDocs() {
     }
   };
 
-  const githubEditUrl = `https://github.com/dqev/reicon/edit/main/docs/${getDocsPath()}`;
+  const githubEditUrl = `https://github.com/vezham/reicon/edit/main/docs/${getDocsPath()}`;
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -134,7 +134,7 @@ export function useDocs() {
   const openInLLM = async (platform: 'chatgpt' | 'claude' | 't3') => {
     const markdown = getFullMarkdown();
     try { await navigator.clipboard.writeText(markdown); } catch { /* silent */ }
-    const promptText = `Here is the Reicon documentation for ${frameworkLabel}. Please read it and help me use the library:\n\n${markdown}`;
+    const promptText = `Here is the Vezham documentation for ${frameworkLabel}. Please read it and help me use the library:\n\n${markdown}`;
     const urls = {
       chatgpt: `https://chatgpt.com/?hints=search&q=${encodeURIComponent(promptText)}`,
       claude: `https://claude.ai/new?q=${encodeURIComponent(promptText)}`,
@@ -174,7 +174,7 @@ export function useDocs() {
       setActiveSection(getFrameworkSectionId(fw));
     } else if (!fwParam) {
       setFramework('vanilla');
-      setActiveSection('what-is-reicon');
+      setActiveSection('what-is-vezham');
     }
     window.scrollTo(0, 0);
   }, [fwParam]);

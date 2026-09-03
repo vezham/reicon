@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const DEFAULT_OG = 'https://reicon.dev/og/og.jpg';
+const DEFAULT_OG = 'https://vezham.com/og/og.jpg';
 
 interface SeoHelmetProps {
   pageTitle: string;
@@ -17,11 +17,11 @@ export default function SeoHelmet({ pageTitle, pageDesc, pageUrl, pascalName, ic
       <title>{pageTitle}</title>
       <meta name="description" content={pageDesc} />
       <link rel="canonical" href={pageUrl} />
-      <meta name="keywords" content={`${name} icon, ${pascalName} svg, download ${name} svg, ${name} react, ${name} vue, ${name} svelte, free ${iconCategory?.toLowerCase() || 'svg'} icon, ${name} png, reicon`} />
+      <meta name="keywords" content={`${name} icon, ${pascalName} svg, download ${name} svg, ${name} react, ${name} vue, ${name} svelte, free ${iconCategory?.toLowerCase() || 'svg'} icon, ${name} png, vezham`} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={pageUrl} />
-      <meta property="og:site_name" content="Reicon" />
+      <meta property="og:site_name" content="Vezham" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDesc} />
@@ -29,8 +29,8 @@ export default function SeoHelmet({ pageTitle, pageDesc, pageUrl, pascalName, ic
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@reicon_dev" />
-      <meta name="twitter:creator" content="@reicon_dev" />
+      <meta name="twitter:site" content="@vezham" />
+      <meta name="twitter:creator" content="@vezham" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDesc} />
       <meta name="twitter:image" content={DEFAULT_OG} />
@@ -42,7 +42,7 @@ export default function SeoHelmet({ pageTitle, pageDesc, pageUrl, pascalName, ic
         "name": pageTitle,
         "description": pageDesc,
         "inLanguage": "en-US",
-        "isPartOf": { "@type": "WebSite", "url": "https://reicon.dev", "name": "Reicon" },
+        "isPartOf": { "@type": "WebSite", "url": "https://vezham.com", "name": "Vezham" },
         "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
         "primaryImageOfPage": { "@type": "ImageObject", "url": DEFAULT_OG },
       })}</script>
@@ -52,20 +52,20 @@ export default function SeoHelmet({ pageTitle, pageDesc, pageUrl, pascalName, ic
         "name": `${pascalName} Icon`,
         "description": pageDesc,
         "url": pageUrl,
-        "codeRepository": "https://github.com/reicon-dev/reicon",
+        "codeRepository": "https://github.com/vezham/reicon",
         "programmingLanguage": ["SVG", "React", "Vue", "Svelte"],
         "runtimePlatform": ["Browser", "Node.js"],
         "license": "https://opensource.org/licenses/MIT",
-        "isPartOf": { "@type": "SoftwareApplication", "name": "Reicon", "url": "https://reicon.dev" },
+        "isPartOf": { "@type": "SoftwareApplication", "name": "Vezham", "url": "https://vezham.com" },
       })}</script>
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": `${pageUrl}#breadcrumb`,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Reicon", "item": "https://reicon.dev" },
-          { "@type": "ListItem", "position": 2, "name": "Icons", "item": "https://reicon.dev/icons" },
-          ...(iconCategory ? [{ "@type": "ListItem", "position": 3, "name": iconCategory, "item": "https://reicon.dev/icons" }] : []),
+          { "@type": "ListItem", "position": 1, "name": "Vezham", "item": "https://vezham.com" },
+          { "@type": "ListItem", "position": 2, "name": "Icons", "item": "https://vezham.com/icons" },
+          ...(iconCategory ? [{ "@type": "ListItem", "position": 3, "name": iconCategory, "item": "https://vezham.com/icons" }] : []),
           { "@type": "ListItem", "position": iconCategory ? 4 : 3, "name": `${pascalName} Icon`, "item": pageUrl },
         ],
       })}</script>

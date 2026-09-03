@@ -7,7 +7,7 @@ import App from '@/src/App';
 import Footer from '@/src/components/layout/Footer';
 import Header from '@/src/components/layout/Header';
 import {ThemeProvider} from '@/src/components/layout/ThemeContext';
-import ReIcon from '@/src/components/ui/ReIcon';
+import VezhamIcon from '@/src/components/ui/VezhamIcon';
 
 describe('App smoke test', () => {
   it('renders without crashing', () => {
@@ -42,14 +42,14 @@ describe('Footer smoke test', () => {
         </MemoryRouter>
       </ThemeProvider>,
     );
-    expect(screen.getAllByText('Reicon').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Vezham').length).toBeGreaterThanOrEqual(1);
   });
 });
 
-describe('ReIcon component', () => {
+describe('VezhamIcon component', () => {
   it('renders a custom element with correct props', () => {
     const {container} = render(
-      <ReIcon icon="home" weight="filled" size={24} color="red" />,
+      <VezhamIcon icon="home" weight="filled" size={24} color="red" />,
     );
     const el = container.querySelector('vx-icon');
     expect(el).toBeInTheDocument();

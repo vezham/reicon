@@ -13,7 +13,7 @@ export default function ToolsSection({ copiedField, onCopy }: ToolsSectionProps)
         Agent Workflow
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        A typical two-step flow for an AI agent to locate and insert a Reicon icon:
+        A typical two-step flow for an AI agent to locate and insert a Vezham icon:
       </p>
 
       <div className="space-y-6 text-[14px] text-text-base/50 leading-relaxed mb-8">

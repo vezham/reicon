@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Common issues and their solutions. If you don't find your answer here, open an issue on the [Reicon GitHub Issues tracker](https://github.com/dqev/reicon/issues).
+Common issues and their solutions. If you don't find your answer here, open an issue on the [Vezham GitHub Issues tracker](https://github.com/vezham/reicon/issues).
 
 ---
 
@@ -26,7 +26,7 @@ The `weight` prop is case-sensitive in the React/Vue packages. Use `"Outline"` o
 ---
 
 ## 3. TypeScript can't find icon names
-Make sure you're importing from the correct package depending on your environment (e.g. `"reicon"` for vanilla JS or `"@vezham/icons-react"` for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.
+Make sure you're importing from the correct package depending on your environment (e.g. `"vezham"` for vanilla JS or `"@vezham/icons-react"` for React). Both packages ship with full type definitions. If autocomplete isn't working, restart your TypeScript server.
 ```typescript
 // ✅ For React projects
 import { Home } from '@vezham/icons-react';
@@ -47,7 +47,7 @@ import * as Icons from '@vezham/icons';
 import { Home, Bell } from '@vezham/icons';
 
 // ✅ Smallest possible
-import Home from 'reicon/icons/Home';
+import Home from 'vezham/icons/Home';
 ```
 
 ---

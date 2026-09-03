@@ -1,6 +1,6 @@
-# Reicon — Complete Icon Names & Component Mapping
+# Vezham — Complete Icon Names & Component Mapping
 
-This file lists every icon in the Reicon SVG icon library by category. Use it to look up the correct import name (PascalCase), CDN attribute value (kebab-case), or direct SVG CDN URL for any icon.
+This file lists every icon in the Vezham SVG icon library by category. Use it to look up the correct import name (PascalCase), CDN attribute value (kebab-case), or direct SVG CDN URL for any icon.
 
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (`arrow-up-right` → `ArrowUpRight`)

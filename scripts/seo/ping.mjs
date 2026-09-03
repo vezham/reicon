@@ -8,8 +8,8 @@ import { PostHog } from 'posthog-node';
 import { ROUTES } from './config.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SITE = 'https://reicon.dev';
-const HOST = 'reicon.dev';
+const SITE = 'https://vezham.com';
+const HOST = 'vezham.com';
 const INDEXNOW_KEY = 'e44e44937f4e91fe08a9067fd87b2860';
 
 const PRIORITY_URLS = ROUTES

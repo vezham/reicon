@@ -9,7 +9,7 @@ import FaqCategory from './FaqCategory';
 
 const NAV_ITEMS = {
   general: [
-    { id: 'what-is-reicon', label: 'What is Reicon?' },
+    { id: 'what-is-vezham', label: 'What is Vezham?' },
     { id: 'is-it-free', label: 'Is it completely free?' },
     { id: 'commercial-use', label: 'Can I use it commercially?' },
   ],
@@ -26,7 +26,7 @@ const NAV_ITEMS = {
 };
 
 const ON_THIS_PAGE = [
-  { id: 'what-is-reicon', label: 'What is Reicon?' },
+  { id: 'what-is-vezham', label: 'What is Vezham?' },
   { id: 'is-it-free', label: 'Is it completely free?' },
   { id: 'commercial-use', label: 'Can I use it commercially?' },
   { id: 'grid-size', label: 'What grid size is used?' },
@@ -52,22 +52,22 @@ const FAQ_CATEGORIES = [
     icon: 'compass',
     items: [
       {
-        id: "what-is-reicon",
-        question: "What is Reicon?",
-        markdownAnswer: "Reicon is a free, open-source vector graphics library providing 3,900+ UI icons in Outline, Filled, and Duotone weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (@vezham/icons-react), React Native (@vezham/icons-react-native), Vue 3 (@vezham/icons-vue), Svelte (@vezham/icons-svelte), Flutter (reicon_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
+        id: "what-is-vezham",
+        question: "What is Vezham?",
+        markdownAnswer: "Vezham is a free, open-source vector graphics library providing 3,900+ UI icons in Outline, Filled, and Duotone weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (@vezham/icons-react), React Native (@vezham/icons-react-native), Vue 3 (@vezham/icons-vue), Svelte (@vezham/icons-svelte), Flutter (vezham_icons_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
         answer: (
           <p>
-            Reicon is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in Outline, Filled, and Duotone weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>@vezham/icons-react</Code>), React Native (<Code>@vezham/icons-react-native</Code>), Vue 3 (<Code>@vezham/icons-vue</Code>), Svelte (<Code>@vezham/icons-svelte</Code>), Flutter (<Code>reicon_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
+            Vezham is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in Outline, Filled, and Duotone weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>@vezham/icons-react</Code>), React Native (<Code>@vezham/icons-react-native</Code>), Vue 3 (<Code>@vezham/icons-vue</Code>), Svelte (<Code>@vezham/icons-svelte</Code>), Flutter (<Code>vezham_icons_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
           </p>
         ),
       },
       {
         id: 'is-it-free',
-        question: 'Is Reicon completely free?',
-        markdownAnswer: 'Yes, Reicon is 100% free and open-source under the MIT License. Use it in personal, commercial, education, or open-source projects — no attribution required (though always appreciated!).',
+        question: 'Is Vezham completely free?',
+        markdownAnswer: 'Yes, Vezham is 100% free and open-source under the MIT License. Use it in personal, commercial, education, or open-source projects — no attribution required (though always appreciated!).',
         answer: (
           <p>
-            Yes, Reicon is 100% free and open-source under the{' '}
+            Yes, Vezham is 100% free and open-source under the{' '}
             <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer" className="text-[#6C5CE7] hover:underline">MIT License</a>. Use it in personal, commercial, education, or open-source projects — no attribution required (though always appreciated!).
           </p>
         ),
@@ -75,10 +75,10 @@ const FAQ_CATEGORIES = [
       {
         id: 'commercial-use',
         question: 'Can I use it in commercial projects?',
-        markdownAnswer: 'Absolutely. Commercial use is fully allowed. Bundle Reicon into templates, websites, SaaS products, or mobile apps — even ones you charge for.',
+        markdownAnswer: 'Absolutely. Commercial use is fully allowed. Bundle Vezham into templates, websites, SaaS products, or mobile apps — even ones you charge for.',
         answer: (
           <p>
-            Absolutely. Commercial use is fully allowed. Bundle Reicon into templates, websites, SaaS products, or mobile apps — even ones you charge for.
+            Absolutely. Commercial use is fully allowed. Bundle Vezham into templates, websites, SaaS products, or mobile apps — even ones you charge for.
           </p>
         ),
       },
@@ -102,10 +102,10 @@ const FAQ_CATEGORIES = [
       {
         id: 'icon-weights',
         question: 'How are weights handled?',
-        markdownAnswer: 'Reicon does not auto-generate weights. Each is handcrafted:\n- Outline: Clean stroked paths (default 1.5px). Customizable via the strokeWidth prop.\n- Filled: Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).',
+        markdownAnswer: 'Vezham does not auto-generate weights. Each is handcrafted:\n- Outline: Clean stroked paths (default 1.5px). Customizable via the strokeWidth prop.\n- Filled: Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).',
         answer: (
           <>
-            <p>Reicon does not auto-generate weights. Each is handcrafted:</p>
+            <p>Vezham does not auto-generate weights. Each is handcrafted:</p>
             <ul className="mt-4 space-y-2 list-disc list-inside">
               <li><strong>Outline:</strong> Clean stroked paths (default 1.5px). Customizable via the <Code>strokeWidth</Code> prop.</li>
               <li><strong>Filled:</strong> Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).</li>
@@ -133,10 +133,10 @@ const FAQ_CATEGORIES = [
       {
         id: 'figma-library',
         question: 'Is there a Figma library?',
-        markdownAnswer: 'Yes! A community Figma file with all vector master components is maintained. Search for "Reicon" in the Figma Community to duplicate the official file and design with the same visual assets.',
+        markdownAnswer: 'Yes! A community Figma file with all vector master components is maintained. Search for "Vezham" in the Figma Community to duplicate the official file and design with the same visual assets.',
         answer: (
           <p>
-            Yes! A community Figma file with all vector master components is maintained. Search for "Reicon" in the Figma Community to duplicate the official file and design with the same visual assets.
+            Yes! A community Figma file with all vector master components is maintained. Search for "Vezham" in the Figma Community to duplicate the official file and design with the same visual assets.
           </p>
         ),
       },
@@ -147,7 +147,7 @@ const FAQ_CATEGORIES = [
         answer: (
           <p>
             Open an Issue on our{' '}
-            <a href="https://github.com/dqev/reicon/issues" target="_blank" rel="noopener noreferrer" className="text-[#6C5CE7] hover:underline">GitHub Issues tracker</a>{' '}
+            <a href="https://github.com/vezham/reicon/issues" target="_blank" rel="noopener noreferrer" className="text-[#6C5CE7] hover:underline">GitHub Issues tracker</a>{' '}
             using the "Icon Request" template. We review requests weekly and design new sets based on popularity.
           </p>
         ),
@@ -167,7 +167,7 @@ const FAQ_CATEGORIES = [
 ];
 
 export default function FaqPage() {
-  const [activeSection, setActiveSection] = useState('what-is-reicon');
+  const [activeSection, setActiveSection] = useState('what-is-vezham');
   const [otpIndicatorStyle, setOtpIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
   const [openItems, setOpenItems] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState('');
@@ -179,8 +179,8 @@ export default function FaqPage() {
   const otpListRef = useRef<HTMLUListElement>(null);
   const openDropdownRef = useRef<HTMLDivElement>(null);
 
-  const githubUrl = 'https://github.com/dqev/reicon/blob/main/src/pages/faq/FaqPage.tsx';
-  const githubEditUrl = 'https://github.com/dqev/reicon/edit/main/src/pages/faq/FaqPage.tsx';
+  const githubUrl = 'https://github.com/vezham/reicon/blob/main/src/pages/faq/FaqPage.tsx';
+  const githubEditUrl = 'https://github.com/vezham/reicon/edit/main/src/pages/faq/FaqPage.tsx';
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -283,7 +283,7 @@ export default function FaqPage() {
       });
     });
     try { await navigator.clipboard.writeText(md); } catch { /* silent */ }
-    const promptText = `Here is the Reicon FAQ documentation. Please read it and help answer my questions:\n\n${md}`;
+    const promptText = `Here is the Vezham FAQ documentation. Please read it and help answer my questions:\n\n${md}`;
     const urls = {
       chatgpt: `https://chatgpt.com/?hints=search&q=${encodeURIComponent(promptText)}`,
       claude: `https://claude.ai/new?q=${encodeURIComponent(promptText)}`,
@@ -323,7 +323,7 @@ export default function FaqPage() {
 
         {/* Left sidebar */}
         <aside id="docs-sidebar" className="hidden lg:block" data-lenis-prevent>
-          <div className="reicon-sidebar-group">
+          <div className="vezham-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
                 <vx-icon icon="compass" size="13" />
@@ -336,7 +336,7 @@ export default function FaqPage() {
             </div>
           </div>
 
-          <div className="reicon-sidebar-group">
+          <div className="vezham-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
                 <vx-icon icon="code" size="13" />
@@ -349,7 +349,7 @@ export default function FaqPage() {
             </div>
           </div>
 
-          <div className="reicon-sidebar-group">
+          <div className="vezham-sidebar-group">
             <div className="sidebar-section-header">
               <div className="sidebar-icon-box">
                 <vx-icon icon="palette" size="13" />
@@ -368,8 +368,8 @@ export default function FaqPage() {
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-serif text-text-base mb-6">Frequently Asked Questions</h1>
             <p className="text-text-base/50 text-[15px] leading-[1.8] mb-8">
-              Everything you need to know about Reicon. If your question isn't answered here, open a discussion on{' '}
-              <a href="https://github.com/dqev/reicon" target="_blank" rel="noopener noreferrer" className="text-[#6C5CE7] hover:underline">GitHub</a> or contact us directly.
+              Everything you need to know about Vezham. If your question isn't answered here, open a discussion on{' '}
+              <a href="https://github.com/vezham/reicon" target="_blank" rel="noopener noreferrer" className="text-[#6C5CE7] hover:underline">GitHub</a> or contact us directly.
             </p>
 
             <div className="relative mb-10">

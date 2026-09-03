@@ -37,7 +37,7 @@ async function main() {
   for (const route of ROUTES) {
     const url = route.path === '/' ? `${SITE}/` : `${SITE}${route.path}`;
     const parts = route.path.split('/').filter(Boolean);
-    const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Reicon', item: SITE }];
+    const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Vezham', item: SITE }];
     let acc = '';
     for (const p of parts) {
       acc += `/${p}`;

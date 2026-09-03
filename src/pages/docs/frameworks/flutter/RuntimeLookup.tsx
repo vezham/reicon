@@ -18,20 +18,20 @@ export default function RuntimeLookup({ copiedField, onCopy }: Props) {
       <SyntaxBlock
         title="Dart"
         onCopy={() => onCopy(
-          "String? icon = Reicon.outline['home'];\n\nfor (final name in Reicon.outline.names) {\n  print('$name: ${Reicon.outline[name]}');\n}",
+          "String? icon = Vezham.outline['home'];\n\nfor (final name in Vezham.outline.names) {\n  print('$name: ${Vezham.outline[name]}');\n}",
           'flutter-runtime'
         )}
         copied={copiedField === 'flutter-runtime'}
       >
         <span className="text-text-base/30">// Look up an icon at runtime</span>
         {'\n'}
-        <span className="text-[#c678dd]">String</span><span className="text-text-base/30">?</span> icon = <span className="text-[#61afef]">Reicon</span><span className="text-text-base/30">.outline[</span><span className="text-[#98c379]">'home'</span><span className="text-text-base/30">];</span>
+        <span className="text-[#c678dd]">String</span><span className="text-text-base/30">?</span> icon = <span className="text-[#61afef]">Vezham</span><span className="text-text-base/30">.outline[</span><span className="text-[#98c379]">'home'</span><span className="text-text-base/30">];</span>
         {'\n\n'}
         <span className="text-text-base/30">// Iterate all icon names</span>
         {'\n'}
-        <span className="text-[#c678dd]">for</span> (<span className="text-[#c678dd]">final</span> name <span className="text-[#c678dd]">in</span> <span className="text-[#61afef]">Reicon</span><span className="text-text-base/30">.outline.names</span>)
+        <span className="text-[#c678dd]">for</span> (<span className="text-[#c678dd]">final</span> name <span className="text-[#c678dd]">in</span> <span className="text-[#61afef]">Vezham</span><span className="text-text-base/30">.outline.names</span>)
         {'\n  '}
-        <span className="text-[#61afef]">print</span>(<span className="text-[#98c379]">'</span><span className="text-[#e5c07b]">{'$'}name</span><span className="text-[#98c379]">: </span><span className="text-[#e5c07b]">{'${'}</span><span className="text-[#61afef]">Reicon</span><span className="text-text-base/30">.outline[name]</span><span className="text-[#e5c07b]">{'}'}</span><span className="text-[#98c379]">'</span>);
+        <span className="text-[#61afef]">print</span>(<span className="text-[#98c379]">'</span><span className="text-[#e5c07b]">{'$'}name</span><span className="text-[#98c379]">: </span><span className="text-[#e5c07b]">{'${'}</span><span className="text-[#61afef]">Vezham</span><span className="text-text-base/30">.outline[name]</span><span className="text-[#e5c07b]">{'}'}</span><span className="text-[#98c379]">'</span>);
       </SyntaxBlock>
     </>
   );

@@ -12,7 +12,7 @@ export default function Performance({ markdownContent, copiedField, onCopy }: Pr
     <section id="performance" data-section className="mb-16 scroll-mt-24">
       <SectionHeader id="performance" title="Performance & Tree-Shaking" level="h2" markdownContent={markdownContent} />
       <p className="text-text-base/50 text-[14px] mb-6 leading-relaxed">
-        Reicon is built with <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">sideEffects: false</code> in
+        Vezham is built with <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">sideEffects: false</code> in
         its package.json. Modern bundlers (Vite, webpack, Rollup) will automatically eliminate unused icons from your production bundle.
       </p>
 

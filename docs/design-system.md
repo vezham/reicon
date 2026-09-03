@@ -1,6 +1,6 @@
-# 🎨 Reicon Design System
+# 🎨 Vezham Design System
 
-This document outlines the design system specifications used for the Reicon website and branding, including the color palette, typography scales, responsive breakpoints, and animations.
+This document outlines the design system specifications used for the Vezham website and branding, including the color palette, typography scales, responsive breakpoints, and animations.
 
 ## Color Palette
 

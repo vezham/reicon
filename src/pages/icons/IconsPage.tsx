@@ -8,12 +8,12 @@ import IconCount from './IconCount';
 import IconGrid from './IconGrid';
 import LoadingScreen from '../../components/ui/LoadingScreen';
 import { loadIconData } from '../../lib/icon-data';
-import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/reicon-loader';
+import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/vezham-loader';
 import { useDuotoneData } from '../../hooks/useDuotoneData';
 import { SortOption } from '../../components/ui/DesktopFilterDropdown';
 
-const LS_ICONS = 'reicon-icons-cache';
-const LS_MAP = 'reicon-map-cache';
+const LS_ICONS = 'vezham-icons-cache';
+const LS_MAP = 'vezham-map-cache';
 
 const BATCH_SIZE = 60;
 

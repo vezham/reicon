@@ -1,20 +1,20 @@
 <p align="center">
   <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/v/@vezham/icons-react-native?color=black&label=npm" alt="npm version" /></a>
   <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/dm/@vezham/icons-react-native?color=black&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
 </p>
 
-# Reicon React Native
+# Vezham React Native
 
 > 2679+ pixel-perfect SVG icons • Outline & Filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
 
-**Reicon React Native** is the official React Native package for Reicon — a free, open-source SVG icon library with 2679+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
+**Vezham React Native** is the official React Native package for Vezham — a free, open-source SVG icon library with 2679+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
 
-- 🔗 **Website & icon browser:** [reicon.dev](https://reicon.dev)
-- 📦 **Core package:** [reicon](https://npmjs.com/package/@vezham/icons)
+- 🔗 **Website & icon browser:** [vezham.com](https://vezham.com)
+- 📦 **Core package:** [vezham](https://npmjs.com/package/vezham)
 - ⚛️ **React package:** [@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react)
-- 🎨 **Figma plugin:** [reicon.dev/figma](https://reicon.dev/figma)
+- 🎨 **Figma plugin:** [vezham.com/figma](https://vezham.com/figma)
 
 ---
 
@@ -115,7 +115,7 @@ Icons use **PascalCase**, derived from their original kebab-case names:
 | `shopping-cart` | `ShoppingCart` |
 | `user-circle` | `UserCircle` |
 
-Browse all 2679+ icons at [reicon.dev](https://reicon.dev).
+Browse all 2679+ icons at [vezham.com](https://vezham.com).
 
 ---
 
@@ -134,9 +134,9 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ---
 
-## Why Reicon?
+## Why Vezham?
 
-| | Reicon | React Native Vector Icons | Lucide RN |
+| | Vezham | React Native Vector Icons | Lucide RN |
 |--|--------|---------------------------|-----------|
 | **Icons** | 2679+ | 3000+ | 1600+ |
 | **Weights** | Outline + Filled | Varies by set | Outline only |
@@ -151,7 +151,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 | Package | Description |
 |---------|-------------|
-| [`/icons`](https://npmjs.com/package/@vezham/icons) | Core vanilla JS + CDN |
+| [`vezham`](https://npmjs.com/package/vezham) | Core vanilla JS + CDN |
 | [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for all 2679+ icons |
 | [`@vezham/icons-react-native`](https://npmjs.com/package/@vezham/icons-react-native) | **This package.** React Native components for all 2679+ icons |
 | [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for all 2679+ icons |
@@ -161,11 +161,11 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ## Links
 
-- 🌐 Website: [reicon.dev](https://reicon.dev)
-- 📖 Documentation: [reicon.dev/docs](https://reicon.dev/docs)
+- 🌐 Website: [vezham.com](https://vezham.com)
+- 📖 Documentation: [vezham.com/docs](https://vezham.com/docs)
 - 📦 npm (React Native): [npmjs.com/package/@vezham/icons-react-native](https://npmjs.com/package/@vezham/icons-react-native)
-- 🐙 GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🐙 GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

@@ -1,6 +1,6 @@
 # Styling & Color
 
-Reicon icons render as standard inline SVG elements that inherit parent styles, making them extremely customizable. By default, they inherit `currentColor` so they match the surrounding text color.
+Vezham icons render as standard inline SVG elements that inherit parent styles, making them extremely customizable. By default, they inherit `currentColor` so they match the surrounding text color.
 
 ---
 

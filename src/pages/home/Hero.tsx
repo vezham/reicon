@@ -46,7 +46,7 @@ export default function Hero({ heroCardRef }: Props) {
             {/* Top pill badges */}
             <div className="flex items-center justify-center gap-2 mb-5 flex-wrap">
               <a
-                href="https://github.com/dqev/reicon"
+                href="https://github.com/vezham/reicon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-[6px] bg-text-base/[0.04] hover:bg-text-base/10 backdrop-blur-lg rounded-full px-[14px] py-[6px] text-[12px] text-text-base/90 transition-colors"

@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://reicon.dev">
-    <img src="../public/readme-banner.png" alt="Reicon - Free Open-Source Icon Library" width="100%" />
+  <a href="https://vezham.com">
+    <img src="../public/readme-banner.png" alt="Vezham - Free Open-Source Icon Library" width="100%" />
   </a>
 </p>
 
-# Reicon Dataset
+# Vezham Dataset
 
-This folder holds the source assets for every Reicon icon.
+This folder holds the source assets for every Vezham icon.
 
 ## Source Layout
 

@@ -132,22 +132,22 @@ export default function IllustrationDetail() {
   return (
     <div className="flex-1">
       <Helmet>
-        <title>{`${currentTitle} Illustration — Reicon`}</title>
+        <title>{`${currentTitle} Illustration — Vezham`}</title>
         <meta name="description" content={`Download free ${currentTitle} doodling handcrafted SVG illustration.`} />
-        <link rel="canonical" href={`https://reicon.dev/illustration/${currentSlug}`} />
+        <link rel="canonical" href={`https://vezham.com/illustration/${currentSlug}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://reicon.dev/illustration/${currentSlug}`} />
-        <meta property="og:site_name" content="Reicon" />
-        <meta property="og:title" content={`${currentTitle} Illustration — Reicon`} />
+        <meta property="og:url" content={`https://vezham.com/illustration/${currentSlug}`} />
+        <meta property="og:site_name" content="Vezham" />
+        <meta property="og:title" content={`${currentTitle} Illustration — Vezham`} />
         <meta property="og:description" content={`Download free ${currentTitle} doodling handcrafted SVG illustration.`} />
-        <meta property="og:image" content="https://reicon.dev/og/illustration-detail.jpg" />
+        <meta property="og:image" content="https://vezham.com/og/illustration-detail.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@reicon_dev" />
-        <meta name="twitter:title" content={`${currentTitle} Illustration — Reicon`} />
+        <meta name="twitter:site" content="@vezham" />
+        <meta name="twitter:title" content={`${currentTitle} Illustration — Vezham`} />
         <meta name="twitter:description" content={`Download free ${currentTitle} doodling handcrafted SVG illustration.`} />
-        <meta name="twitter:image" content="https://reicon.dev/og/illustration-detail.jpg" />
+        <meta name="twitter:image" content="https://vezham.com/og/illustration-detail.jpg" />
       </Helmet>
 
       <main className="flex-1 w-full overflow-x-hidden">

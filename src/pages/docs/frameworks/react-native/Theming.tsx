@@ -11,7 +11,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
             {/* React Navigation Example */}
             <h3 className="text-lg font-serif text-text-base mb-4 mt-10">React Navigation Tab Icons</h3>
             <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-                Reicon works seamlessly with React Navigation. Use different weights to indicate active/inactive tabs.
+                Vezham works seamlessly with React Navigation. Use different weights to indicate active/inactive tabs.
             </p>
 
             <SyntaxBlock

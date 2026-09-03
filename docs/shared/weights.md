@@ -1,6 +1,6 @@
 # Icon Weights
 
-Every icon in the Reicon library is handcrafted in two weight variants: **Outline** and **Filled**.
+Every icon in the Vezham library is handcrafted in two weight variants: **Outline** and **Filled**.
 
 ## Weights Available
 1. **Outline**: Crisp, clean stroke-based outline icon. This is the default weight.

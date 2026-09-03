@@ -250,14 +250,14 @@ body {
   contain-intrinsic-size: auto 72px;
 }
 
-/* ═══ Reicon Sidebar Styles ═══ */
-.reicon-sidebar-group {
+/* ═══ Vezham Sidebar Styles ═══ */
+.vezham-sidebar-group {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 1.25rem;
 }
-.reicon-sidebar-group:first-child {
+.vezham-sidebar-group:first-child {
   margin-top: 0;
 }
 .sidebar-section-header {

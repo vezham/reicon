@@ -2,7 +2,7 @@
   "name": "@vezham/icons-vue",
   "version": "1.0.5",
   "type": "module",
-  "description": "Vue icon components for Reicon.",
+  "description": "Vue icon components for Vezham.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

@@ -9,10 +9,10 @@ export function lazyWithRetry<T extends ComponentType<any>>(
 ) {
   return lazy(async () => {
     try {
-      const pageHasAlreadyBeenRetried = sessionStorage.getItem('reicon_chunk_retry');
+      const pageHasAlreadyBeenRetried = sessionStorage.getItem('vezham_chunk_retry');
       const component = await componentImport();
       if (pageHasAlreadyBeenRetried) {
-        sessionStorage.removeItem('reicon_chunk_retry');
+        sessionStorage.removeItem('vezham_chunk_retry');
       }
       return component;
     } catch (error: unknown) {
@@ -23,10 +23,10 @@ export function lazyWithRetry<T extends ComponentType<any>>(
         errMessage.includes('Failed to load module script') ||
         (error as { name?: string })?.name === 'ChunkLoadError';
 
-      const pageHasAlreadyBeenRetried = sessionStorage.getItem('reicon_chunk_retry');
+      const pageHasAlreadyBeenRetried = sessionStorage.getItem('vezham_chunk_retry');
 
       if (isChunkError && !pageHasAlreadyBeenRetried) {
-        sessionStorage.setItem('reicon_chunk_retry', 'true');
+        sessionStorage.setItem('vezham_chunk_retry', 'true');
         window.location.reload();
         return new Promise<{ default: T }>(() => {});
       }

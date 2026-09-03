@@ -120,10 +120,10 @@ for (const icon of icons) {
 /**
  * @component
  * @name ${icon.pascal}
- * @description Reicon React Native SVG icon component
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs — Documentation
- * @param {import('../createIcon').IconProps} props — Reicon icon props and any valid react-native-svg props
+ * @description Vezham React Native SVG icon component
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs — Documentation
+ * @param {import('../createIcon').IconProps} props — Vezham icon props and any valid react-native-svg props
  * @returns {JSX.Element} JSX Element
  */
 const ${icon.pascal} = createIcon('${icon.pascal}', {
@@ -142,10 +142,10 @@ export default ${icon.pascal};
 /**
  * @component
  * @name ${icon.pascal}
- * @description Reicon React Native SVG icon component
- * @preview ![${icon.pascal}](${previewUri}) - https://reicon.dev/icons/${kebab}
- * @see https://reicon.dev/docs — Documentation
- * @param {import('../createIcon').IconProps} props — Reicon icon props and any valid react-native-svg props
+ * @description Vezham React Native SVG icon component
+ * @preview ![${icon.pascal}](${previewUri}) - https://vezham.com/icons/${kebab}
+ * @see https://vezham.com/docs — Documentation
+ * @param {import('../createIcon').IconProps} props — Vezham icon props and any valid react-native-svg props
  * @returns {JSX.Element} JSX Element
  */
 declare const ${icon.pascal}: IconComponent;
@@ -259,20 +259,20 @@ fs.writeFileSync(path.join(DIST, 'package.json'), JSON.stringify(pkg, null, 2) +
 const readme = `<p align="center">
   <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/v/@vezham/icons-react-native?color=black&label=npm" alt="npm version" /></a>
   <a href="https://npmjs.com/package/@vezham/icons-react-native"><img src="https://img.shields.io/npm/dm/@vezham/icons-react-native?color=black&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
 </p>
 
-# Reicon React Native
+# Vezham React Native
 
 > ${icons.length}+ pixel-perfect SVG icons • Outline & Filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
 
-**Reicon React Native** is the official React Native package for Reicon — a free, open-source SVG icon library with ${icons.length}+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
+**Vezham React Native** is the official React Native package for Vezham — a free, open-source SVG icon library with ${icons.length}+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
 
-- 🔗 **Website & icon browser:** [reicon.dev](https://reicon.dev)
-- 📦 **Core package:** [reicon](https://npmjs.com/package/reicon)
+- 🔗 **Website & icon browser:** [vezham.com](https://vezham.com)
+- 📦 **Core package:** [vezham](https://npmjs.com/package/vezham)
 - ⚛️ **React package:** [@vezham/icons-react](https://npmjs.com/package/@vezham/icons-react)
-- 🎨 **Figma plugin:** [reicon.dev/figma](https://reicon.dev/figma)
+- 🎨 **Figma plugin:** [vezham.com/figma](https://vezham.com/figma)
 
 ---
 
@@ -373,7 +373,7 @@ Icons use **PascalCase**, derived from their original kebab-case names:
 | \`shopping-cart\` | \`ShoppingCart\` |
 | \`user-circle\` | \`UserCircle\` |
 
-Browse all ${icons.length}+ icons at [reicon.dev](https://reicon.dev).
+Browse all ${icons.length}+ icons at [vezham.com](https://vezham.com).
 
 ---
 
@@ -392,9 +392,9 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ---
 
-## Why Reicon?
+## Why Vezham?
 
-| | Reicon | React Native Vector Icons | Lucide RN |
+| | Vezham | React Native Vector Icons | Lucide RN |
 |--|--------|---------------------------|-----------|
 | **Icons** | ${icons.length}+ | 3000+ | 1600+ |
 | **Weights** | Outline + Filled | Varies by set | Outline only |
@@ -409,7 +409,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 | Package | Description |
 |---------|-------------|
-| [\`reicon\`](https://npmjs.com/package/reicon) | Core vanilla JS + CDN |
+| [\`vezham\`](https://npmjs.com/package/vezham) | Core vanilla JS + CDN |
 | [\`@vezham/icons-react\`](https://npmjs.com/package/@vezham/icons-react) | React components for all ${icons.length}+ icons |
 | [\`@vezham/icons-react-native\`](https://npmjs.com/package/@vezham/icons-react-native) | **This package.** React Native components for all ${icons.length}+ icons |
 | [\`@vezham/icons-vue\`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for all ${icons.length}+ icons |
@@ -419,11 +419,11 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 
 ## Links
 
-- 🌐 Website: [reicon.dev](https://reicon.dev)
-- 📖 Documentation: [reicon.dev/docs](https://reicon.dev/docs)
+- 🌐 Website: [vezham.com](https://vezham.com)
+- 📖 Documentation: [vezham.com/docs](https://vezham.com/docs)
 - 📦 npm (React Native): [npmjs.com/package/@vezham/icons-react-native](https://npmjs.com/package/@vezham/icons-react-native)
-- 🐙 GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🐙 GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

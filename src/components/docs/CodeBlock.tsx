@@ -14,7 +14,7 @@ interface CodeBlockProps {
  */
 export default function CodeBlock({ code, onCopy, copied }: CodeBlockProps) {
   return (
-    <figure className="reicon-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm group">
+    <figure className="vezham-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm group">
       {/* Floating copy button */}
       <button
         onClick={onCopy}

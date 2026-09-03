@@ -156,8 +156,8 @@ export default function Integrations() {
                     guideUrl="/docs/vanilla"
                     copyText={`import { Home } from '@vezham/icons';\n\nconst icon = Home({ size: 24 });\ndocument.body.appendChild(icon);`}
                     lines={<>
-                        <NpmInstall pkg="reicon" />
-                        <ImportLine name="Home" from="reicon" />
+                        <NpmInstall pkg="vezham" />
+                        <ImportLine name="Home" from="vezham" />
                         <div className="mt-3">
                             <span className="text-[#c678dd]">const</span>
                             <span className="text-text-base/70"> icon = </span>
@@ -226,21 +226,21 @@ export default function Integrations() {
                     icon={<svg width={16} height={16 * (317 / 256)} viewBox="0 0 256 317" fill="none"><path fill="#47C5FB" d="M158 0 0 158l49 48L255 0zM157 145l-85 85 49 50 49-49 85-86z"/><path fill="#00569E" d="m121 280 37 37h97l-85-86z"/><path fill="#00B5F8" d="m72 230 48-48 50 49-49 49z"/></svg>}
                     title="Flutter"
                     guideUrl="/docs/flutter"
-                    copyText={`import { Reicon } from 'reicon_flutter';\n\nfinal home = Reicon.outline.home;\nreiconSvg(home, size: 24);`}
+                    copyText={`import { Vezham } from 'vezham_icons_flutter';\n\nfinal home = Vezham.outline.home;\nvezhamIconSvg(home, size: 24);`}
                     lines={<>
                         <div className="mb-2">
                             <span className="text-[#ffbd2e]">$</span>
                             <span className="text-[#e06c75]"> flutter</span>
-                            <span className="text-text-base/70"> pub add reicon_flutter</span>
+                            <span className="text-text-base/70"> pub add vezham_icons_flutter</span>
                         </div>
                         <div>
                             <span className="text-[#c678dd]">import</span>
-                            <span className="text-text-base/70"> 'package:reicon_flutter/reicon_flutter.dart';</span>
+                            <span className="text-text-base/70"> 'package:vezham_icons_flutter/vezham_icons_flutter.dart';</span>
                         </div>
                         <div className="mt-3">
                             <span className="text-[#c678dd]">final</span>
                             <span className="text-text-base/70"> home = </span>
-                            <span className="text-[#61afef]">Reicon</span>
+                            <span className="text-[#61afef]">Vezham</span>
                             <span className="text-text-base/30">.outline</span>
                             <span className="text-text-base/70">.home;</span>
                         </div>
@@ -252,7 +252,7 @@ export default function Integrations() {
                     icon={<SiModelcontextprotocol size={16} color="#6C5CE7" />}
                     title="MCP Server"
                     guideUrl="/docs/mcp"
-                    copyText={`{\n  "mcpServers": {\n    "reicon": {\n      "command": "npx",\n      "args": ["vezham-icons-mcp"]\n    }\n  }\n}`}
+                    copyText={`{\n  "mcpServers": {\n    "vezham": {\n      "command": "npx",\n      "args": ["@vezham/icons-mcp"]\n    }\n  }\n}`}
                     lines={<>
                         <div className="mb-2">
                             <span className="text-[#ffbd2e]">$</span>
@@ -261,9 +261,9 @@ export default function Integrations() {
                         </div>
                         <div><span className="text-text-base/30">{'{'}</span></div>
                         <div className="pl-4"><span className="text-[#e5c07b]">"mcpServers"</span><span className="text-text-base/30">: {'{'}</span></div>
-                        <div className="pl-8"><span className="text-[#e5c07b]">"reicon"</span><span className="text-text-base/30">: {'{'}</span></div>
+                        <div className="pl-8"><span className="text-[#e5c07b]">"vezham"</span><span className="text-text-base/30">: {'{'}</span></div>
                         <div className="pl-12"><span className="text-[#e5c07b]">"command"</span><span className="text-text-base/30">: </span><span className="text-[#98c379]">"npx"</span><span className="text-text-base/30">,</span></div>
-                        <div className="pl-12"><span className="text-[#e5c07b]">"args"</span><span className="text-text-base/30">: [</span><span className="text-[#98c379]">"vezham-icons-mcp"</span><span className="text-text-base/30">]</span></div>
+                        <div className="pl-12"><span className="text-[#e5c07b]">"args"</span><span className="text-text-base/30">: [</span><span className="text-[#98c379]">"@vezham/icons-mcp"</span><span className="text-text-base/30">]</span></div>
                         <div className="pl-8"><span className="text-text-base/30">{'}'}</span></div>
                         <div className="pl-4"><span className="text-text-base/30">{'}'}</span></div>
                         <div><span className="text-text-base/30">{'}'}</span></div>

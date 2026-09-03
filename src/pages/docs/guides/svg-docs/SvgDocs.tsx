@@ -34,7 +34,7 @@ export default function SvgDocs({ markdownContent, copiedField, onCopy }: Props)
 
       <div className="mb-8">
         <a
-          href="/reicon-icons.zip"
+          href="/vezham-icons.zip"
           download
           className="inline-flex items-center gap-2 bg-[#6C5CE7] hover:bg-[#5A4BD1] text-white text-[13px] font-semibold px-4 py-2.5 rounded-lg transition-colors cursor-pointer"
         >
@@ -133,7 +133,7 @@ export default function SvgDocs({ markdownContent, copiedField, onCopy }: Props)
         Dynamic Styling via CSS
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Since Reicon SVGs use <code>currentColor</code> for stroke and fill mapping, you can colorize them dynamically by setting the color on parent elements.
+        Since Vezham SVGs use <code>currentColor</code> for stroke and fill mapping, you can colorize them dynamically by setting the color on parent elements.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4 mt-6">

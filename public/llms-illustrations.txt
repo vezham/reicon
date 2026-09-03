@@ -1,9 +1,9 @@
-# Reicon — 71,000+ Free SVG Illustrations Directory for AI Agents
+# Vezham — 71,000+ Free SVG Illustrations Directory for AI Agents
 
 > Browse and fetch 71,000+ free open-source vector SVG illustrations for React, Vue, HTML, and Figma.
-> **CDN URL Pattern**: `https://cdn.reicon.dev/{slug}.svg` (e.g., `https://cdn.reicon.dev/aspen.svg`)
-> **Browse Page**: https://reicon.dev/illustration
-> **Detail Page Pattern**: https://reicon.dev/illustration/{slug}
+> **CDN URL Pattern**: `https://cdn.vezham.com/{slug}.svg` (e.g., `https://cdn.vezham.com/aspen.svg`)
+> **Browse Page**: https://vezham.com/illustration
+> **Detail Page Pattern**: https://vezham.com/illustration/{slug}
 
 ## Statistics
 - **Total Illustrations**: 71262

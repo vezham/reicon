@@ -2,7 +2,7 @@
   "name": "@vezham/icons-svelte",
   "version": "1.0.5",
   "type": "module",
-  "description": "Svelte icon components for Reicon.",
+  "description": "Svelte icon components for Vezham.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

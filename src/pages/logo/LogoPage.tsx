@@ -145,8 +145,8 @@ export default function LogoPage() {
       <LogoHelmet
         title={
           activeCategory !== 'all'
-            ? `${activeCategory} Brand Logos - Vector SVG | Reicon`
-            : '4,900+ Brand Logos - High Quality SVG & PNG Vectors | Reicon'
+            ? `${activeCategory} Brand Logos - Vector SVG | Vezham`
+            : '4,900+ Brand Logos - High Quality SVG & PNG Vectors | Vezham'
         }
         description={`Explore clean vector SVG brand logos for ${activeCategory === 'all' ? 'top tech companies and global brands' : activeCategory}. Free download and instant code copy.`}
       />

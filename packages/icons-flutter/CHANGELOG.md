@@ -7,7 +7,7 @@
 
 ## 1.0.0
 
-- Initial release of the official `reicon_flutter` package for [reicon.dev](https://reicon.dev)
+- Initial release of the official `vezham_icons_flutter` package for [vezham.com](https://vezham.com)
 - 2674 icons in **Outline** weight via `Reicon.outline.*`
 - 2674 icons in **Filled** weight via `Reicon.filled.*`
 - `reiconSvg()` helper to build complete SVG strings

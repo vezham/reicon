@@ -11,7 +11,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
       {/* Basic Usage ESM */}
       <h4 className="text-md font-medium text-text-base mb-4 mt-8">Creating DOM Elements</h4>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Import named icons directly from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon</code>. Each icon is a factory function that returns a native <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">SVGSVGElement</code>.
+        Import named icons directly from <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham</code>. Each icon is a factory function that returns a native <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">SVGSVGElement</code>.
       </p>
 
       <SyntaxBlock

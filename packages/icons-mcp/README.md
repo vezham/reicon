@@ -1,6 +1,6 @@
 # vezham-icons-mcp
 
-MCP server and CLI for searching, previewing, and applying Reicon icons. Works fully offline with a prebuilt search index.
+MCP server and CLI for searching, previewing, and applying Vezham icons. Works fully offline with a prebuilt search index.
 
 ## MCP Server
 
@@ -9,9 +9,9 @@ Add to your MCP client config:
 ```json
 {
   "mcpServers": {
-    "reicon": {
+    "vezham": {
       "command": "npx",
-      "args": ["vezham-icons-mcp"]
+      "args": ["@vezham/icons-mcp"]
     }
   }
 }
@@ -22,9 +22,9 @@ Or point directly at the local binary after building:
 ```json
 {
   "mcpServers": {
-    "reicon": {
+    "vezham": {
       "command": "node",
-      "args": ["/path/to/reicon/packages/icons-mcp/bin/run.cjs"]
+      "args": ["/path/to/vezham/packages/icons-mcp/bin/run.cjs"]
     }
   }
 }
@@ -42,10 +42,10 @@ Or point directly at the local binary after building:
 ## CLI
 
 ```bash
-npx vezham-icons-mcp search "shopping cart"
-npx vezham-icons-mcp view heart --weight Filled
-npx vezham-icons-mcp apply heart --framework react --size 32 --color "#ef4444"
-npx vezham-icons-mcp categories
+npx @vezham/icons-mcp search "shopping cart"
+npx @vezham/icons-mcp view heart --weight Filled
+npx @vezham/icons-mcp apply heart --framework react --size 32 --color "#ef4444"
+npx @vezham/icons-mcp categories
 ```
 
 ### File write mode
@@ -53,7 +53,7 @@ npx vezham-icons-mcp categories
 For scripted insertion, replace a marker string in a target file:
 
 ```bash
-npx vezham-icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
+npx @vezham/icons-mcp apply heart --framework react --file src/App.tsx --marker "{/* ICON */}"
 ```
 
 The marker must exist exactly once. The command exits non-zero if the marker is not found.

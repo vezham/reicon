@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     try {
-      const stored = localStorage.getItem('reicon-theme');
+      const stored = localStorage.getItem('vezham-theme');
       if (stored === 'light' || stored === 'dark') {
         return stored;
       }
@@ -32,7 +32,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     document.body.style.backgroundColor = isLight ? '#f5f5f0' : '#09090b';
 
     try {
-      localStorage.setItem('reicon-theme', theme);
+      localStorage.setItem('vezham-theme', theme);
     } catch {
       // Ignore localStorage security exceptions
     }

@@ -15,7 +15,7 @@ export default function Troubleshooting({ markdownContent, copiedField, onCopy }
       <p className="text-text-base/50 text-[14px] mb-6 leading-relaxed">
         Common issues and their solutions. If you don't find your answer here, open an issue on{' '}
         <a
-          href="https://github.com/dqev/reicon/issues"
+          href="https://github.com/vezham/reicon/issues"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#6C5CE7] hover:underline"

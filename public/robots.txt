@@ -1,5 +1,5 @@
-# Reicon — robots.txt
-# https://reicon.dev
+# Vezham — robots.txt
+# https://vezham.com
 # Free, open-source SVG icon library (2700+ icons).
 
 # ── Default: allow everything ──────────────────────────────────────────
@@ -24,7 +24,7 @@ User-agent: YandexBot
 Allow: /
 
 # ── AI / LLM crawlers (welcomed for GEO discoverability) ───────────────
-# We explicitly allow these so Reicon can be cited in AI answers.
+# We explicitly allow these so Vezham can be cited in AI answers.
 User-agent: GPTBot
 Allow: /
 
@@ -62,4 +62,4 @@ User-agent: cohere-ai
 Allow: /
 
 # ── Sitemaps ───────────────────────────────────────────────────────────
-Sitemap: https://reicon.dev/sitemap.xml
+Sitemap: https://vezham.com/sitemap.xml

@@ -2,7 +2,7 @@
   "name": "@vezham/icons",
   "version": "1.0.5",
   "type": "module",
-  "description": "Vanilla JS core icon package for Reicon.",
+  "description": "Vanilla JS core icon package for Vezham.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

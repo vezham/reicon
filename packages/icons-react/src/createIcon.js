@@ -41,7 +41,7 @@ const createIcon = (displayName, iconData) => {
         height: size,
         viewBox: '0 0 24 24',
         fill: 'none',
-        className: className ? 'reicon ' + className : 'reicon',
+        className: className ? 'vezham ' + className : 'vezham',
         style: color != null ? { color, ...style } : style,
         ...rest,
         dangerouslySetInnerHTML: { __html: html },

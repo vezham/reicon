@@ -21,9 +21,9 @@ export interface DownloadSvgOptions {
  * Robustly fetches SVG content from a URL using Vite's /cdn-proxy and CORS fallbacks.
  */
 export async function fetchSvgText(url: string): Promise<string> {
-  // 1. Try local dev proxy (/cdn-proxy) if URL is on cdn.reicon.dev
-  const proxiedUrl = url.startsWith('https://cdn.reicon.dev')
-    ? url.replace('https://cdn.reicon.dev', '/cdn-proxy')
+  // 1. Try local dev proxy (/cdn-proxy) if URL is on cdn.vezham.com
+  const proxiedUrl = url.startsWith('https://cdn.vezham.com')
+    ? url.replace('https://cdn.vezham.com', '/cdn-proxy')
     : (url.startsWith('/') ? `${window.location.origin}${url}` : url);
 
   try {

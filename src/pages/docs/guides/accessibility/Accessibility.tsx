@@ -12,7 +12,7 @@ export default function Accessibility({ markdownContent, copiedField, onCopy }: 
     <section id="accessibility" data-section className="mb-16 scroll-mt-24">
       <SectionHeader id="accessibility" title="Accessibility" level="h2" markdownContent={markdownContent} />
       <p className="text-text-base/50 text-[14px] mb-6 leading-relaxed">
-        Reicon components pass all extra props (including ARIA attributes) directly to the
+        Vezham components pass all extra props (including ARIA attributes) directly to the
         underlying <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<svg>'}</code> element. Use these patterns to make your icons accessible.
       </p>
 
@@ -91,7 +91,7 @@ export default function Accessibility({ markdownContent, copiedField, onCopy }: 
       {/* Ref forwarding */}
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Ref Forwarding</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        All Reicon components use <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">forwardRef</code>, so you can
+        All Vezham components use <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">forwardRef</code>, so you can
         attach a ref to the underlying SVG for focus management or measurements.
       </p>
 
@@ -151,7 +151,7 @@ export default function Accessibility({ markdownContent, copiedField, onCopy }: 
       </SyntaxBlock>
 
       <div className="mt-6 bg-[#6C5CE7]/5 border border-[#6C5CE7]/15 rounded-xl p-4 text-[13px] text-text-base/50 leading-relaxed">
-        <span className="text-[#6C5CE7] font-medium">Tip:</span> Since Reicon passes all props to the SVG element, you can use any standard SVG or ARIA attribute — <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">focusable</code>, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">tabIndex</code>, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">onFocus</code>, etc.
+        <span className="text-[#6C5CE7] font-medium">Tip:</span> Since Vezham passes all props to the SVG element, you can use any standard SVG or ARIA attribute — <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">focusable</code>, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">tabIndex</code>, <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">onFocus</code>, etc.
       </div>
     </section>
   );

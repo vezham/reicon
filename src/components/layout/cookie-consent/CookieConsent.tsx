@@ -34,7 +34,7 @@ export default function CookieConsent() {
     setAnimateIn(false);
     setTimeout(() => {
       setVisible(false);
-      window.dispatchEvent(new CustomEvent('reicon-cookie-consent-dismissed'));
+      window.dispatchEvent(new CustomEvent('vezham-cookie-consent-dismissed'));
     }, 500);
   };
 

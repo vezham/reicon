@@ -1,6 +1,6 @@
-# Using Reicon with React
+# Using Vezham with React
 
-The official React package for Reicon. Import beautifully crafted icons as React components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
+The official React package for Vezham. Import beautifully crafted icons as React components with full TypeScript support. All icons are tree-shakeable, ensuring only the icons you actually use end up in your bundle.
 
 ## What you can accomplish
 - Import icons as individual React components
@@ -74,7 +74,7 @@ import ShieldCheck from '@vezham/icons-react/icons/ShieldCheck';
 ---
 
 ## Using with Tailwind CSS
-Reicon works seamlessly with Tailwind CSS. Use the `className` prop to apply Tailwind utilities. The icon inherits `currentColor` by default, so Tailwind's text color classes work out of the box.
+Vezham works seamlessly with Tailwind CSS. Use the `className` prop to apply Tailwind utilities. The icon inherits `currentColor` by default, so Tailwind's text color classes work out of the box.
 ```jsx
 <Home className="text-gray-500 hover:text-gray-700 w-6 h-6 transition-colors" />
 
@@ -87,7 +87,7 @@ Reicon works seamlessly with Tailwind CSS. Use the `className` prop to apply Tai
 ---
 
 ## Full Component Example
-Here's a complete example of a React component using multiple Reicon icons with different configurations.
+Here's a complete example of a React component using multiple Vezham icons with different configurations.
 ```jsx
 import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-react';
 

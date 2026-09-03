@@ -17,13 +17,13 @@ export const docsSidebarStyles = `
   #docs-sidebar::-webkit-scrollbar { display: none; }
 
   /* ── LEFT SIDEBAR GROUPS & CONNECTED LINE ── */
-  .reicon-sidebar-group {
+  .vezham-sidebar-group {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 1.25rem;
   }
-  .reicon-sidebar-group:first-child {
+  .vezham-sidebar-group:first-child {
     margin-top: 0;
   }
 

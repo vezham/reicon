@@ -1,4 +1,4 @@
-# Reicon for Flutter
+# Vezham for Flutter
 
 > 2700+ handcrafted, pixel-perfect SVG icons in Outline and Filled weights — now available for Flutter.
 
@@ -8,7 +8,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  reicon_flutter: ^1.0.0
+  vezham_icons_flutter: ^1.0.0
 ```
 
 ```bash
@@ -18,7 +18,7 @@ flutter pub get
 ## Usage
 
 ```dart
-import 'package:reicon_flutter/reicon_flutter.dart';
+import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 ```
 
@@ -26,7 +26,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 ```dart
 SvgPicture.string(
-  reiconSvg(Reicon.outline.home, size: 24),
+  vezhamIconSvg(Vezham.outline.home, size: 24),
 )
 ```
 
@@ -34,7 +34,7 @@ SvgPicture.string(
 
 ```dart
 SvgPicture.string(
-  reiconSvg(Reicon.filled.settings, size: 24),
+  vezhamIconSvg(Vezham.filled.settings, size: 24),
 )
 ```
 
@@ -42,7 +42,7 @@ SvgPicture.string(
 
 ```dart
 SvgPicture.string(
-  reiconSvg(Reicon.outline.star, size: 32),
+  vezhamIconSvg(Vezham.outline.star, size: 32),
   colorFilter: ColorFilter.mode(Colors.amber, BlendMode.srcIn),
 )
 ```
@@ -51,11 +51,11 @@ SvgPicture.string(
 
 | Accessor | Description |
 |----------|-------------|
-| `Reicon.outline.*` | 2674 outline icons |
-| `Reicon.filled.*` | 2674 filled icons |
-| `reiconSvg(path)` | Build SVG string from path data |
+| `Vezham.outline.*` | 2674 outline icons |
+| `Vezham.filled.*` | 2674 filled icons |
+| `vezhamIconSvg(path)` | Build SVG string from path data |
 
 ## Links
 
-- [pub.dev](https://pub.dev/packages/icons_flutter)
+- [pub.dev](https://pub.dev/packages/vezham_icons_flutter)
 - [Source](./packages/icons-flutter)

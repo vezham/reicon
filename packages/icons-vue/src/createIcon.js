@@ -52,7 +52,7 @@ const createIcon = (displayName, iconData) => {
           height: props.size,
           viewBox: '0 0 24 24',
           fill: 'none',
-          class: ['reicon', userClass],
+          class: ['vezham', userClass],
           style: props.color != null ? [{ color: props.color }, userStyle] : userStyle,
           innerHTML: svgHtml.value,
           ...restAttrs,

@@ -54,7 +54,7 @@ export default function DocsLeftSidebar({
     return (
         <aside id="docs-sidebar" className="hidden lg:block" data-lenis-prevent>
             {/* Getting Started */}
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="compass" size="13" />
@@ -68,7 +68,7 @@ export default function DocsLeftSidebar({
             </div>
 
             {/* Framework Dropdown */}
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="code" size="13" />
@@ -127,7 +127,7 @@ export default function DocsLeftSidebar({
             </div>
 
             {/* Basics */}
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="settings" size="13" />
@@ -141,7 +141,7 @@ export default function DocsLeftSidebar({
             </div>
 
             {/* Guides */}
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="palette" size="13" />
@@ -155,7 +155,7 @@ export default function DocsLeftSidebar({
             </div>
 
             {/* Advanced */}
-            <div className="reicon-sidebar-group">
+            <div className="vezham-sidebar-group">
                 <div className="sidebar-section-header">
                     <div className="sidebar-icon-box">
                         <vx-icon icon="help-circle" size="13" />

@@ -2,7 +2,7 @@
   "name": "@vezham/icons-react-native",
   "version": "1.0.5",
   "type": "module",
-  "description": "React Native icon components for Reicon.",
+  "description": "React Native icon components for Vezham.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

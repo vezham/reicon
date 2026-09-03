@@ -2,7 +2,7 @@
   "name": "@vezham/icons-react",
   "version": "1.0.5",
   "type": "module",
-  "description": "React icon components for Reicon.",
+  "description": "React icon components for Vezham.",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/reicon",

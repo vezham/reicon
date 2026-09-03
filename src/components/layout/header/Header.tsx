@@ -17,7 +17,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
   const [stars, setStars] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/dqev/reicon')
+    fetch('https://api.github.com/repos/dqev/vezham')
       .then((res) => res.json())
       .then((data) => {
         if (data.stargazers_count) {
@@ -34,8 +34,8 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
           to="/"
           className="flex items-center gap-2 text-text-base font-semibold text-[14px] bg-text-base/[0.04] backdrop-blur-lg rounded-full px-3.5 py-[7px] hover:bg-text-base/10 transition-all duration-150 shadow-2xs shrink-0"
         >
-          <img src={theme === 'dark' ? '/icon-light.webp' : '/icon-dark.webp'} alt="Reicon" loading="lazy" className="w-4.5 h-4.5" />
-          <span>Reicon</span>
+          <img src={theme === 'dark' ? '/icon-light.webp' : '/icon-dark.webp'} alt="Vezham" loading="lazy" className="w-4.5 h-4.5" />
+          <span>Vezham</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-0.5 absolute left-1/2 -translate-x-1/2 bg-text-base/[0.04] backdrop-blur-lg rounded-full p-1 shadow-2xs">
@@ -65,7 +65,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
               Support
             </Link>
             <a
-              href="https://github.com/dqev/reicon"
+              href="https://github.com/vezham/reicon"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[13px] text-text-base/80 bg-text-base/[0.04] backdrop-blur-lg rounded-full px-4 py-[7px] hover:bg-text-base/10 transition-colors cursor-pointer flex items-center gap-1.5"

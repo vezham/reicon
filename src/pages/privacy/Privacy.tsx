@@ -15,7 +15,7 @@ export default function Privacy() {
   };
 
   const getPageMarkdown = () => {
-    return `# Privacy Policy\n\nLast updated: May 6, 2025\n\n1. Overview\nReicon (reicon.dev) is committed to protecting your privacy.\n\n2. Information We Collect\nAnalytics Data, CDN Logs, Contact Information.\n\n3. Information We Do NOT Collect\nNo account creation, no payment info, no ad trackers, no data selling, no tracking cookies.\n\n4. Third-Party Services\nVercel, Google Fonts, cdn.reicon.dev.\n\n5. Data Retention\nAggregated analytics, temporary server logs.\n\n6. Your Rights\nRequest info, request deletion, opt out of analytics.\n\n7. Children's Privacy\nNot knowingly collected.\n\n8. Changes to This Policy\nPosted with updated revision date.\n\n9. Contact\nhello@reicon.dev`;
+    return `# Privacy Policy\n\nLast updated: May 6, 2025\n\n1. Overview\nVezham (vezham.com) is committed to protecting your privacy.\n\n2. Information We Collect\nAnalytics Data, CDN Logs, Contact Information.\n\n3. Information We Do NOT Collect\nNo account creation, no payment info, no ad trackers, no data selling, no tracking cookies.\n\n4. Third-Party Services\nVercel, Google Fonts, cdn.vezham.com.\n\n5. Data Retention\nAggregated analytics, temporary server logs.\n\n6. Your Rights\nRequest info, request deletion, opt out of analytics.\n\n7. Children's Privacy\nNot knowingly collected.\n\n8. Changes to This Policy\nPosted with updated revision date.\n\n9. Contact\nhello@vezham.com`;
   };
 
   const handleCopyPageMarkdown = async () => {
@@ -32,7 +32,7 @@ export default function Privacy() {
   const openInLLM = async (platform: 'chatgpt' | 'claude' | 't3') => {
     const md = getPageMarkdown();
     try { await navigator.clipboard.writeText(md); } catch { /* silent */ }
-    const promptText = `Here is the Reicon Privacy Policy documentation. Please read it and help answer my questions:\n\n${md}`;
+    const promptText = `Here is the Vezham Privacy Policy documentation. Please read it and help answer my questions:\n\n${md}`;
     const urls = {
       chatgpt: `https://chatgpt.com/?hints=search&q=${encodeURIComponent(promptText)}`,
       claude: `https://claude.ai/new?q=${encodeURIComponent(promptText)}`,
@@ -51,14 +51,14 @@ export default function Privacy() {
         <link rel="canonical" href={PAGE_META['/privacy'].url} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_META['/privacy'].url} />
-        <meta property="og:site_name" content="Reicon" />
+        <meta property="og:site_name" content="Vezham" />
         <meta property="og:title" content={PAGE_META['/privacy'].title} />
         <meta property="og:description" content={PAGE_META['/privacy'].description} />
         <meta property="og:image" content={PAGE_META['/privacy'].ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@reicon_dev" />
+        <meta name="twitter:site" content="@vezham" />
         <meta name="twitter:title" content={PAGE_META['/privacy'].title} />
         <meta name="twitter:description" content={PAGE_META['/privacy'].description} />
         <meta name="twitter:image" content={PAGE_META['/privacy'].ogImage} />
@@ -66,8 +66,8 @@ export default function Privacy() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Reicon", "item": "https://reicon.dev" },
-            { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://reicon.dev/privacy" }
+            { "@type": "ListItem", "position": 1, "name": "Vezham", "item": "https://vezham.com" },
+            { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://vezham.com/privacy" }
           ]
         })}</script>
       </Helmet>
@@ -79,7 +79,7 @@ export default function Privacy() {
         <div className="space-y-8 text-[15px] text-text-base/60 leading-relaxed">
           <section>
             <h2 className="text-lg font-semibold text-text-base mb-3">1. Overview</h2>
-            <p>Reicon (<a href="https://reicon.dev" className="text-[#6C5CE7] hover:underline">reicon.dev</a>) is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+            <p>Vezham (<a href="https://vezham.com" className="text-[#6C5CE7] hover:underline">vezham.com</a>) is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
           </section>
 
           <section>
@@ -106,7 +106,7 @@ export default function Privacy() {
             <ul className="list-disc list-inside mt-2 space-y-1 text-text-base/50">
               <li><strong className="text-text-base/70">Vercel</strong> — Hosting and deployment</li>
               <li><strong className="text-text-base/70">Google Fonts</strong> — Font delivery</li>
-              <li><strong className="text-text-base/70">cdn.reicon.dev</strong> — Icon and asset delivery</li>
+              <li><strong className="text-text-base/70">cdn.vezham.com</strong> — Icon and asset delivery</li>
             </ul>
             <p className="mt-3">Each of these services has its own privacy policy governing how they handle data.</p>
           </section>
@@ -128,7 +128,7 @@ export default function Privacy() {
 
           <section>
             <h2 className="text-lg font-semibold text-text-base mb-3">7. Children's Privacy</h2>
-            <p>Reicon does not knowingly collect information from children under 13. If you believe we have inadvertently collected such information, please contact us and we will promptly delete it.</p>
+            <p>Vezham does not knowingly collect information from children under 13. If you believe we have inadvertently collected such information, please contact us and we will promptly delete it.</p>
           </section>
 
           <section>
@@ -138,7 +138,7 @@ export default function Privacy() {
 
           <section>
             <h2 className="text-lg font-semibold text-text-base mb-3">9. Contact</h2>
-            <p>For privacy-related questions or requests, contact us at <a href="mailto:hello@reicon.dev" className="text-[#6C5CE7] hover:underline">hello@reicon.dev</a>.</p>
+            <p>For privacy-related questions or requests, contact us at <a href="mailto:hello@vezham.com" className="text-[#6C5CE7] hover:underline">hello@vezham.com</a>.</p>
           </section>
         </div>
 
@@ -148,8 +148,8 @@ export default function Privacy() {
           copiedPage={copiedPage}
           openDropdown={openDropdown}
           openDropdownRef={openDropdownRef}
-          githubEditUrl="https://github.com/dqev/reicon/edit/main/src/pages/privacy/Privacy.tsx"
-          githubUrl="https://github.com/dqev/reicon"
+          githubEditUrl="https://github.com/vezham/reicon/edit/main/src/pages/privacy/Privacy.tsx"
+          githubUrl="https://github.com/vezham/reicon"
           onCopyMarkdown={handleCopyPageMarkdown}
           onOpenDropdown={setOpenDropdown}
           onOpenInLLM={openInLLM}

@@ -8,10 +8,10 @@ interface LogoHelmetProps {
 }
 
 export default function LogoHelmet({
-  title = '4,900+ Free SVG Brand Logos — High Quality Vector Logos | Reicon',
+  title = '4,900+ Free SVG Brand Logos — High Quality Vector Logos | Vezham',
   description = 'Browse and download 4,900+ clean vector brand logos for tech companies, frameworks, AI, and global brands. Free SVG & PNG formats. MIT licensed.',
-  image = 'https://reicon.dev/og/logos.jpeg',
-  url = 'https://reicon.dev/logos',
+  image = 'https://vezham.com/og/logos.jpeg',
+  url = 'https://vezham.com/logos',
 }: LogoHelmetProps) {
   useEffect(() => {
     document.title = title;

@@ -38,7 +38,7 @@ export function parseRawItem(raw: RawItem): IllustrationItem {
   };
 }
 
-const CDN_BASE = 'https://cdn.reicon.dev';
+const CDN_BASE = '/cdn-proxy';
 
 export function getIllustrationUrl(slug: string): string {
   return `${CDN_BASE}/${slug}.svg`;
@@ -207,5 +207,4 @@ export async function getIllustrationDetail(slug: string): Promise<IllustrationI
     subcategory: 'misc',
   };
 }
-
 

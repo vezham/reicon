@@ -1,6 +1,6 @@
-# Using Reicon with React Native
+# Using Vezham with React Native
 
-Complete guide for using Reicon icons in React Native applications.
+Complete guide for using Vezham icons in React Native applications.
 
 ## Installation
 
@@ -195,7 +195,7 @@ Icons use PascalCase naming derived from their kebab-case names:
 | `shopping-cart` | `ShoppingCart` |
 | `user-circle` | `UserCircle` |
 
-Browse all icons at [reicon.dev](https://reicon.dev).
+Browse all icons at [vezham.com](https://vezham.com).
 
 ---
 
@@ -381,8 +381,8 @@ Make sure your `tsconfig.json` includes:
 
 ## Resources
 
-- 🌐 [Browse all icons](https://reicon.dev)
-- 📖 [Full documentation](https://reicon.dev/docs)
+- 🌐 [Browse all icons](https://vezham.com)
+- 📖 [Full documentation](https://vezham.com/docs)
 - 📦 [npm package](https://npmjs.com/package/@vezham/icons-react-native)
-- 🐙 [GitHub repository](https://github.com/dqev/reicon)
-- 🐛 [Report issues](https://github.com/dqev/reicon/issues)
+- 🐙 [GitHub repository](https://github.com/vezham/reicon)
+- 🐛 [Report issues](https://github.com/vezham/reicon/issues)

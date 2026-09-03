@@ -22,7 +22,7 @@ export default function CdnDocs({ markdownContent, copiedField, onCopy }: Props)
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        The official vanilla JavaScript package and CDN web components for Reicon. This package allows you to easily add precise, vector-based SVG icons to any JavaScript project or web application without framework dependencies.
+        The official vanilla JavaScript package and CDN web components for Vezham. This package allows you to easily add precise, vector-based SVG icons to any JavaScript project or web application without framework dependencies.
       </p>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">What you can accomplish:</p>

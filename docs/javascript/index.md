@@ -1,6 +1,6 @@
-# Using Reicon with Vanilla JS & CDN
+# Using Vezham with Vanilla JS & CDN
 
-The official vanilla JavaScript package and CDN web components for Reicon. This package allows you to easily add precise, vector-based SVG icons to any JavaScript project or web application without framework dependencies.
+The official vanilla JavaScript package and CDN web components for Vezham. This package allows you to easily add precise, vector-based SVG icons to any JavaScript project or web application without framework dependencies.
 
 ## What you can accomplish
 - Import individual icons as DOM element factories in vanilla JS
@@ -151,13 +151,13 @@ The `<vx-icon>` element acts like an inline block. It automatically inherits its
 ```
 
 ### Full Example HTML Page
-A complete HTML document importing Reicon via CDN and showcasing customizations:
+A complete HTML document importing Vezham via CDN and showcasing customizations:
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Reicon Page</title>
+  <title>Vezham Page</title>
   <script src="https://unpkg.com/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>
 </head>
 <body>

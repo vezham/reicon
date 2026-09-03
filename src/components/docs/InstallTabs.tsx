@@ -43,7 +43,7 @@ export default function InstallTabs({ packageName, copiedField, onCopy }: Props)
   const isCopied = copiedField === copyId;
 
   return (
-    <figure className="reicon-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm">
+    <figure className="vezham-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm">
       {/* Tab row */}
       <div className="relative flex items-center justify-between w-full h-10 pl-5 pr-1.5">
         <div ref={listRef} className="relative flex items-center h-full gap-x-4">

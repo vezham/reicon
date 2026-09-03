@@ -18,7 +18,7 @@ export default function PackPage() {
                 <link rel="canonical" href={PAGE_META['/pack'].url} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_META['/pack'].url} />
-                <meta property="og:site_name" content="Reicon" />
+                <meta property="og:site_name" content="Vezham" />
                 <meta property="og:title" content={PAGE_META['/pack'].title} />
                 <meta
                     property="og:description"
@@ -28,7 +28,7 @@ export default function PackPage() {
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@reicon_dev" />
+                <meta name="twitter:site" content="@vezham" />
                 <meta name="twitter:title" content={PAGE_META['/pack'].title} />
                 <meta
                     name="twitter:description"
@@ -40,12 +40,12 @@ export default function PackPage() {
                         '@context': 'https://schema.org',
                         '@type': 'BreadcrumbList',
                         itemListElement: [
-                            { '@type': 'ListItem', position: 1, name: 'Reicon', item: 'https://reicon.dev' },
+                            { '@type': 'ListItem', position: 1, name: 'Vezham', item: 'https://vezham.com' },
                             {
                                 '@type': 'ListItem',
                                 position: 2,
                                 name: 'Icon Pack',
-                                item: 'https://reicon.dev/pack',
+                                item: 'https://vezham.com/pack',
                             },
                         ],
                     })}

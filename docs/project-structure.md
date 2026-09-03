@@ -1,11 +1,11 @@
-# 📁 Reicon Project Structure
+# 📁 Vezham Project Structure
 
-This document provides a detailed breakdown of the file structure and directory contents of the Reicon monorepo.
+This document provides a detailed breakdown of the file structure and directory contents of the Vezham monorepo.
 
 ## Codebase Directory Tree
 
 ```
-reicon/
+vezham/
 ├── data/                        # ⭐ Single source of truth
 │   ├── icons/                  # Category/icon folders with SVG weights
 │   │   └── arrows/arrow-down2/
@@ -22,7 +22,7 @@ reicon/
 │   ├── @vezham/icons-vue/              # @vezham/icons-vue    (Vue 3)
 │   │   ├── scripts/build.cjs    # Vue package builder
 │   │   └── dist/                # Package compilation output
-│   ├── reicon/                  # reicon        (vanilla JS)
+│   ├── vezham/                  # vezham        (vanilla JS)
 │   │   ├── scripts/             # Vanilla JS + CDN builders
 │   │   │   ├── build.cjs        # Main package builder
 │   │   │   └── build-cdn.cjs    # CDN web component builder
@@ -31,9 +31,9 @@ reicon/
 │   │   ├── scripts/build.cjs    # Bundles offline search index + server
 │   │   ├── src/server/          # MCP stdio server and tool handlers
 │   │   └── dist/                # Package compilation output
-│   ├── reicon-flutter/          # reicon_flutter (Dart & Flutter)
-│   ├── reicon-vscode/           # reicon-vscode (VS Code extension)
-│   └── reicon-figma/            # reicon-figma  (Figma plugin)
+│   ├── vezham-flutter/          # vezham_icons_flutter (Dart & Flutter)
+│   ├── vezham-vscode/           # vezham-vscode (VS Code extension)
+│   └── vezham-figma/            # vezham-figma  (Figma plugin)
 │
 ├── docs/
 │   └── mcp/index.md             # MCP Server guide for agents and CLI
@@ -78,7 +78,7 @@ reicon/
 │   │   │   ├── IconCard.tsx  # Icon display card (+ skeleton)
 │   │   │   ├── IconTooltip.tsx (with icon-tooltip/ subdir)
 │   │   │   ├── LoadingScreen.tsx
-│   │   │   └── ReIcon.tsx
+│   │   │   └── VezhamIcon.tsx
 │   │   └── docs/             # Documentation guide components
 │   │       ├── ActionsBar.tsx
 │   │       ├── CodeBlock.tsx
@@ -150,13 +150,13 @@ reicon/
 │   │
 │   ├── lib/                 # Shared utilities
 │   │   ├── icon-data.ts    # Lazy JSON loader for icon metadata
-│   │   └── reicon-loader.ts # Shared Reicon web component readiness promise
+│   │   └── vezham-loader.ts # Shared Vezham web component readiness promise
 │   ├── data/
 │   │   └── search-index.json, search-data.ts
 │   ├── hooks/
 │   │   └── useIconSearch.ts
 │   ├── types/
-│   │   └── reicon.d.ts
+│   │   └── vezham.d.ts
 │   ├── test/
 │   │   ├── setup.ts
 │   │   └── smoke.test.tsx

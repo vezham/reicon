@@ -42,16 +42,16 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
       {/* Importing Custom Element */}
       <h4 className="text-md font-medium text-text-base mb-4 mt-8">Registering Custom Element (<code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">{'<vx-icon>'}</code>)</h4>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        You can register and import the web component runtime right from your npm installation. Simply import <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">reicon/element</code> once in your application entry point.
+        You can register and import the web component runtime right from your npm installation. Simply import <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham/element</code> once in your application entry point.
       </p>
 
       <SyntaxBlock
         title="JavaScript (Entry)"
-        onCopy={() => onCopy("import 'reicon/element';\n\n// Now you can render <vx-icon> anywhere in your markup:\n// document.body.innerHTML = '<vx-icon icon=\"home\" size=\"24\" weight=\"filled\"></vx-icon>';", 'vanilla-element')}
+        onCopy={() => onCopy("import 'vezham/element';\n\n// Now you can render <vx-icon> anywhere in your markup:\n// document.body.innerHTML = '<vx-icon icon=\"home\" size=\"24\" weight=\"filled\"></vx-icon>';", 'vanilla-element')}
         copied={copiedField === 'vanilla-element'}
       >
         <span className="text-[#c678dd]">import</span>
-        <span className="text-[#98c379]"> 'reicon/element'</span>
+        <span className="text-[#98c379]"> 'vezham/element'</span>
         <span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-text-base/30">{"// Now use <vx-icon icon=\"home\"></vx-icon> in your HTML templates!"}</span>
@@ -157,19 +157,19 @@ export default function AdvancedUsage({ copiedField, onCopy }: Props) {
       {/* Full HTML Example */}
       <h3 className="text-lg font-serif text-text-base mb-4 mt-10">Full Example HTML Page</h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        A complete HTML document importing Reicon via CDN and showcasing customizations:
+        A complete HTML document importing Vezham via CDN and showcasing customizations:
       </p>
 
       <SyntaxBlock
         title="Complete HTML Page"
-        onCopy={() => onCopy('<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>Reicon Page</title>\n  <script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>\n</head>\n<body>\n  <nav>\n    <vx-icon icon="home" size="20"></vx-icon>\n    <vx-icon icon="user" size="20"></vx-icon>\n  </nav>\n  <main>\n    <h1>\n      <vx-icon icon="shield-check" size="28" weight="filled" color="#6C5CE7"></vx-icon>\n      App Verified\n    </h1>\n  </main>\n</body>\n</html>', 'cdn-full')}
+        onCopy={() => onCopy('<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>Vezham Page</title>\n  <script src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"></script>\n</head>\n<body>\n  <nav>\n    <vx-icon icon="home" size="20"></vx-icon>\n    <vx-icon icon="user" size="20"></vx-icon>\n  </nav>\n  <main>\n    <h1>\n      <vx-icon icon="shield-check" size="28" weight="filled" color="#6C5CE7"></vx-icon>\n      App Verified\n    </h1>\n  </main>\n</body>\n</html>', 'cdn-full')}
         copied={copiedField === 'cdn-full'}
       >
         <span className="text-text-base/30">{'<!DOCTYPE html>'}</span>
         {'\n'}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">html</span><span className="text-[#d19a66]"> lang</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"en"</span><span className="text-text-base/70">{'>'}</span>
         {'\n'}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">head</span><span className="text-text-base/70">{'>'}</span>
         {'\n  '}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">meta</span><span className="text-[#d19a66]"> charset</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"UTF-8"</span><span className="text-text-base/70"> /{'>'}</span>
-        {'\n  '}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">title</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/60">Reicon Page</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">title</span><span className="text-text-base/70">{'>'}</span>
+        {'\n  '}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">title</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/60">Vezham Page</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">title</span><span className="text-text-base/70">{'>'}</span>
         {'\n  '}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-[#d19a66]"> src</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/vezham-icons.js"</span><span className="text-text-base/70">{'></'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
         {'\n'}<span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">head</span><span className="text-text-base/70">{'>'}</span>
         {'\n'}<span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">body</span><span className="text-text-base/70">{'>'}</span>

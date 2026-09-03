@@ -9,10 +9,10 @@
 </p>
 <hr>
 
-# reicon
+# vezham
 
 ### Getting Started
 
-This repository mirrors the [reicon](https://github.com/dqev/reicon) repo to suit our needs.
+This repository mirrors the [vezham](https://github.com/vezham/reicon) repo to suit our needs.
 
 Please report any issues and contribute to the upstream repository.

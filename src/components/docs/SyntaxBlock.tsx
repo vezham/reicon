@@ -19,7 +19,7 @@ export default function SyntaxBlock({
   children,
 }: SyntaxBlockProps) {
   return (
-    <figure className="reicon-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm">
+    <figure className="vezham-cb relative my-0 overflow-hidden rounded-xl bg-text-base/3 text-sm">
       {/* Title row */}
       <div className="flex items-center gap-2 h-10 pl-4 pr-1.5">
         {icon && (

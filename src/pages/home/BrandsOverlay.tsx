@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRightUp } from '@vezham/icons-react';
 
-const STORAGE_KEY = 'reicon-brands-overlay-v2';
-const COOKIE_KEY = 'reicon_cookie_consent';
+const STORAGE_KEY = 'vezham-brands-overlay-v2';
+const COOKIE_KEY = 'vezham_cookie_consent';
 
 export default function BrandsOverlay() {
   const [visible, setVisible] = useState(false);
@@ -57,7 +57,7 @@ export default function BrandsOverlay() {
         <div className="relative aspect-[1200/400] overflow-hidden bg-gradient-to-br from-[#6C5CE7]/20 to-transparent">
           <img
             src="/new-launch.jpg"
-            alt="brands.reicon.dev"
+            alt="brands.vezham.com"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-bg-base via-bg-base/10 to-transparent" />
@@ -70,7 +70,7 @@ export default function BrandsOverlay() {
                 New Launch
               </div>
               <h3 className="font-serif text-[16px] text-text-base leading-[1.2] tracking-[-0.01em]">
-                brands.reicon.dev
+                brands.vezham.com
               </h3>
               <p className="text-[12px] text-text-base/45 leading-[1.5] mt-1">
                 4,900+ free brand logos in 3 variants.
@@ -78,7 +78,7 @@ export default function BrandsOverlay() {
             </div>
             <div className="flex gap-1.5 shrink-0 pt-1">
               <a
-                href="https://brands.reicon.dev"
+                href="https://brands.vezham.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 bg-[#6C5CE7] text-white text-[12px] font-medium px-3.5 py-2 rounded-full hover:bg-[#6C5CE7]/90 active:scale-[0.97] transition-all cursor-pointer whitespace-nowrap"

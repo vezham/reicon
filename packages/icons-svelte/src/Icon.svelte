@@ -37,7 +37,7 @@
   height={size}
   viewBox="0 0 24 24"
   fill="none"
-  class="reicon {className}"
+  class="vezham {className}"
   style={color != null ? `color: ${color}; ${customStyle}` : customStyle}
   {...$$restProps}
 >

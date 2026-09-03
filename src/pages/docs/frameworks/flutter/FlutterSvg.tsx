@@ -18,7 +18,7 @@ export default function FlutterSvg({ copiedField, onCopy }: Props) {
       <SyntaxBlock
         title="Dart"
         onCopy={() => onCopy(
-          "import 'package:flutter_svg/flutter_svg.dart';\n\nSvgPicture.string(\n  reiconSvg(Reicon.outline.heart, size: 24),\n  colorFilter: ColorFilter.mode(\n    Colors.red,\n    BlendMode.srcIn,\n  ),\n);",
+          "import 'package:flutter_svg/flutter_svg.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.outline.heart, size: 24),\n  colorFilter: ColorFilter.mode(\n    Colors.red,\n    BlendMode.srcIn,\n  ),\n);",
           'flutter-svg'
         )}
         copied={copiedField === 'flutter-svg'}
@@ -27,7 +27,7 @@ export default function FlutterSvg({ copiedField, onCopy }: Props) {
         {'\n\n'}
         <span className="text-[#61afef]">SvgPicture</span><span className="text-text-base/30">.</span><span className="text-[#61afef]">string</span><span className="text-text-base/70">(</span>
         {'\n  '}
-        <span className="text-[#61afef]">reiconSvg</span><span className="text-text-base/70">(</span><span className="text-[#61afef]">Reicon</span><span className="text-text-base/30">.outline</span><span className="text-text-base/70">.heart</span><span className="text-text-base/30">,</span>
+        <span className="text-[#61afef]">vezhamIconSvg</span><span className="text-text-base/70">(</span><span className="text-[#61afef]">Vezham</span><span className="text-text-base/30">.outline</span><span className="text-text-base/70">.heart</span><span className="text-text-base/30">,</span>
         {'\n    '}
         <span className="text-[#d19a66]">size</span><span className="text-text-base/30">: </span><span className="text-[#d19a66]">24</span><span className="text-text-base/30">,</span>
         {'\n  '}

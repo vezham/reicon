@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, PenSparkle } from '@vezham/icons-react';
 import { loadIconData } from '../../lib/icon-data';
-import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/reicon-loader';
+import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/vezham-loader';
 import PlaygroundPreview from './playground/PlaygroundPreview';
 import PlaygroundControls from './playground/PlaygroundControls';
 import PlaygroundCode from './playground/PlaygroundCode';

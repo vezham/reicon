@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://reicon.dev">
-    <img src="https://reicon.dev/readme-banner.png" alt="Vezham Icons for VS Code — SVG Icon Library for VS Code" width="100%" />
+  <a href="https://vezham.com">
+    <img src="https://vezham.com/readme-banner.png" alt="Vezham Icons for VS Code — SVG Icon Library for VS Code" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon"><img src="https://img.shields.io/visual-studio-marketplace/v/DevChauhan.reicon?color=black&label=marketplace" alt="VS Marketplace version" /></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon"><img src="https://img.shields.io/visual-studio-marketplace/d/DevChauhan.reicon?color=black&label=downloads" alt="VS Marketplace downloads" /></a>
-  <a href="https://github.com/dqev/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
-  <a href="https://reicon.dev"><img src="https://img.shields.io/badge/docs-reicon.dev-black" alt="Documentation" /></a>
-  <a href="https://github.com/dqev/reicon"><img src="https://img.shields.io/badge/github-dqev/reicon-black" alt="GitHub" /></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Vezham.icons"><img src="https://img.shields.io/visual-studio-marketplace/v/Vezham.icons?color=black&label=marketplace" alt="VS Marketplace version" /></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Vezham.icons"><img src="https://img.shields.io/visual-studio-marketplace/d/Vezham.icons?color=black&label=downloads" alt="VS Marketplace downloads" /></a>
+  <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
+  <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
+  <a href="https://github.com/vezham/reicon"><img src="https://img.shields.io/badge/github-Vezham-black" alt="GitHub" /></a>
 </p>
 
 <h1 align="center">Vezham Icons for VS Code</h1>
@@ -30,10 +30,10 @@
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
-| 🌐 &nbsp; Website & icon browser | [reicon.dev](https://reicon.dev) |
-| 📖 &nbsp; Documentation | [reicon.dev/docs](https://reicon.dev/docs) |
-| 📦 &nbsp; Marketplage | [marketplace.visualstudio.com/items?itemName=DevChauhan.reicon](https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon) |
-| 🎨 &nbsp; Figma plugin | [reicon.dev/docs/figma](https://reicon.dev/docs/figma) |
+| 🌐 &nbsp; Website & icon browser | [vezham.com](https://vezham.com) |
+| 📖 &nbsp; Documentation | [vezham.com/docs](https://vezham.com/docs) |
+| 📦 &nbsp; Marketplage | [marketplace.visualstudio.com/items?itemName=Vezham.icons](https://marketplace.visualstudio.com/items?itemName=Vezham.icons) |
+| 🎨 &nbsp; Figma plugin | [vezham.com/docs/figma](https://vezham.com/docs/figma) |
 
 ---
 
@@ -55,7 +55,7 @@
 
 ## Quick Start
 
-1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon)
+1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Vezham.icons)
 2. Click the **Vezham Icons** logo in the Activity Bar on the left
 3. Search for icons by name, category, or description keywords
 4. Set your preferred **Format** (React, Vue, Svelte, SVG), **Size**, and **Color**
@@ -86,11 +86,11 @@
 
 ## Links
 
-- 🌐 &nbsp; Website: [reicon.dev](https://reicon.dev)
-- 📖 &nbsp; Documentation: [reicon.dev/docs](https://reicon.dev/docs)
-- 🛍️ &nbsp; Marketplace: [marketplace.visualstudio.com/items?itemName=DevChauhan.reicon](https://marketplace.visualstudio.com/items?itemName=DevChauhan.reicon)
-- 🐙 &nbsp; GitHub: [github.com/dqev/reicon](https://github.com/dqev/reicon)
-- 🐛 &nbsp; Issues: [github.com/dqev/reicon/issues](https://github.com/dqev/reicon/issues)
+- 🌐 &nbsp; Website: [vezham.com](https://vezham.com)
+- 📖 &nbsp; Documentation: [vezham.com/docs](https://vezham.com/docs)
+- 🛍️ &nbsp; Marketplace: [marketplace.visualstudio.com/items?itemName=Vezham.icons](https://marketplace.visualstudio.com/items?itemName=Vezham.icons)
+- 🐙 &nbsp; GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
+- 🐛 &nbsp; Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 
 ---
 

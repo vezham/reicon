@@ -23,7 +23,7 @@ export default function ReactNativeDocs({ markdownContent, copiedField, onCopy }
             />
 
             <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-                The official React Native package for Reicon. Import beautifully crafted icons as React Native components with full TypeScript support and react-native-svg integration. All icons are tree-shakeable, ensuring only the icons you use end up in your bundle.
+                The official React Native package for Vezham. Import beautifully crafted icons as React Native components with full TypeScript support and react-native-svg integration. All icons are tree-shakeable, ensuring only the icons you use end up in your bundle.
             </p>
 
             <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">What you can accomplish:</p>

@@ -21,7 +21,7 @@ export default function Installation({ markdownContent, copiedField, onCopy }: P
       {/* Installation */}
       <h4 className="text-md font-medium text-text-base mb-4">Installation</h4>
       <InstallTabs
-        packageName="reicon"
+        packageName="vezham"
         copiedField={copiedField}
         onCopy={onCopy}
       />

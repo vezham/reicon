@@ -12,17 +12,17 @@ export default function PackagesPage() {
         <title>{PAGE_META['/packages'].title}</title>
         <meta name="description" content={PAGE_META['/packages'].description} />
         <link rel="canonical" href={PAGE_META['/packages'].url} />
-        <meta name="keywords" content="reicon packages, @vezham/icons-react, reicon-flutter, @vezham/icons-vue, @vezham/icons-svelte, SVG download, React icon library, Vue icons, Svelte icons" />
+        <meta name="keywords" content="vezham packages, @vezham/icons-react, vezham-flutter, @vezham/icons-vue, @vezham/icons-svelte, SVG download, React icon library, Vue icons, Svelte icons" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_META['/packages'].url} />
-        <meta property="og:site_name" content="Reicon" />
+        <meta property="og:site_name" content="Vezham" />
         <meta property="og:title" content={PAGE_META['/packages'].title} />
         <meta property="og:description" content={PAGE_META['/packages'].description} />
         <meta property="og:image" content={PAGE_META['/packages'].ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@reicon_dev" />
+        <meta name="twitter:site" content="@vezham" />
         <meta name="twitter:title" content={PAGE_META['/packages'].title} />
         <meta name="twitter:description" content={PAGE_META['/packages'].description} />
         <meta name="twitter:image" content={PAGE_META['/packages'].ogImage} />
@@ -30,8 +30,8 @@ export default function PackagesPage() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           'itemListElement': [
-            { '@type': 'ListItem', 'position': 1, 'name': 'Reicon', 'item': 'https://reicon.dev' },
-            { '@type': 'ListItem', 'position': 2, 'name': 'Packages', 'item': 'https://reicon.dev/packages' },
+            { '@type': 'ListItem', 'position': 1, 'name': 'Vezham', 'item': 'https://vezham.com' },
+            { '@type': 'ListItem', 'position': 2, 'name': 'Packages', 'item': 'https://vezham.com/packages' },
           ],
         })}</script>
       </Helmet>

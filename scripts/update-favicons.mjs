@@ -94,8 +94,8 @@ function runMigration() {
 
     // Replace structured data logo URL
     content = content.replace(
-      `"logo": "https://reicon.dev/favicon-96x96.png?v=2",`,
-      `"logo": "https://reicon.dev/favicon/apple-touch-icon.png",`
+      `"logo": "https://vezham.com/favicon-96x96.png?v=2",`,
+      `"logo": "https://vezham.com/favicon/apple-touch-icon.png",`
     );
 
     // Optimize Font Loading (Preload stylesheets & load asynchronously to fix render-blocking Core Web Vitals issues)
@@ -135,8 +135,8 @@ function runMigration() {
   if (existsSync(MANIFEST_PATH)) {
     console.log(`Updating: ${MANIFEST_PATH}`);
     const richManifest = {
-      "name": "Reicon — Free Open-Source Icon Library",
-      "short_name": "Reicon",
+      "name": "Vezham — Free Open-Source Icon Library",
+      "short_name": "Vezham",
       "description": "Free, open-source SVG icon library built with obsessive precision. Pixel-perfect, handcrafted icons for UI design, React, Vue, Svelte, Figma, and the web.",
       "start_url": "/",
       "scope": "/",
