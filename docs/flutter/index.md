@@ -8,7 +8,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  vezham_icons_flutter: ^1.0.0
+  vezham_icons: ^1.0.0
 ```
 
 ```bash
@@ -18,7 +18,7 @@ flutter pub get
 ## Usage
 
 ```dart
-import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';
+import 'package:vezham_icons/icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 ```
 
@@ -57,5 +57,5 @@ SvgPicture.string(
 
 ## Links
 
-- [pub.dev](https://pub.dev/packages/vezham_icons_flutter)
+- [pub.dev](https://pub.dev/packages/vezham_icons)
 - [Source](./packages/icons-flutter)

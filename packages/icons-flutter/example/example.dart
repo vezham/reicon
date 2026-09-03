@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 //
-// This is a simple usage example for the `/icons` package.
+// This is a simple usage example for the `package:vezham_icons/icons.dart` entrypoint.
 //
-// Run with: dart example/vezham_example.dart
+// Run with: dart example/example.dart
 
-import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';
+import 'package:vezham_icons/icons.dart';
 
 void main() {
   print('=== Vezham Icon Library ===\n');

@@ -17,12 +17,12 @@ export default function Installation({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="pubspec.yaml"
-        onCopy={() => onCopy("dependencies:\n  vezham_icons_flutter: ^1.0.0", 'flutter-install')}
+        onCopy={() => onCopy("dependencies:\n  vezham_icons: ^1.0.0", 'flutter-install')}
         copied={copiedField === 'flutter-install'}
       >
         <span className="text-[#e5c07b]">dependencies</span><span className="text-text-base/30">:</span>
         {'\n'}
-        <span className="pl-4"><span className="text-[#e5c07b]">vezham_icons_flutter</span><span className="text-text-base/30">: </span><span className="text-[#98c379]">^1.0.0</span></span>
+        <span className="pl-4"><span className="text-[#e5c07b]">vezham</span><span className="text-text-base/30">: </span><span className="text-[#98c379]">^1.0.0</span></span>
       </SyntaxBlock>
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mt-6 mb-4">

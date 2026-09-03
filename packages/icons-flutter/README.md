@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://pub.dev/packages/vezham_icons_flutter"><img src="https://img.shields.io/pub/v/vezham_icons_flutter?color=black&label=pub" alt="pub version" /></a>
-  <a href="https://pub.dev/packages/vezham_icons_flutter/score"><img src="https://img.shields.io/pub/points/vezham_icons_flutter?color=black" alt="pub points" /></a>
-  <a href="https://pub.dev/packages/vezham_icons_flutter"><img src="https://img.shields.io/pub/likes/vezham_icons_flutter?color=black" alt="pub likes" /></a>
+  <a href="https://pub.dev/packages/vezham_icons"><img src="https://img.shields.io/pub/v/vezham_icons?color=black&label=pub" alt="pub version" /></a>
+  <a href="https://pub.dev/packages/vezham_icons/score"><img src="https://img.shields.io/pub/points/vezham_icons?color=black" alt="pub points" /></a>
+  <a href="https://pub.dev/packages/vezham_icons"><img src="https://img.shields.io/pub/likes/vezham_icons?color=black" alt="pub likes" /></a>
   <a href="https://github.com/vezham/reicon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License" /></a>
   <a href="https://vezham.com"><img src="https://img.shields.io/badge/docs-vezham.com-black" alt="Documentation" /></a>
 </p>
@@ -43,7 +43,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  vezham_icons_flutter: ^1.0.0
+  vezham_icons: ^1.0.0
 ```
 
 ```bash
@@ -65,7 +65,7 @@ dart pub get
 ## Usage
 
 ```dart
-import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';
+import 'package:vezham_icons/icons.dart';
 ```
 
 ### Get SVG path data
@@ -196,7 +196,7 @@ Browse and search all 2674+ icons at <a href="https://vezham.com">vezham.com</a>
 
 - 🌐 &nbsp; Website: [vezham.com](https://vezham.com)
 - 📖 &nbsp; Documentation: [vezham.com/docs](https://vezham.com/docs)
-- 📦 &nbsp; pub: [pub.dev/packages/vezham_icons_flutter](https://pub.dev/packages/vezham_icons_flutter)
+- 📦 &nbsp; pub: [pub.dev/packages/vezham_icons](https://pub.dev/packages/vezham_icons)
 - 🐙 &nbsp; GitHub: [github.com/vezham/reicon](https://github.com/vezham/reicon)
 - 🐛 &nbsp; Issues: [github.com/vezham/reicon/issues](https://github.com/vezham/reicon/issues)
 

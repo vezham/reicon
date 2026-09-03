@@ -21,7 +21,7 @@ export function FlutterSnippet({ flutterName, activeWeight, size }: { flutterNam
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:flutter_svg/flutter_svg.dart'</span><span className="text-text-base/30">;</span>
       {'\n'}
-      <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:vezham_icons_flutter/vezham_icons_flutter.dart'</span><span className="text-text-base/30">;</span>
+      <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:vezham_icons/icons.dart'</span><span className="text-text-base/30">;</span>
       {'\n\n'}
       <span className="text-[#61afef]">SvgPicture</span><span className="text-text-base/70">.string(</span>
       {'\n'}

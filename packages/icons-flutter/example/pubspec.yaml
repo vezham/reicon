@@ -1,8 +1,8 @@
-name: vezham_icons_flutter_example
-description: Example usage of vezham_icons_flutter
+name: vezham_icons_example
+description: Example usage of vezham_icons
 publish_to: none
 environment:
   sdk: '>=3.0.0 <4.0.0'
 dependencies:
-  vezham_icons_flutter:
+  vezham_icons:
     path: ../

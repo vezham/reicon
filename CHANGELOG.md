@@ -25,7 +25,7 @@ All notable changes to the Reicon project and open-source platform will be docum
 ---
 
 ## [v1.1.1] - 2026-08-02
-- Added Flutter SDK (`vezham_icons_flutter`) support and docs guide.
+- Added Flutter SDK (`vezham_icons`) support and docs guide.
 - Added VS Code extension and MCP AI server documentation.
 
 ## [v1.1.0] - 2026-08-01

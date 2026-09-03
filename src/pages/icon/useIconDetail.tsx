@@ -97,7 +97,7 @@ export default function useIconDetail() {
   const reactNativeRaw = `import { ${pascalName} } from '@vezham/icons-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
   const vueRaw = `import { ${pascalName} } from '@vezham/icons-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
   const svelteRaw = `<script>\n  import { ${pascalName} } from '@vezham/icons-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
-  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons_flutter/vezham_icons_flutter.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
+  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons/icons.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
   const directRaw = `import ${pascalName} from '@vezham/icons-react/icons/${pascalName}';`;
 
   const CODE_TABS = useMemo(() => [

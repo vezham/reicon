@@ -111,12 +111,12 @@ export default function DocsContent({
                   <SectionHeader id="what-is-vezham" title="What is Vezham?" level="h2" markdownContent={vanillaDocs} />
                   <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
                     Vezham is a free, open-source vector graphics library combining <strong>3,900+ UI icons</strong>, <strong>71,000+ vector illustrations</strong>, and <strong>4,900+ brand logos</strong>.
-                    The ecosystem offers native packages for <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham</code> (vanilla JS &amp; CDN),{' '}
+                    The ecosystem offers native packages for <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons</code> (vanilla JS &amp; CDN),{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-react</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-react-native</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-vue</code>,{' '}
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">@vezham/icons-svelte</code>, and{' '}
-                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham_icons_flutter</code>.
+                    <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham_icons</code>.
                   </p>
                   <p className="text-text-base/60 text-[15px] leading-[1.8]">
                     Icons come in Outline, Filled, and Duotone weights with zero external dependencies and full tree-shakeability. Vector illustrations and brand logos are hosted on global CDNs for direct usage across any framework or design environment.

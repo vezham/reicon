@@ -18,12 +18,12 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
       <SyntaxBlock
         title="Dart"
         onCopy={() => onCopy(
-          "import 'package:vezham_icons_flutter/vezham_icons_flutter.dart';\n\n// Outline icons\nfinal homePath = Vezham.outline.home;\nfinal settingsPath = Vezham.outline.settings;\n\n// Filled icons\nfinal heartFilled = Vezham.filled.heart;\n\n// Build a complete SVG string\nfinal svg = vezhamIconSvg(\n  Vezham.outline.star,\n  size: 32,\n  color: '#d97757',\n);",
+          "import 'package:vezham_icons/icons.dart';\n\n// Outline icons\nfinal homePath = Vezham.outline.home;\nfinal settingsPath = Vezham.outline.settings;\n\n// Filled icons\nfinal heartFilled = Vezham.filled.heart;\n\n// Build a complete SVG string\nfinal svg = vezhamIconSvg(\n  Vezham.outline.star,\n  size: 32,\n  color: '#d97757',\n);",
           'flutter-basic'
         )}
         copied={copiedField === 'flutter-basic'}
       >
-        <span className="text-[#c678dd]">import</span> <span className="text-[#98c379]">'package:vezham_icons_flutter/vezham_icons_flutter.dart'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span> <span className="text-[#98c379]">'package:vezham_icons/icons.dart'</span><span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-text-base/30">// Outline icons</span>
         {'\n'}

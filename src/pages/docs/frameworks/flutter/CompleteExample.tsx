@@ -18,7 +18,7 @@ export default function CompleteExample({ copiedField, onCopy }: Props) {
       <SyntaxBlock
         title="Dart"
         onCopy={() => onCopy(
-          "import 'package:flutter/material.dart';\nimport 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons_flutter/vezham_icons_flutter.dart';\n\nclass IconGrid extends StatelessWidget {\n  const IconGrid({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: const Text('Vezham Icons')),\n      body: Padding(\n        padding: const EdgeInsets.all(16),\n        child: Wrap(\n          spacing: 16,\n          runSpacing: 16,\n          children: [\n            SvgPicture.string(vezhamIconSvg(Vezham.outline.home, size: 32)),\n            SvgPicture.string(\n              vezhamIconSvg(Vezham.filled.heart, size: 32),\n              colorFilter: const ColorFilter.mode(Colors.red, BlendMode.srcIn),\n            ),\n            SvgPicture.string(\n              vezhamIconSvg(Vezham.outline.star, size: 32),\n              colorFilter: const ColorFilter.mode(Colors.amber, BlendMode.srcIn),\n            ),\n          ],\n        ),\n      ),\n    );\n  }\n}",
+          "import 'package:flutter/material.dart';\nimport 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons/icons.dart';\n\nclass IconGrid extends StatelessWidget {\n  const IconGrid({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: const Text('Vezham Icons')),\n      body: Padding(\n        padding: const EdgeInsets.all(16),\n        child: Wrap(\n          spacing: 16,\n          runSpacing: 16,\n          children: [\n            SvgPicture.string(vezhamIconSvg(Vezham.outline.home, size: 32)),\n            SvgPicture.string(\n              vezhamIconSvg(Vezham.filled.heart, size: 32),\n              colorFilter: const ColorFilter.mode(Colors.red, BlendMode.srcIn),\n            ),\n            SvgPicture.string(\n              vezhamIconSvg(Vezham.outline.star, size: 32),\n              colorFilter: const ColorFilter.mode(Colors.amber, BlendMode.srcIn),\n            ),\n          ],\n        ),\n      ),\n    );\n  }\n}",
           'flutter-complete'
         )}
         copied={copiedField === 'flutter-complete'}
@@ -27,7 +27,7 @@ export default function CompleteExample({ copiedField, onCopy }: Props) {
         {'\n'}
         <span className="text-[#c678dd]">import</span> <span className="text-[#98c379]">'package:flutter_svg/flutter_svg.dart'</span><span className="text-text-base/30">;</span>
         {'\n'}
-        <span className="text-[#c678dd]">import</span> <span className="text-[#98c379]">'package:vezham_icons_flutter/vezham_icons_flutter.dart'</span><span className="text-text-base/30">;</span>
+        <span className="text-[#c678dd]">import</span> <span className="text-[#98c379]">'package:vezham_icons/icons.dart'</span><span className="text-text-base/30">;</span>
         {'\n\n'}
         <span className="text-[#c678dd]">class</span> <span className="text-[#61afef]">IconGrid</span> <span className="text-[#c678dd]">extends</span> <span className="text-[#61afef]">StatelessWidget</span> <span className="text-text-base/70">{'{'}</span>
         {'\n  '}
