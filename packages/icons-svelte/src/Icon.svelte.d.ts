@@ -10,11 +10,7 @@ export interface IconComponentProps {
     | 'outline'
     | 'filled'
     | 'duotone-outline'
-    | 'duotone-filled'
-    | 'Outline'
-    | 'Filled'
-    | 'DuotoneOutline'
-    | 'DuotoneFilled';
+    | 'duotone-filled';
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;
   /** Icon svg path data for different weights */

@@ -234,11 +234,7 @@ const umdBundle = `(function (global, factory) {
     outline: 'O',
     filled: 'F',
     'duotone-outline': 'DO',
-    'duotone-filled': 'DF',
-    Outline: 'O',
-    Filled: 'F',
-    DuotoneOutline: 'DO',
-    DuotoneFilled: 'DF'
+    'duotone-filled': 'DF'
   };
 
   function escAttr(v) { return String(v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -376,10 +372,10 @@ const runtimeJS = `/*!
   var W_SHORT = { outline: 'O', filled: 'F', 'duotone-outline': 'DO', 'duotone-filled': 'DF' };
   var WEIGHTS = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
   var WEIGHT_ALIASES = {
-    filled: 'filled', bold: 'filled', Filled: 'filled',
-    outline: 'outline', linear: 'outline', Outline: 'outline',
-    'duotone-outline': 'duotone-outline', duotoneoutline: 'duotone-outline', DuotoneOutline: 'duotone-outline',
-    'duotone-filled': 'duotone-filled', duotonefilled: 'duotone-filled', DuotoneFilled: 'duotone-filled',
+    filled: 'filled',
+    outline: 'outline',
+    'duotone-outline': 'duotone-outline',
+    'duotone-filled': 'duotone-filled',
   };
 
   // ─── caches ───────────────────────────────────────────────────────────────

@@ -3,10 +3,6 @@ const W_MAP = {
   filled: 'F',
   'duotone-outline': 'DO',
   'duotone-filled': 'DF',
-  Outline: 'O',
-  Filled: 'F',
-  DuotoneOutline: 'DO',
-  DuotoneFilled: 'DF',
 };
 
 /** Escape a value for safe embedding inside an HTML/SVG attribute. */

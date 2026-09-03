@@ -2,11 +2,7 @@ export type IconWeight =
   | 'outline'
   | 'filled'
   | 'duotone-outline'
-  | 'duotone-filled'
-  | 'Outline'
-  | 'Filled'
-  | 'DuotoneOutline'
-  | 'DuotoneFilled';
+  | 'duotone-filled';
 
 export interface IconOptions {
   /** Primary color. Default: `currentColor` */

@@ -4,11 +4,7 @@ export type IconWeight =
   | 'outline'
   | 'filled'
   | 'duotone-outline'
-  | 'duotone-filled'
-  | 'Outline'
-  | 'Filled'
-  | 'DuotoneOutline'
-  | 'DuotoneFilled';
+  | 'duotone-filled';
 
 export declare const iconProps: {
   color: { type: StringConstructor; default: undefined };

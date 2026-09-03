@@ -5,11 +5,7 @@ export type IconWeight =
   | 'outline'
   | 'filled'
   | 'duotone-outline'
-  | 'duotone-filled'
-  | 'Outline'
-  | 'Filled'
-  | 'DuotoneOutline'
-  | 'DuotoneFilled';
+  | 'duotone-filled';
 
 export interface IconProps extends Omit<SvgProps, 'color'> {
   /** Primary color. Default: `currentColor` (black in RN) */

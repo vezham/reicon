@@ -22,10 +22,6 @@
     filled: 'F',
     'duotone-outline': 'DO',
     'duotone-filled': 'DF',
-    Outline: 'O',
-    Filled: 'F',
-    DuotoneOutline: 'DO',
-    DuotoneFilled: 'DF',
   };
 
   $: key = W_MAP[weight] || 'O';

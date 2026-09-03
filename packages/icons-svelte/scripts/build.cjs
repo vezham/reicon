@@ -178,7 +178,7 @@ export interface IconProps {
   /** Icon size (px when number, or any CSS unit). Default: \`24\` */
   size?: number | string;
   /** Icon weight / style. Default: \`outline\` */
-  weight?: 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled' | 'Outline' | 'Filled' | 'DuotoneOutline' | 'DuotoneFilled';
+  weight?: 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;
   // allow other standard SVG/HTML attributes
