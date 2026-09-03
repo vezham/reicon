@@ -4,6 +4,7 @@
   "version": "1.0.0-alpha.1",
   "type": "module",
   "scripts": {
+    "@vx/ws:clean:cache": "find . \\( -name '.turbo' -o -name '.next' -o -name 'dist' -o -name 'node_modules' -o -name '.source' -o -name '.contentlayer' -o -name 'pnpm-lock.yaml' \\) -prune -exec rm -rf '{}' +",
     "@vx/cli:format-check-": "prettier --write \"**/*.{json,md,mdx,css,scss,yaml,yml}\" --ignore-path .prettierignore",
     "@vx/ws:changeset": "changeset",
     "dev": "node scripts/generate-website-search-index.mjs && node scripts/sync-illustration-data.mjs && vite --port=3000 --host=0.0.0.0",
