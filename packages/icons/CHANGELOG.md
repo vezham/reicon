@@ -1,5 +1,11 @@
 # @vezham/icons
 
+## 1.0.6
+
+### Patch Changes
+
+- [`bed8648`](https://github.com/vezham/reicon/commit/bed8648a66912ad84254f564b7d1d6b7814410d5) Thanks [@suresh-vtpl](https://github.com/suresh-vtpl)! - Sync scolar icons
+
 ## 1.0.5
 
 ### Patch Changes
