@@ -1,7 +1,15 @@
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { SvgProps } from 'react-native-svg';
 
-export type IconWeight = 'Filled' | 'Outline';
+export type IconWeight =
+  | 'outline'
+  | 'filled'
+  | 'duotone-outline'
+  | 'duotone-filled'
+  | 'Outline'
+  | 'Filled'
+  | 'DuotoneOutline'
+  | 'DuotoneFilled';
 
 export interface IconProps extends Omit<SvgProps, 'color'> {
   /** Primary color. Default: `currentColor` (black in RN) */
@@ -10,7 +18,7 @@ export interface IconProps extends Omit<SvgProps, 'color'> {
   secondaryColor?: string;
   /** Icon size (number for RN). Default: `24` */
   size?: number;
-  /** Icon weight / style. Default: `Outline` */
+  /** Icon weight / style. Default: `outline` */
   weight?: IconWeight;
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;

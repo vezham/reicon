@@ -5,8 +5,16 @@ export interface IconComponentProps {
   color?: string;
   /** Icon size (px when number, or any CSS unit). Default: `24` */
   size?: number | string;
-  /** Icon weight / style: `'Outline'` | `'Filled'`. Default: `'Outline'` */
-  weight?: 'Outline' | 'Filled';
+  /** Icon weight / style. Default: `outline` */
+  weight?:
+    | 'outline'
+    | 'filled'
+    | 'duotone-outline'
+    | 'duotone-filled'
+    | 'Outline'
+    | 'Filled'
+    | 'DuotoneOutline'
+    | 'DuotoneFilled';
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;
   /** Icon svg path data for different weights */

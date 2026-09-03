@@ -15,7 +15,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Vue SFC"
-        onCopy={() => onCopy("<script setup>\nimport { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';\n</script>\n\n<template>\n  <Home />\n  <ShieldCheck :size=\"32\" color=\"#d97757\" />\n  <AltArrowDown weight=\"Filled\" />\n</template>", 'vue-basic')}
+        onCopy={() => onCopy("<script setup>\nimport { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';\n</script>\n\n<template>\n  <Home />\n  <ShieldCheck :size=\"32\" color=\"#d97757\" />\n  <AltArrowDown weight=\"filled\" />\n</template>", 'vue-basic')}
         copied={copiedField === 'vue-basic'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script setup</span><span className="text-text-base/70">{'>'}</span>
@@ -40,7 +40,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         {'\n  '}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">ShieldCheck</span><span className="text-[#d19a66]"> :size</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"32"</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#d97757"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n  '}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">AltArrowDown</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">AltArrowDown</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
         <span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">template</span><span className="text-text-base/70">{'>'}</span>
       </SyntaxBlock>

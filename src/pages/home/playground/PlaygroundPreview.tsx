@@ -1,3 +1,5 @@
+import type { PlaygroundIconWeight } from '../Playground';
+
 export default function PlaygroundPreview({
   selected,
   size,
@@ -7,7 +9,7 @@ export default function PlaygroundPreview({
 }: {
   selected: string;
   size: number;
-  weight: 'outline' | 'filled';
+  weight: PlaygroundIconWeight;
   displayColor: string;
   pascalName: string;
 }) {

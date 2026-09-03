@@ -84,7 +84,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(function Header({ className 
               GitHub
               {stars !== null && (
                 <span className="flex items-center gap-0.5 text-text-base/50 text-[11px] font-medium border-l border-text-base/15 pl-1.5">
-                  <Star size={11} weight="Filled" color="#eab308" className="shrink-0 relative -top-[0.5px]" />
+                  <Star size={11} weight="filled" color="#eab308" className="shrink-0 relative -top-[0.5px]" />
                   {stars}
                 </span>
               )}

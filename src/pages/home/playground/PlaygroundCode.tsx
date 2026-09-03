@@ -1,5 +1,6 @@
 import { Copy } from '@vezham/icons-react';
 import { useState } from 'react';
+import type { PlaygroundIconWeight } from '../Playground';
 
 export default function PlaygroundCode({
     selected,
@@ -13,7 +14,7 @@ export default function PlaygroundCode({
 }: {
     selected: string;
     size: number;
-    weight: 'outline' | 'filled';
+    weight: PlaygroundIconWeight;
     displayColor: string;
     icons: string[];
     onSelect: (name: string) => void;

@@ -76,11 +76,11 @@ This file lists every icon in the Vezham SVG icon library by category. Use it to
 **Quick lookup**: Find the icon's kebab-case name below, then:
 - **Components** (React/Vue/Svelte): convert to PascalCase (\`arrow-up-right\` → \`ArrowUpRight\`)
 - **CDN**: use the kebab-case name as-is: \`<vx-icon icon="arrow-up-right">\`
-- **Direct SVG CDN**: use \`https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{name}.svg\` for outline, \`{name}-filled.svg\` for filled, or \`{name}-duotone.svg\` when available
+- **Direct SVG CDN**: use \`https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/{name}.svg\` for outline, \`{name}-filled.svg\` for filled, \`{name}-duotone-outline.svg\`, or \`{name}-duotone-filled.svg\` when available
 
 ## Stats
-- **Total**: ${totalCount} unique designs (${totalCount * 2} icons counting both weights)
-- **Weights**: "Outline" (default) | "Filled"
+- **Total**: ${totalCount} unique designs with outline, filled, duotone-outline, and duotone-filled assets where available
+- **Weights**: "outline" (default) | "filled" | "duotone-outline" | "duotone-filled"
 - **Grid**: 24×24 px
 
 ---

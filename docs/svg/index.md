@@ -1,10 +1,10 @@
 # Vezham Raw SVGs & Assets Guide
 
-Download and integrate raw SVG vector files directly into vanilla HTML layouts, static sites, or design platforms. We provide pre-compiled, optimized icon sheets in both Outline and Filled weights.
+Download and integrate raw SVG vector files directly into vanilla HTML layouts, static sites, or design platforms. We provide pre-compiled, optimized icon sheets across outline, filled, duotone-outline, and duotone-filled weights.
 
 ### 1. Download ZIP Archive
 
-Get the complete, compressed package containing all 2,700+ icons in both Outline and Filled weights (total 5,400+ vectors).
+Get the complete, compressed package containing all 2,700+ icon designs across outline, filled, duotone-outline, and duotone-filled weights.
 
 All icons are compressed and optimized for lightweight load speeds, pre-colored in black (#000000) for standard vector previews.
 

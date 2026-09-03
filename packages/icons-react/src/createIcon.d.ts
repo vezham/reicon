@@ -1,6 +1,14 @@
 import { ForwardRefExoticComponent, RefAttributes, SVGAttributes } from 'react';
 
-export type IconWeight = 'Filled' | 'Outline';
+export type IconWeight =
+  | 'outline'
+  | 'filled'
+  | 'duotone-outline'
+  | 'duotone-filled'
+  | 'Outline'
+  | 'Filled'
+  | 'DuotoneOutline'
+  | 'DuotoneFilled';
 
 export interface IconProps extends Omit<SVGAttributes<SVGSVGElement>, 'color'> {
   /** Primary color. Default: inherits from CSS */
@@ -9,7 +17,7 @@ export interface IconProps extends Omit<SVGAttributes<SVGSVGElement>, 'color'> {
   secondaryColor?: string;
   /** Icon size (px when number). Default: `24` */
   size?: number | string;
-  /** Icon weight / style. Default: `Outline` */
+  /** Icon weight / style. Default: `outline` */
   weight?: IconWeight;
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;

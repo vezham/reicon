@@ -20,7 +20,7 @@ const SRC = path.join(__dirname, '..', 'src');
 const DIST = path.join(__dirname, '..', 'dist');
 
 // ── weight short keys ──────────────────────────────────────────────────────
-const W_KEY = { Filled: 'F', Outline: 'O' };
+const W_KEY = { outline: 'O', filled: 'F', 'duotone-outline': 'DO', 'duotone-filled': 'DF' };
 
 // ── helpers ────────────────────────────────────────────────────────────────
 function toPascalCase(str) {
@@ -48,7 +48,7 @@ function escapeForJS(s) {
  * Build a base64 data URI for an inline SVG preview (shown in IDE hover).
  */
 function buildPreviewDataUri(weights) {
-  const inner = weights['O'] || weights['F'] || '';
+  const inner = weights.O || weights.F || weights.DO || weights.DF || '';
   if (!inner) return '';
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>`
     .replace(/currentColor/g, '#e4e4e7');
@@ -198,7 +198,7 @@ const pkg = {
   version: srcPkg.version,
   type: 'module',
   description:
-    `Vue 3 icon components for ${icons.length}+ icons in 2 weights (Outline & Filled). Tree-shakeable, TypeScript-ready.`,
+    `Vue 3 icon components for ${icons.length}+ icons in 4 weights. Tree-shakeable, TypeScript-ready.`,
   main: './index.js',
   module: './index.js',
   types: './index.d.ts',
@@ -264,7 +264,7 @@ const readme = `<p align="center">
 <h1 align="center">Vezham Vue</h1>
 
 <p align="center">
-  <b>${icons.length}+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vue 3 component wrapper • Zero dependencies • MIT Licensed
+  <b>${icons.length}+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • Vue 3 component wrapper • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -320,18 +320,20 @@ import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';
   <div>
     <Home />
     <ShieldCheck :size="32" color="#d97757" />
-    <AltArrowDown weight="Filled" />
+    <AltArrowDown weight="filled" />
   </div>
 </template>
 \`\`\`
 
 ### Weights
 
-Every icon ships in two weights — **Outline** (default) and **Filled**:
+Every icon ships in four weights — **outline**, **filled**, **duotone-outline**, and **duotone-filled**:
 
 \`\`\`vue
-<Home />                     <!-- Outline (default) -->
-<Home weight="Filled" />     <!-- Filled -->
+<Home />                     <!-- outline (default) -->
+<Home weight="filled" />     <!-- filled -->
+<Home weight="duotone-outline" />
+<Home weight="duotone-filled" />
 \`\`\`
 
 ### Sizing & coloring
@@ -374,7 +376,7 @@ Pass any standard SVG attribute — \`class\`, \`style\`, \`onClick\`, \`aria-*\
 |------|------|---------|-------------|
 | \`size\` | \`number | string\` | \`24\` | Icon width & height (number = px) |
 | \`color\` | \`string\` | — | Primary icon stroke/fill color. Leave unset to use CSS class. |
-| \`weight\` | \`'Outline' | 'Filled'\` | \`'Outline'\` | Icon style variant |
+| \`weight\` | \`'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'\` | \`'outline'\` | Icon style variant |
 | \`strokeWidth\` | \`number | string\` | — | Override the default stroke width |
 | \`class\` | \`string | array | object\` | — | Additional CSS class on the \`<svg>\` element |
 | \`style\` | \`string | array | object\` | — | Additional inline styles |
@@ -422,7 +424,7 @@ Full type declarations ship with the package — no separate \`@types/\` install
 \`\`\`ts
 import { Home, type IconProps, type IconWeight } from '@vezham/icons-vue';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
 \`\`\`
 
@@ -431,14 +433,14 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | Type | Description |
 |------|-------------|
 | \`IconProps\` | Combined icon props + Vue SVG attributes |
-| \`IconWeight\` | \`'Outline' | 'Filled'\` |
+| \`IconWeight\` | \`'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'\` |
 
 ---
 
 ## Features
 
 - **${icons.length}+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead beyond Vue itself
 - **TypeScript-ready** — Full type declarations included, no extra packages needed
@@ -489,7 +491,7 @@ fs.writeFileSync(path.join(DIST, 'icon-names.json'), JSON.stringify(nameMap, nul
 const totalFiles = (icons.length * 2) + 5;
 console.log(`\nDone!`);
 console.log(`  Icons:       ${icons.length}`);
-console.log(`  Weights:     Outline + Filled`);
+console.log(`  Weights:     outline + filled + duotone-outline + duotone-filled`);
 console.log(`  Files:       ${totalFiles}`);
 console.log(`  Output:      ${DIST}`);
 console.log(`\nTo publish:`);

@@ -66,7 +66,7 @@ A typical two-step flow for an agent adding an icon to a React component:
 1. **Search** with concise keywords (not full sentences):
 
 ```
-search_icons({ query: "heart", weight: "Filled" })
+search_icons({ query: "heart", weight: "filled" })
 ```
 
 2. **Apply** the chosen icon:
@@ -74,7 +74,7 @@ search_icons({ query: "heart", weight: "Filled" })
 ```
 apply_icon({
   name: "heart",
-  weight: "Filled",
+  weight: "filled",
   framework: "react",
   size: 24,
   color: "#ef4444"
@@ -89,13 +89,13 @@ The tool returns `{ importStatement, docsSnippet }`. The agent uses its own file
 
 ### search_icons
 
-Input: `{ query: string, weight?: "Outline" | "Filled", limit?: number }`
+Input: `{ query: string, weight?: "outline" | "filled" | "duotone-outline" | "duotone-filled", limit?: number }`
 
 Returns ranked results with `name`, `weight`, `category`, `tags`, and `score`. Queries that look like full sentences are rejected. Use short keywords like `cart`, `user`, or `settings`.
 
 ### view_icon
 
-Input: `{ name: string, weight: "Outline" | "Filled" }`
+Input: `{ name: string, weight: "outline" | "filled" | "duotone-outline" | "duotone-filled" }`
 
 Returns the raw optimized SVG string plus `viewBox`, `tags`, and `category`.
 
@@ -106,7 +106,7 @@ Input:
 ```ts
 {
   name: string;
-  weight: "Outline" | "Filled";
+  weight: "outline" | "filled" | "duotone-outline" | "duotone-filled";
   framework: "react" | "vue" | "svelte" | "html" | "svg";
   size?: number;
   color?: string;
@@ -130,7 +130,7 @@ The same binary supports CLI mode when arguments are provided:
 
 ```bash
 npx @vezham/icons-mcp search "shopping cart"
-npx @vezham/icons-mcp view heart --weight Filled
+npx @vezham/icons-mcp view heart --weight filled
 npx @vezham/icons-mcp apply heart --framework react --size 32 --color "#ef4444"
 npx @vezham/icons-mcp categories
 ```

@@ -1,8 +1,7 @@
 import type { ApplyIconInput, ApplyIconOutput, IconEntry, IconWeight } from './types.js';
 
 function weightProp(weight: IconWeight, framework: ApplyIconInput['framework']): string {
-  if (weight === 'Outline') return '';
-  if (framework === 'html') return ' weight="filled"';
+  if (weight === 'outline') return '';
   return ` weight="${weight}"`;
 }
 

@@ -9,7 +9,7 @@ interface Props {
 const PROPS = [
   { prop: 'size', type: 'number', default: '24', description: 'Width and height of the icon in pixels' },
   { prop: 'color', type: 'string', default: null, description: 'Icon color (any valid CSS color value)' },
-  { prop: 'weight', type: `'Outline' | 'Filled'`, default: `'Outline'`, description: 'Icon style weight' },
+  { prop: 'weight', type: `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'`, default: `'outline'`, description: 'Icon style weight' },
   { prop: 'class', type: 'string', default: null, description: 'CSS class name(s) to apply to the SVG element' },
   { prop: 'style', type: 'string', default: null, description: 'Inline styles to apply to the SVG element' },
 ];
@@ -28,7 +28,7 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Props"
-        onCopy={() => onCopy('<Home size={16} />\n<Home size={24} />\n<Home size={32} />\n\n<Heart color="#ef4444" />\n<Heart color="rgb(99, 102, 241)" />\n\n<Star />                       <!-- Outline (default) -->\n<Star weight="Filled" />       <!-- Filled -->\n\n<Home class="my-icon" />', 'svelte-props')}
+        onCopy={() => onCopy('<Home size={16} />\n<Home size={24} />\n<Home size={32} />\n\n<Heart color="#ef4444" />\n<Heart color="rgb(99, 102, 241)" />\n\n<Star />                       <!-- outline (default) -->\n<Star weight="filled" />       <!-- filled -->\n<Star weight="duotone-outline" />\n<Star weight="duotone-filled" />\n\n<Home class="my-icon" />', 'svelte-props')}
         copied={copiedField === 'svelte-props'}
       >
         <span className="text-text-base/30">{'<!-- Size -->'}</span>
@@ -47,9 +47,13 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Weight -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'                       <!-- Outline (default) -->'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'                       <!-- outline (default) -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'       <!-- Filled -->'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'       <!-- filled -->'}</span>
+        {'\n'}
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-outline"</span><span className="text-text-base/70"> /{'>'}</span>
+        {'\n'}
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Class -->'}</span>
         {'\n'}

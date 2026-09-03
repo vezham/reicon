@@ -11,6 +11,7 @@ import LogoPlayground from './playground/LogoPlayground';
 
 const CONSISTENCY_COUNT = 80;
 const HEX_RE = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+export type PlaygroundIconWeight = 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
 
 function ClaudeIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   return (
@@ -38,7 +39,7 @@ export default function Playground({ theme }: { theme: string }) {
   const isLight = theme === 'light';
   const [color, setColor] = useState(isLight ? '#111111' : '#ffffff');
   const [size, setSize] = useState(32);
-  const [weight, setWeight] = useState<'outline' | 'filled'>('outline');
+  const [weight, setWeight] = useState<PlaygroundIconWeight>('outline');
 
   const allIconNames = useMemo(() => Object.keys(iconNames), [iconNames]);
 

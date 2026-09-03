@@ -17,7 +17,7 @@ export default function TypeScriptSection({ markdownContent, copiedField, onCopy
 
       <SyntaxBlock
         title="Type Definition"
-        onCopy={() => onCopy("interface VezhamIconProps {\n  size?: number;\n  color?: string;\n  weight?: 'Outline' | 'Filled';\n  className?: string;\n}", 'ts')}
+        onCopy={() => onCopy("interface VezhamIconProps {\n  size?: number;\n  color?: string;\n  weight?: 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';\n  className?: string;\n}", 'ts')}
         copied={copiedField === 'ts'}
       >
         <span className="text-[#c678dd]">interface</span>
@@ -36,9 +36,13 @@ export default function TypeScriptSection({ markdownContent, copiedField, onCopy
         {'\n  '}
         <span className="text-[#e06c75]">weight</span>
         <span className="text-text-base/50">?:</span>
-        <span className="text-[#98c379]"> 'Outline'</span>
+        <span className="text-[#98c379]"> 'outline'</span>
         <span className="text-text-base/50"> | </span>
-        <span className="text-[#98c379]">'Filled'</span>
+        <span className="text-[#98c379]">'filled'</span>
+        <span className="text-text-base/50"> | </span>
+        <span className="text-[#98c379]">'duotone-outline'</span>
+        <span className="text-text-base/50"> | </span>
+        <span className="text-[#98c379]">'duotone-filled'</span>
         <span className="text-text-base/30">;</span>
         {'\n  '}
         <span className="text-[#e06c75]">className</span>

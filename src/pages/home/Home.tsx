@@ -63,7 +63,7 @@ export default function HomePage() {
           "@context": "https://schema.org",
           "@type": "Dataset",
           "name": "Vezham Icon Library",
-          "description": "A free, open-source SVG icon library with 2,700+ handcrafted, pixel-perfect icons in two weights (Outline and Filled).",
+          "description": "A free, open-source SVG icon library with 2,700+ handcrafted, pixel-perfect icons in outline, filled, duotone-outline, and duotone-filled weights.",
           "url": "https://vezham.com",
           "license": "https://opensource.org/licenses/MIT",
           "creator": { "@type": "Person", "name": "Dev Chauhan", "url": "https://devchauhan.in" },
@@ -86,7 +86,7 @@ export default function HomePage() {
           "step": [
             { "@type": "HowToStep", "name": "Install the package", "text": "Run 'npm install @vezham/icons-react' for React, 'npm install @vezham/icons-react-native' for React Native, 'npm install @vezham/icons-vue' for Vue 3, or 'npm install @vezham/icons-svelte' for Svelte.", "url": "https://vezham.com/docs" },
             { "@type": "HowToStep", "name": "Import the icon", "text": "Import by name: import { Home } from '@vezham/icons-react';", "url": "https://vezham.com/docs" },
-            { "@type": "HowToStep", "name": "Render with props", "text": "Render: <Home size={24} weight=\"Outline\" color=\"currentColor\" />", "url": "https://vezham.com/docs" },
+            { "@type": "HowToStep", "name": "Render with props", "text": "Render: <Home size={24} weight=\"outline\" color=\"currentColor\" />", "url": "https://vezham.com/docs" },
           ],
         })}</script>
       </Helmet>

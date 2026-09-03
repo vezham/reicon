@@ -178,13 +178,14 @@
       border: none;
       color: var(--text-secondary);
       padding: 5px 0;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       border-radius: 99px;
       cursor: pointer;
       transition: all 0.2s;
       flex: 1;
       text-align: center;
+      white-space: nowrap;
     }
 
     .segment-button.active {
@@ -591,8 +592,10 @@
       <div class="inline-controls-row">
         <!-- Weight Segmented Toggle -->
         <div class="segmented-control">
-          <button class="segment-button active" id="weight-outline" onclick="selectStyle('Outline', this)">Outline</button>
-          <button class="segment-button" id="weight-filled" onclick="selectStyle('Filled', this)">Filled</button>
+          <button class="segment-button active" id="weight-outline" data-style="outline" onclick="selectStyle('outline', this)">Outline</button>
+          <button class="segment-button" id="weight-filled" data-style="filled" onclick="selectStyle('filled', this)">Filled</button>
+          <button class="segment-button" id="weight-duotone-outline" data-style="duotone-outline" onclick="selectStyle('duotone-outline', this)">Duotone Outline</button>
+          <button class="segment-button" id="weight-duotone-filled" data-style="duotone-filled" onclick="selectStyle('duotone-filled', this)">Duotone Filled</button>
         </div>
         
         <!-- Format selector -->
@@ -668,7 +671,7 @@
 
     // State management
     let activeCategory = 'all';
-    let activeStyle = 'Outline'; 
+    let activeStyle = 'outline';
     let activeFormat = 'react';
     let activeSize = '24';
     let selectedColor = 'currentColor';
@@ -699,23 +702,21 @@
 
     function getSnippet(name, weight, rawCode, format, size, color) {
       const pascalName = toPascalCase(name);
-      const isFilled = weight === 'Filled';
-      
       switch (format) {
         case 'react': {
-          const weightProp = isFilled ? ' weight="Filled"' : '';
+          const weightProp = weight !== 'outline' ? ` weight="${weight}"` : '';
           const sizeProp = size !== 24 ? ` size={${size}}` : '';
           const colorProp = color && color !== 'currentColor' ? ` color="${color}"` : '';
           return `<${pascalName}${weightProp}${sizeProp}${colorProp} />`;
         }
         case 'vue': {
-          const weightProp = isFilled ? ' weight="Filled"' : '';
+          const weightProp = weight !== 'outline' ? ` weight="${weight}"` : '';
           const sizeProp = size !== 24 ? ` :size="${size}"` : '';
           const colorProp = color && color !== 'currentColor' ? ` color="${color}"` : '';
           return `<${pascalName}${weightProp}${sizeProp}${colorProp} />`;
         }
         case 'svelte': {
-          const weightProp = isFilled ? ' weight="Filled"' : '';
+          const weightProp = weight !== 'outline' ? ` weight="${weight}"` : '';
           const sizeProp = size !== 24 ? ` size={${size}}` : '';
           const colorProp = color && color !== 'currentColor' ? ` color="${color}"` : '';
           return `<${pascalName}${weightProp}${sizeProp}${colorProp} />`;
@@ -758,8 +759,9 @@
         }
         if (saved.style) {
           activeStyle = saved.style;
-          document.getElementById('weight-outline').classList.toggle('active', activeStyle === 'Outline');
-          document.getElementById('weight-filled').classList.toggle('active', activeStyle === 'Filled');
+          document.querySelectorAll('.segment-button').forEach(el => {
+            el.classList.toggle('active', el.dataset.style === activeStyle);
+          });
         }
         if (saved.category) {
           activeCategory = saved.category;
@@ -892,7 +894,7 @@
 
       for (let i = displayedCount; i < end; i++) {
         const item = filteredIcons[i];
-        const cardId = `${item.name}-${item.weight}`;
+        const cardId = `${item.name}::${item.weight}`;
 
         const card = document.createElement('div');
         card.className = `icon-card ${selectedIconName === cardId ? 'selected' : ''}`;
@@ -927,16 +929,14 @@
       applyFilters();
     }
 
-    // Style Swapping (Outline / Filled)
+    // Style Swapping
     function selectStyle(styleName, element) {
       document.querySelectorAll('.segment-button').forEach(el => el.classList.remove('active'));
       element.classList.add('active');
       activeStyle = styleName;
 
       if (selectedIconName) {
-        const lastHyphen = selectedIconName.lastIndexOf('-');
-        const name = selectedIconName.substring(0, lastHyphen);
-        const w = selectedIconName.substring(lastHyphen + 1);
+        const [, w] = selectedIconName.split('::');
         if (activeStyle !== w) {
           clearSelection();
         }

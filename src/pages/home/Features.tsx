@@ -27,7 +27,7 @@ export default function Features() {
                 <FeatureBlock icon={<HandHeart size={20} />} title="Handcrafted" description="No auto-generation. Each icon is manually designed, reviewed, and refined for visual consistency." />
                 <FeatureBlock icon={<ShieldCheck size={20} />} title="Open Source" description="MIT licensed. Use in personal and commercial projects. Free forever, no strings attached." />
                 <FeatureBlock icon={<Code size={20} />} title="Tree Shakeable" description="Import only what you need. Your bundle only includes the icons you actually use." />
-                <FeatureBlock icon={<Palette size={20} />} title="Two Weights" description="Outline and Filled variants for every icon. Switch with a single prop change." />
+                <FeatureBlock icon={<Palette size={20} />} title="Four Weights" description="Outline, filled, and two duotone variants for richer icon states." />
                 <FeatureBlock icon={<Box size={20} />} title="Zero Dependencies" description="Lightweight and self-contained. No external runtime dependencies to worry about." />
             </div>
         </section>

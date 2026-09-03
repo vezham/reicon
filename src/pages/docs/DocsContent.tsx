@@ -119,7 +119,7 @@ export default function DocsContent({
                     <code className="text-text-base/70 bg-text-base/6 px-1.5 py-0.5 rounded text-[12px]">vezham_icons</code>.
                   </p>
                   <p className="text-text-base/60 text-[15px] leading-[1.8]">
-                    Icons come in Outline, Filled, and Duotone weights with zero external dependencies and full tree-shakeability. Vector illustrations and brand logos are hosted on global CDNs for direct usage across any framework or design environment.
+                    Icons come in outline, filled, duotone-outline, and duotone-filled weights with zero external dependencies and full tree-shakeability. Vector illustrations and brand logos are hosted on global CDNs for direct usage across any framework or design environment.
                   </p>
                 </section>
               </>

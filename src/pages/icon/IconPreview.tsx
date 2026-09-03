@@ -3,6 +3,8 @@ import { EASE } from './utils';
 import { useDuotoneData } from '../../hooks/useDuotoneData';
 import { useMemo, useEffect } from 'react';
 
+type IconWeight = 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
+
 interface IconPreviewProps {
   pascalName: string;
   iconCategory: string;
@@ -12,7 +14,7 @@ interface IconPreviewProps {
   previewSize: number;
   useCustomColor: boolean;
   customColor: string;
-  onSetActiveWeight: (w: 'outline' | 'filled' | 'duotone') => void;
+  onSetActiveWeight: (w: IconWeight) => void;
   onSetPreviewSize: (s: number) => void;
   onReset: () => void;
 }
@@ -24,25 +26,31 @@ export default function IconPreview({
 }: IconPreviewProps) {
   const { duotoneMap } = useDuotoneData('Duotone');
 
-  const hasDuotone = useMemo(() => {
-    return Boolean(name && duotoneMap && duotoneMap[name]?.code);
+  const availableWeights = useMemo(() => {
+    const weights: IconWeight[] = ['outline', 'filled'];
+    if (!name || !duotoneMap) return weights;
+    if (duotoneMap[name]?.weights?.['duotone-outline']?.code) weights.push('duotone-outline');
+    if (duotoneMap[name]?.weights?.['duotone-filled']?.code) weights.push('duotone-filled');
+    return weights;
   }, [name, duotoneMap]);
 
   useEffect(() => {
-    if (duotoneMap && !hasDuotone && activeWeight === 'duotone') {
+    if (duotoneMap && !availableWeights.includes(activeWeight as IconWeight)) {
       onSetActiveWeight('outline');
     }
-  }, [duotoneMap, hasDuotone, activeWeight, onSetActiveWeight]);
-
-  const availableWeights = useMemo(() => {
-    return hasDuotone ? (['outline', 'filled', 'duotone'] as const) : (['outline', 'filled'] as const);
-  }, [hasDuotone]);
+  }, [duotoneMap, availableWeights, activeWeight, onSetActiveWeight]);
 
   const duotoneSvgInnerHtml = useMemo(() => {
-    if (activeWeight !== 'duotone' || !name || !duotoneMap?.[name]?.code) return null;
-    const rawCode = duotoneMap[name].code;
+    if (!activeWeight.startsWith('duotone') || !name) return null;
+    const rawCode = duotoneMap?.[name]?.weights?.[activeWeight as 'duotone-outline' | 'duotone-filled']?.code;
+    if (!rawCode) return null;
     return rawCode.replace(/fill="#[A-Fa-f0-9]{6}"/gi, 'fill="currentColor"');
   }, [activeWeight, name, duotoneMap]);
+
+  const formatWeightLabel = (weight: string) => weight
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
 
   return (
     <motion.div
@@ -68,7 +76,7 @@ export default function IconPreview({
             transition={{ duration: 0.22, ease: EASE }}
             className="flex items-center justify-center"
           >
-            {activeWeight === 'duotone' && duotoneSvgInnerHtml ? (
+            {activeWeight.startsWith('duotone') && duotoneSvgInnerHtml ? (
               <svg
                 viewBox="0 0 24 24"
                 width={previewSize}
@@ -125,12 +133,12 @@ export default function IconPreview({
 
         <div>
           <label className="text-[12px] text-text-base/50 mb-2 block">Weight</label>
-          <div className="flex gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {availableWeights.map((w) => (
               <button key={w} onClick={() => onSetActiveWeight(w)}
                 className={`flex-1 px-2.5 py-2 rounded-lg text-[13px] font-medium transition-all cursor-pointer flex items-center justify-center gap-1 ${activeWeight === w ? 'bg-[#6C5CE7]/15 text-[#6C5CE7] border border-[#6C5CE7]/30' : 'bg-text-base/5 text-text-base/40 border border-text-base/10 hover:text-text-base/60'}`}>
-                <span>{w.charAt(0).toUpperCase() + w.slice(1)}</span>
-                {w === 'duotone' && (
+                <span>{formatWeightLabel(w)}</span>
+                {w.startsWith('duotone') && (
                   <span className="text-[8px] font-bold uppercase tracking-wider px-1 rounded bg-[#6C5CE7]/20 text-[#6C5CE7]">Beta</span>
                 )}
               </button>
@@ -150,5 +158,3 @@ export default function IconPreview({
     </motion.div>
   );
 }
-
-

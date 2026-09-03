@@ -2,7 +2,7 @@ import { FlutterIcon } from '../../components/docs/framework/icons';
 
 export const FlutterLogo = () => <FlutterIcon size={14} />;
 
-export type IconSnippetWeight = 'outline' | 'filled' | 'duotone';
+export type IconSnippetWeight = 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
 
 interface SnippetOptions {
   activeWeight: IconSnippetWeight;
@@ -12,11 +12,20 @@ interface SnippetOptions {
 
 function toSvgUrlFilename(name: string, weight: IconSnippetWeight) {
   if (weight === 'filled') return `${name}-filled.svg`;
-  if (weight === 'duotone') return `${name}-duotone.svg`;
+  if (weight === 'duotone-outline') return `${name}-duotone-outline.svg`;
+  if (weight === 'duotone-filled') return `${name}-duotone-filled.svg`;
   return `${name}.svg`;
 }
 
+export function toFlutterWeightAccessor(weight: IconSnippetWeight) {
+  if (weight === 'duotone-outline') return 'duotoneOutline';
+  if (weight === 'duotone-filled') return 'duotoneFilled';
+  return weight;
+}
+
 export function FlutterSnippet({ flutterName, activeWeight, size }: { flutterName: string } & SnippetOptions) {
+  const flutterWeight = toFlutterWeightAccessor(activeWeight);
+
   return (
     <>
       <span className="text-[#c678dd]">import</span><span className="text-text-base/70"> 'package:flutter_svg/flutter_svg.dart'</span><span className="text-text-base/30">;</span>
@@ -25,7 +34,7 @@ export function FlutterSnippet({ flutterName, activeWeight, size }: { flutterNam
       {'\n\n'}
       <span className="text-[#61afef]">SvgPicture</span><span className="text-text-base/70">.string(</span>
       {'\n'}
-      <span className="text-text-base/70">  </span><span className="text-[#61afef]">vezhamIconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Vezham</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{activeWeight}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
+      <span className="text-text-base/70">  </span><span className="text-[#61afef]">vezhamIconSvg</span><span className="text-text-base/70">(</span><span className="text-[#e5c07b]">Vezham</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterWeight}</span><span className="text-text-base/70">.</span><span className="text-[#e5c07b]">{flutterName}</span><span className="text-text-base/70">),</span>
       {'\n'}
       <span className="text-text-base/70">  width: </span><span className="text-[#d19a66]">{size}</span><span className="text-text-base/30">,</span>
       {'\n'}

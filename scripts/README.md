@@ -12,7 +12,7 @@ This folder contains the build pipeline automation, SEO utilities, and asset com
 
 | Script File | Purpose | Command |
 | :--- | :--- | :--- |
-| [`generate-zip.mjs`](file:///Users/devchauhan/Documents/Website/vezham/scripts/generate-zip.mjs) | Compiles all outline and filled icon SVG assets from `data/icons` and compresses them into a zip file at `public/vezham-icons.zip`. | `node scripts/generate-zip.mjs` |
+| [`generate-zip.mjs`](file:///Users/devchauhan/Documents/Website/vezham/scripts/generate-zip.mjs) | Compiles all outline, filled, duotone-outline, and duotone-filled SVG assets from `data/icons` into `public/vezham-icons.zip`. | `node scripts/generate-zip.mjs` |
 | [`generate-sitemap.mjs`](file:///Users/devchauhan/Documents/Website/vezham/scripts/generate-sitemap.mjs) | Generates `sitemap.xml` and partitions segmented icon sitemaps (`sitemap-icons-*.xml`) for search engine crawlers. | `npm run sitemap` |
 | [`prerender-meta.mjs`](file:///Users/devchauhan/Documents/Website/vezham/scripts/prerender-meta.mjs) | Reads compiled icon pages and pre-renders static HTML pages with customized metadata to support previews and SEO indexing. | (Runs automatically on build) |
 | [`test-seo.mjs`](file:///Users/devchauhan/Documents/Website/vezham/scripts/test-seo.mjs) | Audits the website build to check for missing HTML meta elements, headers, or broken page structures. | `npm run seo:check` |

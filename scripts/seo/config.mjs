@@ -36,7 +36,7 @@ export const ROUTES = [
   {
     path: '/icons',
     title: 'Free Open-Source SVG Icons — Vezham',
-    description: 'Browse 3,900+ free, open-source SVG icons in Outline, Filled, and Duotone weights. MIT licensed.',
+    description: 'Browse 3,900+ free, open-source SVG icons in outline, filled, duotone-outline, and duotone-filled weights. MIT licensed.',
     ogImage: og('icons.jpeg'),
     priority: '0.9',
     changefreq: 'weekly',
@@ -253,7 +253,7 @@ export const GLOBAL_JSON_LD = [
       {
         '@type': 'Question',
         'name': 'What is Vezham?',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'Vezham is a free, open-source SVG icon library with 2,700+ handcrafted, pixel-perfect icons in Outline and Filled weights.' },
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'Vezham is a free, open-source SVG icon library with 2,700+ handcrafted, pixel-perfect icons in outline, filled, duotone-outline, and duotone-filled weights.' },
       },
       {
         '@type': 'Question',

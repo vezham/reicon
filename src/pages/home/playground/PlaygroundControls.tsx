@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { HexColorPicker } from 'react-colorful';
 import { Restart } from '@vezham/icons-react';
+import type { PlaygroundIconWeight } from '../Playground';
 
 const HEX_RE = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+const WEIGHTS: PlaygroundIconWeight[] = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
 
 function ColorPicker({ color, onChange, theme }: { color: string; onChange: (c: string) => void; theme: string }) {
     const isLight = theme === 'light';
@@ -73,8 +75,8 @@ export default function PlaygroundControls({
     theme: string;
     size: number;
     onChangeSize: (s: number) => void;
-    weight: 'outline' | 'filled';
-    onChangeWeight: (w: 'outline' | 'filled') => void;
+    weight: PlaygroundIconWeight;
+    onChangeWeight: (w: PlaygroundIconWeight) => void;
     onReset: () => void;
 }) {
     return (
@@ -100,15 +102,15 @@ export default function PlaygroundControls({
 
             <div>
                 <label className="text-[13px] text-text-base/50 mb-2 block">Weight</label>
-                <div className="flex gap-2">
-                    {(['outline', 'filled'] as const).map((w) => (
+                <div className="grid grid-cols-2 gap-2">
+                    {WEIGHTS.map((w) => (
                         <button key={w} onClick={() => onChangeWeight(w)}
-                            className={`flex-1 px-3 py-2 rounded-lg text-[13px] font-medium transition-all cursor-pointer ${weight === w
+                            className={`px-3 py-2 rounded-lg text-[12px] font-medium transition-all cursor-pointer ${weight === w
                                 ? 'bg-[#6C5CE7]/15 text-[#6C5CE7] border border-[#6C5CE7]/30'
                                 : 'bg-text-base/5 text-text-base/40 border border-text-base/10 hover:text-text-base/60'
                                 }`}
                         >
-                            {w.charAt(0).toUpperCase() + w.slice(1)}
+                            {w.split('-').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')}
                         </button>
                     ))}
                 </div>

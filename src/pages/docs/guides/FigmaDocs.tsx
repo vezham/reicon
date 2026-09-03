@@ -90,7 +90,7 @@ export default function FigmaDocs({ markdownContent }: Props) {
           </div>
           <div className="flex-1">
             <h4 className="text-text-base font-medium mb-1">Select Weight and Color</h4>
-            <p>Choose between <strong>Outline</strong> and <strong>Filled</strong> styles using the toggle swatches, and set a custom hex color.</p>
+            <p>Choose outline, filled, duotone-outline, or duotone-filled styles using the toggle swatches, and set a custom hex color.</p>
           </div>
         </div>
 

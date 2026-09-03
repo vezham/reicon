@@ -1,4 +1,13 @@
-const W_MAP = { Filled: 'F', Outline: 'O' };
+const W_MAP = {
+  outline: 'O',
+  filled: 'F',
+  'duotone-outline': 'DO',
+  'duotone-filled': 'DF',
+  Outline: 'O',
+  Filled: 'F',
+  DuotoneOutline: 'DO',
+  DuotoneFilled: 'DF',
+};
 
 /** Escape a value for safe embedding inside an HTML/SVG attribute. */
 const escAttr = (v) => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -6,7 +15,7 @@ const escAttr = (v) => String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').
 /**
  * Factory that builds an icon function returning an SVG element.
  * @param {string} displayName  PascalCase icon name
- * @param {Object} iconData     { F?: string, O?: string }
+ * @param {Object} iconData     { O?: string, F?: string, DO?: string, DF?: string }
  * @returns {function(import('./createIcon').IconOptions=): SVGSVGElement}
  */
 const createIcon = (displayName, iconData) => {
@@ -19,7 +28,7 @@ const createIcon = (displayName, iconData) => {
     const {
       color,
       size = 24,
-      weight = 'Outline',
+      weight = 'outline',
       strokeWidth,
       className,
       attrs = {},
@@ -71,7 +80,7 @@ const createIcon = (displayName, iconData) => {
     const {
       color,
       size = 24,
-      weight = 'Outline',
+      weight = 'outline',
       strokeWidth,
       className,
       attrs = {},

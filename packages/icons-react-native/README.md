@@ -7,7 +7,7 @@
 
 # Vezham React Native
 
-> 1273+ pixel-perfect SVG icons • Outline & Filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
+> 1273+ pixel-perfect SVG icons • outline, filled, duotone-outline, and duotone-filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
 
 **Vezham React Native** is the official React Native package for Vezham — a free, open-source SVG icon library with 1273+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
 
@@ -42,7 +42,7 @@ function App() {
     <View>
       <Home />
       <ShieldCheck size={32} color="#d97757" />
-      <AltArrowDown weight="Filled" />
+      <AltArrowDown weight="filled" />
     </View>
   );
 }
@@ -55,22 +55,26 @@ function App() {
 | `size` | `number` | `24` | Icon size in pixels |
 | `color` | `string` | `#000000` | Primary icon color |
 | `secondaryColor` | `string` | same as color | Secondary color |
-| `weight` | `IconWeight` | `Outline` | Icon weight / style |
+| `weight` | `IconWeight` | `outline` | Icon weight / style |
 | `strokeWidth` | `number | string` | — | Override stroke width |
 
 Plus all standard `react-native-svg` SVG props.
 
 ### Weights
 
-- **Outline** — clean outlined style (default)
-- **Filled** — solid filled style
+- **outline** — clean outlined style (default)
+- **filled** — solid filled style
+- **duotone-outline** — two-tone outline style
+- **duotone-filled** — two-tone filled style
 
 ```jsx
 import { Home } from '@vezham/icons-react-native';
 
-<Home />                           {/* Outline (default) */}
-<Home weight="Filled" />           {/* Filled */}
-<Home weight="Filled" color="red" />
+<Home />                           {/* outline (default) */}
+<Home weight="filled" />           {/* filled */}
+<Home weight="filled" color="red" />
+<Home weight="duotone-outline" />
+<Home weight="duotone-filled" />
 ```
 
 ### Direct icon import (smallest bundle)
@@ -126,7 +130,7 @@ Full TypeScript support out of the box:
 ```tsx
 import { Home, IconProps, IconWeight } from '@vezham/icons-react-native';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
 
 <Home {...props} />
@@ -139,7 +143,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | | Vezham | React Native Vector Icons | Lucide RN |
 |--|--------|---------------------------|-----------|
 | **Icons** | 1273+ | 3000+ | 1600+ |
-| **Weights** | Outline + Filled | Varies by set | Outline only |
+| **Weights** | outline + filled + duotone-outline + duotone-filled | Varies by set | Outline only |
 | **Tree-shakeable** | ✅ | ❌ | ✅ |
 | **TypeScript** | ✅ | ✅ | ✅ |
 | **Zero dependencies** | ✅ (+ react-native-svg) | ✅ | ✅ (+ react-native-svg) |

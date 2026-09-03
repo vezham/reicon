@@ -1,15 +1,23 @@
 # Icon Weights
 
-Every icon in the Vezham library is handcrafted in two weight variants: **Outline** and **Filled**.
+Every icon in the Vezham library is handcrafted in four weight variants: **outline**, **filled**, **duotone-outline**, and **duotone-filled**.
 
 ## Weights Available
-1. **Outline**: Crisp, clean stroke-based outline icon. This is the default weight.
-2. **Filled**: Solid, filled shape-based variant. Specified using `weight="Filled"` (or lowercase `weight="filled"` in CDN).
+1. **outline**: Crisp, clean stroke-based outline icon. This is the default weight.
+2. **filled**: Solid, filled shape-based variant.
+3. **duotone-outline**: Two-tone outline variant.
+4. **duotone-filled**: Two-tone filled variant.
 
 ```jsx
-// Outline (default)
+// outline (default)
 <Home />
 
-// Filled
-<Home weight="Filled" />
+// filled
+<Home weight="filled" />
+
+// duotone-outline
+<Home weight="duotone-outline" />
+
+// duotone-filled
+<Home weight="duotone-filled" />
 ```

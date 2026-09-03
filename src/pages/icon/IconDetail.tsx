@@ -133,7 +133,7 @@ export default function IconDetail() {
                 <TypeTable rows={[
                   { prop: 'size', type: 'number | string', default: '24', description: 'Icon size in pixels' },
                   { prop: 'color', type: 'string', default: 'currentColor', description: 'Any valid CSS color' },
-                  { prop: 'weight', type: '"outline" | "filled" | "duotone"', default: 'outline', description: 'Icon weight' },
+                  { prop: 'weight', type: '"outline" | "filled" | "duotone-outline" | "duotone-filled"', default: 'outline', description: 'Icon weight' },
                   { prop: 'className?', type: 'string', default: null, description: 'Extra CSS classes' },
                 ]} />
               </div>

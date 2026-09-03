@@ -1,4 +1,4 @@
-export type IconWeight = 'Outline' | 'Filled';
+export type IconWeight = 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
 
 export type Framework = 'react' | 'react-native' | 'vue' | 'svelte' | 'html' | 'svg';
 

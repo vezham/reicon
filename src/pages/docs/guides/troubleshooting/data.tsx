@@ -24,24 +24,18 @@ export const troubleshootingItems: TroubleshootingItemData[] = [
   },
   {
     question: "Wrong icon weight showing",
-    answer: 'The weight prop is case-sensitive in the React/Vue packages. Use "Outline" or "Filled" (PascalCase). In the CDN, use lowercase: "outline" or "filled".',
-    copyText: '// ✅ React / Vue — PascalCase\n<Star weight="Filled" />\n\n// ✅ CDN — lowercase\n<vx-icon icon="star" weight="filled"></vx-icon>\n\n// ❌ Wrong casing\n<Star weight="filled" />\n<vx-icon icon="star" weight="Filled"></vx-icon>',
+    answer: 'Use one of the supported lowercase weights: "outline", "filled", "duotone-outline", or "duotone-filled". If a specific icon does not have the selected variant, Vezham falls back to the first available SVG.',
+    copyText: '// Supported weights\n<Star weight="outline" />\n<Star weight="filled" />\n<Star weight="duotone-outline" />\n<Star weight="duotone-filled" />\n\n<vx-icon icon="star" weight="duotone-filled"></vx-icon>',
     copyField: "faq-weight",
     syntaxNode: (
       <>
-        <span className="text-text-base/30">{'// ✅ React / Vue — PascalCase'}</span>
+        <span className="text-text-base/30">{'// Supported weights'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span>
-        {'\n\n'}
-        <span className="text-text-base/30">{'// ✅ CDN — lowercase'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"outline"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
-        {'\n\n'}
-        <span className="text-text-base/30">{'// ❌ Wrong casing'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span>
-        {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-[#d19a66]"> icon</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"star"</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-filled"</span><span className="text-text-base/70">{'>'}</span><span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">vx-icon</span><span className="text-text-base/70">{'>'}</span>
       </>
     )
   },

@@ -16,7 +16,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
 
             <SyntaxBlock
                 title="Navigation Example"
-                onCopy={() => onCopy("import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';\nimport { Home, Search, User } from '@vezham/icons-react-native';\n\nconst Tab = createBottomTabNavigator();\n\nfunction AppTabs() {\n  return (\n    <Tab.Navigator\n      screenOptions={({ route }) => ({\n        tabBarIcon: ({ focused, color, size }) => {\n          let Icon;\n          if (route.name === 'Home') Icon = Home;\n          else if (route.name === 'Search') Icon = Search;\n          else Icon = User;\n          \n          return <Icon size={size} color={color} weight={focused ? 'Filled' : 'Outline'} />;\n        },\n      })}\n    >\n      <Tab.Screen name=\"Home\" component={HomeScreen} />\n      <Tab.Screen name=\"Search\" component={SearchScreen} />\n      <Tab.Screen name=\"Profile\" component={ProfileScreen} />\n    </Tab.Navigator>\n  );\n}", 'rn-nav')}
+                onCopy={() => onCopy("import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';\nimport { Home, Search, User } from '@vezham/icons-react-native';\n\nconst Tab = createBottomTabNavigator();\n\nfunction AppTabs() {\n  return (\n    <Tab.Navigator\n      screenOptions={({ route }) => ({\n        tabBarIcon: ({ focused, color, size }) => {\n          let Icon;\n          if (route.name === 'Home') Icon = Home;\n          else if (route.name === 'Search') Icon = Search;\n          else Icon = User;\n          \n          return <Icon size={size} color={color} weight={focused ? 'filled' : 'outline'} />;\n        },\n      })}\n    >\n      <Tab.Screen name=\"Home\" component={HomeScreen} />\n      <Tab.Screen name=\"Search\" component={SearchScreen} />\n      <Tab.Screen name=\"Profile\" component={ProfileScreen} />\n    </Tab.Navigator>\n  );\n}", 'rn-nav')}
                 copied={copiedField === 'rn-nav'}
             >
                 <span className="text-[#c678dd]">import</span>
@@ -51,7 +51,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
                 {'\n          '}
                 <span className="text-text-base/30">// ... Icon selection logic</span>
                 {'\n          '}
-                <span className="text-[#c678dd]">return</span><span className="text-text-base/70"> {'<'}</span><span className="text-[#e06c75]">Icon</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}</span><span className="text-[#e5c07b]">focused</span><span className="text-text-base/70"> ? </span><span className="text-[#98c379]">'Filled'</span><span className="text-text-base/70"> : </span><span className="text-[#98c379]">'Outline'</span><span className="text-text-base/70">{'}'}</span><span className="text-text-base/70"> /{'>'}</span>
+                <span className="text-[#c678dd]">return</span><span className="text-text-base/70"> {'<'}</span><span className="text-[#e06c75]">Icon</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}</span><span className="text-[#e5c07b]">focused</span><span className="text-text-base/70"> ? </span><span className="text-[#98c379]">'filled'</span><span className="text-text-base/70"> : </span><span className="text-[#98c379]">'outline'</span><span className="text-text-base/70">{'}'}</span><span className="text-text-base/70"> /{'>'}</span>
                 {'\n        '}
                 <span className="text-text-base/70">{'}'}</span>
                 {'\n      '}
@@ -76,7 +76,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
 
             <SyntaxBlock
                 title="Pressable Example"
-                onCopy={() => onCopy("import { Pressable } from 'react-native';\nimport { Heart } from '@vezham/icons-react-native';\n\nfunction LikeButton() {\n  const [liked, setLiked] = useState(false);\n  \n  return (\n    <Pressable onPress={() => setLiked(!liked)}>\n      <Heart\n        weight={liked ? 'Filled' : 'Outline'}\n        color={liked ? '#ef4444' : '#6b7280'}\n        size={28}\n      />\n    </Pressable>\n  );\n}", 'rn-pressable')}
+                onCopy={() => onCopy("import { Pressable } from 'react-native';\nimport { Heart } from '@vezham/icons-react-native';\n\nfunction LikeButton() {\n  const [liked, setLiked] = useState(false);\n  \n  return (\n    <Pressable onPress={() => setLiked(!liked)}>\n      <Heart\n        weight={liked ? 'filled' : 'outline'}\n        color={liked ? '#ef4444' : '#6b7280'}\n        size={28}\n      />\n    </Pressable>\n  );\n}", 'rn-pressable')}
                 copied={copiedField === 'rn-pressable'}
             >
                 <span className="text-[#c678dd]">import</span>
@@ -105,7 +105,7 @@ export default function Theming({ onCopy, copiedField }: Props) {
                 {'\n      '}
                 <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Heart</span>
                 {'\n        '}
-                <span className="text-[#d19a66]">weight</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}</span><span className="text-[#e5c07b]">liked</span><span className="text-text-base/70"> ? </span><span className="text-[#98c379]">'Filled'</span><span className="text-text-base/70"> : </span><span className="text-[#98c379]">'Outline'</span><span className="text-text-base/70">{'}'}</span>
+                <span className="text-[#d19a66]">weight</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}</span><span className="text-[#e5c07b]">liked</span><span className="text-text-base/70"> ? </span><span className="text-[#98c379]">'filled'</span><span className="text-text-base/70"> : </span><span className="text-[#98c379]">'outline'</span><span className="text-text-base/70">{'}'}</span>
                 {'\n        '}
                 <span className="text-[#d19a66]">color</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}</span><span className="text-[#e5c07b]">liked</span><span className="text-text-base/70"> ? </span><span className="text-[#98c379]">'#ef4444'</span><span className="text-text-base/70"> : </span><span className="text-[#98c379]">'#6b7280'</span><span className="text-text-base/70">{'}'}</span>
                 {'\n        '}

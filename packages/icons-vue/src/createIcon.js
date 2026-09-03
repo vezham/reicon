@@ -1,11 +1,20 @@
 import { defineComponent, h, computed } from 'vue';
 
-const W_MAP = { Filled: 'F', Outline: 'O' };
+const W_MAP = {
+  outline: 'O',
+  filled: 'F',
+  'duotone-outline': 'DO',
+  'duotone-filled': 'DF',
+  Outline: 'O',
+  Filled: 'F',
+  DuotoneOutline: 'DO',
+  DuotoneFilled: 'DF',
+};
 
 /**
  * Factory that builds a Vue 3 icon component.
  * @param {string} displayName  PascalCase icon name
- * @param {Object} iconData     { F?: string, O?: string }
+ * @param {Object} iconData     { O?: string, F?: string, DO?: string, DF?: string }
  * @returns {import('vue').DefineComponent}
  */
 const createIcon = (displayName, iconData) => {
@@ -17,11 +26,11 @@ const createIcon = (displayName, iconData) => {
       color: { type: String, default: undefined },
       /** Icon size (number = px, string = any CSS unit). Default: `24` */
       size: { type: [Number, String], default: 24 },
-      /** Icon weight / style: `'Outline'` | `'Filled'`. Default: `'Outline'` */
+      /** Icon weight / style. Default: `outline` */
       weight: {
         type: String,
-        default: 'Outline',
-        validator: (v) => ['Outline', 'Filled'].includes(String(v)),
+        default: 'outline',
+        validator: (v) => Object.prototype.hasOwnProperty.call(W_MAP, String(v)),
       },
       /** Override stroke-width on stroked weights */
       strokeWidth: { type: [Number, String], default: undefined },

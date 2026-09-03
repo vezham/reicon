@@ -1,11 +1,19 @@
 import { DefineComponent, ExtractPropTypes } from 'vue';
 
-export type IconWeight = 'Filled' | 'Outline';
+export type IconWeight =
+  | 'outline'
+  | 'filled'
+  | 'duotone-outline'
+  | 'duotone-filled'
+  | 'Outline'
+  | 'Filled'
+  | 'DuotoneOutline'
+  | 'DuotoneFilled';
 
 export declare const iconProps: {
   color: { type: StringConstructor; default: undefined };
   size: { type: (NumberConstructor | StringConstructor)[]; default: 24 };
-  weight: { type: StringConstructor; default: 'Outline'; validator: (v: string) => boolean };
+  weight: { type: StringConstructor; default: 'outline'; validator: (v: string) => boolean };
   strokeWidth: { type: (NumberConstructor | StringConstructor)[]; default: undefined };
 };
 
@@ -16,7 +24,7 @@ export type IconComponent = DefineComponent<{
   color?: string;
   /** Icon size (px when number). Default: `24` */
   size?: number | string;
-  /** Icon weight / style. Default: `Outline` */
+  /** Icon weight / style. Default: `outline` */
   weight?: IconWeight;
   /** Override stroke-width on stroked weights */
   strokeWidth?: number | string;

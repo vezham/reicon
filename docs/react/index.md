@@ -33,7 +33,7 @@ function App() {
     <div>
       <Home size={24} />
       <ShieldCheck size={24} color="#6C5CE7" />
-      <Bell size={24} weight="Filled" />
+      <Bell size={24} weight="filled" />
     </div>
   );
 }
@@ -54,8 +54,8 @@ Every icon component accepts the following props to customize its appearance. Yo
 <Heart color="rgb(99, 102, 241)" />
 
 // Weight
-<Star />                     // Outline (default)
-<Star weight="Filled" />     // Filled
+<Star />                     // outline (default)
+<Star weight="filled" />     // filled
 
 // ClassName
 <Home className="text-blue-500 hover:text-blue-600" />
@@ -97,7 +97,7 @@ export default function Navbar() {
       <Home size={20} />
       <Bell size={20} />
       <User size={20} />
-      <Star size={20} weight="Filled" color="#f59e0b" />
+      <Star size={20} weight="filled" color="#f59e0b" />
       <ShieldCheck size={20} color="#6C5CE7" />
     </nav>
   );

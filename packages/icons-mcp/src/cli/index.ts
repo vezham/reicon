@@ -94,10 +94,10 @@ export async function run(argv: string[]) {
     case 'view': {
       const name = positional[1];
       if (!name) {
-        console.error('Usage: vezham-icons-mcp view <name> --weight Outline|Filled');
+        console.error('Usage: vezham-icons-mcp view <name> --weight outline|filled|duotone-outline|duotone-filled');
         process.exit(1);
       }
-      const weight = (flags.weight as IconWeight) || 'Outline';
+      const weight = (flags.weight as IconWeight) || 'outline';
       const result = handleViewIcon({ name, weight });
       print(result);
       if ('error' in result) process.exit(1);
@@ -106,11 +106,11 @@ export async function run(argv: string[]) {
     case 'apply': {
       const name = positional[1];
       if (!name) {
-        console.error('Usage: vezham-icons-mcp apply <name> --framework react|react-native|vue|svelte|html|svg [--weight Outline|Filled] [--size 24] [--color #hex] [--file path] [--marker "{/* ICON */}"]');
+        console.error('Usage: vezham-icons-mcp apply <name> --framework react|react-native|vue|svelte|html|svg [--weight outline|filled|duotone-outline|duotone-filled] [--size 24] [--color #hex] [--file path] [--marker "{/* ICON */}"]');
         process.exit(1);
       }
       const framework = (flags.framework as Framework) || 'react';
-      const weight = (flags.weight as IconWeight) || 'Outline';
+      const weight = (flags.weight as IconWeight) || 'outline';
       const result = handleApplyIcon({
         name,
         weight,

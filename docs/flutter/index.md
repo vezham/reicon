@@ -1,6 +1,6 @@
 # Vezham for Flutter
 
-> 2700+ handcrafted, pixel-perfect SVG icons in Outline and Filled weights — now available for Flutter.
+> Handcrafted, pixel-perfect SVG icons in outline, filled, duotone-outline, and duotone-filled weights — now available for Flutter.
 
 ## Install
 
@@ -53,6 +53,8 @@ SvgPicture.string(
 |----------|-------------|
 | `Vezham.outline.*` | 2674 outline icons |
 | `Vezham.filled.*` | 2674 filled icons |
+| `Vezham.duotoneOutline.*` | Duotone outline icons |
+| `Vezham.duotoneFilled.*` | Duotone filled icons |
 | `vezhamIconSvg(path)` | Build SVG string from path data |
 
 ## Links

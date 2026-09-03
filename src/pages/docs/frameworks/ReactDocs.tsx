@@ -73,7 +73,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
 
       <SyntaxBlock
         title="Complete Example"
-        onCopy={() => onCopy("import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-react';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"flex items-center gap-4 p-4\">\n      <Home size={20} />\n      <Bell size={20} />\n      <User size={20} />\n      <Star size={20} weight=\"Filled\" color=\"#f59e0b\" />\n      <ShieldCheck size={20} color=\"#6C5CE7\" />\n    </nav>\n  );\n}", 'react-full')}
+        onCopy={() => onCopy("import { Home, Bell, User, Star, ShieldCheck } from '@vezham/icons-react';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"flex items-center gap-4 p-4\">\n      <Home size={20} />\n      <Bell size={20} />\n      <User size={20} />\n      <Star size={20} weight=\"filled\" color=\"#f59e0b\" />\n      <ShieldCheck size={20} color=\"#6C5CE7\" />\n    </nav>\n  );\n}", 'react-full')}
         copied={copiedField === 'react-full'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -99,7 +99,7 @@ export default function ReactDocs({ markdownContent, copiedField, onCopy }: Prop
         {'\n      '}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">User</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}20{'}'}</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n      '}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}20{'}'}</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#f59e0b"</span><span className="text-text-base/70"> /{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}20{'}'}</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#f59e0b"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n      '}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">ShieldCheck</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}20{'}'}</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#6C5CE7"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n    '}

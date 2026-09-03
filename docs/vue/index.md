@@ -33,7 +33,7 @@ import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';
 <template>
   <Home />
   <ShieldCheck :size="32" color="#d97757" />
-  <AltArrowDown weight="Filled" />
+  <AltArrowDown weight="filled" />
 </template>
 ```
 
@@ -52,8 +52,8 @@ Every icon component accepts the following props to customize its appearance. Yo
 <Heart color="rgb(99, 102, 241)" />
 
 <!-- Weight -->
-<Star />                     <!-- Outline (default) -->
-<Star weight="Filled" />     <!-- Filled -->
+<Star />                     <!-- outline (default) -->
+<Star weight="filled" />     <!-- Filled -->
 
 <!-- Class -->
 <Home class="my-icon" />

@@ -101,6 +101,12 @@ export default function Footer() {
               <Link to="/icons?weight=filled" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 Filled Icons
               </Link>
+              <Link to="/icons?weight=duotone-outline" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
+                Duotone Outline
+              </Link>
+              <Link to="/icons?weight=duotone-filled" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
+                Duotone Filled
+              </Link>
               <Link to="/docs/vscode" className="relative flex items-center pl-[26px] py-1 text-[13px] text-text-base/70 hover:text-text-base transition-colors font-medium">
                 VS Code Extension
               </Link>

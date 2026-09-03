@@ -20,7 +20,7 @@ const SRC = path.join(__dirname, '..', 'src');
 const DIST = path.join(__dirname, '..', 'dist');
 
 // ── weight short keys ──────────────────────────────────────────────────────
-const W_KEY = { Filled: 'F', Outline: 'O' };
+const W_KEY = { outline: 'O', filled: 'F', 'duotone-outline': 'DO', 'duotone-filled': 'DF' };
 
 // ── helpers ────────────────────────────────────────────────────────────────
 function toPascalCase(str) {
@@ -48,7 +48,7 @@ function escapeForJS(s) {
  * Build a base64 data URI for an inline SVG preview (shown in IDE hover).
  */
 function buildPreviewDataUri(weights) {
-  const inner = weights['O'] || weights['F'] || '';
+  const inner = weights.O || weights.F || weights.DO || weights.DF || '';
   if (!inner) return '';
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>`
     .replace(/currentColor/g, '#e4e4e7')
@@ -203,7 +203,7 @@ const pkg = {
   version: srcPkg.version,
   type: 'module',
   description:
-    `React Native icon components for ${icons.length}+ icons in 2 weights (Outline & Filled). Tree-shakeable, TypeScript-ready.`,
+    `React Native icon components for ${icons.length}+ icons in 4 weights. Tree-shakeable, TypeScript-ready.`,
   main: './index.js',
   module: './index.js',
   types: './index.d.ts',
@@ -265,7 +265,7 @@ const readme = `<p align="center">
 
 # Vezham React Native
 
-> ${icons.length}+ pixel-perfect SVG icons • Outline & Filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
+> ${icons.length}+ pixel-perfect SVG icons • outline, filled, duotone-outline, and duotone-filled weights • React Native component wrapper • Zero dependencies • MIT Licensed
 
 **Vezham React Native** is the official React Native package for Vezham — a free, open-source SVG icon library with ${icons.length}+ handcrafted, grid-aligned icons built for developers and designers. Every component is optimized for tree-shaking and fully TypeScript-ready.
 
@@ -300,7 +300,7 @@ function App() {
     <View>
       <Home />
       <ShieldCheck size={32} color="#d97757" />
-      <AltArrowDown weight="Filled" />
+      <AltArrowDown weight="filled" />
     </View>
   );
 }
@@ -313,22 +313,26 @@ function App() {
 | \`size\` | \`number\` | \`24\` | Icon size in pixels |
 | \`color\` | \`string\` | \`#000000\` | Primary icon color |
 | \`secondaryColor\` | \`string\` | same as color | Secondary color |
-| \`weight\` | \`IconWeight\` | \`Outline\` | Icon weight / style |
+| \`weight\` | \`IconWeight\` | \`outline\` | Icon weight / style |
 | \`strokeWidth\` | \`number | string\` | — | Override stroke width |
 
 Plus all standard \`react-native-svg\` SVG props.
 
 ### Weights
 
-- **Outline** — clean outlined style (default)
-- **Filled** — solid filled style
+- **outline** — clean outlined style (default)
+- **filled** — solid filled style
+- **duotone-outline** — two-tone outline style
+- **duotone-filled** — two-tone filled style
 
 \`\`\`jsx
 import { Home } from '@vezham/icons-react-native';
 
-<Home />                           {/* Outline (default) */}
-<Home weight="Filled" />           {/* Filled */}
-<Home weight="Filled" color="red" />
+<Home />                           {/* outline (default) */}
+<Home weight="filled" />           {/* filled */}
+<Home weight="filled" color="red" />
+<Home weight="duotone-outline" />
+<Home weight="duotone-filled" />
 \`\`\`
 
 ### Direct icon import (smallest bundle)
@@ -384,7 +388,7 @@ Full TypeScript support out of the box:
 \`\`\`tsx
 import { Home, IconProps, IconWeight } from '@vezham/icons-react-native';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
 
 <Home {...props} />
@@ -397,7 +401,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | | Vezham | React Native Vector Icons | Lucide RN |
 |--|--------|---------------------------|-----------|
 | **Icons** | ${icons.length}+ | 3000+ | 1600+ |
-| **Weights** | Outline + Filled | Varies by set | Outline only |
+| **Weights** | outline + filled + duotone-outline + duotone-filled | Varies by set | Outline only |
 | **Tree-shakeable** | ✅ | ❌ | ✅ |
 | **TypeScript** | ✅ | ✅ | ✅ |
 | **Zero dependencies** | ✅ (+ react-native-svg) | ✅ | ✅ (+ react-native-svg) |
@@ -448,7 +452,7 @@ fs.writeFileSync(path.join(DIST, 'icon-names.json'), JSON.stringify(nameMap, nul
 const totalFiles = (icons.length * 2) + 5;
 console.log(`\nDone!`);
 console.log(`  Icons:       ${icons.length}`);
-console.log(`  Weights:     Outline + Filled`);
+console.log(`  Weights:     outline + filled + duotone-outline + duotone-filled`);
 console.log(`  Files:       ${totalFiles}`);
 console.log(`  Output:      ${DIST}`);
 console.log(`\nTo publish:`);

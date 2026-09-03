@@ -12,9 +12,13 @@ void main() {
   // 1. Access SVG path data
   final homePath = Vezham.outline.home;
   final settingsFilled = Vezham.filled.settings;
+  final starDuotoneOutline = Vezham.duotoneOutline.star;
+  final heartDuotoneFilled = Vezham.duotoneFilled.heart;
 
-  print('Outline home path length: ${homePath.length} chars');
-  print('Filled settings path length: ${settingsFilled.length} chars');
+  print('outline home path length: ${homePath.length} chars');
+  print('filled settings path length: ${settingsFilled.length} chars');
+  print('duotone-outline star path length: ${starDuotoneOutline.length} chars');
+  print('duotone-filled heart path length: ${heartDuotoneFilled.length} chars');
 
   // 2. Build a complete SVG string
   final svg = vezhamIconSvg(
@@ -36,10 +40,14 @@ void main() {
   print('\nHome icon by lookup: ${icon != null}');
 
   // 5. Metadata
-  print('\nOutline: ${Vezham.outline.length} icons');
-  print('Filled:  ${Vezham.filled.length} icons');
+  print('\noutline: ${Vezham.outline.length} icons');
+  print('filled:  ${Vezham.filled.length} icons');
+  print('duotone-outline: ${Vezham.duotoneOutline.length} icons');
+  print('duotone-filled:  ${Vezham.duotoneFilled.length} icons');
 
   // 6. Weight name
   print('Weight: ${Vezham.outline.name}');
   print('Weight: ${Vezham.filled.name}');
+  print('Weight: ${Vezham.duotoneOutline.name}');
+  print('Weight: ${Vezham.duotoneFilled.name}');
 }

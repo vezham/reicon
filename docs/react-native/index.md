@@ -61,7 +61,7 @@ All icons accept these props:
 | `size` | `number` | `24` | Icon size in pixels |
 | `color` | `string` | `#000000` | Primary icon color (hex, rgb, or named) |
 | `secondaryColor` | `string` | same as color | Secondary color for dual-tone icons |
-| `weight` | `'Outline' \| 'Filled'` | `'Outline'` | Icon weight/style |
+| `weight` | `'outline' \| 'filled' \| 'duotone-outline' \| 'duotone-filled'` | `'outline'` | Icon weight/style |
 | `strokeWidth` | `number \| string` | — | Override default stroke width |
 | `style` | `ViewStyle` | — | React Native style object |
 
@@ -90,14 +90,20 @@ import { ShieldCheck } from '@vezham/icons-react-native';
 />
 ```
 
-### Filled Weight
+### Filled and Duotone Weights
 
 ```tsx
 import { Heart } from '@vezham/icons-react-native';
 
 <Heart 
-  weight="Filled"
+  weight="filled"
   color="red"
+/>
+
+<Heart
+  weight="duotone-filled"
+  color="#ef4444"
+  secondaryColor="#fca5a5"
 />
 ```
 
@@ -170,11 +176,11 @@ import { Home, IconProps, IconWeight } from '@vezham/icons-react-native';
 const iconProps: IconProps = {
   size: 32,
   color: '#6366F1',
-  weight: 'Filled'
+  weight: 'filled'
 };
 
 // Type-safe weight
-const weight: IconWeight = 'Outline';
+const weight: IconWeight = 'outline';
 
 function MyComponent() {
   return <Home {...iconProps} />;
@@ -226,7 +232,7 @@ function LikeButton() {
   return (
     <Pressable onPress={() => setLiked(!liked)}>
       <Heart
-        weight={liked ? 'Filled' : 'Outline'}
+        weight={liked ? 'filled' : 'outline'}
         color={liked ? '#ef4444' : '#6b7280'}
         size={28}
       />
@@ -261,7 +267,7 @@ import { Star } from '@vezham/icons-react-native';
 
 const StarIcon = memo(({ filled }: { filled: boolean }) => (
   <Star 
-    weight={filled ? 'Filled' : 'Outline'}
+    weight={filled ? 'filled' : 'outline'}
     color="#fbbf24"
   />
 ));
@@ -328,7 +334,7 @@ function AppTabs() {
             <Icon 
               size={size}
               color={color}
-              weight={focused ? 'Filled' : 'Outline'}
+              weight={focused ? 'filled' : 'outline'}
             />
           );
         },

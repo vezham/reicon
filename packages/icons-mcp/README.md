@@ -43,7 +43,7 @@ Or point directly at the local binary after building:
 
 ```bash
 npx @vezham/icons-mcp search "shopping cart"
-npx @vezham/icons-mcp view heart --weight Filled
+npx @vezham/icons-mcp view heart --weight filled
 npx @vezham/icons-mcp apply heart --framework react --size 32 --color "#ef4444"
 npx @vezham/icons-mcp categories
 ```

@@ -15,7 +15,7 @@
 <h1 align="center">Vezham React</h1>
 
 <p align="center">
-  <b>1273+ pixel-perfect SVG icons</b> • Outline & Filled weights • React component wrapper • Zero dependencies • MIT Licensed
+  <b>1273+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • React component wrapper • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -70,7 +70,7 @@ function App() {
     <div>
       <Home />
       <ShieldCheck size={32} color="#d97757" />
-      <AltArrowDown weight="Filled" />
+      <AltArrowDown weight="filled" />
     </div>
   );
 }
@@ -78,13 +78,15 @@ function App() {
 
 ### Weights
 
-Every icon ships in two weights — **Outline** (default) and **Filled**:
+Every icon ships in four weights — **outline**, **filled**, **duotone-outline**, and **duotone-filled**:
 
 ```jsx
 import { Home } from '@vezham/icons-react';
 
-<Home />                     {/* Outline (default) */}
-<Home weight="Filled" />     {/* Filled */}
+<Home />                     {/* outline (default) */}
+<Home weight="filled" />     {/* filled */}
+<Home weight="duotone-outline" />
+<Home weight="duotone-filled" />
 ```
 
 ### Sizing & coloring
@@ -128,7 +130,7 @@ Pass any standard SVG attribute — `className`, `style`, `onClick`, `aria-*`, e
 | `size` | `number | string` | `24` | Icon width & height (number = px) |
 | `color` | `string` | — | Primary icon stroke/fill color. Leave unset to use CSS class. |
 | `secondaryColor` | `string` | same as `color` | Secondary (accent) fill color |
-| `weight` | `'Outline' | 'Filled'` | `'Outline'` | Icon style variant |
+| `weight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` | `'outline'` | Icon style variant |
 | `strokeWidth` | `number | string` | — | Override the default stroke width |
 | `className` | `string` | — | Additional CSS class on the <svg> element |
 
@@ -176,7 +178,7 @@ Full type declarations ship with the package — no separate `@types/` installat
 ```tsx
 import { Home, type IconProps, type IconWeight } from '@vezham/icons-react';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
 
 <Home {...props} />
@@ -187,7 +189,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | Type | Description |
 |------|-------------|
 | `IconProps` | Combined icon props + React SVG attributes |
-| `IconWeight` | `'Outline' | 'Filled'` |
+| `IconWeight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` |
 | `IconComponent` | Signature of any icon component |
 
 ---
@@ -195,7 +197,7 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 ## Features
 
 - **1273+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead beyond React itself
 - **TypeScript-ready** — Full type declarations included, no extra packages needed

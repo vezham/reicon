@@ -36,7 +36,7 @@ export default function ToolsSection({ copiedField, onCopy }: ToolsSectionProps)
               <span className="text-text-base/40">, </span>
               <span className="text-[#e06c75]">weight</span>
               <span className="text-text-base/40">: </span>
-              <span className="text-[#98c379]">"Filled"</span>
+              <span className="text-[#98c379]">"filled"</span>
               <span className="text-text-base/40"> {'}'}</span>
               <span className="text-text-base/40">)</span>
             </SyntaxBlock>
@@ -64,7 +64,7 @@ export default function ToolsSection({ copiedField, onCopy }: ToolsSectionProps)
               {'\n  '}
               <span className="text-[#e06c75]">weight</span>
               <span className="text-text-base/40">: </span>
-              <span className="text-[#98c379]">"Filled"</span>
+              <span className="text-[#98c379]">"filled"</span>
               <span className="text-text-base/40">,</span>
               {'\n  '}
               <span className="text-[#e06c75]">framework</span>

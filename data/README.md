@@ -18,7 +18,8 @@ data/icons/
     arrow-down2/
       outline.svg
       filled.svg
-      duotone.svg
+      duotone-outline.svg
+      duotone-filled.svg
       meta.json
 ```
 
@@ -27,10 +28,11 @@ Weight filenames are always lowercase:
 ```txt
 outline.svg
 filled.svg
-duotone.svg
+duotone-outline.svg
+duotone-filled.svg
 ```
 
-`outline.svg` should exist for normal icon package output. `filled.svg` and `duotone.svg` are optional when a variant does not exist.
+`outline.svg` should exist for normal icon package output. `filled.svg`, `duotone-outline.svg`, and `duotone-filled.svg` are optional when a variant does not exist.
 
 ## Metadata
 

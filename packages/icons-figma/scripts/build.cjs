@@ -41,12 +41,9 @@ try {
 
       for (const [iconKey, icon] of Object.entries(catData.icons || {})) {
         const weights = {};
-        if (icon.weights) {
-          if (icon.weights.Outline && icon.weights.Outline.code) {
-            weights.Outline = icon.weights.Outline.code;
-          }
-          if (icon.weights.Filled && icon.weights.Filled.code) {
-            weights.Filled = icon.weights.Filled.code;
+        for (const [weightName, weightData] of Object.entries(icon.weights || {})) {
+          if (weightData && weightData.code) {
+            weights[weightName] = weightData.code;
           }
         }
 

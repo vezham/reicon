@@ -14,12 +14,13 @@ Make sure the CDN script is loaded before any `<vx-icon>` elements. Place the sc
 ---
 
 ## 2. Wrong icon weight showing
-The `weight` prop is case-sensitive in the React/Vue packages. Use `"Outline"` or `"Filled"` (PascalCase). In the CDN, use lowercase: `"outline"` or `"filled"`.
+The `weight` prop uses lowercase values across packages and the CDN. Use `"outline"`, `"filled"`, `"duotone-outline"`, or `"duotone-filled"`.
 ```jsx
-// ✅ React / Vue — PascalCase
-<Star weight="Filled" />
+// React / Vue / Svelte / React Native
+<Star weight="filled" />
+<Star weight="duotone-filled" />
 
-// ✅ CDN — lowercase
+// CDN
 <vx-icon icon="star" weight="filled"></vx-icon>
 ```
 

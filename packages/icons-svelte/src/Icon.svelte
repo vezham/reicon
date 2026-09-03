@@ -4,7 +4,7 @@
   /** @type {string | undefined} */
   export let color = undefined;
   /** @type {string} */
-  export let weight = 'Outline';
+  export let weight = 'outline';
   /** @type {string | number | undefined} */
   export let strokeWidth = undefined;
   /** @type {Record<string, string>} */
@@ -17,7 +17,16 @@
   export { customStyle as style };
 
   /** @type {Record<string, string>} */
-  const W_MAP = { Filled: 'F', Outline: 'O' };
+  const W_MAP = {
+    outline: 'O',
+    filled: 'F',
+    'duotone-outline': 'DO',
+    'duotone-filled': 'DF',
+    Outline: 'O',
+    Filled: 'F',
+    DuotoneOutline: 'DO',
+    DuotoneFilled: 'DF',
+  };
 
   $: key = W_MAP[weight] || 'O';
   $: rawHtml = (() => {

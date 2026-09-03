@@ -16,8 +16,8 @@ const ROWS = [
   },
   {
     prop: 'weight',
-    type: '"Outline" | "Filled"',
-    default: 'Outline',
+    type: '"outline" | "filled" | "duotone-outline" | "duotone-filled"',
+    default: 'outline',
     description: 'Icon weight variant',
   },
   {

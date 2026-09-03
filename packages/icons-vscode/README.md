@@ -15,7 +15,7 @@
 <h1 align="center">Vezham Icons for VS Code</h1>
 
 <p align="center">
-  <b>Browse and insert 2674+ Vezham icons</b> • Outline & Filled weights • React, Vue, Svelte, SVG, JSX • Smart code insertion
+  <b>Browse and insert 2674+ Vezham icons</b> • outline, filled, duotone-outline, and duotone-filled weights • React, Vue, Svelte, SVG, JSX • Smart code insertion
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@
 ## Features
 
 - **Activity Bar Panel** — A custom sidebar panel that houses the icon browser
-- **2674+ Pixel-Perfect Icons** — Browse the complete collection in both **Outline** and **Filled** weights
+- **2674+ Pixel-Perfect Icons** — Browse the complete collection in both **outline** and **filled** weights
 - **Smart Code Insertion** — Click any icon to instantly insert it at your cursor in your preferred framework syntax:
   - **React (JSX)**: `<Home size={24} color="#6c5ce7" />`
   - **Vue**: `<Home :size="24" color="#6c5ce7" />`

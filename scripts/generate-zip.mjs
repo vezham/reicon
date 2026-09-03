@@ -11,6 +11,7 @@ const { loadIconData } = require('./lib/icon-source.cjs');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const ZIP_OUT_PATH = path.join(PUBLIC_DIR, 'vezham-icons.zip');
+const WEIGHTS = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
 
 console.log('Generating compressed ZIP archive for all Vezham icons...');
 
@@ -24,37 +25,26 @@ async function run() {
     const rawData = loadIconData();
     const zip = new JSZip();
     
-    // Create folders inside zip
-    const outlineFolder = zip.folder('outline');
-    const filledFolder = zip.folder('filled');
-
-    let outlineCount = 0;
-    let filledCount = 0;
+    const folders = Object.fromEntries(WEIGHTS.map((weight) => [weight, zip.folder(weight)]));
+    const counts = Object.fromEntries(WEIGHTS.map((weight) => [weight, 0]));
 
     if (rawData.categories) {
-      for (const [catKey, catData] of Object.entries(rawData.categories)) {
+      for (const catData of Object.values(rawData.categories)) {
         for (const [iconKey, icon] of Object.entries(catData.icons || {})) {
-          if (icon.weights) {
-            // Outline weight
-            if (icon.weights.Outline && icon.weights.Outline.code) {
-              const code = rewriteColors(icon.weights.Outline.code);
+          for (const weight of WEIGHTS) {
+            const source = icon.weights?.[weight];
+            if (source?.code) {
+              const code = rewriteColors(source.code);
               const fileContent = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${code}</svg>`;
-              outlineFolder.file(`${iconKey}.svg`, fileContent);
-              outlineCount++;
-            }
-            // Filled weight
-            if (icon.weights.Filled && icon.weights.Filled.code) {
-              const code = rewriteColors(icon.weights.Filled.code);
-              const fileContent = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${code}</svg>`;
-              filledFolder.file(`${iconKey}.svg`, fileContent);
-              filledCount++;
+              folders[weight].file(`${iconKey}.svg`, fileContent);
+              counts[weight]++;
             }
           }
         }
       }
     }
 
-    console.log(`Adding ${outlineCount} outline icons and ${filledCount} filled icons to ZIP archive...`);
+    console.log(`Adding icons to ZIP archive: ${WEIGHTS.map((weight) => `${counts[weight]} ${weight}`).join(', ')}...`);
 
     // Generate zip content as node buffer
     const content = await zip.generateAsync({

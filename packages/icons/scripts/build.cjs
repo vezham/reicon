@@ -20,7 +20,7 @@ const SRC = path.join(__dirname, '..', 'src');
 const DIST = path.join(__dirname, '..', 'dist');
 
 // ── weight short keys ──────────────────────────────────────────────────────
-const W_KEY = { Filled: 'F', Outline: 'O' };
+const W_KEY = { outline: 'O', filled: 'F', 'duotone-outline': 'DO', 'duotone-filled': 'DF' };
 
 // ── helpers ────────────────────────────────────────────────────────────────
 function toPascalCase(str) {
@@ -48,7 +48,7 @@ function escapeForJS(s) {
  * Build a base64 data URI for an inline SVG preview (shown in IDE hover).
  */
 function buildPreviewDataUri(weights) {
-  const inner = weights['O'] || weights['F'] || '';
+  const inner = weights.O || weights.F || weights.DO || weights.DF || '';
   if (!inner) return '';
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${inner}</svg>`
     .replace(/currentColor/g, '#e4e4e7')
@@ -88,9 +88,10 @@ for (const [catKey, catData] of Object.entries(data.categories || {})) {
       if (wData.code) {
         const code = rewriteColors(stripSvgWrapper(wData.code));
         if (short) weights[short] = code;
-        if (wName === 'Outline') directWeights.O = code;
-        if (wName === 'Filled') directWeights.F = code;
-        if (wName === 'Duotone') directWeights.D = code;
+        if (wName === 'outline') directWeights.O = code;
+        if (wName === 'filled') directWeights.F = code;
+        if (wName === 'duotone-outline') directWeights.DO = code;
+        if (wName === 'duotone-filled') directWeights.DF = code;
       }
     }
 
@@ -229,7 +230,16 @@ const umdBundle = `(function (global, factory) {
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.VezhamIcons = {}));
 })(this, (function (exports) { 'use strict';
 
-  var W_MAP = { Filled: 'F', Outline: 'O' };
+  var W_MAP = {
+    outline: 'O',
+    filled: 'F',
+    'duotone-outline': 'DO',
+    'duotone-filled': 'DF',
+    Outline: 'O',
+    Filled: 'F',
+    DuotoneOutline: 'DO',
+    DuotoneFilled: 'DF'
+  };
 
   function escAttr(v) { return String(v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
@@ -238,7 +248,7 @@ const umdBundle = `(function (global, factory) {
       options = options || {};
       var color = options.color;
       var size = options.size || 24;
-      var weight = options.weight || 'Outline';
+      var weight = options.weight || 'outline';
       var strokeWidth = options.strokeWidth;
       var className = options.className;
       var attrs = options.attrs || {};
@@ -282,7 +292,7 @@ const umdBundle = `(function (global, factory) {
       options = options || {};
       var color = options.color;
       var size = options.size || 24;
-      var weight = options.weight || 'Outline';
+      var weight = options.weight || 'outline';
       var strokeWidth = options.strokeWidth;
       var className = options.className;
       var attrs = options.attrs || {};
@@ -337,7 +347,7 @@ const catsJSON = JSON.stringify(catList);
 const iconsJSON = JSON.stringify(cdnIconsMap);
 
 const runtimeJS = `/*!
- * Vezham Icons CDN — drop-in web component for 1000+ icons, 2 weights (Outline & Filled).
+ * Vezham Icons CDN — drop-in web component for 1000+ icons, 4 weights.
  * ALL icon data is inlined — zero network fetch, instant rendering.
  *
  *   <vx-icon icon="home"></vx-icon>
@@ -362,12 +372,14 @@ const runtimeJS = `/*!
   var ICONS = ${iconsJSON};
 
   // Weight short→full and full→short maps
-  var W_FULL = { F: 'Filled', O: 'Outline' };
-  var W_SHORT = { Filled: 'F', Outline: 'O' };
-  var WEIGHTS = ['Filled', 'Outline'];
+  var W_FULL = { O: 'outline', F: 'filled', DO: 'duotone-outline', DF: 'duotone-filled' };
+  var W_SHORT = { outline: 'O', filled: 'F', 'duotone-outline': 'DO', 'duotone-filled': 'DF' };
+  var WEIGHTS = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
   var WEIGHT_ALIASES = {
-    filled: 'Filled', bold: 'Filled',
-    outline: 'Outline', linear: 'Outline',
+    filled: 'filled', bold: 'filled', Filled: 'filled',
+    outline: 'outline', linear: 'outline', Outline: 'outline',
+    'duotone-outline': 'duotone-outline', duotoneoutline: 'duotone-outline', DuotoneOutline: 'duotone-outline',
+    'duotone-filled': 'duotone-filled', duotonefilled: 'duotone-filled', DuotoneFilled: 'duotone-filled',
   };
 
   // ─── caches ───────────────────────────────────────────────────────────────
@@ -383,12 +395,15 @@ const runtimeJS = `/*!
     if (!raw) return null;
     var category = null, spec = String(raw).trim();
     var name = spec, weight = null;
-    var dash = spec.lastIndexOf('-');
-    if (dash > 0) {
-      var w = normalizeWeight(spec.substring(dash + 1));
-      if (w) {
-        var base = spec.substring(0, dash);
-        if (ICONS[base] && !ICONS[spec]) { name = base; weight = w; }
+    for (var i = 0; i < WEIGHTS.length; i++) {
+      var suffix = '-' + WEIGHTS[i];
+      if (spec.slice(-suffix.length) === suffix) {
+        var base = spec.slice(0, -suffix.length);
+        if (ICONS[base] && !ICONS[spec]) {
+          name = base;
+          weight = WEIGHTS[i];
+          break;
+        }
       }
     }
     return { category: category, name: name, weight: weight };
@@ -468,7 +483,7 @@ const runtimeJS = `/*!
     var ws = entry[1];
     var short = W_SHORT[weight];
     if (short && ws[short]) return { cat: CATS[entry[0]], inner: ws[short] };
-    var order = ['O', 'F'];
+    var order = ['O', 'F', 'DO', 'DF'];
     for (var i = 0; i < order.length; i++) {
       if (ws[order[i]]) return { cat: CATS[entry[0]], inner: ws[order[i]] };
     }
@@ -594,7 +609,7 @@ const runtimeJS = `/*!
       if (!parsed) { this._injectSvg(FALLBACK_SVG); return; }
 
       var weightAttr = normalizeWeight(this.getAttribute('weight'));
-      var weight = weightAttr || parsed.weight || 'Outline';
+      var weight = weightAttr || parsed.weight || 'outline';
       var name = parsed.name;
       this._lastIconName = name;
       this._applyA11y();
@@ -704,7 +719,7 @@ function writeDirectSvg(relativePath, inner) {
 }
 
 for (const icon of icons) {
-  const outline = icon.directWeights.O || icon.directWeights.F || icon.directWeights.D;
+  const outline = icon.directWeights.O || icon.directWeights.F || icon.directWeights.DO || icon.directWeights.DF;
   if (outline) {
     writeDirectSvg(`${icon.kebab}.svg`, outline);
   }
@@ -713,8 +728,12 @@ for (const icon of icons) {
     writeDirectSvg(`${icon.kebab}-filled.svg`, icon.directWeights.F);
   }
 
-  if (icon.directWeights.D) {
-    writeDirectSvg(`${icon.kebab}-duotone.svg`, icon.directWeights.D);
+  if (icon.directWeights.DO) {
+    writeDirectSvg(`${icon.kebab}-duotone-outline.svg`, icon.directWeights.DO);
+  }
+
+  if (icon.directWeights.DF) {
+    writeDirectSvg(`${icon.kebab}-duotone-filled.svg`, icon.directWeights.DF);
   }
 }
 console.log(`  Direct SVGs: ${directSvgFiles}`);
@@ -726,7 +745,7 @@ const pkg = {
   version: srcPkg.version,
   type: 'module',
   description:
-    `Core vanilla JS icon components for ${icons.length}+ icons in 2 weights (Outline & Filled). Tree-shakeable, TypeScript-ready.`,
+    `Core vanilla JS icon components for ${icons.length}+ icons in 4 weights. Tree-shakeable, TypeScript-ready.`,
   main: './index.js',
   module: './index.js',
   types: './index.d.ts',
@@ -802,7 +821,7 @@ const readme = `<p align="center">
 <h1 align="center">Vezham</h1>
 
 <p align="center">
-  <b>${icons.length}+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
+  <b>${icons.length}+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -855,7 +874,7 @@ import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons';
 
 document.body.appendChild(Home());
 document.body.appendChild(ShieldCheck({ size: 32, color: '#d97757' }));
-document.body.appendChild(AltArrowDown({ weight: 'Filled' }));
+document.body.appendChild(AltArrowDown({ weight: 'filled' }));
 \`\`\`
 
 ### Get SVG as a string
@@ -869,13 +888,15 @@ element.innerHTML = svgString;
 
 ### Weights
 
-Every icon ships in two weights — **Outline** (default) and **Filled**:
+Every icon ships in four weights — **outline**, **filled**, **duotone-outline**, and **duotone-filled**:
 
 \`\`\`js
 import { Home } from '@vezham/icons';
 
-Home()                    // Outline (default)
-Home({ weight: 'Filled' }) // Filled
+Home()                    // outline (default)
+Home({ weight: 'filled' }) // filled
+Home({ weight: 'duotone-outline' })
+Home({ weight: 'duotone-filled' })
 \`\`\`
 
 ### Sizing & coloring
@@ -901,9 +922,11 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 \`\`\`html
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-outline.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-filled.svg" alt="Home" />
 \`\`\`
 
-Use \`/dist/cdn/icons/{name}.svg\` for the default outline SVG and \`/dist/cdn/icons/{name}-filled.svg\` for the filled SVG.
+Use \`/dist/cdn/icons/{name}.svg\` for the default outline SVG, \`/dist/cdn/icons/{name}-filled.svg\` for filled, \`/dist/cdn/icons/{name}-duotone-outline.svg\`, or \`/dist/cdn/icons/{name}-duotone-filled.svg\`.
 Every direct SVG uses a flat kebab-case filename under \`/dist/cdn/icons\`.
 
 ### Direct icon import (smallest bundle)
@@ -921,7 +944,7 @@ import ShieldCheck from '@vezham/icons/ShieldCheck';
 |--------|------|---------|-------------|
 | \`size\` | \`number | string\` | \`24\` | Icon width & height (number = px) |
 | \`color\` | \`string\` | — | Primary icon stroke/fill color. Leave unset to use CSS. |
-| \`weight\` | \`'Outline' | 'Filled'\` | \`'Outline'\` | Icon style variant |
+| \`weight\` | \`'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'\` | \`'outline'\` | Icon style variant |
 | \`strokeWidth\` | \`number | string\` | — | Override the default stroke width |
 | \`className\` | \`string\` | — | Additional CSS class on the \`<svg>\` element |
 | \`attrs\` | \`object\` | — | Any additional SVG attributes |
@@ -967,7 +990,7 @@ Full type declarations ship with the package — no separate \`@types/\` install
 \`\`\`ts
 import { Home, IconOptions, IconWeight } from '@vezham/icons';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const options: IconOptions = { size: 32, color: '#d97757', weight };
 
 const svg: SVGSVGElement = Home(options);
@@ -979,14 +1002,14 @@ document.body.appendChild(svg);
 | Type | Description |
 |------|-------------|
 | \`IconOptions\` | Options for creating an SVG element |
-| \`IconWeight\` | \`'Outline' | 'Filled'\` |
+| \`IconWeight\` | \`'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'\` |
 
 ---
 
 ## Features
 
 - **${icons.length}+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead whatsoever
 - **TypeScript-ready** — Full type declarations included, no extra packages needed
@@ -1038,7 +1061,7 @@ fs.writeFileSync(path.join(DIST, 'icon-names.json'), JSON.stringify(nameMap, nul
 const totalFiles = (icons.length * 2) + directSvgFiles + 6;
 console.log(`\nDone!`);
 console.log(`  Icons:       ${icons.length}`);
-console.log(`  Weights:     Outline + Filled`);
+console.log(`  Weights:     outline + filled + duotone-outline + duotone-filled`);
 console.log(`  Files:       ${totalFiles}`);
 console.log(`  Output:      ${DIST}`);
 console.log(`\nTo publish:`);

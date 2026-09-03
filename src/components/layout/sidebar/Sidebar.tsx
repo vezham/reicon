@@ -89,14 +89,15 @@ function Sidebar({
         </div>
         <div className="sidebar-items-container">
           <div className="sidebar-section-line" style={{ background: 'linear-gradient(to bottom, var(--border-base) 0%, var(--border-base) 60%, transparent 100%)' }} />
-          {STYLE_OPTIONS.map((style) =>
-            renderNavItem(
+          {STYLE_OPTIONS.map((style) => {
+            const label = style.split('-').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+            return renderNavItem(
               `weight-${style}`,
-              style,
+              label,
               activeStyle === style,
-              style === 'Duotone'
-            )
-          )}
+              style.startsWith('duotone')
+            );
+          })}
         </div>
       </div>
 

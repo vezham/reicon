@@ -15,7 +15,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Svelte"
-        onCopy={() => onCopy("<script>\n  import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-svelte';\n</script>\n\n<Home />\n<ShieldCheck size={32} color=\"#d97757\" />\n<AltArrowDown weight=\"Filled\" />", 'svelte-basic')}
+        onCopy={() => onCopy("<script>\n  import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-svelte';\n</script>\n\n<Home />\n<ShieldCheck size={32} color=\"#d97757\" />\n<AltArrowDown weight=\"filled\" />", 'svelte-basic')}
         copied={copiedField === 'svelte-basic'}
       >
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">script</span><span className="text-text-base/70">{'>'}</span>
@@ -38,7 +38,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         {'\n'}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">ShieldCheck</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-[#e5c07b]">{'{'}</span><span className="text-[#d19a66]">32</span><span className="text-[#e5c07b]">{'}'}</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#d97757"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">AltArrowDown</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">AltArrowDown</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span>
       </SyntaxBlock>
     </>
   );

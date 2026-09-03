@@ -1263,7 +1263,7 @@ export function searchIcons(
   // Default limit raised from 5 → 8 for better agent context
   const limit = options.limit ?? 8;
   const tokens = tokenize(query);
-  const weights: IconWeight[] = options.weight ? [options.weight] : ['Outline', 'Filled'];
+  const weights: IconWeight[] = options.weight ? [options.weight] : ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
   const results: SearchResult[] = [];
 
   for (const icon of index.icons) {

@@ -16,7 +16,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="JavaScript"
-        onCopy={() => onCopy("import { Home, ShieldCheck } from '@vezham/icons';\n\n// Create SVG elements\nconst home = Home({ size: 24 });\nconst shield = ShieldCheck({ size: 32, color: '#6C5CE7', weight: 'Filled' });\n\n// Append directly to document\ndocument.body.appendChild(home);\ndocument.body.appendChild(shield);", 'vanilla-esm')}
+        onCopy={() => onCopy("import { Home, ShieldCheck } from '@vezham/icons';\n\n// Create SVG elements\nconst home = Home({ size: 24 });\nconst shield = ShieldCheck({ size: 32, color: '#6C5CE7', weight: 'filled' });\n\n// Append directly to document\ndocument.body.appendChild(home);\ndocument.body.appendChild(shield);", 'vanilla-esm')}
         copied={copiedField === 'vanilla-esm'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -46,7 +46,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         <span className="text-text-base/70">, color: </span>
         <span className="text-[#98c379]">'#6C5CE7'</span>
         <span className="text-text-base/70">, weight: </span>
-        <span className="text-[#98c379]">'Filled'</span>
+        <span className="text-[#98c379]">'filled'</span>
         <span className="text-text-base/70"> {'}'});</span>
         {'\n\n'}
         <span className="text-text-base/30">{'// Append directly to document'}</span>

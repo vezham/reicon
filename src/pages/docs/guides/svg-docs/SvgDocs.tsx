@@ -21,7 +21,7 @@ export default function SvgDocs({ markdownContent, copiedField, onCopy }: Props)
       />
 
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-6">
-        Download and integrate raw SVG vector files directly into vanilla HTML layouts, static sites, or design platforms. We provide pre-compiled, optimized icon sheets in both Outline and Filled weights.
+        Download and integrate raw SVG vector files directly into vanilla HTML layouts, static sites, or design platforms. We provide pre-compiled, optimized icon sheets across outline, filled, duotone-outline, and duotone-filled weights.
       </p>
 
       {/* Download ZIP Archive */}
@@ -29,7 +29,7 @@ export default function SvgDocs({ markdownContent, copiedField, onCopy }: Props)
         Download ZIP Archive
       </h3>
       <p className="text-text-base/60 text-[15px] leading-[1.8] mb-4">
-        Get the complete, compressed package containing all 2,700+ icons in both Outline and Filled weights (total 5,400+ vectors). All icons are compressed and optimized for lightweight load speeds, pre-colored in black (#000000) for standard vector previews.
+        Get the complete, compressed package containing all 2,700+ icon designs across outline, filled, duotone-outline, and duotone-filled weights. All icons are compressed and optimized for lightweight load speeds, pre-colored in black (#000000) for standard vector previews.
       </p>
 
       <div className="mb-8">

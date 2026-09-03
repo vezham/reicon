@@ -6,10 +6,13 @@ const ICONS_DIR = path.join(ROOT, 'data', 'icons');
 const TAGS_PATH = path.join(ROOT, 'data', 'icon-tags.json');
 
 const WEIGHT_FILES = {
-  outline: 'Outline',
-  filled: 'Filled',
-  duotone: 'Duotone',
+  outline: 'outline',
+  filled: 'filled',
+  'duotone-outline': 'duotone-outline',
+  'duotone-filled': 'duotone-filled',
 };
+
+const DUOTONE_WEIGHTS = ['duotone-outline', 'duotone-filled'];
 
 function readJson(filePath, fallback) {
   if (!fs.existsSync(filePath)) return fallback;
@@ -127,10 +130,16 @@ function loadDuotoneIcons(options = {}) {
 
   for (const [category, categoryData] of Object.entries(data.categories || {})) {
     for (const [name, icon] of Object.entries(categoryData.icons || {})) {
-      const duotone = icon.weights && icon.weights.Duotone;
-      if (!duotone || !duotone.code) continue;
+      const weights = {};
+      for (const weight of DUOTONE_WEIGHTS) {
+        const weightData = icon.weights && icon.weights[weight];
+        if (weightData && weightData.code) {
+          weights[weight] = weightData;
+        }
+      }
+      if (Object.keys(weights).length === 0) continue;
       icons[name] = {
-        code: duotone.code,
+        weights,
         category,
         description: icon.description || [],
       };
@@ -142,6 +151,7 @@ function loadDuotoneIcons(options = {}) {
 
 module.exports = {
   ICONS_DIR,
+  WEIGHT_FILES,
   loadDuotoneIcons,
   loadIconData,
   minifySvg,

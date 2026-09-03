@@ -6,6 +6,8 @@ import { handleListCategories } from './tools/list-categories.js';
 import { handleSearchIcons } from './tools/search-icons.js';
 import { handleViewIcon } from './tools/view-icon.js';
 
+const ICON_WEIGHT_VALUES = ['outline', 'filled', 'duotone-outline', 'duotone-filled'] as const;
+
 const server = new McpServer({
   name: 'vezham-icons-mcp',
   version: '1.1.0',
@@ -26,9 +28,9 @@ server.tool(
       'Keyword(s) or phrase — e.g. "cart", "user circle", "volume up", "credit card", "go back", "delete". Handles synonyms, misspellings, and multi-word queries.',
     ),
     weight: z
-      .enum(['Outline', 'Filled'])
+      .enum(ICON_WEIGHT_VALUES)
       .optional()
-      .describe('Filter by weight. Omit to search both.'),
+      .describe('Filter by weight. Omit to search all weights.'),
     limit: z
       .number()
       .int()
@@ -54,7 +56,7 @@ server.tool(
   ].join(' '),
   {
     name: z.string().describe('Icon kebab-case name, e.g. "heart", "arrow-right", "user-circle"'),
-    weight: z.enum(['Outline', 'Filled']).describe('Which weight variant to fetch'),
+    weight: z.enum(ICON_WEIGHT_VALUES).describe('Which weight variant to fetch'),
   },
   async (args) => {
     const result = handleViewIcon(args);
@@ -75,7 +77,7 @@ server.tool(
   ].join(' '),
   {
     name: z.string().describe('Icon kebab-case name, e.g. "heart"'),
-    weight: z.enum(['Outline', 'Filled']).describe('Icon weight variant'),
+    weight: z.enum(ICON_WEIGHT_VALUES).describe('Icon weight variant'),
     framework: z
       .enum(['react', 'react-native', 'vue', 'svelte', 'html', 'svg'])
       .describe('Target framework or output format'),

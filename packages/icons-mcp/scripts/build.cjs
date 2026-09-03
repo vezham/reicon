@@ -54,7 +54,7 @@ function buildIndex(data) {
 
       const weights = {};
 
-      for (const wName of ['Outline', 'Filled']) {
+      for (const wName of ['outline', 'filled', 'duotone-outline', 'duotone-filled']) {
         const wData = icon.weights?.[wName];
         if (wData?.code) {
           weights[wName] = {

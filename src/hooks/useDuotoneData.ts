@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export interface DuotoneIconInfo {
-  code: string;
+  weights?: Partial<Record<'duotone-outline' | 'duotone-filled', { code: string }>>;
   category?: string;
   description?: string[];
 }
@@ -11,11 +11,11 @@ let duotonePromise: Promise<Record<string, DuotoneIconInfo>> | null = null;
 
 export function useDuotoneData(activeStyle: string) {
   const [duotoneMap, setDuotoneMap] = useState<Record<string, DuotoneIconInfo> | null>(duotoneCache);
-  const [loading, setLoading] = useState(activeStyle === 'Duotone' && !duotoneCache);
+  const [loading, setLoading] = useState(activeStyle.toLowerCase().includes('duotone') && !duotoneCache);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (activeStyle !== 'Duotone') return;
+    if (!activeStyle.toLowerCase().includes('duotone')) return;
     if (duotoneCache) {
       setDuotoneMap(duotoneCache);
       setLoading(false);
@@ -31,7 +31,7 @@ export function useDuotoneData(activeStyle: string) {
         const parsed: Record<string, DuotoneIconInfo> = {};
         for (const [key, val] of Object.entries(rawIcons)) {
           parsed[key] = {
-            code: (val as any).code || '',
+            weights: (val as any).weights || {},
             category: (val as any).category,
             description: (val as any).description,
           };

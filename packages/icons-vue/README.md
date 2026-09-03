@@ -15,7 +15,7 @@
 <h1 align="center">Vezham Vue</h1>
 
 <p align="center">
-  <b>1273+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vue 3 component wrapper • Zero dependencies • MIT Licensed
+  <b>1273+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • Vue 3 component wrapper • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -71,18 +71,20 @@ import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons-vue';
   <div>
     <Home />
     <ShieldCheck :size="32" color="#d97757" />
-    <AltArrowDown weight="Filled" />
+    <AltArrowDown weight="filled" />
   </div>
 </template>
 ```
 
 ### Weights
 
-Every icon ships in two weights — **Outline** (default) and **Filled**:
+Every icon ships in four weights — **outline**, **filled**, **duotone-outline**, and **duotone-filled**:
 
 ```vue
-<Home />                     <!-- Outline (default) -->
-<Home weight="Filled" />     <!-- Filled -->
+<Home />                     <!-- outline (default) -->
+<Home weight="filled" />     <!-- filled -->
+<Home weight="duotone-outline" />
+<Home weight="duotone-filled" />
 ```
 
 ### Sizing & coloring
@@ -125,7 +127,7 @@ Pass any standard SVG attribute — `class`, `style`, `onClick`, `aria-*`, etc.:
 |------|------|---------|-------------|
 | `size` | `number | string` | `24` | Icon width & height (number = px) |
 | `color` | `string` | — | Primary icon stroke/fill color. Leave unset to use CSS class. |
-| `weight` | `'Outline' | 'Filled'` | `'Outline'` | Icon style variant |
+| `weight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` | `'outline'` | Icon style variant |
 | `strokeWidth` | `number | string` | — | Override the default stroke width |
 | `class` | `string | array | object` | — | Additional CSS class on the `<svg>` element |
 | `style` | `string | array | object` | — | Additional inline styles |
@@ -173,7 +175,7 @@ Full type declarations ship with the package — no separate `@types/` installat
 ```ts
 import { Home, type IconProps, type IconWeight } from '@vezham/icons-vue';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const props: IconProps = { size: 32, color: '#d97757', weight };
 ```
 
@@ -182,14 +184,14 @@ const props: IconProps = { size: 32, color: '#d97757', weight };
 | Type | Description |
 |------|-------------|
 | `IconProps` | Combined icon props + Vue SVG attributes |
-| `IconWeight` | `'Outline' | 'Filled'` |
+| `IconWeight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` |
 
 ---
 
 ## Features
 
 - **1273+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead beyond Vue itself
 - **TypeScript-ready** — Full type declarations included, no extra packages needed

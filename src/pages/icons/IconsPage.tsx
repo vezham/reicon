@@ -46,9 +46,8 @@ export default function IconsPage() {
   const initialSet = searchParams.get('category') || searchParams.get('set') || 'all';
   const initialStyle = useMemo(() => {
     const w = searchParams.get('weight')?.toLowerCase();
-    if (w === 'filled') return 'Filled';
-    if (w === 'duotone') return 'Duotone';
-    return 'Outline';
+    if (w === 'filled' || w === 'duotone-outline' || w === 'duotone-filled') return w;
+    return 'outline';
   }, [searchParams]);
 
   const [activeSet, setActiveSet] = useState(initialSet);
@@ -84,9 +83,8 @@ export default function IconsPage() {
 
   useEffect(() => {
     const w = searchParams.get('weight')?.toLowerCase();
-    if (w === 'filled') setActiveStyle('Filled');
-    else if (w === 'duotone') setActiveStyle('Duotone');
-    else setActiveStyle('Outline');
+    if (w === 'filled' || w === 'duotone-outline' || w === 'duotone-filled') setActiveStyle(w);
+    else setActiveStyle('outline');
     
     const cat = searchParams.get('category') || searchParams.get('set');
     if (cat) setActiveSet(cat);
@@ -159,7 +157,7 @@ export default function IconsPage() {
   }, [sortedIcons]);
 
   const displaySize = parseInt(activeSize) || 32;
-  const displayWeight = activeStyle === 'Filled' ? 'filled' : 'outline';
+  const displayWeight = activeStyle;
 
   if (loadError) {
     return (

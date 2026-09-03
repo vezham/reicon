@@ -256,7 +256,7 @@ export default function SupportPage() {
       <div className="bg-gradient-to-r from-text-base/4 via-text-base/3 to-text-base/4 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
         <div className="space-y-2 text-center md:text-left">
           <div className="inline-flex items-center gap-1 text-xs text-[#FFDD00] font-semibold">
-            <Star size={14} weight="Filled" />
+            <Star size={14} weight="filled" />
             <span>A note from the creator</span>
           </div>
           <h3 className="text-xl font-serif font-semibold text-text-base">Built with passion by @devchauhan</h3>

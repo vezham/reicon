@@ -6,7 +6,7 @@ Vezham packages ship with full TypeScript support and auto-generated declaration
 interface VezhamIconProps {
   size?: number | string;
   color?: string;
-  weight?: 'Outline' | 'Filled';
+  weight?: 'outline' | 'filled' | 'duotone-outline' | 'duotone-filled';
   strokeWidth?: number | string;
   secondaryColor?: string;
   className?: string;

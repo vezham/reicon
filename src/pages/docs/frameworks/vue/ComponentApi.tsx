@@ -15,7 +15,7 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="Props"
-        onCopy={() => onCopy('<Home :size="16" />\n<Home :size="24" />\n<Home :size="32" />\n\n<Heart color="#ef4444" />\n<Heart color="rgb(99, 102, 241)" />\n\n<Star />                     <!-- Outline (default) -->\n<Star weight="Filled" />     <!-- Filled -->\n\n<Home class="my-icon" />', 'vue-props')}
+        onCopy={() => onCopy('<Home :size="16" />\n<Home :size="24" />\n<Home :size="32" />\n\n<Heart color="#ef4444" />\n<Heart color="rgb(99, 102, 241)" />\n\n<Star />                     <!-- outline (default) -->\n<Star weight="filled" />     <!-- filled -->\n<Star weight="duotone-outline" />\n<Star weight="duotone-filled" />\n\n<Home class="my-icon" />', 'vue-props')}
         copied={copiedField === 'vue-props'}
       >
         <span className="text-text-base/30">{'<!-- Size -->'}</span>
@@ -34,9 +34,13 @@ export default function ComponentApi({ copiedField, onCopy }: Props) {
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Weight -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'                     <!-- Outline (default) -->'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'                     <!-- outline (default) -->'}</span>
         {'\n'}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'     <!-- Filled -->'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span><span className="text-text-base/30">{'     <!-- filled -->'}</span>
+        {'\n'}
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-outline"</span><span className="text-text-base/70"> /{'>'}</span>
+        {'\n'}
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Star</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"duotone-filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n\n'}
         <span className="text-text-base/30">{'<!-- Class -->'}</span>
         {'\n'}

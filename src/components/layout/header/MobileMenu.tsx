@@ -190,7 +190,7 @@ export default function MobileMenu({ stars, theme, toggleTheme }: MobileMenuProp
                       className="flex items-center gap-0.5 text-[11px] font-medium pl-1.5"
                       style={{ borderLeft: isDark ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)', opacity: 0.6 }}
                     >
-                      <Star size={11} weight="Filled" color="#eab308" className="shrink-0 relative -top-[0.5px]" />
+                      <Star size={11} weight="filled" color="#eab308" className="shrink-0 relative -top-[0.5px]" />
                       {stars}
                     </span>
                   )}

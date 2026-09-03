@@ -54,10 +54,10 @@ const FAQ_CATEGORIES = [
       {
         id: "what-is-vezham",
         question: "What is Vezham?",
-        markdownAnswer: "Vezham is a free, open-source vector graphics library providing 3,900+ UI icons in Outline, Filled, and Duotone weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (@vezham/icons-react), React Native (@vezham/icons-react-native), Vue 3 (@vezham/icons-vue), Svelte (@vezham/icons-svelte), Flutter (vezham_icons_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
+        markdownAnswer: "Vezham is a free, open-source vector graphics library providing 3,900+ UI icons in outline, filled, duotone-outline, and duotone-filled weights, 71,000+ SVG illustrations, and 4,900+ brand logos. Official packages are available for React (@vezham/icons-react), React Native (@vezham/icons-react-native), Vue 3 (@vezham/icons-vue), Svelte (@vezham/icons-svelte), Flutter (vezham_icons_flutter), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and AI MCP Server.",
         answer: (
           <p>
-            Vezham is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in Outline, Filled, and Duotone weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>@vezham/icons-react</Code>), React Native (<Code>@vezham/icons-react-native</Code>), Vue 3 (<Code>@vezham/icons-vue</Code>), Svelte (<Code>@vezham/icons-svelte</Code>), Flutter (<Code>vezham_icons_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
+            Vezham is a free, open-source vector graphics library providing <strong>3,900+ UI icons</strong> in outline, filled, duotone-outline, and duotone-filled weights, <strong>71,000+ SVG illustrations</strong>, and <strong>4,900+ brand logos</strong>. Official packages are available for React (<Code>@vezham/icons-react</Code>), React Native (<Code>@vezham/icons-react-native</Code>), Vue 3 (<Code>@vezham/icons-vue</Code>), Svelte (<Code>@vezham/icons-svelte</Code>), Flutter (<Code>vezham_icons_flutter</Code>), vanilla JavaScript, CDN runtime, Figma plugin, VS Code extension, and MCP Server.
           </p>
         ),
       },
@@ -102,13 +102,14 @@ const FAQ_CATEGORIES = [
       {
         id: 'icon-weights',
         question: 'How are weights handled?',
-        markdownAnswer: 'Vezham does not auto-generate weights. Each is handcrafted:\n- Outline: Clean stroked paths (default 1.5px). Customizable via the strokeWidth prop.\n- Filled: Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).',
+        markdownAnswer: 'Vezham does not auto-generate weights. Each is handcrafted:\n- outline: Clean stroked paths (default 1.5px). Customizable via the strokeWidth prop.\n- filled: Custom solid silhouettes designed to match their outline counterparts for smooth state transitions.\n- duotone-outline and duotone-filled: Two-color variants for layered emphasis and richer states.',
         answer: (
           <>
             <p>Vezham does not auto-generate weights. Each is handcrafted:</p>
             <ul className="mt-4 space-y-2 list-disc list-inside">
-              <li><strong>Outline:</strong> Clean stroked paths (default 1.5px). Customizable via the <Code>strokeWidth</Code> prop.</li>
-              <li><strong>Filled:</strong> Custom solid silhouettes designed to match their outline counterparts for smooth state transitions (e.g. active nav tabs).</li>
+              <li><strong>outline:</strong> Clean stroked paths (default 1.5px). Customizable via the <Code>strokeWidth</Code> prop.</li>
+              <li><strong>filled:</strong> Custom solid silhouettes designed to match their outline counterparts for smooth state transitions.</li>
+              <li><strong>duotone-outline / duotone-filled:</strong> Two-color variants for layered emphasis and richer states.</li>
             </ul>
           </>
         ),

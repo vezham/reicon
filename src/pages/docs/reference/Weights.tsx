@@ -12,7 +12,7 @@ export default function Weights({ markdownContent, copiedField, onCopy }: Props)
     <section id="weights" data-section className="mb-16 scroll-mt-24">
       <SectionHeader id="weights" title="Icon Weights" level="h2" markdownContent={markdownContent} />
       <p className="text-text-base/50 text-[14px] mb-6 leading-relaxed">
-        Every icon comes in two weights — Outline and Filled.
+        Icons support outline, filled, duotone-outline, and duotone-filled weights.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-4">
@@ -28,14 +28,14 @@ export default function Weights({ markdownContent, copiedField, onCopy }: Props)
             <vx-icon icon="home" size={48} weight="filled" color="currentColor" />
           </div>
           <span className="text-text-base/70 text-sm font-medium">Filled</span>
-          <p className="text-text-base/30 text-[12px] mt-1">weight="Filled"</p>
+          <p className="text-text-base/30 text-[12px] mt-1">weight="filled"</p>
         </div>
       </div>
 
       <div className="mt-6">
         <SyntaxBlock
           title="Using Weights"
-          onCopy={() => onCopy('<Home />\n<Home weight="Filled" />', 'weights')}
+          onCopy={() => onCopy('<Home />\n<Home weight="filled" />\n<Home weight="duotone-outline" />\n<Home weight="duotone-filled" />', 'weights')}
           copied={copiedField === 'weights'}
         >
           <span className="text-text-base/30">{'// Outline (default)'}</span>
@@ -50,7 +50,25 @@ export default function Weights({ markdownContent, copiedField, onCopy }: Props)
           <span className="text-[#e06c75]">Home</span>
           <span className="text-[#d19a66]"> weight</span>
           <span className="text-text-base/50">=</span>
-          <span className="text-[#98c379]">"Filled"</span>
+          <span className="text-[#98c379]">"filled"</span>
+          <span className="text-text-base/70"> /{'>'}</span>
+          {'\n\n'}
+          <span className="text-text-base/30">{'// Duotone outline'}</span>
+          {'\n'}
+          <span className="text-text-base/70">{'<'}</span>
+          <span className="text-[#e06c75]">Home</span>
+          <span className="text-[#d19a66]"> weight</span>
+          <span className="text-text-base/50">=</span>
+          <span className="text-[#98c379]">"duotone-outline"</span>
+          <span className="text-text-base/70"> /{'>'}</span>
+          {'\n\n'}
+          <span className="text-text-base/30">{'// Duotone filled'}</span>
+          {'\n'}
+          <span className="text-text-base/70">{'<'}</span>
+          <span className="text-[#e06c75]">Home</span>
+          <span className="text-[#d19a66]"> weight</span>
+          <span className="text-text-base/50">=</span>
+          <span className="text-[#98c379]">"duotone-filled"</span>
           <span className="text-text-base/70"> /{'>'}</span>
         </SyntaxBlock>
       </div>

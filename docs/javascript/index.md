@@ -31,7 +31,7 @@ import { Home, ShieldCheck } from '@vezham/icons';
 
 // Create SVG elements
 const home = Home({ size: 24 });
-const shield = ShieldCheck({ size: 32, color: '#6C5CE7', weight: 'Filled' });
+const shield = ShieldCheck({ size: 32, color: '#6C5CE7', weight: 'filled' });
 
 // Append directly to document
 document.body.appendChild(home);
@@ -102,9 +102,11 @@ Use a direct SVG URL when you want a specific icon file without loading the runt
 ```html
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-outline.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-filled.svg" alt="Home" />
 ```
 
-The default file is Outline. Add `-filled` before `.svg` for the Filled weight.
+The default file is outline. Add `-filled`, `-duotone-outline`, or `-duotone-filled` before `.svg` for other weights.
 Every direct SVG uses a flat kebab-case filename under `/dist/cdn/icons`.
 
 ### Load Functions globally via Script tag

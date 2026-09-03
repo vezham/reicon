@@ -14,5 +14,5 @@ How to open and insert vector components inside a design file:
 
 1. **Open the plugin panel**: Right-click inside any Figma project canvas, select **Plugins** &rarr; **Vezham**, or search for "Vezham" in the resource panel (Cmd/Ctrl + I).
 2. **Search or Filter**: Browse through categories (Arrows, Communication, System, etc.) or type keywords in the search bar to locate specific shapes instantly.
-3. **Select Weight and Color**: Choose between **Outline** and **Filled** styles using the toggle swatches, and set a custom hex color.
+3. **Select Weight and Color**: Choose between **outline** and **filled** styles using the toggle swatches, and set a custom hex color.
 4. **Insert Vector Shape**: Click on any icon grid card to instantly spawn the vector group at the center of your viewport or active frames.

@@ -129,6 +129,6 @@ export const SVG_PACKAGE = {
     name: 'vezham-svg',
     guideUrl: '/docs/svg',
     downloadUrl: '/vezham-icons.zip',
-    description: 'Download the complete raw vector assets. Includes all Vezham icons in both outline and filled weights in black SVG format, fully compressed.',
+    description: 'Download the complete raw vector assets. Includes all Vezham icon weights in black SVG format, fully compressed.',
     icon: <SvgIcon size={48} />,
 };

@@ -174,11 +174,11 @@ export default function Integrations() {
                     icon={<SiReact size={16} color="#61dafb" />}
                     title="React"
                     guideUrl="/docs/react"
-                    copyText={`import { Home } from '@vezham/icons-react';\n\n<Home size={24} weight="Outline" />`}
+                    copyText={`import { Home } from '@vezham/icons-react';\n\n<Home size={24} weight="outline" />`}
                     lines={<>
                         <NpmInstall pkg="@vezham/icons-react" />
                         <ImportLine name="Home" from="@vezham/icons-react" />
-                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
+                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="outline" /></>} />
                     </>}
                 />
 
@@ -187,11 +187,11 @@ export default function Integrations() {
                     icon={<FaReact size={16} color="#61dafb" />}
                     title="React Native"
                     guideUrl="/docs/react-native"
-                    copyText={`import { Home } from '@vezham/icons-react-native';\n\n<Home size={24} weight="Outline" />`}
+                    copyText={`import { Home } from '@vezham/icons-react-native';\n\n<Home size={24} weight="outline" />`}
                     lines={<>
                         <NpmInstall pkg="@vezham/icons-react-native" />
                         <ImportLine name="Home" from="@vezham/icons-react-native" />
-                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
+                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="outline" /></>} />
                     </>}
                 />
 
@@ -200,11 +200,11 @@ export default function Integrations() {
                     icon={<svg width={16} height={16} viewBox="0 0 122.88 106.42" fill="none"><polygon fill="#4DBA87" points="75.63,0 61.44,24.58 47.25,0 0,0 61.44,106.42 122.88,0 75.63,0" /><polygon fill="#425466" points="75.63,0 61.44,24.58 47.25,0 24.58,0 61.44,63.85 98.3,0 75.63,0" /></svg>}
                     title="Vue"
                     guideUrl="/docs/vue"
-                    copyText={`import { Home } from '@vezham/icons-vue';\n\n<Home :size="24" weight="Outline" />`}
+                    copyText={`import { Home } from '@vezham/icons-vue';\n\n<Home :size="24" weight="outline" />`}
                     lines={<>
                         <NpmInstall pkg="@vezham/icons-vue" />
                         <ImportLine name="Home" from="@vezham/icons-vue" />
-                        <JsxLine tag="Home" props={<><Prop name=":size" value="24" /><Prop name="weight" value="Outline" /></>} />
+                        <JsxLine tag="Home" props={<><Prop name=":size" value="24" /><Prop name="weight" value="outline" /></>} />
                     </>}
                 />
 
@@ -213,11 +213,11 @@ export default function Integrations() {
                     icon={<SiSvelte size={16} color="#FF3E00" />}
                     title="Svelte"
                     guideUrl="/docs/svelte"
-                    copyText={`import { Home } from '@vezham/icons-svelte';\n\n<Home size={24} weight="Outline" />`}
+                    copyText={`import { Home } from '@vezham/icons-svelte';\n\n<Home size={24} weight="outline" />`}
                     lines={<>
                         <NpmInstall pkg="@vezham/icons-svelte" />
                         <ImportLine name="Home" from="@vezham/icons-svelte" />
-                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="Outline" /></>} />
+                        <JsxLine tag="Home" props={<><Prop name="size" value="{24}" isExpr /><Prop name="weight" value="outline" /></>} />
                     </>}
                 />
 

@@ -63,7 +63,7 @@ export default function FaqHelmet() {
             'name': 'How many icons does Vezham have?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Vezham has over 2,700 handcrafted SVG icons, each available in two weights: Outline and Filled. New icons are added regularly.'
+              'text': 'Vezham has over 2,700 handcrafted SVG icons across outline, filled, duotone-outline, and duotone-filled weights. New icons are added regularly.'
             }
           },
           {

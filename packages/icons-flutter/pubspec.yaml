@@ -1,7 +1,8 @@
 name: vezham_icons
 description: >-
-  Official Vezham icons for Dart & Flutter — 2700+ handcrafted,
-  pixel-perfect SVG icons in Outline and Filled. MIT licensed.
+  Official Vezham icons for Dart & Flutter with handcrafted SVG icons
+  in outline, filled, duotone-outline, and duotone-filled weights.
+  MIT licensed.
 version: 1.0.1
 homepage: https://vezham.com
 repository: https://github.com/vezham/reicon/tree/main/packages/icons-flutter

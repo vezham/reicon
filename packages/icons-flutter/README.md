@@ -15,7 +15,7 @@
 <h1 align="center">Vezham for Dart &amp; Flutter</h1>
 
 <p align="center">
-  <b>2674+ pixel-perfect SVG icons</b> • Outline & Filled weights • Dart & Flutter • Zero dependencies • MIT Licensed
+  <b>2674+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • Dart & Flutter • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
   <a href="#links">Links</a>
 </p>
 
-**Vezham Flutter** is the official Dart & Flutter package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring 2674+ handcrafted, grid-aligned icons. Every icon is available in both Outline and Filled weights as raw SVG path data, ready for any Dart or Flutter SVG renderer.
+**Vezham Flutter** is the official Dart & Flutter package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring handcrafted, grid-aligned icons in outline, filled, duotone-outline, and duotone-filled weights as raw SVG path data, ready for any Dart or Flutter SVG renderer.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
@@ -71,11 +71,15 @@ import 'package:vezham_icons/icons.dart';
 ### Get SVG path data
 
 ```dart
-// Outline weight (default)
+// outline weight (default)
 String homePath = Vezham.outline.home;
 
-// Filled weight
+// filled weight
 String settingsPath = Vezham.filled.settings;
+
+// duotone weights
+String starDuotoneOutline = Vezham.duotoneOutline.star;
+String heartDuotoneFilled = Vezham.duotoneFilled.heart;
 ```
 
 ### Build a complete SVG string
@@ -124,8 +128,10 @@ Entry point. Static accessors for each weight:
 
 | Member | Return type | Description |
 |--------|-------------|-------------|
-| `Vezham.outline` | `VezhamIconWeight` | All icons in Outline weight |
-| `Vezham.filled` | `VezhamIconWeight` | All icons in Filled weight |
+| `Vezham.outline` | `VezhamIconWeight` | All icons in outline weight |
+| `Vezham.filled` | `VezhamIconWeight` | All icons in filled weight |
+| `Vezham.duotoneOutline` | `VezhamIconWeight` | All icons in duotone-outline weight |
+| `Vezham.duotoneFilled` | `VezhamIconWeight` | All icons in duotone-filled weight |
 
 ### `VezhamIconWeight`
 
@@ -133,7 +139,7 @@ Access icons within a weight:
 
 | Member | Return type | Description |
 |--------|-------------|-------------|
-| `weight.name` | `String` | Display name (`"Outline"` / `"Filled"`) |
+| `weight.name` | `String` | Display name |
 | `weight.length` | `int` | Number of icons |
 | `weight.names` | `Iterable<String>` | All icon names |
 | `weight[iconName]` | `String?` | Look up by name |
@@ -170,7 +176,7 @@ Browse and search all 2674+ icons at <a href="https://vezham.com">vezham.com</a>
 ## Features
 
 - **2674+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Zero dependencies** — Pure Dart, no native plugins required
 - **Runtime lookup** — Access icons by string name with `Vezham.outline['name']`
 - **SVG builder** — `vezhamIconSvg()` helper wraps path data in a complete SVG string

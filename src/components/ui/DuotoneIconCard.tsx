@@ -5,11 +5,12 @@ import { IconTooltipTrigger } from './IconTooltip';
 
 interface DuotoneIconCardProps {
   name: string;
+  weight: 'duotone-outline' | 'duotone-filled';
   code: string;
   size?: number;
 }
 
-function DuotoneIconCard({ name, code, size = 32 }: DuotoneIconCardProps) {
+function DuotoneIconCard({ name, weight, code, size = 32 }: DuotoneIconCardProps) {
   const svgInnerHtml = useMemo(() => {
     if (!code) return '';
     return code
@@ -18,12 +19,12 @@ function DuotoneIconCard({ name, code, size = 32 }: DuotoneIconCardProps) {
   }, [code]);
 
   return (
-    <HighlightItem value={`${name}-duotone`}>
-      <IconTooltipTrigger label={`${name} (Duotone)`} side="bottom" sideOffset={14}>
+    <HighlightItem value={`${name}-${weight}`}>
+      <IconTooltipTrigger label={`${name} (${weight})`} side="bottom" sideOffset={14}>
         <Link
-          to={`/icon/${name}?weight=duotone`}
+          to={`/icon/${name}?weight=${weight}`}
           className="cv-auto group flex items-center justify-center w-full h-full aspect-square bg-text-base/3 border border-text-base/6 rounded-xl transition-all cursor-pointer relative"
-          title={`${name} (Duotone)`}
+          title={`${name} (${weight})`}
         >
           <svg
             viewBox="0 0 24 24"

@@ -35,8 +35,8 @@ export default function IconGrid({
   const totalCardsRef = useRef(0);
 
   const effectiveIcons = useMemo(() => {
-    if (activeStyle === 'Duotone' && duotoneMap) {
-      return filteredIcons.filter((name) => Boolean(duotoneMap[name]));
+    if (activeStyle.startsWith('duotone') && duotoneMap) {
+      return filteredIcons.filter((name) => Boolean(duotoneMap[name]?.weights?.[activeStyle as 'duotone-outline' | 'duotone-filled']?.code));
     }
     return filteredIcons;
   }, [filteredIcons, activeStyle, duotoneMap]);
@@ -46,12 +46,13 @@ export default function IconGrid({
   }, [effectiveIcons, activeStyle]);
 
   const visibleCards = useMemo(() => {
-    if (activeStyle === 'Duotone' && duotoneMap) {
+    if (activeStyle.startsWith('duotone') && duotoneMap) {
       return effectiveIcons.slice(0, visibleCount).map((name) => (
         <DuotoneIconCard
           key={name}
           name={name}
-          code={duotoneMap[name]?.code || ''}
+          weight={activeStyle as 'duotone-outline' | 'duotone-filled'}
+          code={duotoneMap[name]?.weights?.[activeStyle as 'duotone-outline' | 'duotone-filled']?.code || ''}
           size={displaySize}
         />
       ));
@@ -92,7 +93,7 @@ export default function IconGrid({
     }
   }, [filteredIcons, totalCards]);
 
-  if (!ready || (activeStyle === 'Duotone' && duotoneLoading)) {
+  if (!ready || (activeStyle.startsWith('duotone') && duotoneLoading)) {
     return (
       <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-1.5">
         {Array.from({ length: 96 }).map((_, i) => (

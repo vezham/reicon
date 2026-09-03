@@ -16,11 +16,11 @@ export const MCP_DEV_CONFIG = `{
   }
 }`;
 
-export const SEARCH_TOOL = `search_icons({ query: "heart", weight: "Filled" })`;
+export const SEARCH_TOOL = `search_icons({ query: "heart", weight: "filled" })`;
 
 export const APPLY_TOOL = `apply_icon({
   name: "heart",
-  weight: "Filled",
+  weight: "filled",
   framework: "react",
   size: 24,
   color: "#ef4444"

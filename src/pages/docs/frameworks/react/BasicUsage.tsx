@@ -15,7 +15,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
 
       <SyntaxBlock
         title="JSX"
-        onCopy={() => onCopy("import { Home, ShieldCheck, Bell } from '@vezham/icons-react';\n\nfunction App() {\n  return (\n    <div>\n      <Home size={24} />\n      <ShieldCheck size={24} color=\"#6C5CE7\" />\n      <Bell size={24} weight=\"Filled\" />\n    </div>\n  );\n}", 'react-basic')}
+        onCopy={() => onCopy("import { Home, ShieldCheck, Bell } from '@vezham/icons-react';\n\nfunction App() {\n  return (\n    <div>\n      <Home size={24} />\n      <ShieldCheck size={24} color=\"#6C5CE7\" />\n      <Bell size={24} weight=\"filled\" />\n    </div>\n  );\n}", 'react-basic')}
         copied={copiedField === 'react-basic'}
       >
         <span className="text-[#c678dd]">import</span>
@@ -43,7 +43,7 @@ export default function BasicUsage({ copiedField, onCopy }: Props) {
         {'\n      '}
         <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">ShieldCheck</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span><span className="text-[#d19a66]"> color</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"#6C5CE7"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n      '}
-        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Bell</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"Filled"</span><span className="text-text-base/70"> /{'>'}</span>
+        <span className="text-text-base/70">{'<'}</span><span className="text-[#e06c75]">Bell</span><span className="text-[#d19a66]"> size</span><span className="text-text-base/50">=</span><span className="text-text-base/70">{'{'}24{'}'}</span><span className="text-[#d19a66]"> weight</span><span className="text-text-base/50">=</span><span className="text-[#98c379]">"filled"</span><span className="text-text-base/70"> /{'>'}</span>
         {'\n    '}
         <span className="text-text-base/70">{'</'}</span><span className="text-[#e06c75]">div</span><span className="text-text-base/70">{'>'}</span>
         {'\n  '}

@@ -1,12 +1,21 @@
 'use client';
 import { forwardRef, createElement } from 'react';
 
-const W_MAP = { Filled: 'F', Outline: 'O' };
+const W_MAP = {
+  outline: 'O',
+  filled: 'F',
+  'duotone-outline': 'DO',
+  'duotone-filled': 'DF',
+  Outline: 'O',
+  Filled: 'F',
+  DuotoneOutline: 'DO',
+  DuotoneFilled: 'DF',
+};
 
 /**
  * Factory that builds a forwardRef icon component.
  * @param {string} displayName  PascalCase icon name
- * @param {Object} iconData     { F?: string, O?: string }
+ * @param {Object} iconData     { O?: string, F?: string, DO?: string, DF?: string }
  */
 const createIcon = (displayName, iconData) => {
   const Icon = forwardRef(
@@ -19,7 +28,7 @@ const createIcon = (displayName, iconData) => {
         color,
         secondaryColor,
         size = 24,
-        weight = 'Outline',
+        weight = 'outline',
         strokeWidth,
         className,
         style,

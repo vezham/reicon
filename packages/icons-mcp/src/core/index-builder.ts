@@ -1,6 +1,6 @@
 import type { IconEntry, IconIndex, IconWeight } from './types.js';
 
-const W_KEYS: IconWeight[] = ['Outline', 'Filled'];
+const W_KEYS: IconWeight[] = ['outline', 'filled', 'duotone-outline', 'duotone-filled'];
 
 function toPascalCase(str: string): string {
   return str

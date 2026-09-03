@@ -64,13 +64,13 @@ export default function McpDocs({ markdownContent, copiedField, onCopy }: Props)
 
         <SyntaxBlock
           title="View"
-          onCopy={() => onCopy('npx @vezham/icons-mcp view heart --weight Filled', 'mcp-view')}
+          onCopy={() => onCopy('npx @vezham/icons-mcp view heart --weight filled', 'mcp-view')}
           copied={copiedField === 'mcp-view'}
         >
           <span className="text-[#98c379]">npx @vezham/icons-mcp view</span>
           <span className="text-[#e5c07b]"> heart</span>
           <span className="text-[#56b6c2]"> --weight</span>
-          <span className="text-[#98c379]"> Filled</span>
+          <span className="text-[#98c379]"> filled</span>
         </SyntaxBlock>
 
         <SyntaxBlock

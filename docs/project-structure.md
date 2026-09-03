@@ -11,7 +11,8 @@ vezham/
 │   │   └── arrows/arrow-down2/
 │   │       ├── outline.svg
 │   │       ├── filled.svg
-│   │       ├── duotone.svg
+│   │       ├── duotone-outline.svg
+│   │       ├── duotone-filled.svg
 │   │       └── meta.json
 │   └── README.md               # Dataset schema & build pipeline
 │

@@ -15,7 +15,7 @@
 <h1 align="center">Vezham</h1>
 
 <p align="center">
-  <b>1273+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
+  <b>1273+ pixel-perfect SVG icons</b> • outline, filled, duotone-outline, and duotone-filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -68,7 +68,7 @@ import { Home, ShieldCheck, AltArrowDown } from '@vezham/icons';
 
 document.body.appendChild(Home());
 document.body.appendChild(ShieldCheck({ size: 32, color: '#d97757' }));
-document.body.appendChild(AltArrowDown({ weight: 'Filled' }));
+document.body.appendChild(AltArrowDown({ weight: 'filled' }));
 ```
 
 ### Get SVG as a string
@@ -82,13 +82,15 @@ element.innerHTML = svgString;
 
 ### Weights
 
-Every icon ships in two weights — **Outline** (default) and **Filled**:
+Every icon ships in four weights — **outline**, **filled**, **duotone-outline**, and **duotone-filled**:
 
 ```js
 import { Home } from '@vezham/icons';
 
-Home()                    // Outline (default)
-Home({ weight: 'Filled' }) // Filled
+Home()                    // outline (default)
+Home({ weight: 'filled' }) // filled
+Home({ weight: 'duotone-outline' })
+Home({ weight: 'duotone-filled' })
 ```
 
 ### Sizing & coloring
@@ -114,9 +116,11 @@ Home({ color: 'currentColor' })   // Inherits parent text color
 ```html
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home.svg" alt="Home" />
 <img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-filled.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-outline.svg" alt="Home" />
+<img src="https://cdn.jsdelivr.net/npm/@vezham/icons@latest/dist/cdn/icons/home-duotone-filled.svg" alt="Home" />
 ```
 
-Use `/dist/cdn/icons/{name}.svg` for the default outline SVG and `/dist/cdn/icons/{name}-filled.svg` for the filled SVG.
+Use `/dist/cdn/icons/{name}.svg` for the default outline SVG, `/dist/cdn/icons/{name}-filled.svg` for filled, `/dist/cdn/icons/{name}-duotone-outline.svg`, or `/dist/cdn/icons/{name}-duotone-filled.svg`.
 Every direct SVG uses a flat kebab-case filename under `/dist/cdn/icons`.
 
 ### Direct icon import (smallest bundle)
@@ -134,7 +138,7 @@ import ShieldCheck from '@vezham/icons/ShieldCheck';
 |--------|------|---------|-------------|
 | `size` | `number | string` | `24` | Icon width & height (number = px) |
 | `color` | `string` | — | Primary icon stroke/fill color. Leave unset to use CSS. |
-| `weight` | `'Outline' | 'Filled'` | `'Outline'` | Icon style variant |
+| `weight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` | `'outline'` | Icon style variant |
 | `strokeWidth` | `number | string` | — | Override the default stroke width |
 | `className` | `string` | — | Additional CSS class on the `<svg>` element |
 | `attrs` | `object` | — | Any additional SVG attributes |
@@ -180,7 +184,7 @@ Full type declarations ship with the package — no separate `@types/` installat
 ```ts
 import { Home, IconOptions, IconWeight } from '@vezham/icons';
 
-const weight: IconWeight = 'Filled';
+const weight: IconWeight = 'filled';
 const options: IconOptions = { size: 32, color: '#d97757', weight };
 
 const svg: SVGSVGElement = Home(options);
@@ -192,14 +196,14 @@ document.body.appendChild(svg);
 | Type | Description |
 |------|-------------|
 | `IconOptions` | Options for creating an SVG element |
-| `IconWeight` | `'Outline' | 'Filled'` |
+| `IconWeight` | `'outline' | 'filled' | 'duotone-outline' | 'duotone-filled'` |
 
 ---
 
 ## Features
 
 - **1273+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
-- **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
+- **Four weights** — outline, filled, duotone-outline, and duotone-filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead whatsoever
 - **TypeScript-ready** — Full type declarations included, no extra packages needed

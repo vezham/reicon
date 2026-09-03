@@ -5,6 +5,8 @@ import { FiLink } from 'react-icons/fi';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiSvelte } from 'react-icons/si';
 import { VueLogo, FlutterLogo } from './Snippets';
+import type { IconSnippetWeight } from './Snippets';
+import { toFlutterWeightAccessor } from './Snippets';
 import { loadIconData } from '../../lib/icon-data';
 import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/vezham-loader';
 import {
@@ -15,18 +17,21 @@ import {
   downloadAsWebp as downloadWebpUtils,
 } from './utils';
 
+const isIconWeight = (w: string | null): w is IconSnippetWeight =>
+  w === 'outline' || w === 'filled' || w === 'duotone-outline' || w === 'duotone-filled';
+
 export default function useIconDetail() {
   const { name } = useParams<{ name: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const [copiedField, setCopiedField] = useState<string | null>(null);
-  const [activeWeight, setActiveWeightState] = useState<'outline' | 'filled' | 'duotone'>(() => {
-    const w = searchParams.get('weight')?.toLowerCase();
-    if (w === 'filled') return 'filled';
-    if (w === 'duotone') return 'duotone';
-    return 'outline';
+
+  const [activeWeight, setActiveWeightState] = useState<IconSnippetWeight>(() => {
+    const weightParam = searchParams.get('weight');
+    const w = weightParam ? weightParam.toLowerCase() : null;
+    return isIconWeight(w) ? w : 'outline';
   });
 
-  const setActiveWeight = useCallback((w: 'outline' | 'filled' | 'duotone') => {
+  const setActiveWeight = useCallback((w: IconSnippetWeight) => {
     setActiveWeightState(w);
     const newParams = new URLSearchParams(searchParams);
     newParams.set('weight', w);
@@ -85,7 +90,7 @@ export default function useIconDetail() {
     setIsColorPickerOpen(false);
   }, [setActiveWeight]);
 
-  const svgUrlFilename = `${name}${activeWeight === 'filled' ? '-filled' : activeWeight === 'duotone' ? '-duotone' : ''}.svg`;
+  const svgUrlFilename = `${name}${activeWeight === 'outline' ? '' : `-${activeWeight}`}.svg`;
   const snippetColor = useCustomColor ? customColor : undefined;
   const jsColorProp = snippetColor ? `, color: '${snippetColor}'` : '';
   const htmlColorAttr = snippetColor ? ` color="${snippetColor}"` : '';
@@ -97,7 +102,7 @@ export default function useIconDetail() {
   const reactNativeRaw = `import { ${pascalName} } from '@vezham/icons-react-native';\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
   const vueRaw = `import { ${pascalName} } from '@vezham/icons-vue';\n\n<${pascalName} :size="${previewSize}" weight="${activeWeight}"${htmlColorAttr} />`;
   const svelteRaw = `<script>\n  import { ${pascalName} } from '@vezham/icons-svelte';\n</script>\n\n<${pascalName} size={${previewSize}} weight="${activeWeight}"${htmlColorAttr} />`;
-  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons/icons.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.${activeWeight}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
+  const flutterRaw = `import 'package:flutter_svg/flutter_svg.dart';\nimport 'package:vezham_icons/icons.dart';\n\nSvgPicture.string(\n  vezhamIconSvg(Vezham.${toFlutterWeightAccessor(activeWeight)}.${flutterName}),\n  width: ${previewSize},\n  height: ${previewSize},\n)`;
   const directRaw = `import ${pascalName} from '@vezham/icons-react/icons/${pascalName}';`;
 
   const CODE_TABS = useMemo(() => [
@@ -115,10 +120,9 @@ export default function useIconDetail() {
   const activeTab = CODE_TABS.find((t) => t.id === codeTab)!;
 
   useEffect(() => {
-    const w = searchParams.get('weight')?.toLowerCase();
-    if (w === 'filled') setActiveWeightState('filled');
-    else if (w === 'duotone') setActiveWeightState('duotone');
-    else setActiveWeightState('outline');
+    const weightParam = searchParams.get('weight');
+    const w = weightParam ? weightParam.toLowerCase() : null;
+    setActiveWeightState(isIconWeight(w) ? w : 'outline');
   }, [name, searchParams]);
 
   useEffect(() => {
@@ -161,7 +165,7 @@ export default function useIconDetail() {
   }, [name]);
 
   const pageTitle = `${pascalName} Icon \u2014 Vezham`;
-  const pageDesc = `Free ${pascalName} SVG icon from Vezham. Outline & filled weights. MIT licensed.`;
+  const pageDesc = `Free ${pascalName} SVG icon from Vezham. Outline, filled, duotone-outline, and duotone-filled weights. MIT licensed.`;
   const pageUrl = `https://vezham.com/icon/${name}`;
 
   const relatedIcons = useMemo(() => {
