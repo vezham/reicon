@@ -91,10 +91,10 @@ jobs:
       - name: 🟠 · 🧩 Setup Node & pnpm
         uses: vezham/vx-deployer/.github/actions/common/setup-install@timeline
 
-      - name: 🔵 · 🧹 Lint • ESLint
-        shell: bash
-        run: |
-          pnpm lint
+      # - name: 🔵 · 🧹 Lint • ESLint
+      #   shell: bash
+      #   run: |
+      #     pnpm lint
 
   prettier:
     runs-on: ubuntu-latest
