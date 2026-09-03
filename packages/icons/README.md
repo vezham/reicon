@@ -15,7 +15,7 @@
 <h1 align="center">Vezham</h1>
 
 <p align="center">
-  <b>2679+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
+  <b>1273+ pixel-perfect SVG icons</b> • Outline & Filled weights • Vanilla JS & CDN runtime • Zero dependencies • MIT Licensed
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@
   <a href="#cdn">CDN</a>
 </p>
 
-**Vezham** is the core vanilla JavaScript package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring 2679+ handcrafted, grid-aligned icons. Use it directly as ES modules, or load via CDN with zero build step. Every icon is tree-shakeable, fully TypeScript-ready, and ships with no dependencies.
+**Vezham** is the core vanilla JavaScript package for <a href="https://vezham.com">Vezham</a> — a free, open-source SVG icon library featuring 1273+ handcrafted, grid-aligned icons. Use it directly as ES modules, or load via CDN with zero build step. Every icon is tree-shakeable, fully TypeScript-ready, and ships with no dependencies.
 
 | 🔗 &nbsp; Resource | Link |
 |---|---|
@@ -169,7 +169,7 @@ Icons use **PascalCase**, derived from their original kebab-case file names:
 | `shopping-cart` | `ShoppingCart` |
 | `user-circle` | `UserCircle` |
 
-Browse and search all 2679+ icons at <a href="https://vezham.com">vezham.com</a>.
+Browse and search all 1273+ icons at <a href="https://vezham.com">vezham.com</a>.
 
 ---
 
@@ -198,7 +198,7 @@ document.body.appendChild(svg);
 
 ## Features
 
-- **2679+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
+- **1273+ icons** — Handcrafted, pixel-perfect SVGs across a wide range of categories
 - **Two weights** — Outline and Filled, with consistent 24×24 grid alignment
 - **Tree-shakeable** — Import only what you use; every icon is a standalone ES module
 - **Zero dependencies** — No runtime overhead whatsoever
@@ -214,9 +214,9 @@ document.body.appendChild(svg);
 | Package | Description |
 |---------|-------------|
 | [`vezham`](https://npmjs.com/package/@vezham/icons) | **This package.** Core vanilla JS + CDN runtime. No framework required. |
-| [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for 2679+ icons. |
-| [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for 2679+ icons. |
-| [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for 2679+ icons. |
+| [`@vezham/icons-react`](https://npmjs.com/package/@vezham/icons-react) | React components for 1273+ icons. |
+| [`@vezham/icons-vue`](https://npmjs.com/package/@vezham/icons-vue) | Vue 3 components for 1273+ icons. |
+| [`@vezham/icons-svelte`](https://npmjs.com/package/@vezham/icons-svelte) | Svelte components for 1273+ icons. |
 
 ---
 
