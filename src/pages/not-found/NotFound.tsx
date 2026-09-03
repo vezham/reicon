@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Ghost, ArrowLeft, Search3 } from '@vezham/icons-react';
+import { Ghost, ArrowLeft, Magnifier } from '@vezham/icons-react';
 
 export default function NotFound() {
   return (
@@ -33,7 +33,7 @@ export default function NotFound() {
             to="/icons"
             className="bg-text-base/6 hover:bg-text-base/10 text-text-base/70 hover:text-text-base text-sm font-medium px-5 py-2.5 rounded-lg transition-colors inline-flex items-center gap-2"
           >
-            <Search3 size={16} />
+            <Magnifier size={16} />
             Browse Icons
           </Link>
         </div>

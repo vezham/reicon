@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Search3, Copy, Pointer } from '@vezham/icons-react';
+import { Star, Magnifier, Copy, Cursor } from '@vezham/icons-react';
 import ClayButton from '../../components/ui/Button';
 
 const PACKAGES = [
@@ -131,7 +131,7 @@ export default function CTA() {
 
                     <div className="flex flex-col items-center md:items-end gap-3 shrink-0">
                         <ClayButton to="/icons" variant="primary" className="w-full justify-center">
-                            <Search3 size={16} />
+                            <Magnifier size={16} />
                             Browse 2700+ Icons
                         </ClayButton>
                         <Link
@@ -151,7 +151,7 @@ export default function CTA() {
                         </a>
                         <Link to="/docs" className="w-full justify-center inline-flex items-center gap-1.5 text-[13px] text-text-base/30 hover:text-text-base/60 transition-colors mt-1">
                             Read the docs
-                            <Pointer size={13} className="-rotate-10" />
+                            <Cursor size={13} className="-rotate-10" />
                         </Link>
                     </div>
                 </div>

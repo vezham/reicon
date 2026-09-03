@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion } from 'motion/react';
-import { Search3 } from '@vezham/icons-react';
+import { Magnifier } from '@vezham/icons-react';
 import DocsActionsBar from '../../components/docs/ActionsBar';
 import { docsSidebarStyles } from '../../components/docs/sidebar/styles';
 import DocsRightSidebar from '../../components/docs/sidebar/Right';
@@ -374,7 +374,7 @@ export default function FaqPage() {
 
             <div className="relative mb-10">
               <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-base/70">
-                <Search3 size={16} />
+                <Magnifier size={16} />
               </div>
               <input
                 type="text"

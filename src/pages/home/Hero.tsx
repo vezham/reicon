@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HandHeart, Search3, Doc, PenSparkle } from '@vezham/icons-react';
+import { HandHeart, Magnifier, Document, Stars } from '@vezham/icons-react';
 import { SiJavascript, SiReact } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 import Background from '../../components/layout/Background';
@@ -76,7 +76,7 @@ export default function Hero({ heroCardRef }: Props) {
             </p>
             <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-center gap-2 sm:gap-2.5 max-w-[440px] sm:max-w-none mx-auto w-full">
               <ClayButton to="/icons" variant="primary" className="w-full justify-center px-2.5 sm:px-5 text-[12px] sm:text-[14px] whitespace-nowrap">
-                <Search3 size={15} />
+                <Magnifier size={15} />
                 <span className="sm:hidden whitespace-nowrap">Icons</span>
                 <span className="hidden sm:inline whitespace-nowrap">Browse Icons</span>
               </ClayButton>
@@ -97,12 +97,12 @@ export default function Hero({ heroCardRef }: Props) {
                 to="/illustration"
                 className="bg-text-base/[0.04] hover:bg-text-base/10 text-text-base text-[12px] sm:text-[14px] font-medium px-2.5 sm:px-5 py-3 rounded-full backdrop-blur-lg flex items-center justify-center gap-1.5 transition-all duration-150 shadow-2xs w-full whitespace-nowrap"
               >
-                <PenSparkle size={15} />
+                <Stars size={15} />
                 <span className="whitespace-nowrap">Illustrations</span>
               </Link>
 
               <ClayButton to="/docs" variant="primary" className="w-full justify-center px-2.5 sm:px-5 text-[12px] sm:text-[14px] whitespace-nowrap">
-                <Doc size={15} color="currentColor" />
+                <Document size={15} color="currentColor" />
                 <span className="whitespace-nowrap">Docs Guide</span>
               </ClayButton>
             </div>

@@ -1,4 +1,4 @@
-import { Search3 } from '@vezham/icons-react';
+import { Magnifier } from '@vezham/icons-react';
 import DesktopFilterDropdown, { SortOption } from '../../components/ui/DesktopFilterDropdown';
 
 interface LogoSearchBarProps {
@@ -36,7 +36,7 @@ export default function LogoSearchBar({
 
       <div className="relative flex-1">
         <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-base/70">
-          <Search3 size={16} />
+          <Magnifier size={16} />
         </div>
         <input
           type="text"

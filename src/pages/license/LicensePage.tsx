@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PAGE_META } from '../../data/page-meta';
-import { Copy, Check } from '@vezham/icons-react';
+import { Copy, CheckCircle } from '@vezham/icons-react';
 import DocsActionsBar from '../../components/docs/ActionsBar';
 
 const LICENSE_TEXT = `MIT License
@@ -132,7 +132,7 @@ export default function LicensePage() {
                 onClick={handleCopy}
                 className="flex items-center gap-1.5 text-[12px] text-text-base/40 hover:text-text-base/70 transition-colors px-2.5 py-1.5 rounded-lg bg-text-base/4 hover:bg-text-base/8 cursor-pointer"
               >
-                {copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}
+                {copied ? <><CheckCircle size={13} /> Copied</> : <><Copy size={13} /> Copy</>}
               </button>
             </div>
             <pre className="bg-text-base/3 rounded-xl p-5 text-[13px] text-text-base/50 leading-relaxed overflow-x-auto whitespace-pre-wrap">{LICENSE_TEXT}</pre>

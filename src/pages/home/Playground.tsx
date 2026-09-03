@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, PenSparkle } from '@vezham/icons-react';
+import { Stars, MagicWand } from '@vezham/icons-react';
 import { loadIconData } from '../../lib/icon-data';
 import { getVezhamIconsRuntime, waitForVezhamIcons } from '../../lib/vezham-loader';
 import PlaygroundPreview from './playground/PlaygroundPreview';
@@ -133,7 +133,7 @@ export default function Playground({ theme }: { theme: string }) {
               />
             )}
             <span className="relative z-10 flex items-center gap-1.5 sm:gap-2">
-              <Sparkles size={14} color="currentColor" />
+              <Stars size={14} color="currentColor" />
               <span>Icons</span>
             </span>
           </button>
@@ -176,7 +176,7 @@ export default function Playground({ theme }: { theme: string }) {
               />
             )}
             <span className="relative z-10 flex items-center gap-1.5 sm:gap-2">
-              <PenSparkle size={14} color="currentColor" />
+              <MagicWand size={14} color="currentColor" />
               <span>Illustrations</span>
             </span>
           </button>

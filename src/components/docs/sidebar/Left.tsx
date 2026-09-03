@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef } from 'react';
 import { motion } from 'motion/react';
-import { ChevronExpandY } from '@vezham/icons-react';
+import { AltArrowDown } from '@vezham/icons-react';
 import { FrameworkIcon } from '../framework/icons';
 import { FRAMEWORKS, NAV_ITEMS, Framework } from '../framework/constants';
 
@@ -95,7 +95,7 @@ export default function DocsLeftSidebar({
                                     </>
                                 )}
                             </div>
-                            <ChevronExpandY className="w-3.5 h-3.5 text-text-base/30" />
+                            <AltArrowDown className="w-3.5 h-3.5 text-text-base/30" />
                         </button>
 
                         {dropdownOpen && (

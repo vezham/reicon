@@ -1,4 +1,4 @@
-import { ChevronExpandY } from '@vezham/icons-react';
+import { AltArrowDown } from '@vezham/icons-react';
 import { FrameworkIcon } from '../framework/icons';
 import { FRAMEWORKS, Framework } from '../framework/constants';
 
@@ -83,7 +83,7 @@ export default function DocsMobileNav({
                         </>
                     )}
                 </div>
-                <ChevronExpandY className="w-4 h-4 text-text-base/40" />
+                <AltArrowDown className="w-4 h-4 text-text-base/40" />
             </button>
         </div>
     );

@@ -1,4 +1,4 @@
-import { ChevronExpandY } from '@vezham/icons-react';
+import { AltArrowDown } from '@vezham/icons-react';
 import { SiClaude, SiGithub } from 'react-icons/si';
 
 interface Props {
@@ -56,7 +56,7 @@ export default function DocsActionsBar({
                     className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-[13px] font-medium text-text-base/70 hover:text-text-base bg-text-base/4 border border-text-base/10 hover:bg-text-base/8 transition-colors cursor-pointer whitespace-nowrap"
                 >
                     Open
-                    <ChevronExpandY size={14} className="text-text-base/40" />
+                    <AltArrowDown size={14} className="text-text-base/40" />
                 </button>
 
                 {openDropdown && (

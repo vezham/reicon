@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
-import { Heart, HandHeart, Sparkles, Star, Code, Check } from '@vezham/icons-react';
+import { Heart, HandHeart, Stars, Star, Code, CheckCircle } from '@vezham/icons-react';
 import BuyMeACoffeeIcon from '../../components/ui/BuyMeACoffeeIcon';
 import { PAGE_META } from '../../data/page-meta';
 import DocsActionsBar from '../../components/docs/ActionsBar';
@@ -45,7 +45,7 @@ const IMPACT_CARDS = [
     description: 'Vezham is released under the permissive MIT license. Your support keeps all 2,700+ icons accessible to everyone worldwide without paywalls.',
   },
   {
-    icon: <Sparkles size={22} className="text-[#6C5CE7]" />,
+    icon: <Stars size={22} className="text-[#6C5CE7]" />,
     title: 'Handcrafted Precision',
     description: 'Every path and stroke is manually drawn on a 24×24 grid — never auto-generated. Contributions allow dedicated focus on icon detail and design quality.',
   },
@@ -168,7 +168,7 @@ export default function SupportPage() {
             onClick={handleShare}
             className="inline-flex items-center gap-1.5 bg-text-base/6 hover:bg-text-base/10 text-text-base/80 text-sm px-5 py-3 rounded-full transition-colors border border-text-base/10 cursor-pointer"
           >
-            {copiedLink ? <><Check size={16} /> Link Copied!</> : <><Heart size={16} className="text-rose-500" /> Share Link</>}
+            {copiedLink ? <><CheckCircle size={16} /> Link Copied!</> : <><Heart size={16} className="text-rose-500" /> Share Link</>}
           </button>
         </div>
       </div>

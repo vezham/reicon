@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ChevronExpandY } from '@vezham/icons-react';
+import { AltArrowDown } from '@vezham/icons-react';
 import { FrameworkIcon } from './icons';
 import { FRAMEWORKS, Framework } from './constants';
 
@@ -45,7 +45,7 @@ export default function FrameworkSelector({
                             </>
                         )}
                     </div>
-                    <ChevronExpandY className="w-3.5 h-3.5 text-text-base/30" />
+                    <AltArrowDown className="w-3.5 h-3.5 text-text-base/30" />
                 </button>
 
                 {dropdownOpen && (

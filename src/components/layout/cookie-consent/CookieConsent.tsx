@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Cookie } from '@vezham/icons-react';
+import { Donut } from '@vezham/icons-react';
 
 import { getStoredConsent, setStoredConsent, type CookiePreferences } from './storage';
 import CookieToggle from './CookieToggle';
@@ -63,7 +63,7 @@ export default function CookieConsent() {
           <div className="p-3 sm:p-5">
             <div className="flex items-center gap-1 mb-2 sm:mb-3">
               <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                <Cookie size={16} className="text-[#6C5CE7]" />
+                <Donut size={16} className="text-[#6C5CE7]" />
               </div>
               <h3 className="text-[14px] sm:text-[16px] font-semibold text-text-base">We use cookies</h3>
             </div>
@@ -103,7 +103,7 @@ export default function CookieConsent() {
           <div className="p-3 sm:p-5">
             <div className="flex items-center gap-1 mb-3 sm:mb-4">
               <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
-                <Cookie size={16} className="text-[#6C5CE7]" />
+                <Donut size={16} className="text-[#6C5CE7]" />
               </div>
               <h3 className="text-[14px] sm:text-[16px] font-semibold text-text-base">Cookie Preferences</h3>
             </div>
